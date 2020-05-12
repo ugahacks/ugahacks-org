@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>skele template</title>
+<title>UGAHACKS</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="assets/style.css">
@@ -51,15 +51,15 @@ body, html {
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="#home" class="w3-bar-item w3-button" style="color: #fff;">UGAHACKS</a>
-    <a href="events" class="w3-bar-item w3-button w3-hide-small" style="color: #fff;"><i class="fa fa-th"></i> EVENTS</a>
-    <a href="contact" class="w3-bar-item w3-button w3-hide-small" style="color: #fff;"><i class="fa fa-envelope"></i> CONTACT</a>
+    <a href="/" class="w3-bar-item w3-button" style="color: #fff;">UGAHACKS</a>
+    <a href="timeline.html" class="w3-bar-item w3-button w3-hide-small" style="color: #fff;"><i class="fa fa-th"></i> EVENTS</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small" style="color: #fff;"><i class="fa fa-envelope"></i> CONTACT</a>
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="events" class="w3-bar-item w3-button" onclick="toggleFunction()">EVENTS</a>
-    <a href="contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    <a href="timeline.html" class="w3-bar-item w3-button" onclick="toggleFunction()">EVENTS</a>
+    <a href="contact.html" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
   </div>
 </div>
 
@@ -143,7 +143,7 @@ body, html {
   </div>
 
   <div class="w3-row-padding w3-center w3-section">
-    <a href="contact" class="w3-button w3-padding-large w3-light-grey" style="margin-top:32px" onclick="toggleFunction()">SEE EVENTS PAGE</a>
+    <a href="timeline.html" class="w3-button w3-padding-large w3-light-grey" style="margin-top:32px" onclick="toggleFunction()">SEE PAST EVENTS</a>
   </div>
 </div>
 
@@ -157,12 +157,12 @@ body, html {
 </div>
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+<footer class="w3-center w3-padding-64 w3-opacity w3-hover-opacity-off">
   <div class="w3-xlarge w3-section">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>
     <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
   </div>
 </footer>
  
@@ -181,7 +181,6 @@ function myFunction() {
     var navbar = document.getElementById("myNavbar");
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " uga-red";
-        //navbar.style = "style='color: #777;'"
     } else {
         navbar.className = navbar.className.replace(" w3-card w3-animate-top uga-red", "");
     }
