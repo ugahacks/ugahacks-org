@@ -164,33 +164,19 @@ const SCROLLX = new (function () {
 			const fncs = getFunctions(element, percentCompleted);
 			
 			if (percentCompleted >= 0 && percentCompleted <= 1) {
-				if (fncs.SCROLLX_ADD_CLASS_IN) {
-					fncs.SCROLLX_ADD_CLASS_IN();
-				}
-				if (fncs.SCROLLX_REMOVE_CLASS_IN) {
-					fncs.SCROLLX_REMOVE_CLASS_IN();
-				}
-				if (fncs.SCROLLX_CALL_ON) {
-					fncs.SCROLLX_CALL_ON();
-				}
-				if (fncs.SCROLLX_TOGGLE_CLASS) {
-					fncs.SCROLLX_TOGGLE_CLASS(true);
-				}
+				if (fncs.SCROLLX_ADD_CLASS_IN)  fncs.SCROLLX_ADD_CLASS_IN();
+				if (fncs.SCROLLX_REMOVE_CLASS_IN) fncs.SCROLLX_REMOVE_CLASS_IN();
+				if (fncs.SCROLLX_CALL_ON) fncs.SCROLLX_CALL_ON();
+				if (fncs.SCROLLX_TOGGLE_CLASS) fncs.SCROLLX_TOGGLE_CLASS(true);
+
 				element.data('hasBeenOnScreen', true);
 			} else {
 				if (element.data('hasBeenOnScreen')) {
-					if (fncs.SCROLLX_ADD_CLASS_OUT) {
-						fncs.SCROLLX_ADD_CLASS_OUT();
-					}
-					if (fncs.SCROLLX_REMOVE_CLASS_OUT) {
-						fncs.SCROLLX_REMOVE_CLASS_OUT();
-					}
-					if (fncs.SCROLLX_CALL_OFF) {
-						fncs.SCROLLX_CALL_OFF();
-					}
-					if (fncs.SCROLLX_TOGGLE_CLASS) {
-						fncs.SCROLLX_TOGGLE_CLASS(false);
-					}
+					if (fncs.SCROLLX_ADD_CLASS_OUT) fncs.SCROLLX_ADD_CLASS_OUT();
+					if (fncs.SCROLLX_REMOVE_CLASS_OUT) fncs.SCROLLX_REMOVE_CLASS_OUT();
+					if (fncs.SCROLLX_CALL_OFF) fncs.SCROLLX_CALL_OFF();
+					if (fncs.SCROLLX_TOGGLE_CLASS) fncs.SCROLLX_TOGGLE_CLASS(false);
+
 					element.data('hasBeenOnScreen', false);
 				}
 			}
@@ -198,7 +184,7 @@ const SCROLLX = new (function () {
 	}
 
 	$(document).ready(function () {
-		handleScroll
+		handleScroll();
 		$(window).on('scroll', handleScroll);
 	});
 })();
