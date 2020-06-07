@@ -186,3 +186,18 @@ footer .bottom {
 	background: #f3f3f3;
     font-size: 12px;
 }
+
+/** SCROLLX Classes */
+
+.red {
+	background: red !important;
+	font-weight: 900;
+}
+
+.box {
+	text-align: center; 
+	margin: 0 auto;
+	border: 2px solid white; 
+	height: 200px; 
+	width: 200px;
+}
