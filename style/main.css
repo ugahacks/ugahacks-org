@@ -12,10 +12,12 @@ body {
     box-sizing: border-box;
 }
 
-/** HEADER */
-.header {
+section {
 	display: flex;
+	height: auto;
 }
+
+/** HEADER */
 
 h1,
 h2 {
@@ -32,16 +34,17 @@ h2 {
 	font-size: 2em;
 }
 
+.header {
+	display: flex;
+	height: 100vh;
+}
+
 .header .txt-rotate {
 	font-weight: 600;
 	color: #fe3d40;
 }
 .header .left {
 	width: 60%;
-}
-
-.header .left, .header .right {
-	height: 100vh;
 }
 
 .header .inspiration h1 {
@@ -61,6 +64,7 @@ nav {
     top: 0;
     transition: box-shadow 0.25s, border-bottom-width 0.25s;
     border-bottom: 0px solid white;
+    z-index: 1100;
 }
 
 nav.scrolling {
@@ -125,7 +129,7 @@ nav > .menu a {
     border-radius: 2px;
 }
 
-nav .icon {
+.icon {
     background-repeat: no-repeat;
     background-size: 40px;
     width: 40px;
@@ -136,23 +140,23 @@ nav .icon {
     transition: filter 0.3s;
 }
 
-nav .icon:hover {
+.icon:hover {
 	filter: grayscale(0);
 }
 
-nav .icon-twitter {
+.icon-twitter {
 	background-image: url(../icons/twitter.png);
 }
 
-nav .icon-facebook {
+.icon-facebook {
 	background-image: url(../icons/facebook.png);
 }
 
-nav .icon-instagram {
+.icon-instagram {
 	background-image: url(../icons/instagram.png);
 }
 
-nav .icon-github {
+.icon-github {
 	background-image: url(../icons/github.png);
 }
 
@@ -200,4 +204,126 @@ footer .bottom {
 	border: 2px solid white; 
 	height: 200px; 
 	width: 200px;
+}
+
+.offscreen-left {
+	transform: translateX(-1500px);
+	opacity: 0;
+}
+
+.offscreen-right {
+	transform: translateX(1500px);
+	opacity: 0;
+}
+
+/** TEAM */
+
+.team {
+	background: transparent; 
+	display: block; 
+	padding: 100px; 
+	text-align: center;
+}
+
+.team > .pure-g {
+	margin-bottom: 20px;
+}
+
+.member {
+	position: relative;
+	width: 158px;
+	margin: 0 auto 15px;
+	transition: transform 1s ease-in, opacity 1s ease-in;
+}
+
+.member .summary {
+	text-align: center;
+	margin-top: 8px;
+	color: white;
+}
+
+.member .card {
+	position: absolute;
+    background: white;
+    z-index: 1000;
+    top: -20px;
+    left: -30px;
+    height: 350px;
+    width: 220px;
+    padding: 20px;
+    border-radius: 5px;
+    display:none;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.member .card.fade-in {
+	opacity: 1;
+}
+
+.member .card img {
+	border-radius: 50%;
+	width: 158px;
+	height: 158px;
+	border: 4px solid #b5b5b5;
+  	box-shadow: 0 0 0 2px #fe3d40;
+}
+
+.member .card .info {
+	margin-top: 8px;
+}
+
+.team-picture {
+  background-color: transparent;
+  width: 158px;
+  height: 158px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.member img {
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+  	object-fit: cover;
+}
+
+/* This container is needed to position the front and back side */
+.team-picture-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.2s;
+  transform-style: preserve-3d;
+  border-radius: 50%;
+  border: 4px solid #b5b5b5;
+  box-shadow: 0 0 0 2px #fe3d40;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+/*.team-picture:hover .team-picture-inner {
+  transform: rotateY(180deg);
+}*/
+
+.team-picture.flip .team-picture-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.team-picture-front, .team-picture-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.team-picture-front {
+  color: black;
+}
+
+/* Style the back side */
+.team-picture-back {
+  transform: rotateY(180deg);
 }

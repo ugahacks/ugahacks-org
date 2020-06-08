@@ -4,18 +4,19 @@
  */
 const SCROLLX = new (function () {
 	const callables = new Map();
+	const afters = new Map();
 
 	const SCROLL_X_ID = 'scrollx';
 	const SCROLL_X_BOOLS = [
-		
 	];
 	const SCROLL_X_DATA = [
+		// based on determines which screenline 
 		'based-on',
-		'offset'
+		'offset',
 	];
 	const SCROLL_X_FUNCTIONS = {
 		// toggle class
-		'scrollx-toggle-class': function (frameperc, param, addClass) {
+		'toggle-class': function (frameperc, param, addClass) {
 			if (addClass) {
 				$(this).addClass(param);
 			} else {
@@ -23,22 +24,22 @@ const SCROLLX = new (function () {
 			}
 		},
 		// add class
-		'scrollx-add-class-in': function (frameperc, param) {
+		'add-class-in': function (frameperc, param) {
 			$(this).addClass(param);
 		},
 		// add class
-		'scrollx-add-class-out': function (frameperc, param) {
+		'add-class-out': function (frameperc, param) {
 			$(this).addClass(param);
 		},
 		// remove class
-		'scrollx-remove-class-in': function (frameperc, param) {
+		'remove-class-in': function (frameperc, param) {
 			$(this).removeClass(param);
 		},
 		// remove class
-		'scrollx-remove-class-out': function (frameperc, param) {
+		'remove-class-out': function (frameperc, param) {
 			$(this).removeClass(param);
 		},
-		'scrollx-call-on': function (frameperc, param) {
+		'call-on': function (frameperc, param) {
 			let parts = param.split(/\s*:\s*/);
 			let funcName = parts[0];
 
@@ -49,7 +50,7 @@ const SCROLLX = new (function () {
 				callables.get(funcName).apply(this, [frameperc]);
 			}
 		},
-		'scrollx-call-off': function (frameperc, param) {
+		'call-off': function (frameperc, param) {
 			let parts = param.split(/\s*:\s*/);
 			let funcName = parts[0];
 
@@ -71,6 +72,10 @@ const SCROLLX = new (function () {
 		}
 		callables.set(name, func);
 	};
+
+	this.after = (scrollX, on, off) => {
+		afters.set(scrollX, [on, off]);
+	}
 
 	/**
 	 * Returns a list of scrollX booleans
@@ -121,6 +126,10 @@ const SCROLLX = new (function () {
 		return obj;
 	}
 
+	/**
+	 * Get window x position
+	 * @return {{top: number, middle: number, bottom: number}} Three ranges to choose the window x position from
+	 */
 	function getWinX() {
 		const winHeight = window.innerHeight;
 		const winX = window.scrollY;
@@ -132,6 +141,10 @@ const SCROLLX = new (function () {
 		}
 	}
 
+	/**
+	 * Get x position of an element
+	 * @return {{top: number, middle: number, bottom: number}} Three ranges to choose the element x position from
+	 */
 	function getElX(element) {
 		const elHeight = element.height();
 		const elX = element.offset().top;
@@ -143,8 +156,20 @@ const SCROLLX = new (function () {
 		}
 	}
 
+	/**
+	 * Main function handles the math to determine when to trigger an element. 
+	 * @return {[type]} [description]
+	 */
 	function handleScroll () {
 		const winX = getWinX();
+
+		afters.forEach(([on, off], key) => {
+			if (winX.top > key) {
+				on();
+			} else {
+				off();
+			}
+		});
 
 		$(`[data-${SCROLL_X_ID}]`).each(function () {
 			// Get some information from the element
@@ -152,7 +177,7 @@ const SCROLLX = new (function () {
 			const position = getElX(element);
 			const bools = getBooleans(element);
 			const data = getData(element);
-			// get the element pos based on the middle of it
+
 			const elementPos = position['top'];
 
 			// set up the trigger determiners
@@ -161,21 +186,33 @@ const SCROLLX = new (function () {
 			let scrollX = winX[data.BASED_ON || 'middle'] + offset;
 
 			const percentCompleted = (scrollX - elementPos) / element.height();
-			const fncs = getFunctions(element, percentCompleted);
-			
-			if (percentCompleted >= 0 && percentCompleted <= 1) {
-				if (fncs.SCROLLX_ADD_CLASS_IN)  fncs.SCROLLX_ADD_CLASS_IN();
-				if (fncs.SCROLLX_REMOVE_CLASS_IN) fncs.SCROLLX_REMOVE_CLASS_IN();
-				if (fncs.SCROLLX_CALL_ON) fncs.SCROLLX_CALL_ON();
-				if (fncs.SCROLLX_TOGGLE_CLASS) fncs.SCROLLX_TOGGLE_CLASS(true);
+
+			const beenOnScreen = element.data('hasBeenOnScreen');
+			if (percentCompleted >= 0) {
+				const fncs = getFunctions(element, percentCompleted);
+
+				if (!beenOnScreen) {
+					if (fncs.ADD_CLASS_IN)  fncs.ADD_CLASS_IN();
+					if (fncs.REMOVE_CLASS_IN) fncs.REMOVE_CLASS_IN();
+				}
+
+				if (percentCompleted <= 1) {
+					if (fncs.CALL_ON) fncs.CALL_ON();
+					if (fncs.TOGGLE_CLASS) fncs.TOGGLE_CLASS(true);
+				} else {
+					if (fncs.CALL_OFF) fncs.CALL_OFF();
+					if (fncs.TOGGLE_CLASS) fncs.TOGGLE_CLASS(false);
+				}
 
 				element.data('hasBeenOnScreen', true);
 			} else {
-				if (element.data('hasBeenOnScreen')) {
-					if (fncs.SCROLLX_ADD_CLASS_OUT) fncs.SCROLLX_ADD_CLASS_OUT();
-					if (fncs.SCROLLX_REMOVE_CLASS_OUT) fncs.SCROLLX_REMOVE_CLASS_OUT();
-					if (fncs.SCROLLX_CALL_OFF) fncs.SCROLLX_CALL_OFF();
-					if (fncs.SCROLLX_TOGGLE_CLASS) fncs.SCROLLX_TOGGLE_CLASS(false);
+				if (beenOnScreen) {
+					const fncs = getFunctions(element, percentCompleted);
+
+					if (fncs.ADD_CLASS_OUT) fncs.ADD_CLASS_OUT();
+					if (fncs.REMOVE_CLASS_OUT) fncs.REMOVE_CLASS_OUT();
+					if (fncs.CALL_OFF) fncs.CALL_OFF();
+					if (fncs.TOGGLE_CLASS) fncs.TOGGLE_CLASS(false);
 
 					element.data('hasBeenOnScreen', false);
 				}
@@ -188,8 +225,3 @@ const SCROLLX = new (function () {
 		$(window).on('scroll', handleScroll);
 	});
 })();
-
-
-SCROLLX.addCallable('opacity', function (frameperc, arg1) {
-	$(this).css('opacity', frameperc);
-});
