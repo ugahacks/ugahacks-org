@@ -15,6 +15,7 @@ body {
 section {
 	display: flex;
 	height: auto;
+	width: 100%;
 }
 
 /** HEADER */
