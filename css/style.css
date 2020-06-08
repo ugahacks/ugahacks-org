@@ -4,13 +4,6 @@ body{
   color: #979797;
 }
 
-@media only screen and (max-device-width: 480px) {
-  .about-container {
-    display: flex;
-    flex-direction: row;
-  }
-}
-
 .top-buffer {
   height: 2000px;
 }
@@ -23,13 +16,14 @@ body{
 }
 
 .about-image {
-
+  
 }
 
 .about-text {
   width: 30%;
   font-size: 20px;
   text-align: justify;
+  max-width: 600px;
 }
 
 .about-text h1{
@@ -101,5 +95,9 @@ span {
    margin-top: 50px;
    text-align: center;
    justify-content: space-evenly;
+ }
+
+ .stats-name {
+   margin-bottom: 50px;
  }
 }
