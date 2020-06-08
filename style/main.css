@@ -48,7 +48,7 @@ h1 {
 }
 
 .header .laptop {
-	background: url(../img/laptop.svg) center center no-repeat; 
+	background: url(../img/laptop.svg) center center no-repeat;
 	background-size: cover;
 }
 
@@ -184,6 +184,7 @@ nav > .menu a {
   width: 30%;
   font-size: 20px;
   text-align: justify;
+	max-width: 600px;
 }
 
 .about-text h1 {
@@ -223,7 +224,7 @@ nav > .menu a {
 }
 
 .stats-name {
-
+	margin-bottom: 50px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -498,14 +499,14 @@ footer .bottom {
 }
 
 .box {
-	text-align: center; 
+	text-align: center;
 	margin: 0 auto;
-	border: 2px solid white; 
-	height: 200px; 
+	border: 2px solid white;
+	height: 200px;
 	width: 200px;
 }
 
-[data-scrollx] {	
+[data-scrollx] {
 	transition: transform 0.5s ease-in, opacity 0.5s ease-in;
 }
 
@@ -517,9 +518,9 @@ footer .bottom {
 /** TEAM */
 
 .team {
-	background: transparent; 
-	display: block; 
-	padding: 100px; 
+	background: transparent;
+	display: block;
+	padding: 100px;
 	text-align: center;
 }
 
