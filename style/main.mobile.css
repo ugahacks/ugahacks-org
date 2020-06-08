@@ -1,0 +1,70 @@
+@media only screen and (max-width: 935px) {
+	.mobile-only {
+		display: inline-block;
+	}
+
+	/** MENU */
+	nav {
+		border-bottom-width: 1px;
+    	box-shadow: 0 0 30px -20px white;
+    	/** height is set for height transition */
+    	height: 84px;
+    	transition: height 0.20s;
+	}
+
+	nav li {
+		margin-right: 15px;
+	}
+
+	nav .icon-menu {
+		background-image: url(../icons/menu.png);
+	}
+
+	.menu li:not(:first-child) a {
+	    padding: 20px;
+	    width: 100%;
+	}
+
+	/** MENU TRANSITION */
+	.menu li:not(:first-child), .social a {
+		display: none;
+	    transform: translateY(10px);
+	}
+
+	.menu li:not(:first-child) {
+	    transform: translateX(-200%);
+	}
+
+	.menu li:nth-child(2) {
+		transition: transform 0.25s;
+	}
+
+	.menu li:nth-child(3) {
+		transition: transform 0.4s;
+	}
+
+	.menu li:nth-child(4) {
+		transition: transform 0.6s;
+	}
+
+	.menu li:nth-child(5) {
+		transition: transform 0.75s;
+	}
+
+	.social a {
+	    transform: translateX(100px);
+	    transition: transform 0.5s;
+	}
+
+	nav.responsive-open {
+		height: 325px;
+	}
+
+	nav.responsive-open .menu li:not(:first-child), nav.responsive-open .social a {
+		display: block;
+	}
+
+	nav.responsive-open.slide-in .menu li:not(:first-child), nav.responsive-open.slide-in .social a {
+		transform: translateX(0);
+	}
+}
