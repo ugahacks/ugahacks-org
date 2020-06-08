@@ -164,6 +164,104 @@ nav > .menu a {
 	display: none;
 }
 
+/** ABOUT US */
+@media only screen and (max-device-width: 480px) {
+  .about-container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+
+.about-container {
+  margin: 0 auto;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+}
+
+.about-image {
+
+}
+
+.about-text {
+  width: 30%;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.about-text h1 {
+  color: #fe3d40;
+}
+
+.about-text h1 span {
+  color: #979797;
+  border-right: .05em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.stats-container {
+  margin: 0 auto;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 150px;
+  justify-content: space-evenly;
+}
+
+.stats-body {
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+}
+
+.stats-value {
+  color: #fe3d40;
+  font-size: 50px;
+}
+
+.stats-name {
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  .about-container {
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-container h1{
+    text-align: center;
+  }
+
+ .about-text {
+   margin: 0 auto;
+   width: 90%;
+ }
+
+ .about-image {
+   margin: 0 auto;
+   margin-top: 50px;
+ }
+
+ .stats-container {
+   display: flex;
+   flex-direction: column;
+   margin-top: 50px;
+   text-align: center;
+   justify-content: space-evenly;
+ }
+}
+
 /** FOOTER */
 footer {
     width: 100%;
@@ -206,13 +304,12 @@ footer .bottom {
 	width: 200px;
 }
 
-.offscreen-left {
-	transform: translateX(-1500px);
-	opacity: 0;
+[data-scrollx] {	
+	transition: transform 0.5s ease-in, opacity 0.5s ease-in;
 }
 
-.offscreen-right {
-	transform: translateX(1500px);
+.offscreen-up {
+	transform: translateY(-30px);
 	opacity: 0;
 }
 
@@ -233,7 +330,6 @@ footer .bottom {
 	position: relative;
 	width: 158px;
 	margin: 0 auto 15px;
-	transition: transform 1s ease-in, opacity 1s ease-in;
 }
 
 .member .summary {
