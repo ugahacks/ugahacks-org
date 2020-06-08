@@ -43,8 +43,12 @@ h1 {
 	width: 60%;
 }
 
+.header .right {
+	margin: auto 0;
+}
+
 .header .inspiration h1 {
-	margin-top: 50%;
+	font-size: 70px;
 }
 
 .header .laptop {
