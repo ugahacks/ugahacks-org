@@ -1,11 +1,22 @@
+/**
+ * RED: #fe3d40;
+ * BACKGROUND: #21232c;
+ */
+
+@keyframes pulse {
+  0% { margin-bottom: 20px; }
+  50% { margin-bottom: 0; }
+  100% { margin-bottom: 20px; }
+}
+
 html,
 body {
-	/** @type {@temp} */
-	height: 5000px;
-	font-family: 'Raleway', sans-serif;
-	font-size: 18px;
-	background: #21232c;
-	color: #aaa;
+	  /** @type {@temp} */
+	  height: 5000px;
+	  font-family: 'Raleway', sans-serif;
+	  font-size: 18px;
+	  background: #21232c;
+	  color: #aaa;
 }
 
 * {
@@ -13,47 +24,63 @@ body {
 }
 
 section {
-	display: flex;
-	height: auto;
-	width: 100%;
+	  display: flex;
+	  height: auto;
+	  width: 100%;
+    position: relative;
 }
 
 /** HEADER */
 
 h1,
 h2 {
-	font-weight: 200;
-	margin: 0.4em 0;
+	  font-weight: 200;
+	  margin: 0.4em 0;
 }
 
 h1 {
-	font-size: 3.5em;
+	  font-size: 3.5em;
 }
 
 .header {
-	display: flex;
-	height: 100vh;
+	  display: flex;
+	  height: 100vh;
 }
 
 .header .txt-rotate {
-	font-weight: 600;
-	color: #fe3d40;
+	  font-weight: 600;
+	  color: #fe3d40;
 }
 .header .left {
-	width: 60%;
+	  width: 60%;
 }
 
 .header .right {
-	margin: auto 0;
+	  margin: auto 0;
 }
 
 .header .inspiration h1 {
-	font-size: 70px;
+	  font-size: 70px;
 }
 
 
 .header .laptop {
-	background: url(../img/laptop.svg) center center no-repeat;
+	  background: url(../img/laptop.svg) center center no-repeat;
+}
+
+.header .arrow {
+    height: 54px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 2px solid #fe3d40;
+    padding: 5px;
+    display: inline-block;
+    box-shadow: 0 0 0 1px white, 0 0 10px white;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    margin-left: -25px;
+    animation: pulse 1s infinite;
 }
 
 /** MENU */
@@ -129,13 +156,16 @@ nav > .menu a {
     border-radius: 2px;
 }
 
+nav .icon {
+  margin-top: 15px;
+}
+
 .icon {
     background-repeat: no-repeat;
     background-size: 40px;
     width: 40px;
     height: 40px;
     display: inline-block;
-    margin-top: 15px;
     filter: grayscale(0.8);
     transition: filter 0.3s;
 }
@@ -158,6 +188,10 @@ nav > .menu a {
 
 .icon-github {
 	background-image: url(../icons/github.png);
+}
+
+.icon-down-arrow {
+  background-image: url(../icons/down-arrow.png);
 }
 
 .mobile-only {
