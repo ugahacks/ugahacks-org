@@ -70,17 +70,16 @@ h1 {
 
 .header .arrow {
     height: 54px;
-    background-color: #ffffff;
+    background-color: transparent;
     border-radius: 50%;
     border: 2px solid #fe3d40;
     padding: 5px;
     display: inline-block;
-    box-shadow: 0 0 0 2px white;
     position: absolute;
     bottom: 100px;
     left: 50%;
-    margin-left: -25px;
-    animation: pulse 1s infinite;
+    margin-left: -27px;
+    animation: pulse 2s infinite;
 }
 
 /** MENU */
