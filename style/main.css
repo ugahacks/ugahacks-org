@@ -43,13 +43,35 @@ h1 {
 	width: 60%;
 }
 
+.header .right {
+	margin: auto 0;
+}
+
 .header .inspiration h1 {
-	margin-top: 50%;
+	font-size: 70px;
+}
+
+@media only screen and (max-width: 480px) {
+	.header {
+		display: flex;
+		flex-direction: column;
+	}
+	.header .left {
+		min-height: 500px;
+		margin: 0 auto;
+	}
+
+	.header .right {
+		margin-top: 0;
+	}
+
+	.header .inspiration h1 {
+		text-align: center;
+	}
 }
 
 .header .laptop {
 	background: url(../img/laptop.svg) center center no-repeat;
-	background-size: cover;
 }
 
 /** MENU */
@@ -161,13 +183,6 @@ nav > .menu a {
 }
 
 /** ABOUT US */
-@media only screen and (max-device-width: 480px) {
-  .about-container {
-    display: flex;
-    flex-direction: row;
-  }
-}
-
 
 .about-container {
   margin: 0 auto;
@@ -227,7 +242,7 @@ nav > .menu a {
 	margin-bottom: 50px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
 
   .about-container {
     margin: 0 auto;
@@ -257,6 +272,10 @@ nav > .menu a {
    text-align: center;
    justify-content: space-evenly;
  }
+
+ .stats-name {
+		margin-bottom: 50px;
+	}
 }
 
 /** TIMELINE */
@@ -446,14 +465,14 @@ nav > .menu a {
 }
 
 .event-card .card-body {
-  padding: 10px;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
     0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072),
     0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
 .event-card .card-body p {
-  margin-bottom: 15px;
+  margin: 10px 0px;
+	padding: 10px;
 }
 
 .event-card .card-body img {
@@ -463,6 +482,16 @@ nav > .menu a {
 
 .card-head::after {
   border-color: #fe3d40;
+}
+
+.timeline-links {
+	text-decoration: none;
+	color: #fe3d40;
+	transition: 0.2s opacity;
+}
+
+.timeline-links:hover {
+	opacity: 0.8;
 }
 
 /** TEAM */
@@ -590,20 +619,39 @@ footer > div {
 
 footer .container {
 	background: #fff;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 60px;
     width: auto;
-    max-width: 680px;
+    max-width: 87%;
     padding: 0 15px;
     margin: 0 auto;
+		text-align: right;
 }
 
+.container button{
+	padding: 10px 10px;
+	transition: 0.2s color;
+}
+
+.container button:hover{
+	color: #fe3d40;
+}
 
 footer .bottom {
 	background: #f3f3f3;
     font-size: 12px;
 }
 
+.bottom > div{
+	float: right;
+}
+
+@media only screen and (max-width: 480px) {
+	.bottom > div{
+		float: none;
+		text-align: center;
+	}
+}
 /** SCROLLX Classes */
 
 .red {
