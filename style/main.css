@@ -51,24 +51,6 @@ h1 {
 	font-size: 70px;
 }
 
-@media only screen and (max-width: 480px) {
-	.header {
-		display: flex;
-		flex-direction: column;
-	}
-	.header .left {
-		min-height: 500px;
-		margin: 0 auto;
-	}
-
-	.header .right {
-		margin-top: 0;
-	}
-
-	.header .inspiration h1 {
-		text-align: center;
-	}
-}
 
 .header .laptop {
 	background: url(../img/laptop.svg) center center no-repeat;
@@ -242,42 +224,6 @@ nav > .menu a {
 	margin-bottom: 50px;
 }
 
-@media only screen and (max-width: 480px) {
-
-  .about-container {
-    margin: 0 auto;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .about-container h1{
-    text-align: center;
-  }
-
- .about-text {
-   margin: 0 auto;
-   width: 90%;
- }
-
- .about-image {
-   margin: 0 auto;
-   margin-top: 50px;
- }
-
- .stats-container {
-   display: flex;
-   flex-direction: column;
-   margin-top: 50px;
-   text-align: center;
-   justify-content: space-evenly;
- }
-
- .stats-name {
-		margin-bottom: 50px;
-	}
-}
-
 /** TIMELINE */
 #timeline {
   padding: 100px 0;
@@ -298,32 +244,6 @@ nav > .menu a {
 
 #timeline h2 {
   text-align: center;
-}
-
-@media (min-width: 1100px) {
-  #timeline .event-card:nth-child(odd) .card-head::after, #timeline .event-card:nth-child(even) .card-head::after {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 0;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-  }
-
-  #timeline .event-card:nth-child(odd) .card-head::before, #timeline .event-card:nth-child(even) .card-head::before {
-    position: absolute;
-    content: "";
-    width: 10px;
-    height: 10px;
-    background-color: #fe3d40;
-    border-radius: 50%;
-    border: 5px solid #fe3d40;
-  }
-
-  #timeline-end {
-    width: 50%;
-    margin: auto;
-  }
 }
 
 .event-card:nth-child(1) {
@@ -355,17 +275,6 @@ nav > .menu a {
   margin: auto;
 }
 
-@media (min-width: 1200px) {
-  #timeline .event-card-wrapper {
-    display: flex;
-    flex-flow: column wrap;
-    width: 1170px;
-    height: 1650px;
-    /*Increase to add more cards*/
-    margin: 0 auto;
-  }
-}
-
 #timeline .event-card-wrapper::after {
   z-index: 1;
   content: "";
@@ -375,11 +284,6 @@ nav > .menu a {
   left: 50%;
 }
 
-@media (min-width: 1050px) {
-  #timeline .event-card-wrapper::after {
-    border-left: 10px solid #374142;
-  }
-}
 
 #timeline .event-card {
   position: relative;
@@ -387,54 +291,6 @@ nav > .menu a {
   margin: 10px auto 80px;
   max-width: 94%;
   z-index: 2;
-}
-
-@media (min-width: 480px) {
-  #timeline .event-card {
-    max-width: 60%;
-  }
-}
-
-@media (min-width: 1050px) {
-  #timeline .event-card {
-    max-width: 450px;
-    height: 400px;
-    margin: 95px;
-    margin-top: 100px;
-    margin-bottom: 45px;
-  }
-
-  #timeline .event-card:nth-child(odd) {
-    margin-right: 46px;
-  }
-
-  #timeline .event-card:nth-child(odd) .card-head::after {
-    border-left-width: 15px;
-    border-left-style: solid;
-    left: 100%;
-  }
-
-  #timeline .event-card:nth-child(odd) .card-head::before {
-    left: 486px;
-  }
-
-  #timeline .event-card:nth-child(even) {
-    margin-left: 46px;
-  }
-
-  #timeline .event-card:nth-child(even) .card-head::after {
-    border-right-width: 15px;
-    border-right-style: solid;
-    right: 100%;
-  }
-
-  #timeline .event-card:nth-child(even) .card-head::before {
-    right: 486px;
-  }
-
-  #timeline .event-card:nth-child(2) {
-    margin-top: 350px;
-  }
 }
 
 .event-card .card-head {
@@ -578,10 +434,6 @@ nav > .menu a {
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
-/*.team-picture:hover .team-picture-inner {
-  transform: rotateY(180deg);
-}*/
-
 .team-picture.flip .team-picture-inner {
   transform: rotateY(180deg);
 }
@@ -642,31 +494,11 @@ footer .bottom {
     font-size: 12px;
 }
 
-.bottom > div{
+footer .bottom > div{
 	float: right;
 }
 
-@media only screen and (max-width: 480px) {
-	.bottom > div{
-		float: none;
-		text-align: center;
-	}
-}
 /** SCROLLX Classes */
-
-.red {
-	background: red !important;
-	font-weight: 900;
-}
-
-.box {
-	text-align: center;
-	margin: 0 auto;
-	border: 2px solid white;
-	height: 200px;
-	width: 200px;
-}
-
 [data-scrollx] {
 	transition: transform 0.5s ease-in, opacity 0.5s ease-in;
 }
