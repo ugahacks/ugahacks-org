@@ -2,7 +2,7 @@
  * Scroll-x is a lightweight scroll controller that is configured in HTML.
  * @author Shawn Holman
  */
-const SCROLLX = new (function () {
+const ScrollX = new (function () {
 	const callables = new Map();
 	const afters = new Map();
 
