@@ -59,11 +59,11 @@
 		<section data-section="about" class="about-container">
 		    <div class="about-text">
 		        <h1>About Us<span></span></h1>
-		        <div data-aos="fade-right" class="">
+		        <div data-aos="fade-right" data-aos-once="true" class="">
 		          UGAHacks is an annual event that takes place in Athens, GA at the University of Georgia. An event that brings together 500+ people from all over the nation to a friendly environment where they can think, create, and bring ideas to life. Every year there is a new adventure to explore and new prizes to be won. Each event encompasses different people to meet, workshops to learn from, food to enjoy, and side events to take some time to relax. Every year it takes a team of 20+ organizers,  various Sponsors, and a multitude mentors to make sure the event is successful. UGAHacks is an event that prides itself as being like non-other where hackers, sponsors, and mentors can come together and not only have an environment to work and create anything their mind can think of but purely enjoy their time while they are there.
 		        </div>
 		        <br>
-		        <div data-aos="fade-left" data-aos-delay="300">
+		        <div data-aos="fade-left" data-aos-delay="300" data-aos-once="true">
 		          UGAHacks has seen tremendous growth since its creation in 2015. We have grown from 200 hackers, 6 sponsors, and less than 10 mentors to now over 500 plus hackers , 15 plus sponsors, and over 15 mentors. We also have become a recognizable brand with the cutest mascot , Byte, who is seen making an appearance at every event we have. We are always looking for new partners and new people to be apart of our event each year in order to make it even better than the last, so if you are interest please feel free to contact us. As an organization we take great pride in our growth and are excited to see our event reach even greater heights.
 
 		        </div>
@@ -74,7 +74,7 @@
 		</section>
 
 	    <section class="stats-container">
-	      	<div data-aos="fade-right" data-aos-delay="300" class="stats-body">
+	      	<div data-aos="fade-right" data-aos-delay="150" data-aos-once="true" class="stats-body">
 	        	<div class="stats-value">
 	        		50
 	        	</div>
@@ -82,7 +82,7 @@
 	        		Dogs
 	        	</div>
 	     	</div>
-	      	<div data-aos="fade-right" data-aos-delay="600" class="stats-body">
+	      	<div data-aos="fade-right" data-aos-delay="300" data-aos-once="true" class="stats-body">
 	        	<div class="stats-value">
 	          		72
 	        	</div>
@@ -90,7 +90,7 @@
 	        	   Cats
 	        	</div>
 	      	</div>
-	      	<div data-aos="fade-right" data-aos-delay="900" class="stats-body">
+	      	<div data-aos="fade-right" data-aos-delay="450" data-aos-once="true" class="stats-body">
 	       		<div class="stats-value">
 	        		24
 	        	</div>
@@ -98,7 +98,7 @@
 	        	   Parrots
 	        	</div>
 	      	</div>
-	      	<div data-aos="fade-right" data-aos-delay="1200" class="stats-body">
+	      	<div data-aos="fade-right" data-aos-delay="600" data-aos-once="true" class="stats-body">
 	        	<div class="stats-value">
 	        	  44
 	        	</div>
@@ -106,7 +106,7 @@
 	        	   Hamsters
 	        	</div>
 	      	</div>
-	      	<div data-aos="fade-right" data-aos-delay="1500" class="stats-body">
+	      	<div data-aos="fade-right" data-aos-delay="750" data-aos-once="true" class="stats-body">
 	      		<div class="stats-value">
 	        		98
 	        	</div>
@@ -1067,7 +1067,7 @@
   			Main.registerState("", Main.scrollWindow.bind(this, 0))
   			Main.registerState("about", Main.scrollWindow.bind(this, $('[data-section="about"]').offset().top));
   			Main.registerState("timeline", Main.scrollWindow.bind(this, $('[data-section="timeline"]').offset().top));
-			
+
 			ScrollX.after(5, () => $('nav').addClass('scrolling'), () => $('nav').removeClass('scrolling'));
 
 			AOS.init();
