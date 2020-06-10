@@ -120,7 +120,8 @@
 	    <section data-section="timeline" id="timeline">
 		    <h1>Past Events</h1>
 
-		    <div class="event-card-wrapper">
+		    <div class="event-card-wrapper" data-scrollx data-call-on="timelineProgress">
+		    	<div class='timeline-progress'></div>
 		    	<div class="event-card" data-aos="fade-right">
 		        	<div class="card-head">
 		          		<div class="number-box">
@@ -1070,6 +1071,18 @@
   			Main.registerState("timeline", Main.scrollWindow.bind(this, $('[data-section="timeline"]').offset().top));
 
 			ScrollX.after(5, () => $('nav').addClass('scrolling'), () => $('nav').removeClass('scrolling'));
+
+			let eventWrapperHeight = 0;
+			$(document).ready(function () {
+				eventWrapperHeight = $(".event-card-wrapper").height();
+			});
+			ScrollX.addCallable("timelineProgress", (frameperc) => {
+				if (frameperc < 0.1) frameperc = 0;
+				if (frameperc > 0.9) frameperc = 1;
+				let height = eventWrapperHeight * frameperc;
+
+				document.querySelector('.timeline-progress').style.height = height + 'px';
+			});
 
 			AOS.init();
   		</script>

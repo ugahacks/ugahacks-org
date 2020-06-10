@@ -18,26 +18,26 @@ const ScrollX = new (function () {
 		// toggle class
 		'toggle-class': function (frameperc, param, addClass) {
 			if (addClass) {
-				$(this).addClass(param);
+				this.classList.add(param);
 			} else {
-				$(this).removeClass(param);
+				this.classList.remove(param);
 			}
 		},
 		// add class
 		'add-class-in': function (frameperc, param) {
-			$(this).addClass(param);
+			this.classList.add(param);
 		},
 		// add class
 		'add-class-out': function (frameperc, param) {
-			$(this).addClass(param);
+			this.classList.add(param);
 		},
 		// remove class
 		'remove-class-in': function (frameperc, param) {
-			$(this).removeClass(param);
+			this.classList.remove(param);
 		},
 		// remove class
 		'remove-class-out': function (frameperc, param) {
-			$(this).removeClass(param);
+			this.classList.remove(param);
 		},
 		'call-on': function (frameperc, param) {
 			let parts = param.split(/\s*:\s*/);
@@ -77,6 +77,10 @@ const ScrollX = new (function () {
 		afters.set(scrollX, [on, off]);
 	}
 
+	function inDataSet(element, datapoint) {
+		return element.dataset.hasOwnProperty(datapoint);
+	}
+
 	/**
 	 * Returns a list of scrollX booleans
 	 * @param  {jQuery.Element} scrollXElement The scrollX element to get the booleans for
@@ -86,7 +90,7 @@ const ScrollX = new (function () {
 		let obj = {};
 		for (let boolTag of SCROLL_X_BOOLS) {
 			let key = boolTag.toUpperCase().replace(/-/g, '_');
-			let data = scrollXElement.attr('data-' + boolTag);
+			let data = scrollXElement.getAttribute('data-' + boolTag);
 			obj[key] = data === '' || data === 'true';
 		}
 		return obj;
@@ -101,7 +105,7 @@ const ScrollX = new (function () {
 		let obj = {};
 		for (let dataTag of SCROLL_X_DATA) {
 			let key = dataTag.toUpperCase().replace(/-/g, '_');
-			let data = scrollXElement.attr('data-' + dataTag) || '';
+			let data = scrollXElement.getAttribute('data-' + dataTag) || '';
 			if (!isNaN(parseFloat(data))) {
 				obj[key] = parseInt(data);
 			} else {
@@ -120,7 +124,7 @@ const ScrollX = new (function () {
 		let obj = {};
 		for (let funcTag in SCROLL_X_FUNCTIONS) {
 			let key = funcTag.toUpperCase().replace(/-/g, '_');
-			let data = scrollXElement.attr('data-' + funcTag) || false;
+			let data = scrollXElement.getAttribute('data-' + funcTag) || false;
 			obj[key] = data ? SCROLL_X_FUNCTIONS[funcTag].bind(scrollXElement, frameperc, data) : false;
 		}
 		return obj;
@@ -146,8 +150,8 @@ const ScrollX = new (function () {
 	 * @return {{top: number, middle: number, bottom: number}} Three ranges to choose the element x position from
 	 */
 	function getElX(element) {
-		const elHeight = element.height();
-		const elX = element.offset().top;
+		const elHeight = element.clientHeight;
+		const elX = element.getBoundingClientRect().top + window.scrollY;
 
 		return {
 			top: elX,
@@ -156,12 +160,14 @@ const ScrollX = new (function () {
 		}
 	}
 
-	/**
-	 * Main function handles the math to determine when to trigger an element. 
-	 * @return {[type]} [description]
-	 */
-	function handleScroll () {
-		const winX = getWinX();
+	let winX = 0;
+	let ticking = false;
+
+
+	function scrollAnim () {
+		// reset the tick so we can
+		// capture the next onScroll
+		ticking = false;
 
 		afters.forEach(([on, off], key) => {
 			if (winX.top > key) {
@@ -171,9 +177,10 @@ const ScrollX = new (function () {
 			}
 		});
 
-		$(`[data-${SCROLL_X_ID}]`).each(function () {
+		let nodes = document.querySelectorAll('[data-Scrollx]');
+
+		for (let element of nodes) {
 			// Get some information from the element
-			const element = $(this);
 			const position = getElX(element);
 			const bools = getBooleans(element);
 			const data = getData(element);
@@ -185,9 +192,9 @@ const ScrollX = new (function () {
 			// the scroll offset to base the scrolling on
 			let scrollX = winX[data.BASED_ON || 'middle'] + offset;
 
-			const percentCompleted = (scrollX - elementPos) / element.height();
+			const percentCompleted = (scrollX - elementPos) / element.clientHeight;
 
-			const beenOnScreen = element.data('hasBeenOnScreen');
+			const beenOnScreen = element.dataset.hasOwnProperty('hasBeenOnScreen') ? element.dataset.hasBeenOnScreen : false;
 			if (percentCompleted >= 0) {
 				const fncs = getFunctions(element, percentCompleted);
 
@@ -204,7 +211,7 @@ const ScrollX = new (function () {
 					if (fncs.TOGGLE_CLASS) fncs.TOGGLE_CLASS(false);
 				}
 
-				element.data('hasBeenOnScreen', true);
+				element.dataset.hasBeenOnScreen = true;
 			} else {
 				if (beenOnScreen) {
 					const fncs = getFunctions(element, percentCompleted);
@@ -214,10 +221,26 @@ const ScrollX = new (function () {
 					if (fncs.CALL_OFF) fncs.CALL_OFF();
 					if (fncs.TOGGLE_CLASS) fncs.TOGGLE_CLASS(false);
 
-					element.data('hasBeenOnScreen', false);
+					element.dataset.hasBeenOnScreen = false;
 				}
 			}
-		});
+		};
+	}
+
+	function requestTick() {
+		if(!ticking) {
+			requestAnimationFrame(scrollAnim);
+		}
+		ticking = true;
+	}
+
+	/**
+	 * Main function handles the math to determine when to trigger an element. 
+	 * @return {[type]} [description]
+	 */
+	function handleScroll () {
+		winX = getWinX();
+		requestTick();
 	}
 
 	$(document).ready(function () {
