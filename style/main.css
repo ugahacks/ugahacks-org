@@ -9,12 +9,14 @@
   100% { margin-bottom: 20px; }
 }
 
+
 html,
 body {
 	  font-family: 'Raleway', sans-serif;
 	  font-size: 18px;
 	  background: #21232c;
 	  color: #aaa;
+    overflow-x: hidden;
 }
 
 * {
@@ -84,11 +86,13 @@ h1 {
 nav {
     background-color: #21232c;
     padding: 5px;
-    position: sticky;
+    position: fixed;
     top: 0;
     transition: box-shadow 0.25s, border-bottom-width 0.25s;
     border-bottom: 0px solid white;
     z-index: 1100;
+    margin-bottom: 80px;
+    width: 100%;
 }
 
 nav.scrolling {
