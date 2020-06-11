@@ -11,8 +11,6 @@
 
 html,
 body {
-	  /** @type {@temp} */
-	  height: 5000px;
 	  font-family: 'Raleway', sans-serif;
 	  font-size: 18px;
 	  background: #21232c;
