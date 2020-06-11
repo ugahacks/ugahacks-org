@@ -518,21 +518,24 @@ footer > div {
 footer .container {
 	background: #fff;
     font-size: 16px;
-    line-height: 60px;
+    line-height: 50px;
     width: auto;
     max-width: 87%;
     padding: 0 15px;
     margin: 0 auto;
-		text-align: right;
+		text-align: center;
 }
 
-.container button{
-	padding: 10px 10px;
-	transition: 0.2s color;
+.container a {
+  text-decoration: none;
+  opacity: 0.8;
+  color: grey;
+  margin: 0px 70px;
+  transition: 0.2s opacity;
 }
 
-.container button:hover{
-	color: #fe3d40;
+.container a:hover {
+  opacity: 1;
 }
 
 footer .bottom {

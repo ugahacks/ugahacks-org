@@ -58,6 +58,10 @@
 		margin-bottom: 10px;
 		text-align: center;
 	}
+
+	.container a {
+		display: block;
+	}
 }
 
 @media only screen and (max-width: 935px) {
