@@ -553,3 +553,19 @@ footer .bottom .slogan {
 	transform: translateY(-30px);
 	opacity: 0;
 }
+
+/* Scrollbar Styling (Only on Chrome but something cool) */
+::-webkit-scrollbar {
+		width: 15px;
+}
+::-webkit-scrollbar-track {
+	width: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #1b1a1a;
+}
+::-webkit-scrollbar-thumb {
+	width: 10px;
+	border-radius: 10px;
+	background-color: #D62929;
+}

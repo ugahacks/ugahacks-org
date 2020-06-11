@@ -53,11 +53,6 @@
 		margin-bottom: 50px;
 	}
 
-	/** TIMELINE */
-	#timeline .event-card {
-	    max-width: 60%;
-	}
-
 	/** FOOTER */
 	footer .bottom .pure-u-1 {
 		margin-bottom: 10px;
@@ -222,5 +217,5 @@
 	    height: 1650px;
 	    /*Increase to add more cards*/
 	    margin: 0 auto;
-  	}	
+  	}
 }
