@@ -281,7 +281,7 @@ nav .icon {
 
 #timeline .timeline-progress {
   width: 10px;
-  background: #865f61;
+  background: #fe3d40;
   position: absolute;
   top: 0;
   left: 50%;
@@ -535,11 +535,11 @@ footer .container {
 
 footer .bottom {
 	background: #f3f3f3;
-    font-size: 12px;
+  font-size: 12px;
 }
 
-footer .bottom > div{
-	float: right;
+footer .bottom .slogan {
+  text-align: right;
 }
 
 /** SCROLLX Classes */

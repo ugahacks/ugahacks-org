@@ -59,8 +59,8 @@
 	}
 
 	/** FOOTER */
-	footer .bottom > div{
-		float: none;
+	footer .bottom .pure-u-1 {
+		margin-bottom: 10px;
 		text-align: center;
 	}
 }
