@@ -209,11 +209,12 @@ nav .icon {
 }
 
 .about-image {
-
+  align-self: center;
+  width: 40%;
+  height: 100%;
 }
 
 .about-text {
-  width: 30%;
   font-size: 20px;
   text-align: justify;
 	max-width: 600px;
@@ -537,7 +538,7 @@ footer .container {
   text-decoration: none;
   opacity: 0.8;
   color: grey;
-  margin: 0px 70px;
+  margin: 0px 45px;
   transition: 0.2s opacity;
 }
 
