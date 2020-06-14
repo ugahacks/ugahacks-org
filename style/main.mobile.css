@@ -61,6 +61,11 @@
 
 	.container a {
 		display: block;
+		margin: 0px;
+	}
+
+	footer > div {
+		padding: 20px;
 	}
 }
 
