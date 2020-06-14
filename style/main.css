@@ -220,12 +220,13 @@ nav .icon {
 }
 
 .about-text h1 {
-  color: #fe3d40;
+  font-size: 3rem;
+  color: white;
 }
 
-.about-text h1 span {
+.about-text h1 span, #timeline h1 span, .team h1 span {
   color: #979797;
-  border-right: .05em solid;
+  border-right: .08em solid;
   animation: caret 1s steps(1) infinite;
 }
 
@@ -403,6 +404,12 @@ nav .icon {
 	display: block;
 	padding: 100px;
 	text-align: center;
+}
+
+.team h1 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 100px;
 }
 
 .team > .pure-g {
