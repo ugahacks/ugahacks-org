@@ -522,11 +522,11 @@ footer {
 
 footer > div {
 	padding: 20px 100px;
-    color: grey;
+  color: #dcdfe4;
 }
 
 footer .container {
-	background: #2b2b2a;
+	background: #fe3d40;
     font-size: 16px;
     line-height: 50px;
     width: auto;
@@ -539,8 +539,8 @@ footer .container {
 .container a {
   text-decoration: none;
   opacity: 0.8;
-  color: grey;
-  margin: 0px 45px;
+  color: white;
+  margin: 0px 55px;
   transition: 0.2s opacity;
 }
 
@@ -549,7 +549,7 @@ footer .container {
 }
 
 footer .bottom {
-	background: #2b2b2a;
+	background: #fe3d40;
   font-size: 12px;
 }
 
