@@ -22,25 +22,37 @@ const Router = new (function () {
 		}
 	}
 
+	function getHash() {
+		let hash = window.location.hash.substr(1);
+		let hashParts = hash.split("?");
+		let hashText = hashParts[0];
+		let query = null;
+
+		if (hashParts.length == 2) { // pass on query data
+			let hashQuery = parseQuery(hashParts[1]);
+			query = hashQuery;
+		}
+
+		return {
+			hash: hashText,
+			query: query
+		}
+	}
+
 	/**
 	 * Manages the history state and calls registered states accordingly
 	 * @param  event the state passed in through the popstate event
 	 */
-	function manageState(event) {
-		let hash = window.location.hash.substr(1);
-		let hashParts = hash.split("?");
-		let hashText = hashParts[0];
-		let state = states.get(hashText);
+	function manageState(event = {}) {
+		let hash = getHash();
+		let state = states.get(hash.hash);
 
-		if (hashParts.length == 2) { // pass on query data
-			let hashQuery = parseQuery(hashParts[1]);
-			event.queryData = hashQuery;
-		}
+		event.queryData = hash.query;
 
 		if (state) {
 		    state.call(event);
 		} else {
-			console.warn('State does not exist: ' + hash);
+			console.warn('State does not exist: ' + hash.hash);
 		}
 	}
 
@@ -59,12 +71,20 @@ const Router = new (function () {
 	 */
 	function pushState () {
 		let link = $(this).attr('data-link');
-		history.pushState(null, null, link);
+		let hash = getHash();
+		let state = hash.hash;
+		// push state if its not the same 
+		if (link != state) {
+			
+			history.pushState(null, null, '#' + link);
+		}
+
+		manageState();
 	}
 
 	$(document).ready(function () {
 		// Get the current state
-		manageState(null);
+		manageState();
 
 		$('[data-link]').on('click', pushState);
 		$(window).on('popstate', manageState);

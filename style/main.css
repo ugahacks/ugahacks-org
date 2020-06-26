@@ -30,6 +30,10 @@ section {
     position: relative;
 }
 
+[data-link] {
+  cursor: pointer;
+} 
+
 /** HEADER */
 
 h1,

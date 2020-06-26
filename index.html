@@ -29,11 +29,11 @@
 	<body>
 		<nav>
 			<ul class='menu'>
-				<li class='logo'><a href="#">UGAHacks</a></li>
-				<li><a href="#about">About US</a></li>
-				<li><a href="#timeline">Events</a></li>
-				<li><a href="#team">Team</a></li>
-				<li><a href="#blog">Blog</a></li>
+				<li class='logo'><a data-link="">UGAHacks</a></li>
+				<li><a data-link="about">About US</a></li>
+				<li><a data-link="timeline">Events</a></li>
+				<li><a data-link="team">Team</a></li>
+				<li><a data-link="blog">Blog</a></li>
 			</ul>
 			<div class='social'>
 				<button class="hamburger hamburger--collapse mobile-only menu-toggle" type="button">
@@ -58,7 +58,7 @@
 						  data-rotate='[ "Create.", "Inspire.", "Code."]'></span>
 				</h1>
 			</div>
-			<a href="#about" class='arrow'><div class='icon icon-down-arrow' style='filter:grayscale(0);'></div></a>
+			<a data-link="about" class='arrow'><div class='icon icon-down-arrow' style='filter:grayscale(0);'></div></a>
 		</section>
 
 		<section data-section="about" class="about-container">
@@ -1347,13 +1347,13 @@
   			Router.registerState("timeline", Router.action.scrollWindowToElement('[data-section="timeline"]'));
   			Router.registerState("team", Router.action.scrollWindowToElement('[data-section="team"]'));
 
+  			// After 5px she should add the scorlling class to the nav before. If we go backwa
 			ScrollX.after(5, () => $('nav').addClass('scrolling'), () => $('nav').removeClass('scrolling'));
 
 			let eventWrapperHeight = $(".event-card-wrapper").height();
 			ScrollX.addCallable("timelineProgress", (frameperc) => {
 				if (frameperc < 0.2) frameperc = 0;
 				if (frameperc > 0.8) frameperc = 1;
-				console.log("FRAMEPERC", frameperc);
 				let height = eventWrapperHeight * frameperc;
 
 				document.querySelector('.timeline-progress').style.height = height + 'px';
