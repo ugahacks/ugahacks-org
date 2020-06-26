@@ -217,7 +217,7 @@
 		    </div>
 		</section>
 
-		<section class='team'>
+		<section data-section="team" class='team'>
 			<h1>Meet the team!<span></span></h1>
 			<h2>Mascot</h2>
 			<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
@@ -1340,17 +1340,20 @@
   		<!-- Scrolling animatons -->
 	    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script src="js/scrollx.js"></script>
+		<script src="js/router.js"></script>
   		<script>
-  			Main.registerState("", Main.scrollWindow.bind(this, 0))
-  			Main.registerState("about", Main.scrollWindow.bind(this, $('[data-section="about"]').offset().top));
-  			Main.registerState("timeline", Main.scrollWindow.bind(this, $('[data-section="timeline"]').offset().top));
+  			Router.registerState("", Router.action.scrollWindowTo(0))
+  			Router.registerState("about", Router.action.scrollWindowToElement('[data-section="about"]'));
+  			Router.registerState("timeline", Router.action.scrollWindowToElement('[data-section="timeline"]'));
+  			Router.registerState("team", Router.action.scrollWindowToElement('[data-section="team"]'));
 
 			ScrollX.after(5, () => $('nav').addClass('scrolling'), () => $('nav').removeClass('scrolling'));
 
 			let eventWrapperHeight = $(".event-card-wrapper").height();
 			ScrollX.addCallable("timelineProgress", (frameperc) => {
-				if (frameperc < 0.1) frameperc = 0;
-				if (frameperc > 0.9) frameperc = 1;
+				if (frameperc < 0.2) frameperc = 0;
+				if (frameperc > 0.8) frameperc = 1;
+				console.log("FRAMEPERC", frameperc);
 				let height = eventWrapperHeight * frameperc;
 
 				document.querySelector('.timeline-progress').style.height = height + 'px';

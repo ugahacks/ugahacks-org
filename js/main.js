@@ -1,19 +1,7 @@
 const Main = new (function () {
 	/** Pixels required to swipedown to close the menu */
 	const MENU_CLOSE_SWIPE_THRESHOLD = 50;
-
-	const states = new Map();
 	let timer;
-
-	// public methods
-	this.registerState = function (name, action) {
-		states.set(name, action);
-	}
-
-	this.scrollWindow = function (scrollTop) {
-		scrollTop = scrollTop - $('nav').height();
-		$("html, body").animate({ scrollTop });
-	}
 
 	// private methods
 	/**
@@ -91,38 +79,11 @@ const Main = new (function () {
 		}, 200);
 	}
 
-	/**
-	 * Manages the history state and calls registered states accordingly
-	 * @param  event the state passed in through the popstate event
-	 */
-	function manageState(event) {
-		let hash = window.location.hash.substr(1);
-		let state = states.get(hash);
-
-		if (state) {
-		    state.call(event);
-		} else {
-			console.warn('State does not exist: ' + hash);
-		}
-	}
-
-	/**
-	 * Pushes a new state
-	 */
-	function pushState () {
-		let link = $(this).attr('data-link');
-		history.push(null, null, link);
-	}
-
 	// dom 
 	$(document).ready(function () {
-		manageState(null);
-
 		$('.team-picture').on('mouseover', openProfileCard);
 		$('.card').on('mouseleave', closeProfileCard);
 		$('.menu-toggle').on('click', toggleMenu);
-		$('[data-link]').on('click', pushState);
-		$(window).on('popstate', manageState);
 	});
 })();
 
