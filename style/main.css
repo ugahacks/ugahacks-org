@@ -172,7 +172,7 @@ nav .icon {
     width: 40px;
     height: 40px;
     display: inline-block;
-    filter: grayscale(0.8);
+    filter: grayscale(1) invert(1);
     transition: filter 0.3s;
 }
 
@@ -530,7 +530,7 @@ footer > div {
 }
 
 footer .container {
-	background: #fe3d40;
+	background: #221b1b;
     font-size: 16px;
     line-height: 50px;
     width: auto;
@@ -542,7 +542,7 @@ footer .container {
 
 .container a {
   text-decoration: none;
-  opacity: 0.8;
+  opacity: 0.5;
   color: white;
   margin: 0px 55px;
   transition: 0.2s opacity;
@@ -553,7 +553,7 @@ footer .container {
 }
 
 footer .bottom {
-	background: #fe3d40;
+	background: #221b1b;
   font-size: 12px;
 }
 
