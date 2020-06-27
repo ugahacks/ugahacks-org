@@ -101,7 +101,7 @@
 	}
 
 	.menu li:not(:first-child) a {
-	    padding: 20px;
+	    padding: 12px;
 	    width: 100%;
 	}
 
@@ -129,6 +129,10 @@
 
 	.menu li:nth-child(5) {
 		transition: transform 0.75s;
+	}
+
+	.menu li:nth-child(6) {
+		transition: transform 0.85s;
 	}
 
 	.social a {
