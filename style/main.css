@@ -93,7 +93,8 @@ nav {
     padding: 5px;
     position: fixed;
     top: 0;
-    transition: box-shadow 0.25s, border-bottom-width 0.25s;
+    /*transition: box-shadow 1.25s ease, border-bottom-width 1.25s ease;*/
+    transition: 0.1s; /* GENERAL: transition border-bottom for 3px in 0.1 sec*/
     border-bottom: 0px solid white;
     z-index: 1100;
     margin-bottom: 80px;
@@ -101,8 +102,9 @@ nav {
 }
 
 nav.scrolling {
-    border-bottom-width: 1px;
-    box-shadow: 0 0 30px -20px white;
+    border-bottom: 3px solid white;
+    /*border-bottom-width: 1px;*/
+    /*box-shadow: 0 0 30px -20px white;*/
 }
 
 nav .menu {
