@@ -21,7 +21,7 @@
 
 	/** ABOUT */
 
-	.about-image {
+	.about-image, .privacy-image {
 			width: 90%;
 	}
 
@@ -53,22 +53,29 @@
 	}
 }
 @media only screen and (max-width: 1024px) {
-	.about-container h1{
+	.about-container h1, .privacy-container h1, .privacy-container h2{
 			text-align: center;
 		}
 
-	.about-text {
+	.about-text, .privacy-text {
 		margin: 0 auto;
 		width: 90%;
 	}
 
-	.about-image {
+	.about-image, .privacy-image {
 		margin: 0 auto;
 		margin-top: 50px;
 	}
 
 	.about-container {
 		margin: 0 auto;
+		justify-content: center;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.privacy-container {
+		margin: 75px auto;
 		justify-content: center;
 		display: flex;
 		flex-direction: column;

@@ -179,7 +179,7 @@ nav .icon {
 }
 
 .icon:hover {
-	filter: grayscale(0);
+	filter: none;
 }
 
 .icon-twitter {
@@ -232,7 +232,7 @@ nav .icon {
   color: white;
 }
 
-.about-text h1 span, #timeline h1 span, .team h1 span {
+.about-text h1 span, #timeline h1 span, .team h1 span, .privacy-text h1 span {
   color: #979797;
   border-right: .08em solid;
   animation: caret 1s steps(1) infinite;
@@ -563,6 +563,40 @@ footer .bottom {
 
 footer .bottom .slogan {
   text-align: right;
+}
+
+/* Privacy Section */
+.privacy-container {
+  margin: 75px auto;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+}
+
+.privacy-image {
+  align-self: center;
+  width: 40%;
+  height: 100%;
+}
+
+.privacy-text {
+  font-size: 20px;
+  text-align: justify;
+	max-width: 600px;
+}
+
+.privacy-text h1 {
+  font-size: 3rem;
+  color: white;
+}
+
+.privacy-container a {
+  color: #aaa;
+  transition: opacity 0.2s;
+}
+
+.privacy-container a:hover {
+  opacity: 0.8;
 }
 
 /** SCROLLX Classes */
