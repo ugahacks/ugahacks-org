@@ -575,8 +575,12 @@ footer .bottom .slogan {
 
 .privacy-image {
   align-self: center;
-  width: 40%;
+  width: 50%;
   height: 100%;
+}
+
+.privacy-image img {
+  width: 100%;
 }
 
 .privacy-text {
