@@ -575,7 +575,7 @@ footer .bottom .slogan {
 
 .privacy-image {
   align-self: center;
-  width: 50%;
+  width: 40%;
   height: 100%;
 }
 
@@ -594,8 +594,12 @@ footer .bottom .slogan {
   color: white;
 }
 
+.privacy-text h2 {
+  color: #fe3d40;
+}
+
 .privacy-container a {
-  color: #aaa;
+  color: #fe3d40;
   transition: opacity 0.2s;
 }
 
