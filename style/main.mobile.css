@@ -203,7 +203,15 @@
   	}
 
   	#timeline .event-card:nth-child(2) {
-    	margin-top: 350px;
+    	margin-top: 250px;
+  	}
+
+		#timeline .event-card:nth-child(4) {
+    	margin-top: 170px;
+  	}
+
+		#timeline .event-card:nth-child(5) {
+    	margin-top: 250px;
   	}
 }
 
@@ -239,7 +247,7 @@
 	    display: flex;
 	    flex-flow: column wrap;
 	    width: 1170px;
-	    height: 1650px;
+	    height: 1850px;
 	    /*Increase to add more cards*/
 	    margin: 0 auto;
   	}
