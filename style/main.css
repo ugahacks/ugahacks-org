@@ -246,7 +246,7 @@ nav .icon {
 
 .stats-container {
   margin: 0 auto;
-  width: 70%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   margin-top: 150px;
@@ -262,6 +262,7 @@ nav .icon {
 .stats-value {
   color: #fe3d40;
   font-size: 50px;
+  text-align: center;
 }
 
 .stats-name {
@@ -418,6 +419,10 @@ nav .icon {
   font-size: 3rem;
   color: white;
   margin-bottom: 100px;
+}
+
+.team h2 {
+  margin-bottom: 30px;
 }
 
 .team > .pure-g {
