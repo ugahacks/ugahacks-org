@@ -403,6 +403,8 @@ nav .icon {
 }
 
 .timeline-links:hover {
+  text-decoration: none;
+  color: #fe3d40;
 	opacity: 0.8;
 }
 
@@ -539,7 +541,7 @@ footer > div {
 }
 
 footer .container {
-	background: #221b1b;
+	background: #1b1a1a;
     font-size: 16px;
     line-height: 50px;
     width: auto;
@@ -562,7 +564,7 @@ footer .container {
 }
 
 footer .bottom {
-	background: #221b1b;
+	background: #1b1a1a;
   font-size: 12px;
 }
 
