@@ -186,6 +186,14 @@ nav .icon {
 	background-image: url(../icons/twitter.png);
 }
 
+.icon-linkedin {
+	background-image: url(../icons/linkedin.png);
+}
+
+.icon-website {
+	background-image: url(../icons/website.png);
+}
+
 .icon-facebook {
 	background-image: url(../icons/facebook.png);
 }
@@ -450,8 +458,8 @@ nav .icon {
     z-index: 1000;
     top: -20px;
     left: -30px;
-    height: 350px;
-    width: 220px;
+    height: 370px;
+    width: 230px;
     padding: 20px;
     border-radius: 15px;
     /*border: 3px solid rgba(0,0,0,1); -> looks real bad*/
@@ -607,6 +615,7 @@ footer .bottom .slogan {
 
 .privacy-container a {
   color: #fe3d40;
+  text-decoration: none;
   transition: opacity 0.2s;
 }
 
