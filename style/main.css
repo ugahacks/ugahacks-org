@@ -439,6 +439,10 @@ nav .icon {
 	margin-bottom: 20px;
 }
 
+.nav-item > a:hover {
+  color: #fe3d40;
+}
+
 .member {
 	position: relative;
 	width: 158px;
