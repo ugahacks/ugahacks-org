@@ -9,6 +9,10 @@
   100% { margin-bottom: 20px; }
 }
 
+.bootstrap-iso .nav-tabs {
+  border-bottom: 0px solid #dddddd;
+}
+
 
 html,
 body {
