@@ -334,6 +334,15 @@ nav .icon {
   order: 6;
 }
 
+/*#timeline .event-card:nth-child(even) .card-head::before {
+      width:15px;
+      height:15px;
+}
+
+#timeline .event-card:nth-child(odd) .card-head::before {
+      background-color: #000000;
+}*/
+
 #timeline .event-card-wrapper {
   position: relative;
   margin: auto;
@@ -357,7 +366,7 @@ nav .icon {
   z-index: 2;
 }
 
-.event-card .card-head {
+.event-card .card-head { 
   position: relative;
   display: flex;
   align-items: center;
@@ -365,6 +374,16 @@ nav .icon {
   font-weight: 400;
   background-color: #fe3d40;
 }
+
+/*.card-head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: 400;
+  right: 0.5em;
+  background-color: #fe3d40;
+}*/
 
 .number-box {
   display: inline;
