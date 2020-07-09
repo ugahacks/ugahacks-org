@@ -186,7 +186,7 @@
 
   	#timeline .event-card:nth-child(odd) .card-head::before {
     	/*left: 486px;*/
-    	left: 109%;
+    	left: 107.8%;
   	}
 
   	#timeline .event-card:nth-child(even) {
@@ -201,7 +201,7 @@
 
   	#timeline .event-card:nth-child(even) .card-head::before {
     	/*right: 486px;*/
-    	right: 109.25%;
+    	right: 108.05%;
   	}
 
   	#timeline .event-card:nth-child(2) {
