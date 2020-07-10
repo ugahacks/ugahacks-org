@@ -3,6 +3,11 @@
  * BACKGROUND: #21232c;
  */
 
+@media (min-width: 1200px) {
+.bootstrap-iso .container {
+    width: 1190px !important;
+  }
+}
 @keyframes pulse {
   0% { margin-bottom: 20px; }
   50% { margin-bottom: 0; }
