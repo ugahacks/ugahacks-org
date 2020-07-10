@@ -1,91 +1,25 @@
 const Main = new (function () {
-	/** Pixels required to swipedown to close the menu */
-	const MENU_CLOSE_SWIPE_THRESHOLD = 50;
-	let timer;
+	/** Register routers */
+	Router.registerState("", Router.action.scrollWindowTo(0))
+	Router.registerState("about", Router.action.scrollWindowToElement('[data-section="about"]'));
+	Router.registerState("timeline", Router.action.scrollWindowToElement('[data-section="timeline"]'));
+	Router.registerState("team", Router.action.scrollWindowToElement('[data-section="team"]'));
 
-	// private methods
-	/**
-	 * Adds an event to close the menu on swipe down
-	 */
-	function closeMenuOnSwipeDown() {
-		let start;
-		let touchStart = function (e) {
-			start = e.touches[0].clientY;
-		};
-		let touchMove = function (e) {
-			let current = e.touches[0].clientY;
+	/** SCROLLING ANIMATION USING ScrollX setup */
 
-			if (start - current > MENU_CLOSE_SWIPE_THRESHOLD) {
-				if ($('nav').hasClass('responsive-open')) {
-					toggleMenu();
+	// After 5px she should add the scorlling class to the nav before. If we go backwa
+	ScrollX.after(5, () => $('nav').addClass('scrolling'), () => $('nav').removeClass('scrolling'));
 
-					$(document).off('touchstart');
-					$(document).off('touchmove');
-				}
-			}
-		};
-		$(document).off('touchstart').on('touchstart', touchStart);
-		$(document).off('touchmove').on('touchmove', touchMove);
-	}
-	
-	/**
-	 * Open and close the mobile menu depending on the state of it.
-	 */
-	function toggleMenu () {
-		$('.menu-toggle').toggleClass('is-active');
-		if ($('nav').hasClass('slide-in')) {
-			$('nav').removeClass('slide-in');
-			setTimeout(function () {
-				$('nav').removeClass('responsive-open');
-			}, 250);
-		} else {
-			$('nav').addClass('responsive-open');
-			setTimeout(function () {
-				$('nav').addClass('slide-in');
-				// on swipe down
-				closeMenuOnSwipeDown();
-			}, 50);
-		}
-	}
+	let eventWrapperHeight = $(".event-card-wrapper").height();
+	ScrollX.addCallable("timelineProgress", (frameperc) => {
+		if (frameperc < 0.2) frameperc = 0;
+		if (frameperc > 0.8) frameperc = 1;
+		let height = eventWrapperHeight * frameperc;
 
-	/**
-	 * Activates the profile picture card
-	 */
-	function openProfileCard () {
-		clearTimeout(timer);
-		let t = $(this);
-
-		$('.card').removeClass('fade-in');
-		$('.card').next().removeClass('flip');
-		t.addClass('flip');
-
-		timer = setTimeout(function () {
-			t.prev().show();
-			setTimeout(function () {
-				t.prev().addClass('fade-in');
-			}, 50)
-		}, 150);
-	}
-
-	/**
-	 * Closes the profile picture card
-	 */
-	function closeProfileCard () {
-		clearTimeout(timer);
-		$('.card').removeClass('fade-in');
-		timer = setTimeout(() => {
-			$('.card').hide();
-			$('.card').next().removeClass('flip');
-		}, 200);
-	}
-
-	// dom 
-	$(document).ready(function () {
-		$('.team-picture').on('mouseover', openProfileCard);
-		$('.card').on('mouseleave', closeProfileCard);
-		$('.menu-toggle').on('click', toggleMenu);
+		document.querySelector('.timeline-progress').style.height = height + 'px';
 	});
+
+
+	/** Setup AOS */
+	AOS.init();
 })();
-
-
-

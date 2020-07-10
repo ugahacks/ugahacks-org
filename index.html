@@ -3605,41 +3605,17 @@
 			</div>
 		</footer>
 
+
   		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  		<script src="js/ticker.js"></script>
-  		<script src="js/main.js"></script>
-  		<!-- Scrolling animatons -->
 	    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  		<!-- TODO: Migrate over to using webpack/gulp to combine and minify. -->
+  		<script src="js/ticker.js"></script>
+  		<script src="js/menu.js"></script>
+  		<script src="js/profile-card.js"></script>
 		<script src="js/scrollx.js"></script>
 		<script src="js/router.js"></script>
-  		<script>
-  			Router.registerState("", Router.action.scrollWindowTo(0))
-  			Router.registerState("about", Router.action.scrollWindowToElement('[data-section="about"]'));
-  			Router.registerState("timeline", Router.action.scrollWindowToElement('[data-section="timeline"]'));
-  			Router.registerState("team", Router.action.scrollWindowToElement('[data-section="team"]'));
 
-  			// After 5px she should add the scorlling class to the nav before. If we go backwa
-			ScrollX.after(5, () => $('nav').addClass('scrolling'), () => $('nav').removeClass('scrolling'));
-
-			let eventWrapperHeight = $(".event-card-wrapper").height();
-			ScrollX.addCallable("timelineProgress", (frameperc) => {
-				if (frameperc < 0.2) frameperc = 0;
-				if (frameperc > 0.8) frameperc = 1;
-				let height = eventWrapperHeight * frameperc;
-
-				document.querySelector('.timeline-progress').style.height = height + 'px';
-			});
-
-			AOS.init();
-  		</script>
+		<!-- Main has to be loaded last -->
+		<script src="js/main.js"></script>
 	</body>
-	<!--<div style="
-	    width: 100%;
-	    position: fixed;
-	    top: 50%;
-	    left: 0px;
-	    height: 1px;
-	    background: blue;
-	    z-index: 1000;
-	"></div>-->
 </html>
