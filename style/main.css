@@ -133,12 +133,28 @@ nav ul {
 	text-transform: uppercase;
 }
 
+
 nav li {
 	display: inline-block;
 	font-size: 20px;
 	font-weight: 200;
     color: white;
     margin-right: 10px;
+}
+
+nav button {
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  background-color: transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  font-size: 20px;
+  font-weight: 200;
+  color: white;
+  margin-right: 10px;
+  outline: none;
 }
 
 nav li:last-child {
