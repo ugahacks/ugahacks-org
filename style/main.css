@@ -167,6 +167,10 @@ nav button {
   outline: none;
 }
 
+nav button:hover {
+  color: #fe3d40;
+}
+
 nav li:last-child {
 	margin-right: 0;
 }
