@@ -14,7 +14,7 @@ body.modal-open .site-content{
 
 @media (min-width: 1200px) {
 .bootstrap-iso .container {
-    width: 1190px !important;
+    width: 1250px !important;
   }
 }
 @keyframes pulse {
@@ -26,7 +26,6 @@ body.modal-open .site-content{
 .bootstrap-iso .nav-tabs {
   border-bottom: 0px solid #dddddd;
 }
-
 
 html,
 body {
