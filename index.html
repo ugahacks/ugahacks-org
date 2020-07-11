@@ -1,201 +1,3679 @@
-<!DOCTYPE html>
-<html>
-<title>UGAHACKS</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="assets/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Poppins", sans-serif;}
-body, html {
-  height: 100%;
-  color: #777;
-  line-height: 1.8;
-}
+<!doctype html>
+<html lang="en" dir="ltr">
+	<head>
+		<title>
+        	UGAHacks
+	    </title>
+	    <meta name="description" content="UGAHacks Homepage" />
+	    <meta charset="utf-8" />
+	    <meta name="theme-color" content="#21232c">
+			<link rel="apple-touch-icon" sizes="180x180" href="icons/favicons/apple-touch-icon.png">
+			<link rel="icon" type="image/png" sizes="32x32" href="icons/favicons/favicon-32x32.png">
+			<link rel="icon" type="image/png" sizes="16x16" href="icons/favicons/favicon-16x16.png">
+			<link rel="manifest" href="icons/favicons/site.webmanifest">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2 {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+	    <!-- Bootstrap for Centered Pill Tabs -->
+		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+		<link href="style/bootstrap-iso.css" rel="stylesheet" type="text/css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-.bgimg-1 {
-  background-color: #21232c;
-  min-height: 100%;
-}
+		<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+		<link href="style/hamburger.css" rel="stylesheet" type="text/css" />
+		<link href="style/main.css" rel="stylesheet" type="text/css" />
+		<link href="style/main.mobile.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.1/build/base-min.css">
+		<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css" />
 
-.bgimg-2 {
-  background-color: #BA0C2F;
-  min-height: 400px;
-}
+		<!-- Scrolling animatons -->
+	    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	</head>
+	<body>
+		<nav>
+			<ul class='menu'>
+				<li class='logo'><a data-link="">UGAHacks</a></li>
+				<li><a data-link="about">About US</a></li>
+				<li><a data-link="timeline">Events</a></li>
+				<li><a data-link="team">Team</a></li>
+				<li><a data-link="blog">Blog</a></li>
+				<li><a href="mailto:hello@ugahacks.com">Contact Us</a></li>
+			</ul>
+			<div class='social'>
+				<button class="hamburger hamburger--collapse mobile-only menu-toggle" type="button">
+				  <span class="hamburger-box">
+				    <span class="hamburger-inner"></span>
+				  </span>
+				</button>
+				<a href="https://www.facebook.com/ugahacks" target="_BLANK"><div class='icon icon-facebook'></div></a>
+				<a href="https://www.instagram.com/ugahacks/" target="_BLANK"><div class='icon icon-instagram'></div></a>
+				<a href="https://github.com/ugahacks" target="_BLANK"><div class='icon icon-github'></div></a>
+				<a href="https://twitter.com/ugahacks" target="_BLANK"><div class='icon icon-twitter'></div></a>
+			</div>
+			<div style="clear:both"></div>
+		</nav>
 
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
+		<section class="header">
+			<div class="laptop left"></div>
+			<div class="inspiration right">
+				<h1>Boot up your dreams.
+					<br>
+					<span class="txt-rotate" data-period="2000"
+						  data-rotate='[ "Create.", "Inspire.", "Code."]'></span>
+				</h1>
+			</div>
+			<a data-link="about" class='arrow'><div class='icon icon-down-arrow' style='filter:grayscale(0);'></div></a>
+		</section>
 
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
-  .bgimg-1, .bgimg-2 {
-    background-attachment: scroll;
-    min-height: 400px;
-  }
-}
-</style>
-<body>
+		<section data-section="about" class="about-container">
+		    <div class="about-text">
+		        <h1>About Us<span></span></h1>
+		        <div data-aos="fade-right" data-aos-once="true" class="">
+							<p data-aos="fade-right" data-aos-once="true" data-aos-delay="0">
+								UGAHacks is a 501 (c)(3) organization that hosts an annual 48 hour programming sleepover which takes place in Athens, Georgia at the University of Georgia.
+							</p>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="/" class="w3-bar-item w3-button" style="color: #fff;">UGAHACKS</a>
-    <a href="timeline.html" class="w3-bar-item w3-button w3-hide-small" style="color: #fff;"><i class="fa fa-th"></i> EVENTS</a>
-    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small" style="color: #fff;"><i class="fa fa-envelope"></i> CONTACT</a>
-  </div>
+							<p data-aos="fade-right" data-aos-once="true" data-aos-delay="50">We brought together 500+ people from all over the nation to a friendly environment where they can think, create, and bring ideas to life.</p>
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="timeline.html" class="w3-bar-item w3-button" onclick="toggleFunction()">EVENTS</a>
-    <a href="contact.html" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-  </div>
-</div>
+					 		<p data-aos="fade-right" data-aos-once="true" data-aos-delay="100">Every year there is a new adventure to explore and new prizes to be won. Each event encompasses different people to meet, workshops to learn from, food to enjoy, and side events to take some time to relax.</p>
+					 		<p data-aos="fade-right" data-aos-once="true" data-aos-delay="150">Every year it takes a team of 20+ organizers,  various Sponsors, and a multitude mentors to make sure the event is successful.</p>
+					 		<p data-aos="fade-right" data-aos-once="true" data-aos-delay="200">UGAHacks is an event that prides itself as being like non-other where hackers, sponsors, and mentors can come together and not only have an environment to work and create anything their mind can think of but purely enjoy their time while they are there.</p>
+		        </div>
+		        <br>
+		        <div data-aos="fade-left" data-aos-delay="300" data-aos-once="true">
+							<p data-aos="fade-right" data-aos-once="true" data-aos-delay="250">UGAHacks has seen tremendous growth since its creation in 2015. We have grown from 200 hackers, 6 sponsors, and less than 10 mentors to now over 500 plus hackers, 15 plus sponsors, and over 15 mentors.</p>
+							<p data-aos="fade-right" data-aos-once="true" data-aos-delay="300">We also have become a recognizable brand with the cutest mascot, Byte, who is seen making an appearance at every event we have.</p>
+							<p data-aos="fade-right" data-aos-once="true" data-aos-delay="350">We are always looking for new partners and new people to be apart of our event each year in order to make it even better than the last, so if you are interested, please feel free to contact us using the link above.</p>
+							<p data-aos="fade-right" data-aos-once="true" data-aos-delay="400">As an organization, we take great pride in our growth and are excited to see our event reach even greater heights.</p>
 
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">GRAPHIC <span class="w3-hide-small">GOES</span> HERE</span>
-  </div>
-</div>
+		        </div>
+		    </div>
+		    <div class="about-image">
+		        <img src="img/laptopbyte.svg" alt="Byte with a Laptop">
+		    </div>
+		</section>
 
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">ABOUT UGAHACKS</h3>
-  <p class="w3-center"><em>Catchy slogan or some text?</em></p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-    qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b></i>UGAHACKS TEAM</b></p><br>
-      <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Org" width="500" height="333">
-    </div>
+	    <section class="stats-container">
+	      	<div data-aos="fade-right" data-aos-delay="150" data-aos-once="true" class="stats-body">
+	        	<div class="stats-value">
+	        		25+
+	        	</div>
+	        	<div class="stats-name">
+							Schools Represented
+	        	</div>
+	     	</div>
+	      	<div data-aos="fade-right" data-aos-delay="300" data-aos-once="true" class="stats-body">
+	        	<div class="stats-value">
+	          		1200+
+	        	</div>
+	        	<div class="stats-name">
+	        	   Hackers
+	        	</div>
+	      	</div>
+	      	<div data-aos="fade-right" data-aos-delay="450" data-aos-once="true" class="stats-body">
+	       		<div class="stats-value">
+	        		180+
+	        	</div>
+	        	<div class="stats-name">
+	        	   Projects
+	        	</div>
+	      	</div>
+	      	<div data-aos="fade-right" data-aos-delay="600" data-aos-once="true" class="stats-body">
+	        	<div class="stats-value">
+	        	  40+
+	        	</div>
+	        	<div class="stats-name">
+	        	   Organizers
+	        	</div>
+	      	</div>
+	      	<div data-aos="fade-right" data-aos-delay="750" data-aos-once="true" class="stats-body">
+	      		<div class="stats-value">
+	        		#19
+	        	</div>
+	        	<div class="stats-name">
+	           	MLH Hackathon Ranking
+	        	</div>
+	      </div>
+	    </section>
 
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-  </div>
- 
-</div>
+	    <section data-section="timeline" id="timeline">
+		    <h1>Past Events<span></span></h1>
 
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">14+</span><br>
-    Sponsors
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">555+</span><br>
-    Projects Submitted
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">15+</span><br>
-    Winners
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">6</span><br>
-    Hackathons
-  </div>
-</div>
+		    <div data-scrollx data-call-on="timelineProgress" style="position: relative;">
+		    	<div class='timeline-progress desktop-only'></div>
+			    <div class="event-card-wrapper">
+			    	<div class="event-card" data-aos="fade-right" data-aos-once="true" >
+			        	<div class="card-head">
+			          		<div class="number-box">
+			            		<span>2020</span>
+			          		</div>
+			          		<h2>UGAHacks 5</h2>
+			        	</div>
+			        	<div class="card-body">
+			          		<p>UGAHacks 5 was hosted at the Zell Miller Learning Center, which would become the new home for UGAHacks.
+											The 5th rendition of UGAHacks was the largest we have seen in statistical numbers with 500 participants, 14 sponsors,
+											15 mentors, and a record <a class="timeline-links" href="https://ugahacks5.devpost.com/">70 project submissions</a>. UGAHacks 5 was themed around bringing 'otherworldly' ideas to life with
+											our mascot, Byte, heading to explore space, but from the event perspective UGAHacks 5 could be
+											considered the 'Launch Pad' that became the new standard for all future UGAHacks events.</p>
+										<a href="https://5.ugahacks.com/">
+			          		<img src="img/timeline-photos/hacks5banner.jpg" alt="UGAHacks 5 banner">
+										</a>
+			        	</div>
+			      	</div>
 
-<!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">UPCOMING EVENTS</span>
-  </div>
-</div>
+			      	<div class="event-card" data-aos="fade-left" data-aos-once="true">
+			        	<div class="card-head">
+			          		<div class="number-box">
+			            		<span>2019</span>
+			          		</div>
+			          		<h2>UGAHacks 4</h2>
+			        	</div>
+			        	<div class="card-body">
+			          		<p>UGAHacks 4 returned to its original home at the Lamar Dodd School of Art which allowed to connect and have a greater presence within the University that year.
+											This event saw the largest number of participants with 450, sponsors with 11, mentors with 15, and over <a class="timeline-links" href="https://ugahacks4.devpost.com/">50 project submissions</a>. The fourth UGAHacks event
+											also experienced the greatest diversity of hackers from so many different schools across the entire world. UGAHacks 4 allowed for a new sprouting of ideas and possibilities for
+											all future events which were once  thought of as unattainable.</p>
+										<a href="https://4.ugahacks.com/">
+			          			<img src="img/timeline-photos/hacks4banner.png" alt="UGAHacks 4 Banner">
+										</a>
+			        	</div>
+			      	</div>
 
-<!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <p class="w3-center"><em>Here are some lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
+			      	<div class="event-card" data-aos="fade-right" data-aos-once="true">
+			        	<div class="card-head">
+			          		<div class="number-box">
+			            		<span>2018</span>
+			          		</div>
+			          		<h2>UGAHacks 3</h2>
+			        	</div>
+			        	<div class="card-body">
+			          		<p>UGAHacks 3 was hosted at Thinc Studios once again but this event did not fail to exceed expectations as its predecessors once did.
+											There was a change in leadership which came with a new organizational structure and new way of planning a hackathon. The third rendition of
+											our event created a recognizable brand which allowed hackers, sponsors, and partners to see a new vision that UGAHacks was about to embark upon, one that they had to be a part of.
+											We saw a total of 150 participants, 10 sponsors/partners, and over <a class="timeline-links" href="https://ugahacks3.devpost.com/">26 submissions for projects</a>. UGAHacks 3 was centered around the possibilities that could come from partnering with a team around a table just as UGAHacks 3
+											and future events after came to life - with a few students coming around a table and communicating new ideas.</p>
+											<a href="https://3.ugahacks.com/">
+												<img src="img/timeline-photos/hacks3banner.png" alt="UGAHacks 3 Banner">
+											</a>
+			        	</div>
+			      	</div>
 
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
-    <div class="w3-row-padding w3-center w3-section">
-      <img src="/w3images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="UPCOMING EVENT">
-    </div>
+			      	<div class="event-card" data-aos="fade-left" data-aos-once="true">
+			        	<div class="card-head">
+			          		<div class="number-box">
+			            		<span>2017</span>
+			          		</div>
+			          		<h2>UGAHacks 2</h2>
+			        	</div>
+			        	<div class="card-body">
+			          		<p>UGAHacks 2 moved to a new home in Downtown Athens, Thinc. Studios, which helped created a more hacker friendly environment
+											with better work spaces, bean bag chairs, and modern presentation rooms for unique workshops. The second UGAHacks event saw
+											great growth with more resources to add key features to the event such as food, a larger venue, and better prizes. This all
+											fueled the desire for more hackers to come and create a standard of awesomeness moving forward.</p>
+										<a href="https://ugahacks.herokuapp.com/">
+										<img src="img/timeline-photos/hacks2banner.png" alt="UGAHacks 2 Banner">
+										</a>
+			        	</div>
+			      	</div>
 
-<!--     <div class="w3-col m3">
-      <img src="/w3images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="PAST EVENT">
-    </div>
+			      	<div class="event-card" data-aos="fade-right" data-aos-once="true">
+			        	<div class="card-head">
+			          		<div class="number-box">
+			            		<span>2016</span>
+			          		</div>
+			          		<h2>UGAHacks 1</h2>
+			        	</div>
+			        	<div class="card-body">
+			          		<p>The original UGAHacks event began at the Lamar Dodd School of Art. The first event of its kind at UGA was special because two roommates wanted to bring an underrepresented
+											community of students within the Computer Science and Engineering schools together for a weekend of fun and unlimited creativity.
+											The first version of our event had humble beginnings with less than 100 participants and <a class="timeline-links" href="https://ugahacks.devpost.com/">36 submissions for projects</a>. UGAHacks became the new safe haven for hackers can come together to learn, create and share!</p>
+			          		<img src="img/timeline-photos/hacks1banner.png" alt="UGAHacks 1 Banner">
+			        	</div>
+			      	</div>
+			    </div>
+			</div>
+			<br>
+			<br>
+		    <div id="timeline-end">
+		      <h2>2015 - The initial UGAHacks team formed with the plan of bringing the hacking spirit to Athens, Georgia</h2>
+		    </div>
+		</section>
 
-    <div class="w3-col m3">
-      <img src="/w3images/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="PAST EVENT">
-    </div>
+		<section data-section="team" class='team'>
+			<div class="container">
+				<h1>Meet the team!<span></span></h1>
+			</div>
+		</section>
 
-    <div class="w3-col m3">
-      <img src="/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="PAST EVENT">
-    </div> -->
-  </div>
+		<div class="bootstrap-iso">
+		<div class="container">
+			<ul class="nav nav-tabs nav-center" role="tablist">
+				<li class="nav-item"><a data-toggle="tab" class="active nav-link" href="#team6">UGAHacks 6</a></li>
+				<li class="nav-item"><a data-toggle="tab" class="active nav-link"href="#team5">UGAHacks 5</a></li>
+				<li class="nav-item"><a data-toggle="tab" class="active nav-link"href="#team4">UGAHacks 4</a></li>
+				<li class="nav-item"><a data-toggle="tab" class="active nav-link"href="#team3">UGAHacks 3</a></li>
+				<li class="nav-item"><a data-toggle="tab" class="active nav-link"href="#team2">UGAHacks 2</a></li>
+				<li class="nav-item"><a data-toggle="tab" class="active nav-link"href="#team1">UGAHacks 1</a></li>
+			</ul>
+		</div>
 
-  <div class="w3-row-padding w3-center w3-section">
-    <a href="timeline.html" class="w3-button w3-padding-large w3-light-grey" style="margin-top:32px" onclick="toggleFunction()">SEE PAST EVENTS</a>
-  </div>
-</div>
+		<div class="tab-content">
+			<div id="team6" class="tab-pane fade in active">
+				<section data-section="team6" class='team'>
+					<!--<h1>Meet the team!<span></span></h1>-->
+					<h2>Mascot</h2>
+					<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+						<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+							<div class="card">
+								<div class="pure-g">
+												<div class="pure-u-1-1">
+													<img src="img/team-photos/personal/byte.png" alt="Avatar">
+												</div>
+												<div class="pure-u-1-1 info">
+													<strong>Byte</strong>
+													<div>Mascot</div>
+													<p>"Building the Future!"</p>
+												</div>
+												<div class="pure-u-1-1">
+													<div class='icon icon-facebook'></div>
+													<div class='icon icon-instagram'></div>
+													<div class='icon icon-github'></div>
+													<div class='icon icon-twitter'></div>
+												</div>
+								</div>
+							</div>
+							<div class="team-picture">
+								<div class="team-picture-inner">
+									<div class="team-picture-front">
+										<img src="img/team-photos/bitmoji/byte.png" alt="Avatar">
+									</div>
+									<div class="team-picture-back">
+										<img src="img/team-photos/personal/byte.png" alt="Avatar">
+									</div>
+								</div>
+							</div>
+							<div class="summary">
+								<strong>Byte</strong>
+							</div>
+						</div>
+					</div>
+					<h2>Directors</h2>
+					<div class='pure-g'>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/glen-george.jpg" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Glen George</strong>
+									        	<div>Lead Director</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+									        	<a href="https://www.linkedin.com/in/glen-j-george/"><div class='icon icon-linkedin'></div></a>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/bitmoji/glen-george.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/glen-george.jpg" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Glen George</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/shawn-holman.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Yi Jian MaMa</strong>
+									        	<div>Finance Director</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+									        	<a href="https://www.linkedin.com/in/yi-jian-ma-ma-555199164/"><div class='icon icon-linkedin'></div></a>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/bitmoji/yi-jian.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/shawn-holman.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Yi Jian MaMa</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/sydney-nelms.jpg" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Sydney Nelms</strong>
+									        	<div>Logistics Director</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+									        	<a href="https://www.linkedin.com/in/sydney-nelms-1a1874191/"><div class='icon icon-linkedin'></div></a>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/bitmoji/sydney-nelms.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/sydney-nelms.jpg" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Sydney Nelms</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/jenny-kim.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Jenny Kim</strong>
+									        	<div>Marketing Director</div>
+									        	<p>"Rainy day = Noodles"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<a href="https://www.linkedin.com/in/jenny-kim-b005121a4/"><div class='icon icon-linkedin'></div></a>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/bitmoji/jenny.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/jenny-kim.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Jenny Kim</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/jeffery-john.jpg" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Jeffery John</strong>
+									        	<div>Sponsorship Director</div>
+									        	<p>"Go Dawgs!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<a href="https://www.instagram.com/jefferyjohn_/"><div class='icon icon-instagram'></div></a>
+									        	<a href="https://github.com/jefferyjohn"><div class='icon icon-github'></div></a>
+									        	<a href="https://twitter.com/jefferyjohn_"><div class='icon icon-twitter'> </div></a>
+														<a href="https://www.linkedin.com/in/jefferyjohn/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://jefferyajohn.com/"><div class='icon icon-website'></div></a>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/bitmoji/jeffery-john.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/jeffery-john.jpg" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Jeffery John</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/kane-du.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Kane Du</strong>
+									        	<div>Web Director</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/kane-du-517277172/"><div class='icon icon-linkedin'></div></a>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/bitmoji/kane-du.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/kane-du.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Kane Du</strong>
+								</div>
+							</div>
+						</div>
+					</div>
+						<h2>Advisors</h2>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/danny-lee.jpg" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Danny Lee</strong>
+									        	<div>Advisor</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+									        	<a href="https://www.linkedin.com/in/dannylee25/"><div class='icon icon-linkedin'></div></a>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/bitmoji/danny-lee.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/danny-lee.jpg" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Danny Lee</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/jin-jeong.jpg" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Jin Jeong</strong>
+									        	<div>Advisor</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+									        	<a href="https://www.linkedin.com/in/jin-jeong/"><div class='icon icon-linkedin'></div></a>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/bitmoji/jin-jeong.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/jin-jeong.jpg" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Jin Jeong</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/jennifer-ly.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Jennifer Ly</strong>
+									        	<div>Advisor</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/ngoc-jennifer-ly/"><div class='icon icon-linkedin'></div></a>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/bitmoji/jennifer-ly.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/jennifer-ly.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Jennifer Ly</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/mohd-hasan.jpg" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Mohd (TJ) Hasan</strong>
+									        	<p>"Those who are seen dancing are thought to be insane by those who cannot hear the music."</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<a href="https://github.com/tjhasan"><div class='icon icon-github'></div></a>
+									        	<a href="https://www.linkedin.com/in/mohdhasan10/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://tjhasan.github.io/"><div class='icon icon-website'></div></a>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/bitmoji/mohd-hasan.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/mohd-hasan.jpg" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Mohd (TJ) Hasan</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/paul-hansa.jpg" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Paul Hansa</strong>
+									        	<div>Advisor</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/phansa/"><div class='icon icon-linkedin'></div></a>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/bitmoji/paul-hansa.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/paul-hansa.jpg" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Paul Hansa</strong>
+								</div>
+							</div>
+						</div>
+						<h2>Logistics Team</h2>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/kevin-tang.png" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Kevin Tang</strong>
+														<div>Logistics Team</div>
+														<p>"Hack on!"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<a href="https://www.linkedin.com/in/kevin-tang-101a62190/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/bitmoji/kevin-tang.png" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/kevin-tang.png" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Kevin Tang</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/kyle-aban.png" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Kyle Aban</strong>
+														<div>Logistics Team</div>
+														<p>"My passion is code!"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<div class='icon icon-facebook'></div>
+														<div class='icon icon-instagram'></div>
+														<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/kyle-aban/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/bitmoji/kyle-aban.png" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/kyle-aban.png" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Kyle Aban</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/miranda-gomez.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Miranda Gomez</strong>
+									        	<p>"What matters in life is not what happens to you but what you remember and how"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<a href="https://www.linkedin.com/in/miranda-gomez-puche/"><div class='icon icon-linkedin'></div></a>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/bitmoji/miranda-gomez.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/miranda-gomez.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Miranda Gomez</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/stefan-tobler.jpg" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Stefan Tobler</strong>
+									        	<p>"No mom I don't know what error code 27 means on the TV"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<a href="https://github.com/stefantobler"><div class='icon icon-github'></div></a>
+									        	<a href="https://twitter.com/stefanltobler"><div class='icon icon-twitter'></div></a>
+														<a href="https://www.linkedin.com/in/stefantobler"><div class='icon icon-linkedin'></div></a>
+														<a href="https://stefantobler.com"><div class='icon icon-website'></div></a>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/bitmoji/stefan-tobler.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/stefan-tobler.jpg" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Stefan Tobler</strong>
+								</div>
+							</div>
+						</div>
+						<h2>Marketing Team</h2>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/aidan-ostapko.png" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Aidan Ostapko</strong>
+														<div>Marketing Team</div>
+														<p>"I make things move"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<div class='icon icon-facebook'></div>
+														<div class='icon icon-instagram'></div>
+														<div class='icon icon-github'></div>
+														<div class='icon icon-twitter'></div>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/bitmoji/aidan-ostapko.png" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/aidan-ostapko.png" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Aidan Ostapko</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/annie-lian.jpg" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Annie Lian</strong>
+														<div>Marketing Advisor</div>
+														<p>"My passion is code!"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<div class='icon icon-facebook'></div>
+														<div class='icon icon-instagram'></div>
+														<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/annie-lian/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/bitmoji/annie-lian.png" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/annie-lian.jpg" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Annie Lian</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/felise-wen.jpg" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Felise Wen</strong>
+														<div>Marketing Advisor</div>
+														<p>"Opinions on Frozen Pop Tarts?"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<a href="https://www.instagram.com/feliseeeeenavidad/"><div class='icon icon-instagram'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/bitmoji/felise-wen.png" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/felise-wen.jpg" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Felise Wen</strong>
+								</div>
+							</div>
+						</div>
+						<h2>Sponsorship Team</h2>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/amanda-yang.jpg" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Amanda Yang</strong>
+														<div>Sponsorship Advisor</div>
+														<p>"My passion is code!"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<div class='icon icon-facebook'></div>
+														<div class='icon icon-instagram'></div>
+														<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/amanda-yang-2019/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/bitmoji/amanda-yang.png" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/amanda-yang.jpg" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Amanda Yang</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/chunwing-ng.png" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Chunwing Ng</strong>
+														<p>"The only time I'm not on caffeine is when I'm asleep "</p>
+													</div>
+													<div class="pure-u-1-1">
+														<a href="https://www.linkedin.com/in/chunwing-ng/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/bitmoji/chunwing.png" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/chunwing-ng.png" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Chunwing Ng</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/connor-cummings.jpg" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Connor Cummings</strong>
+														<div>Sponsorship Team</div>
+														<p>"My passion is code!"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<div class='icon icon-facebook'></div>
+														<div class='icon icon-instagram'></div>
+														<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/connor-cummings-47905216b/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/bitmoji/connor-cummings.png" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/connor-cummings.jpg" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Connor Cummings</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/shawn-holman.png" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Keshav Raviprakash</strong>
+														<div>Sponsorship Team</div>
+														<p>"My passion is code!"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<div class='icon icon-facebook'></div>
+														<div class='icon icon-instagram'></div>
+														<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/keshav-raviprakash-638b11113/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/bitmoji/keshav.png" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/shawn-holman.png" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Keshav Raviprakash</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/sameer-annavarapu.png" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Sameer Annavarapu</strong>
+														<p>"Never regret anythin that made you smile"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<a href="https://www.instagram.com/sameer_annavarapu/"><div class='icon icon-instagram'></div></a>
+														<a href="https://www.linkedin.com/in/sameer-annavarapu/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/bitmoji/sameer-annavarapu.png" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/sameer-annavarapu.png" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Sameer Annavarapu</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/shivani-nanda.jpg" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Shivani Nanda</strong>
+									        	<div>Sponsorship Advisor</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/shivaninanda/"><div class='icon icon-linkedin'></div></a>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/bitmoji/shivani-nanda.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/shivani-nanda.jpg" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Shivani Nanda</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/sudhan-chitgopkar.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Sudhan Chitgopkar</strong>
+									        	<div>Sponsorship Team</div>
+									        	<p>"Some flies are too awesome for the wall"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<a href="https://www.facebook.com/sudhan.chitgopkar/"><div class='icon icon-facebook'></div></a>
+									        	<a href="https://www.instagram.com/not.sudhan/"><div class='icon icon-instagram'></div></a>
+									        	<a href="https://github.com/sudhanchitgopkar"><div class='icon icon-github'></div></a>
+														<a href="https://www.linkedin.com/in/sudhanchitgopkar/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://sudhanchitgopkar.com"><div class='icon icon-website'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/bitmoji/sudhan-chitgopkar.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/sudhan-chitgopkar.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Sudhan Chitgopkar</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/shawn-holman.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Venusly Yang</strong>
+									        	<div>Sponsorship Team</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/venusly-yang/"><div class='icon icon-linkedin'></div></a>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/bitmoji/venusly-yang.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/shawn-holman.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Venusly Yang</strong>
+								</div>
+							</div>
+						</div>
+						<h2>Web Team</h2>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/andrei-spatariu.jpg" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Andrei Spatariu</strong>
+									        	<div>Web Advisor</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<a href="https://github.com/andros415"><div class='icon icon-github'></div></a>
+														<a href="https://www.linkedin.com/in/andrei-s/"><div class='icon icon-linkedin'></div></a>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/bitmoji/andrei-spatariu.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/andrei-spatariu.jpg" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Andrei Spatariu</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/danny-lopez.jpg" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Danny Lopez</strong>
+														<div>Web Advisor</div>
+														<p>"My passion is code!"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<div class='icon icon-facebook'></div>
+														<div class='icon icon-instagram'></div>
+														<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/dlopez1212/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/bitmoji/danny-lopez.png" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/danny-lopez.jpg" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Danny Lopez</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/emmanuel-oni.jpg" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Emmanuel Oni</strong>
+									        	<p>"The universe is change and life is opinion"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<a href="https://github.com/emmanoni"><div class='icon icon-github'></div></a>
+									        	<a href="https://twitter.com/milkywaysalad"><div class='icon icon-twitter'></div></a>
+														<a href="https://www.linkedin.com/in/emmanoni/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.milkywaysalad.com"><div class='icon icon-website'></div></a>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/bitmoji/emmanuel.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/emmanuel-oni.jpg" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Emmanuel Oni</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/neal-patel.jpg" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Neal Patel</strong>
+														<div>Web Team</div>
+														<p>"Space, reading, coding."</p>
+													</div>
+													<div class="pure-u-1-1">
+														<a href="https://nealdotpy.dev"><div class='icon icon-website'></div></a>
+														<a href="https://github.com/nealdotpy"><div class='icon icon-github'></div></a>
+														<a href="https://www.linkedin.com/in/thatnealpatel/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/bitmoji/neal-patel.png" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/neal-patel.jpg" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Neal Patel</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/lana-kelly.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Lana Kelly</strong>
+									        	<div>Web Team</div>
+									        	<p>"Your voice matters. Vote!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<a href="https://www.instagram.com/elhanakelly/"><div class='icon icon-instagram'></div></a>
+														<a href="https://www.linkedin.com/in/elhana/"><div class='icon icon-linkedin'></div></a>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/bitmoji/lana-kelly.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/lana-kelly.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Lana Kelly</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/shawn-holman.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Shawn Holman</strong>
+									        	<div>Web Team</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/shawn-holman/"><div class='icon icon-linkedin'></div></a>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/bitmoji/shawn-holman.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/shawn-holman.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Shawn Holman</strong>
+								</div>
+							</div>
+						</div>
+				</section>
+			</div>
 
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
+			<div id="team5" class="tab-pane fade">
+				<section data-section="team5" class='team'>
+					<!--<h1>Meet UGAHacks 5!<span></span></h1>-->
+					<h2>Mascot</h2>
+					<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+						<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+							<div class="card">
+								<div class="pure-g">
+												<div class="pure-u-1-1">
+													<img src="img/team-photos/personal/byte-5.png" alt="Avatar">
+												</div>
+												<div class="pure-u-1-1 info">
+													<strong>Byte</strong>
+													<div>Mascot</div>
+													<p>"Boot up your dreams!"</p>
+												</div>
+												<div class="pure-u-1-1">
+													<div class='icon icon-facebook'></div>
+													<div class='icon icon-instagram'></div>
+													<div class='icon icon-github'></div>
+													<div class='icon icon-twitter'></div>
+												</div>
+								</div>
+							</div>
+							<div class="team-picture">
+								<div class="team-picture-inner">
+									<div class="team-picture-front">
+										<img src="img/team-photos/bitmoji/byte.png" alt="Avatar">
+									</div>
+									<div class="team-picture-back">
+										<img src="img/team-photos/personal/byte-5.png" alt="Avatar">
+									</div>
+								</div>
+							</div>
+							<div class="summary">
+								<strong>Byte</strong>
+							</div>
+						</div>
+					</div>
+					<h2>Directors</h2>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/mohd-hasan.jpg" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Mohd (TJ) Hasan</strong>
+														<p>Lead Director</p>
+									        	<p>"Those who are seen dancing are thought to be insane by those who cannot hear the music."</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<a href="https://github.com/tjhasan"><div class='icon icon-github'></div></a>
+									        	<a href="https://www.linkedin.com/in/mohdhasan10/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://tjhasan.github.io/"><div class='icon icon-website'></div></a>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/personal/mohd-hasan.jpg" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/mohd-hasan.jpg" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Mohd (TJ) Hasan</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/amy-yang.jpg" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Amy Yang</strong>
+														<div>Finance Director</div>
+														<p>"My passion is code!"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<div class='icon icon-facebook'></div>
+														<div class='icon icon-instagram'></div>
+														<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/amy-yang-2bba64102/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/personal/amy-yang.jpg" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/amy-yang.jpg" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Amy Yang</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/glen-george.jpg" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Glen George</strong>
+														<div>Logistics Director</div>
+														<p>"My passion is code!"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<div class='icon icon-facebook'></div>
+														<div class='icon icon-instagram'></div>
+														<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/glen-j-george/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/personal/glen-george.jpg" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/glen-george.jpg" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Glen George</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/annie-lian.jpg" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Annie Lian</strong>
+														<div>Marketing Director</div>
+														<p>"My passion is code!"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<div class='icon icon-facebook'></div>
+														<div class='icon icon-instagram'></div>
+														<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/annie-lian/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/personal/annie-lian.jpg" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/annie-lian.jpg" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Annie Lian</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/amanda-yang.jpg" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Amanda Yang</strong>
+														<div>Sponsorship Co-director</div>
+														<p>"My passion is code!"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<div class='icon icon-facebook'></div>
+														<div class='icon icon-instagram'></div>
+														<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/amanda-yang-2019/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/personal/amanda-yang.jpg" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/amanda-yang.jpg" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Amanda Yang</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/shivani-nanda.jpg" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Shivani Nanda</strong>
+														<div>Sponsorship Co-director</div>
+														<p>"My passion is code!"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<div class='icon icon-facebook'></div>
+														<div class='icon icon-instagram'></div>
+														<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/shivaninanda/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/personal/shivani-nanda.jpg" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/shivani-nanda.jpg" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Shivani Nanda</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/andrei-spatariu.jpg" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Andrei Spatariu</strong>
+														<div>Web Director</div>
+														<p>"My passion is code!"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<a href="https://github.com/andros415"><div class='icon icon-github'></div></a>
+														<a href="https://www.linkedin.com/in/andrei-s/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/personal/andrei-spatariu.jpg" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/andrei-spatariu.jpg" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Andrei Spatariu</strong>
+								</div>
+							</div>
+						</div>
+					<h2>Advisors</h2>
+					<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+						<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+							<div class="card">
+								<div class="pure-g">
+												<div class="pure-u-1-1">
+													<img src="img/team-photos/personal/danny-lee.jpg" alt="Avatar">
+												</div>
+												<div class="pure-u-1-1 info">
+													<strong>Danny Lee</strong>
+													<div>Advisor</div>
+													<p>"My passion is code!"</p>
+												</div>
+												<div class="pure-u-1-1">
+													<div class='icon icon-facebook'></div>
+													<div class='icon icon-instagram'></div>
+													<div class='icon icon-github'></div>
+													<a href="https://www.linkedin.com/in/dannylee25/"><div class='icon icon-linkedin'></div></a>
+												</div>
+								</div>
+							</div>
+							<div class="team-picture">
+								<div class="team-picture-inner">
+									<div class="team-picture-front">
+										<img src="img/team-photos/personal/danny-lee.jpg" alt="Avatar">
+									</div>
+									<div class="team-picture-back">
+										<img src="img/team-photos/personal/danny-lee.jpg" alt="Avatar">
+									</div>
+								</div>
+							</div>
+							<div class="summary">
+								<strong>Danny Lee</strong>
+							</div>
+						</div>
+					</div>
+					<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+						<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+							<div class="card">
+								<div class="pure-g">
+												<div class="pure-u-1-1">
+													<img src="img/team-photos/personal/jin-jeong.jpg" alt="Avatar">
+												</div>
+												<div class="pure-u-1-1 info">
+													<strong>Jin Jeong</strong>
+													<div>Advisor</div>
+													<p>"My passion is code!"</p>
+												</div>
+												<div class="pure-u-1-1">
+													<div class='icon icon-facebook'></div>
+													<div class='icon icon-instagram'></div>
+													<div class='icon icon-github'></div>
+													<a href="https://www.linkedin.com/in/jin-jeong/"><div class='icon icon-linkedin'></div></a>
+												</div>
+								</div>
+							</div>
+							<div class="team-picture">
+								<div class="team-picture-inner">
+									<div class="team-picture-front">
+										<img src="img/team-photos/personal/jin-jeong.jpg" alt="Avatar">
+									</div>
+									<div class="team-picture-back">
+										<img src="img/team-photos/personal/jin-jeong.jpg" alt="Avatar">
+									</div>
+								</div>
+							</div>
+							<div class="summary">
+								<strong>Jin Jeong</strong>
+							</div>
+						</div>
+					</div>
+					<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+						<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+							<div class="card">
+								<div class="pure-g">
+												<div class="pure-u-1-1">
+													<img src="img/team-photos/personal/jennifer-ly.png" alt="Avatar">
+												</div>
+												<div class="pure-u-1-1 info">
+													<strong>Jennifer Ly</strong>
+													<div>Advisor</div>
+													<p>"My passion is code!"</p>
+												</div>
+												<div class="pure-u-1-1">
+													<div class='icon icon-facebook'></div>
+													<div class='icon icon-instagram'></div>
+													<div class='icon icon-github'></div>
+													<a href="https://www.linkedin.com/in/ngoc-jennifer-ly/"><div class='icon icon-linkedin'></div></a>
+												</div>
+								</div>
+							</div>
+							<div class="team-picture">
+								<div class="team-picture-inner">
+									<div class="team-picture-front">
+										<img src="img/team-photos/personal/jennifer-ly.png" alt="Avatar">
+									</div>
+									<div class="team-picture-back">
+										<img src="img/team-photos/personal/jennifer-ly.png" alt="Avatar">
+									</div>
+								</div>
+							</div>
+							<div class="summary">
+								<strong>Jennifer Ly</strong>
+							</div>
+						</div>
+					</div>
+					<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+						<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+							<div class="card">
+								<div class="pure-g">
+												<div class="pure-u-1-1">
+													<img src="img/team-photos/personal/paul-hansa.jpg" alt="Avatar">
+												</div>
+												<div class="pure-u-1-1 info">
+													<strong>Paul Hansa</strong>
+													<div>Advisor</div>
+													<p>"My passion is code!"</p>
+												</div>
+												<div class="pure-u-1-1">
+													<div class='icon icon-facebook'></div>
+													<div class='icon icon-instagram'></div>
+													<div class='icon icon-github'></div>
+													<a href="https://www.linkedin.com/in/phansa/"><div class='icon icon-linkedin'></div></a>
+												</div>
+								</div>
+							</div>
+							<div class="team-picture">
+								<div class="team-picture-inner">
+									<div class="team-picture-front">
+										<img src="img/team-photos/personal/paul-hansa.jpg" alt="Avatar">
+									</div>
+									<div class="team-picture-back">
+										<img src="img/team-photos/personal/paul-hansa.jpg" alt="Avatar">
+									</div>
+								</div>
+							</div>
+							<div class="summary">
+								<strong>Paul Hansa</strong>
+							</div>
+						</div>
+					</div>
+					<h2>Logistics Team</h2>
+					<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+						<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+							<div class="card">
+								<div class="pure-g">
+												<div class="pure-u-1-1">
+													<img src="img/team-photos/personal/ac-williams.jpg" alt="Avatar">
+												</div>
+												<div class="pure-u-1-1 info">
+													<strong>A.C. Willams</strong>
+													<div>Logistics Team</div>
+													<p>"My passion is code!"</p>
+												</div>
+												<div class="pure-u-1-1">
+													<div class='icon icon-facebook'></div>
+													<div class='icon icon-instagram'></div>
+													<div class='icon icon-github'></div>
+													<a href="https://www.linkedin.com/in/allen-williams-ac"><div class='icon icon-linkedin'></div></a>
+												</div>
+								</div>
+							</div>
+							<div class="team-picture">
+								<div class="team-picture-inner">
+									<div class="team-picture-front">
+										<img src="img/team-photos/personal/ac-williams.jpg" alt="Avatar">
+									</div>
+									<div class="team-picture-back">
+										<img src="img/team-photos/personal/ac-williams.jpg" alt="Avatar">
+									</div>
+								</div>
+							</div>
+							<div class="summary">
+								<strong>A.C. Williams</strong>
+							</div>
+						</div>
+					</div>
+					<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+						<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+							<div class="card">
+								<div class="pure-g">
+												<div class="pure-u-1-1">
+													<img src="img/team-photos/personal/sydney-nelms.jpg" alt="Avatar">
+												</div>
+												<div class="pure-u-1-1 info">
+													<strong>Sydney Nelms</strong>
+													<p>"My passion is code!"</p>
+												</div>
+												<div class="pure-u-1-1">
+													<div class='icon icon-facebook'></div>
+													<div class='icon icon-instagram'></div>
+													<div class='icon icon-github'></div>
+													<a href="https://www.linkedin.com/in/sydney-nelms-1a1874191/"><div class='icon icon-linkedin'></div></a>
+												</div>
+								</div>
+							</div>
+							<div class="team-picture">
+								<div class="team-picture-inner">
+									<div class="team-picture-front">
+										<img src="img/team-photos/personal/sydney-nelms.jpg" alt="Avatar">
+									</div>
+									<div class="team-picture-back">
+										<img src="img/team-photos/personal/sydney-nelms.jpg" alt="Avatar">
+									</div>
+								</div>
+							</div>
+							<div class="summary">
+								<strong>Sydney Nelms</strong>
+							</div>
+						</div>
+					</div>
+					<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+						<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+							<div class="card">
+								<div class="pure-g">
+												<div class="pure-u-1-1">
+													<img src="img/team-photos/personal/stefan-tobler.jpg" alt="Avatar">
+												</div>
+												<div class="pure-u-1-1 info">
+													<strong>Stefan Tobler</strong>
+													<p>"No mom I don't know what error code 27 means on the TV"</p>
+												</div>
+												<div class="pure-u-1-1">
+													<a href="https://github.com/stefantobler"><div class='icon icon-github'></div></a>
+													<a href="https://twitter.com/stefanltobler"><div class='icon icon-twitter'></div></a>
+													<a href="https://www.linkedin.com/in/stefantobler"><div class='icon icon-linkedin'></div></a>
+													<a href="https://stefantobler.com"><div class='icon icon-website'></div></a>
+												</div>
+								</div>
+							</div>
+							<div class="team-picture">
+								<div class="team-picture-inner">
+									<div class="team-picture-front">
+										<img src="img/team-photos/personal/stefan-tobler.jpg" alt="Avatar">
+									</div>
+									<div class="team-picture-back">
+										<img src="img/team-photos/personal/stefan-tobler.jpg" alt="Avatar">
+									</div>
+								</div>
+							</div>
+							<div class="summary">
+								<strong>Stefan Tobler</strong>
+							</div>
+						</div>
+					</div>
+					<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+						<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+							<div class="card">
+								<div class="pure-g">
+												<div class="pure-u-1-1">
+													<img src="img/team-photos/personal/thonny-koon.jpg" alt="Avatar">
+												</div>
+												<div class="pure-u-1-1 info">
+													<strong>Thonny Koon</strong>
+													<p>"My passion is code!"</p>
+												</div>
+												<div class="pure-u-1-1">
+													<div class='icon icon-facebook'></div>
+													<div class='icon icon-instagram'></div>
+													<div class='icon icon-github'></div>
+													<a href="https://www.linkedin.com/in/thonnykoon/"><div class='icon icon-linkedin'></div></a>
+												</div>
+								</div>
+							</div>
+							<div class="team-picture">
+								<div class="team-picture-inner">
+									<div class="team-picture-front">
+										<img src="img/team-photos/personal/thonny-koon.jpg" alt="Avatar">
+									</div>
+									<div class="team-picture-back">
+										<img src="img/team-photos/personal/thonny-koon.jpg" alt="Avatar">
+									</div>
+								</div>
+							</div>
+							<div class="summary">
+								<strong>Thonny Koon</strong>
+							</div>
+						</div>
+					</div>
+					<h2>Marketing Team</h2>
+					<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+						<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+							<div class="card">
+								<div class="pure-g">
+												<div class="pure-u-1-1">
+													<img src="img/team-photos/personal/felise-wen.jpg" alt="Avatar">
+												</div>
+												<div class="pure-u-1-1 info">
+													<strong>Felise Wen</strong>
+													<p>"Opinions on Frozen Pop Tarts?"</p>
+												</div>
+												<div class="pure-u-1-1">
+													<a href="https://www.instagram.com/feliseeeeenavidad/"><div class='icon icon-instagram'></div></a>
+												</div>
+								</div>
+							</div>
+							<div class="team-picture">
+								<div class="team-picture-inner">
+									<div class="team-picture-front">
+										<img src="img/team-photos/personal/felise-wen.jpg" alt="Avatar">
+									</div>
+									<div class="team-picture-back">
+										<img src="img/team-photos/personal/felise-wen.jpg" alt="Avatar">
+									</div>
+								</div>
+							</div>
+							<div class="summary">
+								<strong>Felise Wen</strong>
+							</div>
+						</div>
+					</div>
+					<h2>Sponsorship Team</h2>
+					<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+						<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+							<div class="card">
+								<div class="pure-g">
+												<div class="pure-u-1-1">
+													<img src="img/team-photos/personal/connor-cummings.jpg" alt="Avatar">
+												</div>
+												<div class="pure-u-1-1 info">
+													<strong>Connor Cummings</strong>
+													<div>Sponsorship Team</div>
+													<p>"My passion is code!"</p>
+												</div>
+												<div class="pure-u-1-1">
+													<div class='icon icon-facebook'></div>
+													<div class='icon icon-instagram'></div>
+													<div class='icon icon-github'></div>
+													<a href="https://www.linkedin.com/in/connor-cummings-47905216b/"><div class='icon icon-linkedin'></div></a>
+												</div>
+								</div>
+							</div>
+							<div class="team-picture">
+								<div class="team-picture-inner">
+									<div class="team-picture-front">
+										<img src="img/team-photos/personal/connor-cummings.jpg" alt="Avatar">
+									</div>
+									<div class="team-picture-back">
+										<img src="img/team-photos/personal/connor-cummings.jpg" alt="Avatar">
+									</div>
+								</div>
+							</div>
+							<div class="summary">
+								<strong>Connor Cummings</strong>
+							</div>
+						</div>
+					</div>
+					<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+						<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+							<div class="card">
+								<div class="pure-g">
+												<div class="pure-u-1-1">
+													<img src="img/team-photos/personal/jeffery-john.jpg" alt="Avatar">
+												</div>
+												<div class="pure-u-1-1 info">
+													<strong>Jeffery John</strong>
+													<div>Sponsorship Director</div>
+													<p>"Go Dawgs!"</p>
+												</div>
+												<div class="pure-u-1-1">
+													<a href="https://www.instagram.com/jefferyjohn_/"><div class='icon icon-instagram'></div></a>
+													 <a href="https://github.com/jefferyjohn"><div class='icon icon-github'></div></a>
+													<a href="https://twitter.com/jefferyjohn_"><div class='icon icon-twitter'></div> </a>
+													 <a href="https://www.linkedin.com/in/jefferyjohn/"><div class='icon icon-linkedin'></div></a>
+													<a href="https://jefferyajohn.com/"><div class='icon icon-website'></div></a>
+												</div>
+								</div>
+							</div>
+							<div class="team-picture">
+								<div class="team-picture-inner">
+									<div class="team-picture-front">
+										<img src="img/team-photos/personal/jeffery-john.jpg" alt="Avatar">
+									</div>
+									<div class="team-picture-back">
+										<img src="img/team-photos/personal/jeffery-john.jpg" alt="Avatar">
+									</div>
+								</div>
+							</div>
+							<div class="summary">
+								<strong>Jeffery John</strong>
+							</div>
+						</div>
+					</div>
+					<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+						<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+							<div class="card">
+								<div class="pure-g">
+												<div class="pure-u-1-1">
+													<img src="img/team-photos/personal/hima-velaga.jpg" alt="Avatar">
+												</div>
+												<div class="pure-u-1-1 info">
+													<strong>Hima Velaga</strong>
+													<p>"The only time I'm not on caffeine is when I'm asleep "</p>
+												</div>
+												<div class="pure-u-1-1">
+													<a href="https://www.linkedin.com/in/hima-velaga/"><div class='icon icon-linkedin'></div></a>
+												</div>
+								</div>
+							</div>
+							<div class="team-picture">
+								<div class="team-picture-inner">
+									<div class="team-picture-front">
+										<img src="img/team-photos/personal/hima-velaga.jpg" alt="Avatar">
+									</div>
+									<div class="team-picture-back">
+										<img src="img/team-photos/personal/hima-velaga.jpg" alt="Avatar">
+									</div>
+								</div>
+							</div>
+							<div class="summary">
+								<strong>Hima Velaga</strong>
+							</div>
+						</div>
+					</div>
+					<h2>Web Team</h2>
+					<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+						<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+							<div class="card">
+								<div class="pure-g">
+												<div class="pure-u-1-1">
+													<img src="img/team-photos/personal/alex-costa.jpg" alt="Avatar">
+												</div>
+												<div class="pure-u-1-1 info">
+													<strong>Alex Costa</strong>
+													<div>Web Team</div>
+													<p>"My passion is code!"</p>
+												</div>
+												<div class="pure-u-1-1">
+													<a href="https://www.linkedin.com/in/alexcostaluiz/"><<div class='icon icon-linkedin'></div></a>
+												</div>
+								</div>
+							</div>
+							<div class="team-picture">
+								<div class="team-picture-inner">
+									<div class="team-picture-front">
+										<img src="img/team-photos/personal/alex-costa.jpg" alt="Avatar">
+									</div>
+									<div class="team-picture-back">
+										<img src="img/team-photos/personal/alex-costa.jpg" alt="Avatar">
+									</div>
+								</div>
+							</div>
+							<div class="summary">
+								<strong>Alex Costa</strong>
+							</div>
+						</div>
+					</div>
+					<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+						<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+							<div class="card">
+								<div class="pure-g">
+												<div class="pure-u-1-1">
+													<img src="img/team-photos/personal/courtney-hogan.jpg" alt="Avatar">
+												</div>
+												<div class="pure-u-1-1 info">
+													<strong>Courtney Hogan</strong>
+													<div>Web Team</div>
+													<p>"My passion is code!"</p>
+												</div>
+												<div class="pure-u-1-1">
+													<a href="https://www.linkedin.com/in/courtney-hogan/"><div class='icon icon-linkedin'></div></a>
+												</div>
+								</div>
+							</div>
+							<div class="team-picture">
+								<div class="team-picture-inner">
+									<div class="team-picture-front">
+										<img src="img/team-photos/personal/courtney-hogan.jpg" alt="Avatar">
+									</div>
+									<div class="team-picture-back">
+										<img src="img/team-photos/personal/courtney-hogan.jpg" alt="Avatar">
+									</div>
+								</div>
+							</div>
+							<div class="summary">
+								<strong>Courtney Hogan</strong>
+							</div>
+						</div>
+					</div>
+					<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+						<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+							<div class="card">
+								<div class="pure-g">
+												<div class="pure-u-1-1">
+													<img src="img/team-photos/personal/danny-lopez.jpg" alt="Avatar">
+												</div>
+												<div class="pure-u-1-1 info">
+													<strong>Danny Lopez</strong>
+													<div>Web Team</div>
+													<p>"My passion is code!"</p>
+												</div>
+												<div class="pure-u-1-1">
+													<div class='icon icon-facebook'></div>
+													<div class='icon icon-instagram'></div>
+													<div class='icon icon-github'></div>
+													<a href="https://www.linkedin.com/in/dlopez1212/"><div class='icon icon-linkedin'></div></a>
+												</div>
+								</div>
+							</div>
+							<div class="team-picture">
+								<div class="team-picture-inner">
+									<div class="team-picture-front">
+										<img src="img/team-photos/personal/danny-lopez.jpg" alt="Avatar">
+									</div>
+									<div class="team-picture-back">
+										<img src="img/team-photos/personal/danny-lopez.jpg" alt="Avatar">
+									</div>
+								</div>
+							</div>
+							<div class="summary">
+								<strong>Danny Lopez</strong>
+							</div>
+						</div>
+					</div>
+					<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+						<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+							<div class="card">
+								<div class="pure-g">
+												<div class="pure-u-1-1">
+													<img src="img/team-photos/personal/julian-camp.jpg" alt="Avatar">
+												</div>
+												<div class="pure-u-1-1 info">
+													<strong>Julian Camp</strong>
+													<p>"The universe is change and life is opinion"</p>
+												</div>
+												<div class="pure-u-1-1">
+													<a href="https://www.linkedin.com/in/juliancamp/"><div class='icon icon-linkedin'></div></a>
+												</div>
+								</div>
+							</div>
+							<div class="team-picture">
+								<div class="team-picture-inner">
+									<div class="team-picture-front">
+										<img src="img/team-photos/personal/julian-camp.jpg" alt="Avatar">
+									</div>
+									<div class="team-picture-back">
+										<img src="img/team-photos/personal/julian-camp.jpg" alt="Avatar">
+									</div>
+								</div>
+							</div>
+							<div class="summary">
+								<strong>Julian Camp</strong>
+							</div>
+						</div>
+					</div>
+					<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+						<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+							<div class="card">
+								<div class="pure-g">
+												<div class="pure-u-1-1">
+													<img src="img/team-photos/personal/kane-du.png" alt="Avatar">
+												</div>
+												<div class="pure-u-1-1 info">
+													<strong>Kane Du</strong>
+													<div>Web Director</div>
+													<p>"My passion is code!"</p>
+												</div>
+												<div class="pure-u-1-1">
+													<div class='icon icon-facebook'></div>
+													<div class='icon icon-instagram'></div>
+													<div class='icon icon-github'></div>
+													<a href="https://www.linkedin.com/in/kane-du-517277172/"><div class='icon icon-linkedin'></div></a>
+												</div>
+								</div>
+							</div>
+							<div class="team-picture">
+								<div class="team-picture-inner">
+									<div class="team-picture-front">
+										<img src="img/team-photos/personal/kane-du.png" alt="Avatar">
+									</div>
+									<div class="team-picture-back">
+										<img src="img/team-photos/personal/kane-du.png" alt="Avatar">
+									</div>
+								</div>
+							</div>
+							<div class="summary">
+								<strong>Kane Du</strong>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
 
-<!-- Footer -->
-<footer class="w3-center w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
-</footer>
- 
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
+			<div id="team4" class="tab-pane fade">
+				<section data-section="team4" class='team'>
+					<!--<h1>Meet UGAHacks 4!<span></span></h1>-->
+					<h2>Mascot</h2>
+					<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+						<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+							<div class="card">
+								<div class="pure-g">
+												<div class="pure-u-1-1">
+													<img src="img/team-photos/personal/hacks4.png" alt="Avatar">
+												</div>
+												<div class="pure-u-1-1 info">
+													<strong>Leaf</strong>
+													<div>Mascot</div>
+													<p>"Sowing the seed!"</p>
+												</div>
+												<div class="pure-u-1-1">
+													<div class='icon icon-facebook'></div>
+													<div class='icon icon-instagram'></div>
+													<div class='icon icon-github'></div>
+													<div class='icon icon-twitter'></div>
+												</div>
+								</div>
+							</div>
+							<div class="team-picture">
+								<div class="team-picture-inner">
+									<div class="team-picture-front">
+										<img src="img/team-photos/personal/hacks4.png" alt="Avatar">
+									</div>
+									<div class="team-picture-back">
+										<img src="img/team-photos/personal/hacks4.png" alt="Avatar">
+									</div>
+								</div>
+							</div>
+							<div class="summary">
+								<strong>Leaf</strong>
+							</div>
+						</div>
+					</div>
+					<h2>Directors</h2>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/jin-jeong.jpg" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Jin Jeong</strong>
+									        	<div>Lead Director</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+									        	<a href="https://www.linkedin.com/in/jin-jeong/"><div class='icon icon-linkedin'></div></a>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/personal/jin-jeong.jpg" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/jin-jeong.jpg" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Jin Jeong</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/beier-zhu.jpg" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Beier Zhu</strong>
+														<p>"I learned from the creators that you don't have ot be talented, just a heart for the community."</p>
+													</div>
+													<div class="pure-u-1-1">
+														<a href="https://www.linkedin.com/in/beier-zhu/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/personal/beier-zhu.jpg" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/beier-zhu.jpg" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Beier Zhu</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/felise-wen.jpg" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Felise Wen</strong>
+														<div>Marketing Advisor</div>
+														<p>"Opinions on Frozen Pop Tarts?"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<a href="https://www.instagram.com/feliseeeeenavidad/"><div class='icon icon-instagram'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/personal/felise-wen.jpg" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/felise-wen.jpg" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Felise Wen</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/mohd-hasan.jpg" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Mohd (TJ) Hasan</strong>
+									        	<p>"Those who are seen dancing are thought to be insane by those who cannot hear the music."</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<a href="https://github.com/tjhasan"><div class='icon icon-github'></div></a>
+									        	<a href="https://www.linkedin.com/in/mohdhasan10/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://tjhasan.github.io/"><div class='icon icon-website'></div></a>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/personal/mohd-hasan.jpg" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/mohd-hasan.jpg" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Mohd (TJ) Hasan</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/sunny-park.jpg" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Sunny Park</strong>
+														<p>"I'm privileged to have been part of the team - I've made long lasting relationsihps and helped create an amazing event for future talent!"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<a href="https://www.linkedin.com/in/sunjun-park/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/personal/sunny-park.jpg" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/sunny-park.jpg" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Sunny Park</strong>
+								</div>
+							</div>
+						</div>
+						<h2>Advisors</h2>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/danny-lee.jpg" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Danny Lee</strong>
+														<div>Advisor</div>
+														<p>"My passion is code!"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<div class='icon icon-facebook'></div>
+														<div class='icon icon-instagram'></div>
+														<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/dannylee25/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/personal/danny-lee.jpg" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/danny-lee.jpg" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Danny Lee</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/jennifer-ly.png" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Jennifer Ly</strong>
+														<div>Advisor</div>
+														<p>"My passion is code!"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<div class='icon icon-facebook'></div>
+														<div class='icon icon-instagram'></div>
+														<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/ngoc-jennifer-ly/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/personal/jennifer-ly.png" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/jennifer-ly.png" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Jennifer Ly</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/paul-hansa.jpg" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Paul Hansa</strong>
+														<div>Advisor</div>
+														<p>"My passion is code!"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<div class='icon icon-facebook'></div>
+														<div class='icon icon-instagram'></div>
+														<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/phansa/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/personal/paul-hansa.jpg" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/paul-hansa.jpg" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Paul Hansa</strong>
+								</div>
+							</div>
+						</div>
+						<h2>Logistics Team</h2>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/glen-george.jpg" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Glen George</strong>
+														<p>"My passion is code!"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<div class='icon icon-facebook'></div>
+														<div class='icon icon-instagram'></div>
+														<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/glen-j-george/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/personal/glen-george.jpg" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/glen-george.jpg" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Glen George</strong>
+								</div>
+							</div>
+						</div>
+						<h2>Marketing Team</h2>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/annie-lian.jpg" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Annie Lian</strong>
+														<div>Marketing Advisor</div>
+														<p>"My passion is code!"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<div class='icon icon-facebook'></div>
+														<div class='icon icon-instagram'></div>
+														<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/annie-lian/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/personal/annie-lian.jpg" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/annie-lian.jpg" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Annie Lian</strong>
+								</div>
+							</div>
+						</div>
+						<h2>Sponsorship Team</h2>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/amanda-yang.jpg" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Amanda Yang</strong>
+														<div>Sponsorship Advisor</div>
+														<p>"My passion is code!"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<div class='icon icon-facebook'></div>
+														<div class='icon icon-instagram'></div>
+														<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/amanda-yang-2019/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/personal/amanda-yang.jpg" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/amanda-yang.jpg" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Amanda Yang</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/connor-cummings.jpg" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Connor Cummings</strong>
+														<div>Sponsorship Team</div>
+														<p>"My passion is code!"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<div class='icon icon-facebook'></div>
+														<div class='icon icon-instagram'></div>
+														<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/connor-cummings-47905216b/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/personal/connor-cummings.jpg" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/connor-cummings.jpg" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Connor Cummings</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/shivani-nanda.jpg" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Shivani Nanda</strong>
+														<div>Sponsorship Advisor</div>
+														<p>"My passion is code!"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<div class='icon icon-facebook'></div>
+														<div class='icon icon-instagram'></div>
+														<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/shivaninanda/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/personal/shivani-nanda.jpg" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/shivani-nanda.jpg" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Shivani Nanda</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/richard-red.jpg" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Richard Red</strong>
+														<p>"Do it"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<div class='icon icon-facebook'></div>
+														<div class='icon icon-instagram'></div>
+														<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/richardred/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/personal/richard-red.jpg" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/richard-red.jpg" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Richard Red</strong>
+								</div>
+							</div>
+						</div>
+						<h2>Web Team</h2>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+													<div class="pure-u-1-1">
+														<img src="img/team-photos/personal/sahil-patel.jpg" alt="Avatar">
+													</div>
+													<div class="pure-u-1-1 info">
+														<strong>Sahil Patel</strong>
+														<p>"My passion is code!"</p>
+													</div>
+													<div class="pure-u-1-1">
+														<div class='icon icon-facebook'></div>
+														<div class='icon icon-instagram'></div>
+														<div class='icon icon-github'></div>
+														<a href="https://www.linkedin.com/in/sahilpatel2397/"><div class='icon icon-linkedin'></div></a>
+													</div>
+									</div>
+								</div>
+								<div class="team-picture">
+									<div class="team-picture-inner">
+										<div class="team-picture-front">
+											<img src="img/team-photos/personal/sahil-patel.jpg" alt="Avatar">
+										</div>
+										<div class="team-picture-back">
+											<img src="img/team-photos/personal/sahil-patel.jpg" alt="Avatar">
+										</div>
+									</div>
+								</div>
+								<div class="summary">
+									<strong>Sahil Patel</strong>
+								</div>
+							</div>
+						</div>
+				</section>
+			</div>
 
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " uga-red";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top uga-red", "");
-    }
-}
+			<div id="team3" class="tab-pane fade">
+				<section data-section="team3" class='team'>
+					<h2>Mascot</h2>
+					<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+						<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+							<!-- let it still flip as an "easter egg", but only once.
+							<div class="card">
+								<div class="pure-g">
+												<div class="pure-u-1-1">
+													<img src="img/team-photos/personal/mascot-uh3.png" alt="Avatar">
+												</div>
+												<div class="pure-u-1-1 info">
+													<strong>Table</strong>
+													<div>Mascot</div>
+													<p>"Thump."</p>
+												</div>
+												<div class="pure-u-1-1">
+													<div class='icon icon-facebook'></div>
+													<div class='icon icon-instagram'></div>
+													<div class='icon icon-github'></div>
+													<div class='icon icon-twitter'></div>
+												</div>
+								</div>
+							</div>-->
+							<div class="team-picture">
+								<div class="team-picture-inner">
+									<div class="team-picture-front">
+										<img src="img/team-photos/personal/mascot-uh3.png" alt="Avatar">
+									</div>
+									<div class="team-picture-back">
+										<img src="img/team-photos/personal/mascot-uh3.png" alt="Avatar">
+									</div>
+								</div>
+							</div>
+							<div class="summary">
+								<strong>Table</strong>
+							</div>
+						</div>
+					</div>
+					<h2>Directors</h2>
+					<!-- <div class='pure-g'> -->
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/danny-lee.jpg" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Danny Lee</strong>
+									        	<div>Lead Director</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+									        	<div class='icon icon-twitter'></div>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/personal/danny-lee.jpg" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/danny-lee.jpg" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Danny Lee</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/jennifer-ly.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Jennifer Ly</strong>
+									        	<div>Director</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+									        	<div class='icon icon-twitter'></div>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/personal/jennifer-ly.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/jennifer-ly.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Jennifer Ly</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/paul-hansa.jpg" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Paul Hansa</strong>
+									        	<div>Director</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+									        	<div class='icon icon-twitter'></div>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/personal/paul-hansa.jpg" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/paul-hansa.jpg" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Paul Hansa</strong>
+								</div>
+							</div>
+						</div>
 
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
+					<!-- </div> -->
+					<h2>Logistics</h2>
+					<!-- <div class='pure-g'> -->
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>James Wang</strong>
+									        	<div>Logistics Team</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+									        	<div class='icon icon-twitter'></div>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>James Wang</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Tyle Vox</strong>
+									        	<div>Logistics Team</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+									        	<div class='icon icon-twitter'></div>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Tyle Vox</strong>
+								</div>
+							</div>
+						</div>
+					<!-- </div> -->
+					<h2>Marketing</h2>
+					<!-- <div class='pure-g'> -->
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Ashley Wang</strong>
+									        	<div>Marketing Team</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+									        	<div class='icon icon-twitter'></div>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Ashley Wang</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>DJ Bradbord</strong>
+									        	<div>Marketing Team</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+									        	<div class='icon icon-twitter'></div>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>DJ Bradford</strong>
+								</div>
+							</div>
+						</div>
+					<!-- </div> -->
+					<h2>Sponsorship</h2>
+					<!-- <div class='pure-g'> -->
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Jacky Fong</strong>
+									        	<div>Sponsorship Team</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+									        	<div class='icon icon-twitter'></div>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Jacky Fong</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Nick Tang</strong>
+									        	<div>Sponsorship Team</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+									        	<div class='icon icon-twitter'></div>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Nick Tang</strong>
+								</div>
+							</div>
+						</div>
+					<!-- </div> -->
+				</section>
+			</div>
 
-</body>
+			<div id="team2" class="tab-pane fade">
+				<section data-section="team2" class='team'>
+					<!--- not a mascot tho? <h2>Mascot</h2> -->
+					<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+						<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+							<!-- let it still flip as an "easter egg", but only once.
+							<div class="card-logo-sub">
+								<div class="pure-g">
+												<div class="pure-u-1-1">
+													<img src="img/team-photos/personal/mascot-uh1.png" alt="Avatar">
+												</div>
+												<div class="pure-u-1-1 info">
+													<strong></strong>
+													<div></div>
+													<p></p>
+												</div>
+								</div>
+							</div> -->
+							<div class="team-picture">
+								<div class="team-picture-inner">
+									<div class="team-picture-front">
+										<img src="img/team-photos/personal/mascot-uh1.png" alt="Avatar">
+									</div>
+									<div class="team-picture-back">
+										<img src="img/team-photos/personal/mascot-uh1.png" alt="Avatar">
+									</div>
+								</div>
+							</div>
+							<div class="summary">
+								<strong></strong>
+							</div>
+						</div>
+					</div>
+
+					<h2>Directors</h2>
+					<!-- <div class='pure-g'> -->
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Anurag Banerjee</strong>
+									        	<div>Lead Director</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+									        	<div class='icon icon-twitter'></div>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Anurag Banerjee</strong>
+								</div>
+							</div>
+						</div>
+
+					<!-- </div> -->
+					<h2>Logistics</h2>
+					<!-- <div class='pure-g'> -->
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Aditya Sood</strong>
+									        	<div>Logistics Team</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+									        	<div class='icon icon-twitter'></div>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Aditya Sood</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Jade Glasgow</strong>
+									        	<div>Logistics Team</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+									        	<div class='icon icon-twitter'></div>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Jade Glasgow</strong>
+								</div>
+							</div>
+						</div>
+					<!-- </div> -->
+					<h2>Marketing</h2>
+					<!-- <div class='pure-g'> -->
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Kelsie Belan</strong>
+									        	<div>Marketing Team</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+									        	<div class='icon icon-twitter'></div>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Kelsie Belan</strong>
+								</div>
+							</div>
+						</div>
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Jay Patel</strong>
+									        	<div>Marketing Team</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+									        	<div class='icon icon-twitter'></div>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Jay Patel</strong>
+								</div>
+							</div>
+						</div>
+					<!-- </div> -->
+					<h2>Tech</h2>
+					<!-- <div class='pure-g'> -->
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Heather Hunynh</strong>
+									        	<div>Tech Director</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+									        	<div class='icon icon-twitter'></div>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Heather Hunynh</strong>
+								</div>
+							</div>
+						</div>
+					<!-- </div> -->
+				</section>
+			</div>
+
+			<div id="team1" class="tab-pane fade">
+				<section data-section="team1" class='team'>
+					<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+						<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+							<!-- let it still flip as an "easter egg", but only once.
+							<div class="card-logo-sub">
+								<div class="pure-g">
+												<div class="pure-u-1-1">
+													<img src="img/team-photos/personal/mascot-uh1.png" alt="Avatar">
+												</div>
+												<div class="pure-u-1-1 info">
+													<strong></strong>
+													<div></div>
+													<p></p>
+												</div>
+								</div>
+							</div> -->
+							<div class="team-picture">
+								<div class="team-picture-inner">
+									<div class="team-picture-front">
+										<img src="img/team-photos/personal/mascot-uh1.png" alt="Avatar">
+									</div>
+									<div class="team-picture-back">
+										<img src="img/team-photos/personal/mascot-uh1.png" alt="Avatar">
+									</div>
+								</div>
+							</div>
+							<div class="summary">
+								<strong></strong>
+							</div>
+						</div>
+					</div>
+					<h2>Directors</h2>
+					<!-- <div class='pure-g'> -->
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Anurag Banerjee</strong>
+									        	<div>Lead Director</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+									        	<div class='icon icon-twitter'></div>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Anurag Banerjee</strong>
+								</div>
+							</div>
+						</div>
+
+					<!-- </div> -->
+					<h2>Logistics</h2>
+					<!-- <div class='pure-g'> -->
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Jaicob Stewart</strong>
+									        	<div>Logistics Team</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+									        	<div class='icon icon-twitter'></div>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Jaicob Stewart</strong>
+								</div>
+							</div>
+						</div>
+					<!-- </div> -->
+					<h2>Marketing</h2>
+					<!-- <div class='pure-g'> -->
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Malinda Inthirath</strong>
+									        	<div>Marketing Director</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+									        	<div class='icon icon-twitter'></div>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Malinda Inthirath</strong>
+								</div>
+							</div>
+						</div>
+
+					<!-- </div> -->
+					<h2>Tech</h2>
+					<!-- <div class='pure-g'> -->
+						<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
+							<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
+								<div class="card">
+									<div class="pure-g">
+									        <div class="pure-u-1-1">
+									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        </div>
+									        <div class="pure-u-1-1 info">
+									        	<strong>Caleb Adams</strong>
+									        	<div>Tech Director</div>
+									        	<p>"My passion is code!"</p>
+									        </div>
+									        <div class="pure-u-1-1">
+									        	<div class='icon icon-facebook'></div>
+									        	<div class='icon icon-instagram'></div>
+									        	<div class='icon icon-github'></div>
+									        	<div class='icon icon-twitter'></div>
+									        </div>
+									</div>
+								</div>
+								<div class="team-picture">
+								  <div class="team-picture-inner">
+								    <div class="team-picture-front">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								    <div class="team-picture-back">
+								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								    </div>
+								  </div>
+								</div>
+								<div class="summary">
+									<strong>Caleb Adams</strong>
+								</div>
+							</div>
+						</div>
+					<!-- </div> -->
+				</section>
+			</div>
+		</div>
+		</div>
+
+		<footer>
+			<div class='container'>
+				<a href="privacy.html">Privacy Policy</a>
+				<a href="mailto:hello@ugahacks.com">Contact Us</a>
+				<a data-link="">Back to Top</a>
+			</div>
+			<div class='bottom'>
+				<div class="pure-g">
+					<span class="pure-u-1 pure-u-md-2-3 copyright">© <span>2020</span> UGAHacks. All rights reserved.</span>
+					<div class="pure-u-1 pure-u-md-1-3 slogan">
+						Boot up your dreams.
+					</div>
+				</div>
+			</div>
+		</footer>
+
+
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  		<!-- TODO: Migrate over to using webpack/gulp to combine and minify. -->
+  		<script src="js/ticker.js"></script>
+  		<script src="js/menu.js"></script>
+  		<script src="js/profile-card.js"></script>
+		<script src="js/scrollx.js"></script>
+		<script src="js/router.js"></script>
+
+		<!-- Main has to be loaded last -->
+		<script src="js/main.js"></script>
+	</body>
 </html>
