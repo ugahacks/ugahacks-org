@@ -112,6 +112,10 @@
 	    width: 100%;
 	}
 
+	.menu li:not(:first-child) button {
+	    padding: 12px;
+	}
+
 	/** MENU TRANSITION */
 	.menu li:not(:first-child), .social a {
 		display: none;

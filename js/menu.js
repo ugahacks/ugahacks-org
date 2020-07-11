@@ -50,6 +50,7 @@ const Menu = new (function () {
 	// dom 
 	$(document).ready(function () {
 		$('.menu-toggle').on('click', toggleMenu);
+		$('.btn-toggle').on('click', toggleMenu); // for 'contact us' on mobile 
 	});
 })();
 

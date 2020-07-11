@@ -132,9 +132,9 @@ nav .menu {
 
 nav .social {
 	width: 30%;
-    float: right;
-    text-align: right;
-    padding-right: 40px;
+  float: right;
+  text-align: right;
+  padding-right: 40px;
 }
 
 nav ul {
@@ -147,23 +147,27 @@ nav li {
 	display: inline-block;
 	font-size: 20px;
 	font-weight: 200;
-    color: white;
-    margin-right: 10px;
+  color: white;
+  margin-right: 10px;
 }
 
 /*For the contact-us button*/
 nav button {
   font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
+
   background-color: transparent;
   background-repeat:no-repeat;
+
   border: none;
   cursor:pointer;
   overflow: hidden;
+
   font-size: 20px;
   font-weight: 200;
   color: white;
   margin-right: 10px;
+
   outline: none;
 }
 
