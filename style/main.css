@@ -18,9 +18,9 @@ body.modal-open .site-content{
   }
 }
 @keyframes pulse {
-  0% { margin-bottom: 20px; }
-  50% { margin-bottom: 0; }
-  100% { margin-bottom: 20px; }
+  0% { margin-top: 20px; }
+  50% { margin-top: 0; }
+  100% { margin-top: 20px; }
 }
 
 .bootstrap-iso .nav-tabs {
@@ -98,7 +98,7 @@ h1 {
     padding: 5px;
     display: inline-block;
     position: absolute;
-    bottom: 100px;
+    top: calc(100vh - 205px);
     left: 50%;
     margin-left: -27px;
     animation: pulse 2s infinite;
