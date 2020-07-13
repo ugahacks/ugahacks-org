@@ -14,8 +14,143 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 
 	    <!-- Bootstrap for Centered Pill Tabs -->
-		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
-		<link href="style/bootstrap-iso.css" rel="stylesheet" type="text/css" />
+		<!-- not using: <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+
+		<!-- <link rel="stylesheet" href="https://toert.github.io/Isolated-Bootstrap/versions/4.1.0/iso_bootstrap4.1.0min.css">
+			DELAY THIS ASSET LOAD SINCE IT ONLY PERTAINS TO CONTACT US MODAL:-->
+		<link rel="preload" href="https://toert.github.io/Isolated-Bootstrap/versions/4.1.0/iso_bootstrap4.1.0min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript><link rel="stylesheet" href="https://toert.github.io/Isolated-Bootstrap/versions/4.1.0/iso_bootstrap4.1.0min.css"></noscript>
+
+		<!-- <link href="style/bootstrap-iso.css" rel="stylesheet" type="text/css" /> -->
+		<style type="text/css">
+			.bootstrap-iso {}
+			.bootstrap-iso article, .bootstrap-iso aside, .bootstrap-iso details, .bootstrap-iso figcaption, .bootstrap-iso figure, .bootstrap-iso footer, .bootstrap-iso header, .bootstrap-iso hgroup, .bootstrap-iso main, .bootstrap-iso menu, .bootstrap-iso nav, .bootstrap-iso section, .bootstrap-iso summary {display: block;}
+			.bootstrap-iso a {background-color: transparent;}
+			.bootstrap-iso b, .bootstrap-iso strong {font-weight: bold;}
+			.bootstrap-iso img {border: 0;}
+			.bootstrap-iso * {
+			    -webkit-box-sizing: border-box;
+			    -moz-box-sizing: border-box;
+			    box-sizing: border-box;}
+
+			.bootstrap-iso *:before, .bootstrap-iso *:after {
+			    -webkit-box-sizing: border-box;
+			    -moz-box-sizing: border-box;
+			    box-sizing: border-box;
+			}
+						.bootstrap-iso a {
+			    color: #337ab7;
+			    text-decoration: none;
+			}
+
+						.bootstrap-iso img {
+			    vertical-align: middle;
+			}
+						.bootstrap-iso h1, .bootstrap-iso h2, .bootstrap-iso h3, .bootstrap-iso h4, .bootstrap-iso h5, .bootstrap-iso h6, .bootstrap-iso .h1, .bootstrap-iso .h2, .bootstrap-iso .h3, .bootstrap-iso .h4, .bootstrap-iso .h5, .bootstrap-iso .h6 {
+			    font-family: inherit;
+			    font-weight: 500;
+			    line-height: 1.1;
+			    color: inherit;
+			}
+						.bootstrap-iso h1, .bootstrap-iso .h1, .bootstrap-iso h2, .bootstrap-iso .h2, .bootstrap-iso h3, .bootstrap-iso .h3 {
+			    margin-top: 20px;
+			    margin-bottom: 10px;
+			}
+						.bootstrap-iso h2, .bootstrap-iso .h2 {
+			    font-size: 30px;
+			}
+						.bootstrap-iso ul, .bootstrap-iso ol {
+			    margin-top: 0;
+			    margin-bottom: 10px;
+			}
+
+						.bootstrap-iso .container {
+			    margin-right: auto;
+			    margin-left: auto;
+			    padding-left: 15px;
+			    padding-right: 15px;
+			}
+
+			@media (min-width: 768px) {
+			    .bootstrap-iso .container {
+			        width: 750px;
+			    }
+			}
+
+			@media (min-width: 992px) {
+			    .bootstrap-iso .container {
+			        width: 970px;
+			    }
+			}
+
+			@media (min-width: 1200px) {
+			    .bootstrap-iso .container {
+			        width: 1170px;
+			    }
+			}
+
+			.bootstrap-iso .fade {
+			    opacity: 0;
+			    -webkit-transition: opacity 0.15s linear;
+			    -o-transition: opacity 0.15s linear;
+			    transition: opacity 0.15s linear;
+			}
+
+			.bootstrap-iso .fade.in {
+			    opacity: 1;
+			}
+
+					.bootstrap-iso .nav {
+			    margin-bottom: 0;
+			    padding-left: 0;
+			    list-style: none;
+			}
+
+			.bootstrap-iso .nav > li {
+			    position: relative;
+			    display: block;
+			}
+
+			.bootstrap-iso .nav > li > a {
+			    position: relative;
+			    display: block;
+			    padding: 10px 15px;
+			}
+
+					.bootstrap-iso .nav-tabs {
+			    border-bottom: 1px solid #dddddd;
+			}
+
+			.bootstrap-iso .nav-tabs > li {
+			    float: left;
+			    margin-bottom: -1px;
+			}
+
+			.bootstrap-iso .nav-tabs > li > a {
+			    margin-right: 2px;
+			    line-height: 1.42857143;
+			    border: 1px solid transparent;
+			    border-radius: 4px 4px 0 0;
+			}
+
+						.bootstrap-iso .tab-content > .tab-pane {
+			    display: none;
+			}
+
+			.bootstrap-iso .tab-content > .active {
+			    display: block;
+			}
+
+			.bootstrap-iso .clearfix:before, .bootstrap-iso .clearfix:after, .bootstrap-iso .dl-horizontal dd:before, .bootstrap-iso .dl-horizontal dd:after, .bootstrap-iso .container:before, .bootstrap-iso .container:after, .bootstrap-iso .container-fluid:before, .bootstrap-iso .container-fluid:after, .bootstrap-iso .row:before, .bootstrap-iso .row:after, .bootstrap-iso .form-horizontal .form-group:before, .bootstrap-iso .form-horizontal .form-group:after, .bootstrap-iso .btn-toolbar:before, .bootstrap-iso .btn-toolbar:after, .bootstrap-iso .btn-group-vertical > .btn-group:before, .bootstrap-iso .btn-group-vertical > .btn-group:after, .bootstrap-iso .nav:before, .bootstrap-iso .nav:after, .bootstrap-iso .navbar:before, .bootstrap-iso .navbar:after, .bootstrap-iso .navbar-header:before, .bootstrap-iso .navbar-header:after, .bootstrap-iso .navbar-collapse:before, .bootstrap-iso .navbar-collapse:after, .bootstrap-iso .pager:before, .bootstrap-iso .pager:after, .bootstrap-iso .panel-body:before, .bootstrap-iso .panel-body:after, .bootstrap-iso .modal-footer:before, .bootstrap-iso .modal-footer:after {
+				    content: " ";
+				    display: table;
+				}
+
+			.bootstrap-iso .clearfix:after, .bootstrap-iso .dl-horizontal dd:after, .bootstrap-iso .container:after, .bootstrap-iso .container-fluid:after, .bootstrap-iso .row:after, .bootstrap-iso .form-horizontal .form-group:after, .bootstrap-iso .btn-toolbar:after, .bootstrap-iso .btn-group-vertical > .btn-group:after, .bootstrap-iso .nav:after, .bootstrap-iso .navbar:after, .bootstrap-iso .navbar-header:after, .bootstrap-iso .navbar-collapse:after, .bootstrap-iso .pager:after, .bootstrap-iso .panel-body:after, .bootstrap-iso .modal-footer:after {
+			    clear: both;
+			}
+		</style>
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -31,6 +166,17 @@
 
 		<!-- Scrolling animatons -->
 	    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<!-- Hotjar Tracking Code for https://ugahacks.com/ -->
+		<script>
+		    (function(h,o,t,j,a,r){
+		        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+		        h._hjSettings={hjid:1566634,hjsv:6};
+		        a=o.getElementsByTagName('head')[0];
+		        r=o.createElement('script');r.async=1;
+		        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+		        a.appendChild(r);
+		    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+		</script>
 	</head>
 	<body>
 		<nav>
@@ -40,7 +186,7 @@
 				<li><a data-link="timeline">Events</a></li>
 				<li><a data-link="team">Team</a></li>
 				<li><a href="//blog.ugahacks.com">Blog</a></li>
-				<li><a href="mailto:hello@ugahacks.com">Contact Us</a></li>
+				<li><button type="button" class="btn btn-primary btn-toggle" data-toggle="modal" data-target="#contactusmodal">Contact Us</button></li>
 			</ul>
 			<div class='social'>
 				<button class="hamburger hamburger--collapse mobile-only menu-toggle" type="button">
@@ -55,6 +201,44 @@
 			</div>
 			<div style="clear:both"></div>
 		</nav>
+
+		<!-- Modal -->
+		<div class="bootstrap">
+			<div class="modal fade" id="contactusmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			  <div class="modal-dialog modal-dialog-centered" role="document">
+			    <div style="background-color: #313545; color: #fff;" class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLongTitle">Reach Out!</h5>
+			        <button type="button" class="close" data-dismiss="modal" style="color:#fff" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			      	<b>General: </b><a href="mailto:hello@ugahacks.com" style="color:#fe3d40">hello@ugahacks.com</a>
+			      	<br><b>Sponsor: </b><a href="mailto:sponsor@ugahacks.com" style="color:#fe3d40">sponsor@ugahacks.com</a>
+			      	<br>
+			      	<div style="width: 50%; height: 75%; float:left;">
+			      		<b>Mailing Address:</b>
+				      	<br>University Hackathons
+				      	<br>PO Box 1827
+				      	<br>Athens, GA 30603
+			      	</div>
+
+			      	<div style="width: 50%; height: 75%; float:right;">
+			      		<b>Physical Address:</b>
+				      	<br>University Hackathons
+				      	<br>102 Tate Student Center
+				      	<br>Athens, GA 30602
+			      	</div>
+
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		</div>
+
+		<!-- -->
+		<div class="site-content">
 
 		<section class="header">
 			<div class="laptop left"></div>
@@ -173,7 +357,7 @@
 			        	</div>
 			        	<div class="card-body">
 			          		<p>UGAHacks 4 returned to its original home at the Lamar Dodd School of Art which allowed to connect and have a greater presence within the University that year.
-											This event saw the largest number of participants with 450, sponsors with 11, mentors with 15, and over <a class="timeline-links" href="https://ugahacks4.devpost.com/">50 project submissions</a>. The fourth UGAHacks event
+											This event saw a total of 450 participants, 11 sponsors, 15 mentors, and over <a class="timeline-links" href="https://ugahacks4.devpost.com/">50 project submissions</a>. The fourth UGAHacks event
 											also experienced the greatest diversity of hackers from so many different schools across the entire world. UGAHacks 4 allowed for a new sprouting of ideas and possibilities for
 											all future events which were once  thought of as unattainable.</p>
 										<a href="https://4.ugahacks.com/">
@@ -213,7 +397,7 @@
 											with better work spaces, bean bag chairs, and modern presentation rooms for unique workshops. The second UGAHacks event saw
 											great growth with more resources to add key features to the event such as food, a larger venue, and better prizes. This all
 											fueled the desire for more hackers to come and create a standard of awesomeness moving forward.</p>
-										<a href="https://ugahacks.herokuapp.com/">
+										<a href="https://2.ugahacks.com/">
 										<img src="img/timeline-photos/hacks2banner.png" alt="UGAHacks 2 Banner">
 										</a>
 			        	</div>
@@ -230,7 +414,9 @@
 			          		<p>The original UGAHacks event began at the Lamar Dodd School of Art. The first event of its kind at UGA was special because two roommates wanted to bring an underrepresented
 											community of students within the Computer Science and Engineering schools together for a weekend of fun and unlimited creativity.
 											The first version of our event had humble beginnings with less than 100 participants and <a class="timeline-links" href="https://ugahacks.devpost.com/">36 submissions for projects</a>. UGAHacks became the new safe haven for hackers can come together to learn, create and share!</p>
-			          		<img src="img/timeline-photos/hacks1banner.png" alt="UGAHacks 1 Banner">
+										<a href="https://1.ugahacks.com/">
+										<img src="img/timeline-photos/hacks1banner.png" alt="UGAHacks 1 Banner">
+										</a>
 			        	</div>
 			      	</div>
 			    </div>
@@ -251,12 +437,12 @@
 		<div class="bootstrap-iso">
 		<div class="container">
 			<ul class="nav nav-tabs nav-center" role="tablist">
-				<li class="nav-item"><a data-toggle="tab" class="active nav-link" href="#team6">UGAHacks 6</a></li>
-				<li class="nav-item"><a data-toggle="tab" class="active nav-link"href="#team5">UGAHacks 5</a></li>
-				<li class="nav-item"><a data-toggle="tab" class="active nav-link"href="#team4">UGAHacks 4</a></li>
-				<li class="nav-item"><a data-toggle="tab" class="active nav-link"href="#team3">UGAHacks 3</a></li>
-				<li class="nav-item"><a data-toggle="tab" class="active nav-link"href="#team2">UGAHacks 2</a></li>
-				<li class="nav-item"><a data-toggle="tab" class="active nav-link"href="#team1">UGAHacks 1</a></li>
+				<li class="nav-item"><a data-toggle="tab" class="active nav-link" href="#team6" style="-webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px;">UGAHacks 6</a></li>
+				<li class="nav-item"><a data-toggle="tab" class="active nav-link"href="#team5" style="-webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px;">UGAHacks 5</a></li>
+				<li class="nav-item"><a data-toggle="tab" class="active nav-link"href="#team4" style="-webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px;">UGAHacks 4</a></li>
+				<li class="nav-item"><a data-toggle="tab" class="active nav-link"href="#team3" style="-webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px;">UGAHacks 3</a></li>
+				<li class="nav-item"><a data-toggle="tab" class="active nav-link"href="#team2" style="-webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px;">UGAHacks 2</a></li>
+				<li class="nav-item"><a data-toggle="tab" class="active nav-link"href="#team1" style="-webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px;">UGAHacks 1</a></li>
 			</ul>
 		</div>
 
@@ -270,18 +456,19 @@
 							<div class="card">
 								<div class="pure-g">
 												<div class="pure-u-1-1">
-													<img src="img/team-photos/personal/byte.png" alt="Avatar">
+													<img src="img/team-photos/personal-pruned/byte.jpg" alt="Avatar">
 												</div>
 												<div class="pure-u-1-1 info">
 													<strong>Byte</strong>
 													<div>Mascot</div>
+													<br>
 													<p>"Building the Future!"</p>
 												</div>
 												<div class="pure-u-1-1">
-													<div class='icon icon-facebook'></div>
-													<div class='icon icon-instagram'></div>
-													<div class='icon icon-github'></div>
-													<div class='icon icon-twitter'></div>
+													<a href="https://www.facebook.com/ugahacks" target="_BLANK"><div class='icon icon-facebook'></div></a>
+													<a href="https://www.instagram.com/ugahacks/" target="_BLANK"><div class='icon icon-instagram'></div></a>
+													<a href="https://github.com/ugahacks" target="_BLANK"><div class='icon icon-github'></div></a>
+													<a href="https://twitter.com/ugahacks" target="_BLANK"><div class='icon icon-twitter'></div></a>
 												</div>
 								</div>
 							</div>
@@ -291,7 +478,7 @@
 										<img src="img/team-photos/bitmoji/byte.png" alt="Avatar">
 									</div>
 									<div class="team-picture-back">
-										<img src="img/team-photos/personal/byte.png" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/byte.jpg" alt="Avatar">
 									</div>
 								</div>
 							</div>
@@ -307,17 +494,15 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/glen-george.jpg" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/glen-george.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Glen George</strong>
 									        	<div>Lead Director</div>
-									        	<p>"My passion is code!"</p>
+									        	<p>"Chase your dreams, pursue your passions, never be afraid to be uncomfortable."</p>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<div class='icon icon-facebook'></div>
-									        	<div class='icon icon-instagram'></div>
-									        	<div class='icon icon-github'></div>
+														<a href="https://www.instagram.com/glenge0rge/"><div class='icon icon-instagram'></div></a>
 									        	<a href="https://www.linkedin.com/in/glen-j-george/"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
@@ -328,7 +513,7 @@
 								      <img src="img/team-photos/bitmoji/glen-george.png" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/glen-george.jpg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/glen-george.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -342,17 +527,15 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/bitmoji/yi-jian.png" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/yi-jian.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Yi Jian MaMa</strong>
 									        	<div>Finance Director</div>
-									        	<p>"My passion is code!"</p>
+														<br>
+														<br>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<div class='icon icon-facebook'></div>
-									        	<div class='icon icon-instagram'></div>
-									        	<div class='icon icon-github'></div>
 									        	<a href="https://www.linkedin.com/in/yi-jian-ma-ma-555199164/"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
@@ -363,7 +546,7 @@
 								      <img src="img/team-photos/bitmoji/yi-jian.png" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/bitmoji/yi-jian.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/yi-jian.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -377,17 +560,15 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/sydney-nelms.jpg" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/sydney-nelms.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Sydney Nelms</strong>
 									        	<div>Logistics Director</div>
-									        	<p>"My passion is code!"</p>
+														<br>
+														<br>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<div class='icon icon-facebook'></div>
-									        	<div class='icon icon-instagram'></div>
-									        	<div class='icon icon-github'></div>
 									        	<a href="https://www.linkedin.com/in/sydney-nelms-1a1874191/"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
@@ -398,7 +579,7 @@
 								      <img src="img/team-photos/bitmoji/sydney-nelms.png" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/sydney-nelms.jpg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/sydney-nelms.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -412,11 +593,12 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/jenny-kim.png" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/jenny-kim.png" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Jenny Kim</strong>
 									        	<div>Marketing Director</div>
+														<br>
 									        	<p>"Rainy day = Noodles"</p>
 									        </div>
 									        <div class="pure-u-1-1">
@@ -430,7 +612,7 @@
 								      <img src="img/team-photos/bitmoji/jenny.png" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/jenny-kim.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/jenny-kim.png" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -444,11 +626,12 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/jeffery-john.jpg" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/jeffery-john.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Jeffery John</strong>
 									        	<div>Sponsorship Director</div>
+														<br>
 									        	<p>"Go Dawgs!"</p>
 									        </div>
 									        <div class="pure-u-1-1">
@@ -466,7 +649,7 @@
 								      <img src="img/team-photos/bitmoji/jeffery-john.png" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/jeffery-john.jpg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/jeffery-john.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -480,17 +663,17 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/kane-du.png" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/kane-du.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Kane Du</strong>
 									        	<div>Web Director</div>
-									        	<p>"My passion is code!"</p>
+														<br>
+									        	<p>"Hello there"</p>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<div class='icon icon-facebook'></div>
-									        	<div class='icon icon-instagram'></div>
-									        	<div class='icon icon-github'></div>
+														<a href="https://www.instagram.com/youkaneduit/"><div class='icon icon-instagram'></div></a>
+														<a href="https://github.com/kanedu828"><div class='icon icon-github'></div></a>
 														<a href="https://www.linkedin.com/in/kane-du-517277172/"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
@@ -501,7 +684,7 @@
 								      <img src="img/team-photos/bitmoji/kane-du.png" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/kane-du.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/kane-du.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -517,17 +700,15 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/danny-lee.jpg" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/danny-lee.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Danny Lee</strong>
 									        	<div>Advisor</div>
-									        	<p>"My passion is code!"</p>
+														<br>
+														<br>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<div class='icon icon-facebook'></div>
-									        	<div class='icon icon-instagram'></div>
-									        	<div class='icon icon-github'></div>
 									        	<a href="https://www.linkedin.com/in/dannylee25/"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
@@ -538,7 +719,7 @@
 								      <img src="img/team-photos/bitmoji/danny-lee.png" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/danny-lee.jpg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/danny-lee.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -552,17 +733,15 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/jin-jeong.jpg" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/jin-jeong.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Jin Jeong</strong>
 									        	<div>Advisor</div>
-									        	<p>"My passion is code!"</p>
+														<br>
+														<br>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<div class='icon icon-facebook'></div>
-									        	<div class='icon icon-instagram'></div>
-									        	<div class='icon icon-github'></div>
 									        	<a href="https://www.linkedin.com/in/jin-jeong/"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
@@ -573,7 +752,7 @@
 								      <img src="img/team-photos/bitmoji/jin-jeong.png" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/jin-jeong.jpg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/jin-jeong.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -587,17 +766,15 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/jennifer-ly.png" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/jennifer-ly.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Jennifer Ly</strong>
 									        	<div>Advisor</div>
-									        	<p>"My passion is code!"</p>
+														<br>
+														<br>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<div class='icon icon-facebook'></div>
-									        	<div class='icon icon-instagram'></div>
-									        	<div class='icon icon-github'></div>
 														<a href="https://www.linkedin.com/in/ngoc-jennifer-ly/"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
@@ -608,7 +785,7 @@
 								      <img src="img/team-photos/bitmoji/jennifer-ly.png" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/jennifer-ly.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/jennifer-ly.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -622,10 +799,11 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/mohd-hasan.jpg" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/mohd-hasan.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Mohd (TJ) Hasan</strong>
+														<div>Advisor</div>
 									        	<p>"Those who are seen dancing are thought to be insane by those who cannot hear the music."</p>
 									        </div>
 									        <div class="pure-u-1-1">
@@ -641,7 +819,7 @@
 								      <img src="img/team-photos/bitmoji/mohd-hasan.png" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/mohd-hasan.jpg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/mohd-hasan.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -655,17 +833,15 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/paul-hansa.jpg" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/paul-hansa.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Paul Hansa</strong>
 									        	<div>Advisor</div>
-									        	<p>"My passion is code!"</p>
+														<br>
+														<br>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<div class='icon icon-facebook'></div>
-									        	<div class='icon icon-instagram'></div>
-									        	<div class='icon icon-github'></div>
 														<a href="https://www.linkedin.com/in/phansa/"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
@@ -676,7 +852,7 @@
 								      <img src="img/team-photos/bitmoji/paul-hansa.png" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/paul-hansa.jpg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/paul-hansa.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -691,11 +867,12 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/kevin-tang.png" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/kevin-tang.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Kevin Tang</strong>
 														<div>Logistics Team</div>
+														<br>
 														<p>"Hack on!"</p>
 													</div>
 													<div class="pure-u-1-1">
@@ -709,7 +886,7 @@
 											<img src="img/team-photos/bitmoji/kevin-tang.png" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/kevin-tang.png" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/kevin-tang.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -723,17 +900,15 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/kyle-aban.png" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/kyle-aban.png" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Kyle Aban</strong>
 														<div>Logistics Team</div>
-														<p>"My passion is code!"</p>
+														<br>
+														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<div class='icon icon-facebook'></div>
-														<div class='icon icon-instagram'></div>
-														<div class='icon icon-github'></div>
 														<a href="https://www.linkedin.com/in/kyle-aban/"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
@@ -744,7 +919,7 @@
 											<img src="img/team-photos/bitmoji/kyle-aban.png" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/kyle-aban.png" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/kyle-aban.png" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -758,10 +933,11 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/miranda-gomez.png" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/miranda-gomez.png" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Miranda Gomez</strong>
+														<div>Logistics Team</div>
 									        	<p>"What matters in life is not what happens to you but what you remember and how"</p>
 									        </div>
 									        <div class="pure-u-1-1">
@@ -775,7 +951,7 @@
 								      <img src="img/team-photos/bitmoji/miranda-gomez.png" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/miranda-gomez.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/miranda-gomez.png" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -789,10 +965,11 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/stefan-tobler.jpg" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/stefan-tobler.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Stefan Tobler</strong>
+														<div>Logistics Team</div>
 									        	<p>"No mom I don't know what error code 27 means on the TV"</p>
 									        </div>
 									        <div class="pure-u-1-1">
@@ -809,7 +986,7 @@
 								      <img src="img/team-photos/bitmoji/stefan-tobler.png" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/stefan-tobler.jpg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/stefan-tobler.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -824,18 +1001,15 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/aidan-ostapko.png" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/aidan-ostapko.png" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Aidan Ostapko</strong>
 														<div>Marketing Team</div>
+														<br>
 														<p>"I make things move"</p>
 													</div>
 													<div class="pure-u-1-1">
-														<div class='icon icon-facebook'></div>
-														<div class='icon icon-instagram'></div>
-														<div class='icon icon-github'></div>
-														<div class='icon icon-twitter'></div>
 													</div>
 									</div>
 								</div>
@@ -845,7 +1019,7 @@
 											<img src="img/team-photos/bitmoji/aidan-ostapko.png" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/aidan-ostapko.png" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/aidan-ostapko.png" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -859,17 +1033,15 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/annie-lian.jpg" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/annie-lian.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Annie Lian</strong>
 														<div>Marketing Advisor</div>
-														<p>"My passion is code!"</p>
+														<br>
+														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<div class='icon icon-facebook'></div>
-														<div class='icon icon-instagram'></div>
-														<div class='icon icon-github'></div>
 														<a href="https://www.linkedin.com/in/annie-lian/"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
@@ -880,7 +1052,7 @@
 											<img src="img/team-photos/bitmoji/annie-lian.png" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/annie-lian.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/annie-lian.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -894,11 +1066,12 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/felise-wen.jpg" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/felise-wen.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Felise Wen</strong>
 														<div>Marketing Advisor</div>
+														<br>
 														<p>"Opinions on Frozen Pop Tarts?"</p>
 													</div>
 													<div class="pure-u-1-1">
@@ -912,7 +1085,7 @@
 											<img src="img/team-photos/bitmoji/felise-wen.png" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/felise-wen.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/felise-wen.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -927,17 +1100,15 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/amanda-yang.jpg" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/amanda-yang.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Amanda Yang</strong>
 														<div>Sponsorship Advisor</div>
-														<p>"My passion is code!"</p>
+														<br>
+														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<div class='icon icon-facebook'></div>
-														<div class='icon icon-instagram'></div>
-														<div class='icon icon-github'></div>
 														<a href="https://www.linkedin.com/in/amanda-yang-2019/"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
@@ -948,7 +1119,7 @@
 											<img src="img/team-photos/bitmoji/amanda-yang.png" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/amanda-yang.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/amanda-yang.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -962,10 +1133,11 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/chunwing-ng.png" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/chunwing-ng.png" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Chunwing Ng</strong>
+														<div>Sponsorship Team</div>
 														<p>"The only time I'm not on caffeine is when I'm asleep "</p>
 													</div>
 													<div class="pure-u-1-1">
@@ -979,7 +1151,7 @@
 											<img src="img/team-photos/bitmoji/chunwing.png" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/chunwing-ng.png" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/chunwing-ng.png" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -993,17 +1165,15 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/connor-cummings.jpg" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/connor-cummings.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Connor Cummings</strong>
 														<div>Sponsorship Team</div>
-														<p>"My passion is code!"</p>
+														<br>
+														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<div class='icon icon-facebook'></div>
-														<div class='icon icon-instagram'></div>
-														<div class='icon icon-github'></div>
 														<a href="https://www.linkedin.com/in/connor-cummings-47905216b/"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
@@ -1014,7 +1184,7 @@
 											<img src="img/team-photos/bitmoji/connor-cummings.png" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/connor-cummings.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/connor-cummings.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -1034,12 +1204,10 @@
 													<div class="pure-u-1-1 info">
 														<strong>Keshav Raviprakash</strong>
 														<div>Sponsorship Team</div>
-														<p>"My passion is code!"</p>
+														<br>
+														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<div class='icon icon-facebook'></div>
-														<div class='icon icon-instagram'></div>
-														<div class='icon icon-github'></div>
 														<a href="https://www.linkedin.com/in/keshav-raviprakash-638b11113/"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
@@ -1065,10 +1233,12 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/sameer-annavarapu.png" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/sameer-annavarapu.png" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Sameer Annavarapu</strong>
+														<div>Sponsorship Team</div>
+														<br>
 														<p>"Never regret anythin that made you smile"</p>
 													</div>
 													<div class="pure-u-1-1">
@@ -1083,7 +1253,7 @@
 											<img src="img/team-photos/bitmoji/sameer-annavarapu.png" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/sameer-annavarapu.png" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/sameer-annavarapu.png" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -1097,17 +1267,15 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/shivani-nanda.jpg" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/shivani-nanda.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Shivani Nanda</strong>
 									        	<div>Sponsorship Advisor</div>
-									        	<p>"My passion is code!"</p>
+														<br>
+														<br>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<div class='icon icon-facebook'></div>
-									        	<div class='icon icon-instagram'></div>
-									        	<div class='icon icon-github'></div>
 														<a href="https://www.linkedin.com/in/shivaninanda/"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
@@ -1118,7 +1286,7 @@
 								      <img src="img/team-photos/bitmoji/shivani-nanda.png" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/shivani-nanda.jpg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/shivani-nanda.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -1132,7 +1300,7 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/sudhan-chitgopkar.png" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/sudhan-chitgopkar.png" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Sudhan Chitgopkar</strong>
@@ -1154,7 +1322,7 @@
 								      <img src="img/team-photos/bitmoji/sudhan-chitgopkar.png" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/sudhan-chitgopkar.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/sudhan-chitgopkar.png" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -1174,12 +1342,10 @@
 									        <div class="pure-u-1-1 info">
 									        	<strong>Venusly Yang</strong>
 									        	<div>Sponsorship Team</div>
-									        	<p>"My passion is code!"</p>
+														<br>
+														<br>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<div class='icon icon-facebook'></div>
-									        	<div class='icon icon-instagram'></div>
-									        	<div class='icon icon-github'></div>
 														<a href="https://www.linkedin.com/in/venusly-yang/"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
@@ -1206,12 +1372,12 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/andrei-spatariu.jpg" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/andrei-spatariu.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Andrei Spatariu</strong>
 									        	<div>Web Advisor</div>
-									        	<p>"My passion is code!"</p>
+									        	<p>"If you're good at one thing, make it everything."</p>
 									        </div>
 									        <div class="pure-u-1-1">
 									        	<a href="https://github.com/andros415"><div class='icon icon-github'></div></a>
@@ -1225,7 +1391,7 @@
 								      <img src="img/team-photos/bitmoji/andrei-spatariu.png" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/andrei-spatariu.jpg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/andrei-spatariu.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -1239,17 +1405,15 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/danny-lopez.jpg" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/danny-lopez.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Danny Lopez</strong>
 														<div>Web Advisor</div>
-														<p>"My passion is code!"</p>
+														<br>
+														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<div class='icon icon-facebook'></div>
-														<div class='icon icon-instagram'></div>
-														<div class='icon icon-github'></div>
 														<a href="https://www.linkedin.com/in/dlopez1212/"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
@@ -1260,7 +1424,7 @@
 											<img src="img/team-photos/bitmoji/danny-lopez.png" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/danny-lopez.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/danny-lopez.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -1274,10 +1438,11 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/emmanuel-oni.jpg" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/emmanuel-oni.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Emmanuel Oni</strong>
+														<div>Web Team</div>
 									        	<p>"The universe is change and life is opinion"</p>
 									        </div>
 									        <div class="pure-u-1-1">
@@ -1294,7 +1459,7 @@
 								      <img src="img/team-photos/bitmoji/emmanuel.png" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/emmanuel-oni.jpg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/emmanuel-oni.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -1308,11 +1473,12 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/neal-patel.jpg" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/neal-patel.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Neal Patel</strong>
 														<div>Web Team</div>
+														<br>
 														<p>"Space, reading, coding."</p>
 													</div>
 													<div class="pure-u-1-1">
@@ -1328,7 +1494,7 @@
 											<img src="img/team-photos/bitmoji/neal-patel.png" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/neal-patel.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/neal-patel.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -1342,11 +1508,12 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/lana-kelly.png" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/lana-kelly.png" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Lana Kelly</strong>
 									        	<div>Web Team</div>
+														<br>
 									        	<p>"Your voice matters. Vote!"</p>
 									        </div>
 									        <div class="pure-u-1-1">
@@ -1361,7 +1528,7 @@
 								      <img src="img/team-photos/bitmoji/lana-kelly.png" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/lana-kelly.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/lana-kelly.png" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -1375,17 +1542,16 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/shawn-holman.png" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/shawn-holman.png" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Shawn Holman</strong>
 									        	<div>Web Team</div>
-									        	<p>"My passion is code!"</p>
+														<br>
+														<br>
+									        	<p></p>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<div class='icon icon-facebook'></div>
-									        	<div class='icon icon-instagram'></div>
-									        	<div class='icon icon-github'></div>
 														<a href="https://www.linkedin.com/in/shawn-holman/"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
@@ -1396,7 +1562,7 @@
 								      <img src="img/team-photos/bitmoji/shawn-holman.png" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/shawn-holman.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/shawn-holman.png" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -1417,18 +1583,16 @@
 							<div class="card">
 								<div class="pure-g">
 												<div class="pure-u-1-1">
-													<img src="img/team-photos/personal/byte-5.png" alt="Avatar">
+													<img src="img/team-photos/personal-pruned/byte-5.jpg" alt="Avatar">
 												</div>
 												<div class="pure-u-1-1 info">
 													<strong>Byte</strong>
 													<div>Mascot</div>
+													<br>
 													<p>"Boot up your dreams!"</p>
 												</div>
 												<div class="pure-u-1-1">
-													<div class='icon icon-facebook'></div>
-													<div class='icon icon-instagram'></div>
-													<div class='icon icon-github'></div>
-													<div class='icon icon-twitter'></div>
+													<a href="https://5.ugahacks.com/"><div class='icon icon-website'></div></a>
 												</div>
 								</div>
 							</div>
@@ -1438,7 +1602,7 @@
 										<img src="img/team-photos/bitmoji/byte.png" alt="Avatar">
 									</div>
 									<div class="team-picture-back">
-										<img src="img/team-photos/personal/byte-5.png" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/byte-5.jpg" alt="Avatar">
 									</div>
 								</div>
 							</div>
@@ -1453,11 +1617,11 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/mohd-hasan.jpg" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/mohd-hasan.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Mohd (TJ) Hasan</strong>
-														<p>Lead Director</p>
+														<div>Lead Director</div>
 									        	<p>"Those who are seen dancing are thought to be insane by those who cannot hear the music."</p>
 									        </div>
 									        <div class="pure-u-1-1">
@@ -1470,10 +1634,10 @@
 								<div class="team-picture">
 								  <div class="team-picture-inner">
 								    <div class="team-picture-front">
-								      <img src="img/team-photos/personal/mohd-hasan.jpg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/mohd-hasan.jpg" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/mohd-hasan.jpg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/mohd-hasan.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -1487,17 +1651,15 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/amy-yang.jpg" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/amy-yang.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Amy Yang</strong>
 														<div>Finance Director</div>
-														<p>"My passion is code!"</p>
+														<br>
+														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<div class='icon icon-facebook'></div>
-														<div class='icon icon-instagram'></div>
-														<div class='icon icon-github'></div>
 														<a href="https://www.linkedin.com/in/amy-yang-2bba64102/"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
@@ -1505,10 +1667,10 @@
 								<div class="team-picture">
 									<div class="team-picture-inner">
 										<div class="team-picture-front">
-											<img src="img/team-photos/personal/amy-yang.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/amy-yang.jpg" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/amy-yang.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/amy-yang.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -1522,17 +1684,15 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/glen-george.jpg" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/glen-george.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Glen George</strong>
 														<div>Logistics Director</div>
-														<p>"My passion is code!"</p>
+														<p>"Chase your dreams, pursue your passions, never be afraid to be uncomfortable."</p>
 													</div>
 													<div class="pure-u-1-1">
-														<div class='icon icon-facebook'></div>
-														<div class='icon icon-instagram'></div>
-														<div class='icon icon-github'></div>
+														<a href="https://www.instagram.com/glenge0rge/"><div class='icon icon-instagram'></div></a>
 														<a href="https://www.linkedin.com/in/glen-j-george/"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
@@ -1540,10 +1700,10 @@
 								<div class="team-picture">
 									<div class="team-picture-inner">
 										<div class="team-picture-front">
-											<img src="img/team-photos/personal/glen-george.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/glen-george.jpg" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/glen-george.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/glen-george.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -1557,17 +1717,15 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/annie-lian.jpg" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/annie-lian.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Annie Lian</strong>
 														<div>Marketing Director</div>
-														<p>"My passion is code!"</p>
+														<br>
+														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<div class='icon icon-facebook'></div>
-														<div class='icon icon-instagram'></div>
-														<div class='icon icon-github'></div>
 														<a href="https://www.linkedin.com/in/annie-lian/"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
@@ -1575,10 +1733,10 @@
 								<div class="team-picture">
 									<div class="team-picture-inner">
 										<div class="team-picture-front">
-											<img src="img/team-photos/personal/annie-lian.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/annie-lian.jpg" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/annie-lian.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/annie-lian.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -1592,17 +1750,14 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/amanda-yang.jpg" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/amanda-yang.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Amanda Yang</strong>
 														<div>Sponsorship Co-director</div>
-														<p>"My passion is code!"</p>
+														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<div class='icon icon-facebook'></div>
-														<div class='icon icon-instagram'></div>
-														<div class='icon icon-github'></div>
 														<a href="https://www.linkedin.com/in/amanda-yang-2019/"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
@@ -1610,10 +1765,10 @@
 								<div class="team-picture">
 									<div class="team-picture-inner">
 										<div class="team-picture-front">
-											<img src="img/team-photos/personal/amanda-yang.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/amanda-yang.jpg" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/amanda-yang.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/amanda-yang.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -1627,17 +1782,14 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/shivani-nanda.jpg" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/shivani-nanda.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Shivani Nanda</strong>
 														<div>Sponsorship Co-director</div>
-														<p>"My passion is code!"</p>
+														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<div class='icon icon-facebook'></div>
-														<div class='icon icon-instagram'></div>
-														<div class='icon icon-github'></div>
 														<a href="https://www.linkedin.com/in/shivaninanda/"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
@@ -1645,10 +1797,10 @@
 								<div class="team-picture">
 									<div class="team-picture-inner">
 										<div class="team-picture-front">
-											<img src="img/team-photos/personal/shivani-nanda.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/shivani-nanda.jpg" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/shivani-nanda.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/shivani-nanda.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -1662,12 +1814,12 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/andrei-spatariu.jpg" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/andrei-spatariu.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Andrei Spatariu</strong>
 														<div>Web Director</div>
-														<p>"My passion is code!"</p>
+														<p>"If you're only good at one thing, make it everything."</p>
 													</div>
 													<div class="pure-u-1-1">
 														<a href="https://github.com/andros415"><div class='icon icon-github'></div></a>
@@ -1678,10 +1830,10 @@
 								<div class="team-picture">
 									<div class="team-picture-inner">
 										<div class="team-picture-front">
-											<img src="img/team-photos/personal/andrei-spatariu.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/andrei-spatariu.jpg" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/andrei-spatariu.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/andrei-spatariu.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -1696,17 +1848,15 @@
 							<div class="card">
 								<div class="pure-g">
 												<div class="pure-u-1-1">
-													<img src="img/team-photos/personal/danny-lee.jpg" alt="Avatar">
+													<img src="img/team-photos/personal-pruned/danny-lee.jpg" alt="Avatar">
 												</div>
 												<div class="pure-u-1-1 info">
 													<strong>Danny Lee</strong>
 													<div>Advisor</div>
-													<p>"My passion is code!"</p>
+													<br>
+													<br>
 												</div>
 												<div class="pure-u-1-1">
-													<div class='icon icon-facebook'></div>
-													<div class='icon icon-instagram'></div>
-													<div class='icon icon-github'></div>
 													<a href="https://www.linkedin.com/in/dannylee25/"><div class='icon icon-linkedin'></div></a>
 												</div>
 								</div>
@@ -1714,10 +1864,10 @@
 							<div class="team-picture">
 								<div class="team-picture-inner">
 									<div class="team-picture-front">
-										<img src="img/team-photos/personal/danny-lee.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/danny-lee.jpg" alt="Avatar">
 									</div>
 									<div class="team-picture-back">
-										<img src="img/team-photos/personal/danny-lee.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/danny-lee.jpg" alt="Avatar">
 									</div>
 								</div>
 							</div>
@@ -1731,17 +1881,15 @@
 							<div class="card">
 								<div class="pure-g">
 												<div class="pure-u-1-1">
-													<img src="img/team-photos/personal/jin-jeong.jpg" alt="Avatar">
+													<img src="img/team-photos/personal-pruned/jin-jeong.jpg" alt="Avatar">
 												</div>
 												<div class="pure-u-1-1 info">
 													<strong>Jin Jeong</strong>
 													<div>Advisor</div>
-													<p>"My passion is code!"</p>
+													<br>
+													<br>
 												</div>
 												<div class="pure-u-1-1">
-													<div class='icon icon-facebook'></div>
-													<div class='icon icon-instagram'></div>
-													<div class='icon icon-github'></div>
 													<a href="https://www.linkedin.com/in/jin-jeong/"><div class='icon icon-linkedin'></div></a>
 												</div>
 								</div>
@@ -1749,10 +1897,10 @@
 							<div class="team-picture">
 								<div class="team-picture-inner">
 									<div class="team-picture-front">
-										<img src="img/team-photos/personal/jin-jeong.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/jin-jeong.jpg" alt="Avatar">
 									</div>
 									<div class="team-picture-back">
-										<img src="img/team-photos/personal/jin-jeong.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/jin-jeong.jpg" alt="Avatar">
 									</div>
 								</div>
 							</div>
@@ -1766,17 +1914,15 @@
 							<div class="card">
 								<div class="pure-g">
 												<div class="pure-u-1-1">
-													<img src="img/team-photos/personal/jennifer-ly.png" alt="Avatar">
+													<img src="img/team-photos/personal-pruned/jennifer-ly.jpg" alt="Avatar">
 												</div>
 												<div class="pure-u-1-1 info">
 													<strong>Jennifer Ly</strong>
 													<div>Advisor</div>
-													<p>"My passion is code!"</p>
+													<br>
+													<br>
 												</div>
 												<div class="pure-u-1-1">
-													<div class='icon icon-facebook'></div>
-													<div class='icon icon-instagram'></div>
-													<div class='icon icon-github'></div>
 													<a href="https://www.linkedin.com/in/ngoc-jennifer-ly/"><div class='icon icon-linkedin'></div></a>
 												</div>
 								</div>
@@ -1784,10 +1930,10 @@
 							<div class="team-picture">
 								<div class="team-picture-inner">
 									<div class="team-picture-front">
-										<img src="img/team-photos/personal/jennifer-ly.png" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/jennifer-ly.jpg" alt="Avatar">
 									</div>
 									<div class="team-picture-back">
-										<img src="img/team-photos/personal/jennifer-ly.png" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/jennifer-ly.jpg" alt="Avatar">
 									</div>
 								</div>
 							</div>
@@ -1801,17 +1947,15 @@
 							<div class="card">
 								<div class="pure-g">
 												<div class="pure-u-1-1">
-													<img src="img/team-photos/personal/paul-hansa.jpg" alt="Avatar">
+													<img src="img/team-photos/personal-pruned/paul-hansa.jpg" alt="Avatar">
 												</div>
 												<div class="pure-u-1-1 info">
 													<strong>Paul Hansa</strong>
 													<div>Advisor</div>
-													<p>"My passion is code!"</p>
+													<br>
+													<br>
 												</div>
 												<div class="pure-u-1-1">
-													<div class='icon icon-facebook'></div>
-													<div class='icon icon-instagram'></div>
-													<div class='icon icon-github'></div>
 													<a href="https://www.linkedin.com/in/phansa/"><div class='icon icon-linkedin'></div></a>
 												</div>
 								</div>
@@ -1819,10 +1963,10 @@
 							<div class="team-picture">
 								<div class="team-picture-inner">
 									<div class="team-picture-front">
-										<img src="img/team-photos/personal/paul-hansa.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/paul-hansa.jpg" alt="Avatar">
 									</div>
 									<div class="team-picture-back">
-										<img src="img/team-photos/personal/paul-hansa.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/paul-hansa.jpg" alt="Avatar">
 									</div>
 								</div>
 							</div>
@@ -1837,17 +1981,15 @@
 							<div class="card">
 								<div class="pure-g">
 												<div class="pure-u-1-1">
-													<img src="img/team-photos/personal/ac-williams.jpg" alt="Avatar">
+													<img src="img/team-photos/personal-pruned/ac-williams.jpg" alt="Avatar">
 												</div>
 												<div class="pure-u-1-1 info">
 													<strong>A.C. Willams</strong>
 													<div>Logistics Team</div>
-													<p>"My passion is code!"</p>
+													<br>
+													<br>
 												</div>
 												<div class="pure-u-1-1">
-													<div class='icon icon-facebook'></div>
-													<div class='icon icon-instagram'></div>
-													<div class='icon icon-github'></div>
 													<a href="https://www.linkedin.com/in/allen-williams-ac"><div class='icon icon-linkedin'></div></a>
 												</div>
 								</div>
@@ -1855,10 +1997,10 @@
 							<div class="team-picture">
 								<div class="team-picture-inner">
 									<div class="team-picture-front">
-										<img src="img/team-photos/personal/ac-williams.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/ac-williams.jpg" alt="Avatar">
 									</div>
 									<div class="team-picture-back">
-										<img src="img/team-photos/personal/ac-williams.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/ac-williams.jpg" alt="Avatar">
 									</div>
 								</div>
 							</div>
@@ -1872,16 +2014,15 @@
 							<div class="card">
 								<div class="pure-g">
 												<div class="pure-u-1-1">
-													<img src="img/team-photos/personal/sydney-nelms.jpg" alt="Avatar">
+													<img src="img/team-photos/personal-pruned/sydney-nelms.jpg" alt="Avatar">
 												</div>
 												<div class="pure-u-1-1 info">
 													<strong>Sydney Nelms</strong>
-													<p>"My passion is code!"</p>
+													<div>Logistics Team</div>
+													<br>
+													<br>
 												</div>
 												<div class="pure-u-1-1">
-													<div class='icon icon-facebook'></div>
-													<div class='icon icon-instagram'></div>
-													<div class='icon icon-github'></div>
 													<a href="https://www.linkedin.com/in/sydney-nelms-1a1874191/"><div class='icon icon-linkedin'></div></a>
 												</div>
 								</div>
@@ -1889,10 +2030,10 @@
 							<div class="team-picture">
 								<div class="team-picture-inner">
 									<div class="team-picture-front">
-										<img src="img/team-photos/personal/sydney-nelms.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/sydney-nelms.jpg" alt="Avatar">
 									</div>
 									<div class="team-picture-back">
-										<img src="img/team-photos/personal/sydney-nelms.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/sydney-nelms.jpg" alt="Avatar">
 									</div>
 								</div>
 							</div>
@@ -1906,10 +2047,11 @@
 							<div class="card">
 								<div class="pure-g">
 												<div class="pure-u-1-1">
-													<img src="img/team-photos/personal/stefan-tobler.jpg" alt="Avatar">
+													<img src="img/team-photos/personal-pruned/stefan-tobler.jpg" alt="Avatar">
 												</div>
 												<div class="pure-u-1-1 info">
 													<strong>Stefan Tobler</strong>
+													<div>Logistics Team</div>
 													<p>"No mom I don't know what error code 27 means on the TV"</p>
 												</div>
 												<div class="pure-u-1-1">
@@ -1923,10 +2065,10 @@
 							<div class="team-picture">
 								<div class="team-picture-inner">
 									<div class="team-picture-front">
-										<img src="img/team-photos/personal/stefan-tobler.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/stefan-tobler.jpg" alt="Avatar">
 									</div>
 									<div class="team-picture-back">
-										<img src="img/team-photos/personal/stefan-tobler.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/stefan-tobler.jpg" alt="Avatar">
 									</div>
 								</div>
 							</div>
@@ -1940,16 +2082,15 @@
 							<div class="card">
 								<div class="pure-g">
 												<div class="pure-u-1-1">
-													<img src="img/team-photos/personal/thonny-koon.jpg" alt="Avatar">
+													<img src="img/team-photos/personal-pruned/thonny-koon.jpg" alt="Avatar">
 												</div>
 												<div class="pure-u-1-1 info">
 													<strong>Thonny Koon</strong>
-													<p>"My passion is code!"</p>
+													<div>Logistics Team</div>
+													<br>
+													<br>
 												</div>
 												<div class="pure-u-1-1">
-													<div class='icon icon-facebook'></div>
-													<div class='icon icon-instagram'></div>
-													<div class='icon icon-github'></div>
 													<a href="https://www.linkedin.com/in/thonnykoon/"><div class='icon icon-linkedin'></div></a>
 												</div>
 								</div>
@@ -1957,10 +2098,10 @@
 							<div class="team-picture">
 								<div class="team-picture-inner">
 									<div class="team-picture-front">
-										<img src="img/team-photos/personal/thonny-koon.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/thonny-koon.jpg" alt="Avatar">
 									</div>
 									<div class="team-picture-back">
-										<img src="img/team-photos/personal/thonny-koon.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/thonny-koon.jpg" alt="Avatar">
 									</div>
 								</div>
 							</div>
@@ -1975,10 +2116,12 @@
 							<div class="card">
 								<div class="pure-g">
 												<div class="pure-u-1-1">
-													<img src="img/team-photos/personal/felise-wen.jpg" alt="Avatar">
+													<img src="img/team-photos/personal-pruned/felise-wen.jpg" alt="Avatar">
 												</div>
 												<div class="pure-u-1-1 info">
 													<strong>Felise Wen</strong>
+													<div>Marketing Team</div>
+													<br>
 													<p>"Opinions on Frozen Pop Tarts?"</p>
 												</div>
 												<div class="pure-u-1-1">
@@ -1989,10 +2132,10 @@
 							<div class="team-picture">
 								<div class="team-picture-inner">
 									<div class="team-picture-front">
-										<img src="img/team-photos/personal/felise-wen.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/felise-wen.jpg" alt="Avatar">
 									</div>
 									<div class="team-picture-back">
-										<img src="img/team-photos/personal/felise-wen.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/felise-wen.jpg" alt="Avatar">
 									</div>
 								</div>
 							</div>
@@ -2007,17 +2150,15 @@
 							<div class="card">
 								<div class="pure-g">
 												<div class="pure-u-1-1">
-													<img src="img/team-photos/personal/connor-cummings.jpg" alt="Avatar">
+													<img src="img/team-photos/personal-pruned/connor-cummings.jpg" alt="Avatar">
 												</div>
 												<div class="pure-u-1-1 info">
 													<strong>Connor Cummings</strong>
 													<div>Sponsorship Team</div>
-													<p>"My passion is code!"</p>
+													<br>
+													<br>
 												</div>
 												<div class="pure-u-1-1">
-													<div class='icon icon-facebook'></div>
-													<div class='icon icon-instagram'></div>
-													<div class='icon icon-github'></div>
 													<a href="https://www.linkedin.com/in/connor-cummings-47905216b/"><div class='icon icon-linkedin'></div></a>
 												</div>
 								</div>
@@ -2025,10 +2166,10 @@
 							<div class="team-picture">
 								<div class="team-picture-inner">
 									<div class="team-picture-front">
-										<img src="img/team-photos/personal/connor-cummings.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/connor-cummings.jpg" alt="Avatar">
 									</div>
 									<div class="team-picture-back">
-										<img src="img/team-photos/personal/connor-cummings.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/connor-cummings.jpg" alt="Avatar">
 									</div>
 								</div>
 							</div>
@@ -2042,11 +2183,12 @@
 							<div class="card">
 								<div class="pure-g">
 												<div class="pure-u-1-1">
-													<img src="img/team-photos/personal/jeffery-john.jpg" alt="Avatar">
+													<img src="img/team-photos/personal-pruned/jeffery-john.jpg" alt="Avatar">
 												</div>
 												<div class="pure-u-1-1 info">
 													<strong>Jeffery John</strong>
-													<div>Sponsorship Director</div>
+													<div>Sponsorship Team</div>
+													<br>
 													<p>"Go Dawgs!"</p>
 												</div>
 												<div class="pure-u-1-1">
@@ -2061,10 +2203,10 @@
 							<div class="team-picture">
 								<div class="team-picture-inner">
 									<div class="team-picture-front">
-										<img src="img/team-photos/personal/jeffery-john.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/jeffery-john.jpg" alt="Avatar">
 									</div>
 									<div class="team-picture-back">
-										<img src="img/team-photos/personal/jeffery-john.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/jeffery-john.jpg" alt="Avatar">
 									</div>
 								</div>
 							</div>
@@ -2078,11 +2220,13 @@
 							<div class="card">
 								<div class="pure-g">
 												<div class="pure-u-1-1">
-													<img src="img/team-photos/personal/hima-velaga.jpg" alt="Avatar">
+													<img src="img/team-photos/personal-pruned/hima-velaga.jpg" alt="Avatar">
 												</div>
 												<div class="pure-u-1-1 info">
 													<strong>Hima Velaga</strong>
-													<p>"The only time I'm not on caffeine is when I'm asleep "</p>
+													<div>Sponsorship Team</div>
+													<br>
+													<br>
 												</div>
 												<div class="pure-u-1-1">
 													<a href="https://www.linkedin.com/in/hima-velaga/"><div class='icon icon-linkedin'></div></a>
@@ -2092,10 +2236,10 @@
 							<div class="team-picture">
 								<div class="team-picture-inner">
 									<div class="team-picture-front">
-										<img src="img/team-photos/personal/hima-velaga.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/hima-velaga.jpg" alt="Avatar">
 									</div>
 									<div class="team-picture-back">
-										<img src="img/team-photos/personal/hima-velaga.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/hima-velaga.jpg" alt="Avatar">
 									</div>
 								</div>
 							</div>
@@ -2110,25 +2254,26 @@
 							<div class="card">
 								<div class="pure-g">
 												<div class="pure-u-1-1">
-													<img src="img/team-photos/personal/alex-costa.jpg" alt="Avatar">
+													<img src="img/team-photos/personal-pruned/alex-costa.jpg" alt="Avatar">
 												</div>
 												<div class="pure-u-1-1 info">
 													<strong>Alex Costa</strong>
 													<div>Web Team</div>
-													<p>"My passion is code!"</p>
+													<br>
+													<br>
 												</div>
 												<div class="pure-u-1-1">
-													<a href="https://www.linkedin.com/in/alexcostaluiz/"><<div class='icon icon-linkedin'></div></a>
+													<a href="https://www.linkedin.com/in/alexcostaluiz/"><div class='icon icon-linkedin'></div></a>
 												</div>
 								</div>
 							</div>
 							<div class="team-picture">
 								<div class="team-picture-inner">
 									<div class="team-picture-front">
-										<img src="img/team-photos/personal/alex-costa.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/alex-costa.jpg" alt="Avatar">
 									</div>
 									<div class="team-picture-back">
-										<img src="img/team-photos/personal/alex-costa.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/alex-costa.jpg" alt="Avatar">
 									</div>
 								</div>
 							</div>
@@ -2142,12 +2287,13 @@
 							<div class="card">
 								<div class="pure-g">
 												<div class="pure-u-1-1">
-													<img src="img/team-photos/personal/courtney-hogan.jpg" alt="Avatar">
+													<img src="img/team-photos/personal-pruned/courtney-hogan.jpg" alt="Avatar">
 												</div>
 												<div class="pure-u-1-1 info">
 													<strong>Courtney Hogan</strong>
 													<div>Web Team</div>
-													<p>"My passion is code!"</p>
+													<br>
+													<br>
 												</div>
 												<div class="pure-u-1-1">
 													<a href="https://www.linkedin.com/in/courtney-hogan/"><div class='icon icon-linkedin'></div></a>
@@ -2157,10 +2303,10 @@
 							<div class="team-picture">
 								<div class="team-picture-inner">
 									<div class="team-picture-front">
-										<img src="img/team-photos/personal/courtney-hogan.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/courtney-hogan.jpg" alt="Avatar">
 									</div>
 									<div class="team-picture-back">
-										<img src="img/team-photos/personal/courtney-hogan.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/courtney-hogan.jpg" alt="Avatar">
 									</div>
 								</div>
 							</div>
@@ -2174,17 +2320,15 @@
 							<div class="card">
 								<div class="pure-g">
 												<div class="pure-u-1-1">
-													<img src="img/team-photos/personal/danny-lopez.jpg" alt="Avatar">
+													<img src="img/team-photos/personal-pruned/danny-lopez.jpg" alt="Avatar">
 												</div>
 												<div class="pure-u-1-1 info">
 													<strong>Danny Lopez</strong>
 													<div>Web Team</div>
-													<p>"My passion is code!"</p>
+													<br>
+													<br>
 												</div>
 												<div class="pure-u-1-1">
-													<div class='icon icon-facebook'></div>
-													<div class='icon icon-instagram'></div>
-													<div class='icon icon-github'></div>
 													<a href="https://www.linkedin.com/in/dlopez1212/"><div class='icon icon-linkedin'></div></a>
 												</div>
 								</div>
@@ -2192,10 +2336,10 @@
 							<div class="team-picture">
 								<div class="team-picture-inner">
 									<div class="team-picture-front">
-										<img src="img/team-photos/personal/danny-lopez.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/danny-lopez.jpg" alt="Avatar">
 									</div>
 									<div class="team-picture-back">
-										<img src="img/team-photos/personal/danny-lopez.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/danny-lopez.jpg" alt="Avatar">
 									</div>
 								</div>
 							</div>
@@ -2209,11 +2353,13 @@
 							<div class="card">
 								<div class="pure-g">
 												<div class="pure-u-1-1">
-													<img src="img/team-photos/personal/julian-camp.jpg" alt="Avatar">
+													<img src="img/team-photos/personal-pruned/julian-camp.jpg" alt="Avatar">
 												</div>
 												<div class="pure-u-1-1 info">
 													<strong>Julian Camp</strong>
-													<p>"The universe is change and life is opinion"</p>
+													<div>Web Team</div>
+													<br>
+													<br>
 												</div>
 												<div class="pure-u-1-1">
 													<a href="https://www.linkedin.com/in/juliancamp/"><div class='icon icon-linkedin'></div></a>
@@ -2223,10 +2369,10 @@
 							<div class="team-picture">
 								<div class="team-picture-inner">
 									<div class="team-picture-front">
-										<img src="img/team-photos/personal/julian-camp.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/julian-camp.jpg" alt="Avatar">
 									</div>
 									<div class="team-picture-back">
-										<img src="img/team-photos/personal/julian-camp.jpg" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/julian-camp.jpg" alt="Avatar">
 									</div>
 								</div>
 							</div>
@@ -2240,17 +2386,17 @@
 							<div class="card">
 								<div class="pure-g">
 												<div class="pure-u-1-1">
-													<img src="img/team-photos/personal/kane-du.png" alt="Avatar">
+													<img src="img/team-photos/personal-pruned/kane-du.jpg" alt="Avatar">
 												</div>
 												<div class="pure-u-1-1 info">
 													<strong>Kane Du</strong>
-													<div>Web Director</div>
-													<p>"My passion is code!"</p>
+													<div>Web Team</div>
+													<br>
+													<p>"Hello there"</p>
 												</div>
 												<div class="pure-u-1-1">
-													<div class='icon icon-facebook'></div>
-													<div class='icon icon-instagram'></div>
-													<div class='icon icon-github'></div>
+													<a href="https://www.instagram.com/youkaneduit/"><div class='icon icon-instagram'></div></a>
+													<a href="https://github.com/kanedu828"><div class='icon icon-github'></div></a>
 													<a href="https://www.linkedin.com/in/kane-du-517277172/"><div class='icon icon-linkedin'></div></a>
 												</div>
 								</div>
@@ -2258,10 +2404,10 @@
 							<div class="team-picture">
 								<div class="team-picture-inner">
 									<div class="team-picture-front">
-										<img src="img/team-photos/personal/kane-du.png" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/kane-du.jpg" alt="Avatar">
 									</div>
 									<div class="team-picture-back">
-										<img src="img/team-photos/personal/kane-du.png" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/kane-du.jpg" alt="Avatar">
 									</div>
 								</div>
 							</div>
@@ -2282,28 +2428,26 @@
 							<div class="card">
 								<div class="pure-g">
 												<div class="pure-u-1-1">
-													<img src="img/team-photos/personal/hacks4.png" alt="Avatar">
+													<img src="img/team-photos/personal-pruned/hacks4.jpg" alt="Avatar">
 												</div>
 												<div class="pure-u-1-1 info">
 													<strong>Leaf</strong>
 													<div>Mascot</div>
+													<br>
 													<p>"Sowing the seed!"</p>
 												</div>
 												<div class="pure-u-1-1">
-													<div class='icon icon-facebook'></div>
-													<div class='icon icon-instagram'></div>
-													<div class='icon icon-github'></div>
-													<div class='icon icon-twitter'></div>
+													<a href="https://4.ugahacks.com/"><div class='icon icon-website'></div></a>
 												</div>
 								</div>
 							</div>
 							<div class="team-picture">
 								<div class="team-picture-inner">
 									<div class="team-picture-front">
-										<img src="img/team-photos/personal/hacks4.png" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/hacks4.jpg" alt="Avatar">
 									</div>
 									<div class="team-picture-back">
-										<img src="img/team-photos/personal/hacks4.png" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/hacks4.jpg" alt="Avatar">
 									</div>
 								</div>
 							</div>
@@ -2318,17 +2462,15 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/jin-jeong.jpg" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/jin-jeong.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Jin Jeong</strong>
 									        	<div>Lead Director</div>
-									        	<p>"My passion is code!"</p>
+														<br>
+														<br>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<div class='icon icon-facebook'></div>
-									        	<div class='icon icon-instagram'></div>
-									        	<div class='icon icon-github'></div>
 									        	<a href="https://www.linkedin.com/in/jin-jeong/"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
@@ -2336,10 +2478,10 @@
 								<div class="team-picture">
 								  <div class="team-picture-inner">
 								    <div class="team-picture-front">
-								      <img src="img/team-photos/personal/jin-jeong.jpg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/jin-jeong.jpg" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/jin-jeong.jpg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/jin-jeong.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -2353,7 +2495,7 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/beier-zhu.jpg" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/beier-zhu.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Beier Zhu</strong>
@@ -2367,10 +2509,10 @@
 								<div class="team-picture">
 									<div class="team-picture-inner">
 										<div class="team-picture-front">
-											<img src="img/team-photos/personal/beier-zhu.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/beier-zhu.jpg" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/beier-zhu.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/beier-zhu.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -2384,11 +2526,12 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/felise-wen.jpg" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/felise-wen.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Felise Wen</strong>
-														<div>Marketing Advisor</div>
+														<div>Marketing Director</div>
+														<br>
 														<p>"Opinions on Frozen Pop Tarts?"</p>
 													</div>
 													<div class="pure-u-1-1">
@@ -2399,10 +2542,10 @@
 								<div class="team-picture">
 									<div class="team-picture-inner">
 										<div class="team-picture-front">
-											<img src="img/team-photos/personal/felise-wen.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/felise-wen.jpg" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/felise-wen.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/felise-wen.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -2416,10 +2559,11 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/mohd-hasan.jpg" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/mohd-hasan.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Mohd (TJ) Hasan</strong>
+														<div>Logistics Director</div>
 									        	<p>"Those who are seen dancing are thought to be insane by those who cannot hear the music."</p>
 									        </div>
 									        <div class="pure-u-1-1">
@@ -2432,10 +2576,10 @@
 								<div class="team-picture">
 								  <div class="team-picture-inner">
 								    <div class="team-picture-front">
-								      <img src="img/team-photos/personal/mohd-hasan.jpg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/mohd-hasan.jpg" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/mohd-hasan.jpg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/mohd-hasan.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -2449,11 +2593,12 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/sunny-park.jpg" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/sunny-park.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Sunny Park</strong>
-														<p>"I'm privileged to have been part of the team - I've made long lasting relationsihps and helped create an amazing event for future talent!"</p>
+														<div>Sponsorship Director</div>
+														<p>"I'm privileged to have been part of the team to create an amazing event for future talent!"</p>
 													</div>
 													<div class="pure-u-1-1">
 														<a href="https://www.linkedin.com/in/sunjun-park/"><div class='icon icon-linkedin'></div></a>
@@ -2463,10 +2608,10 @@
 								<div class="team-picture">
 									<div class="team-picture-inner">
 										<div class="team-picture-front">
-											<img src="img/team-photos/personal/sunny-park.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/sunny-park.jpg" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/sunny-park.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/sunny-park.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -2481,17 +2626,15 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/danny-lee.jpg" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/danny-lee.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Danny Lee</strong>
 														<div>Advisor</div>
-														<p>"My passion is code!"</p>
+														<br>
+														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<div class='icon icon-facebook'></div>
-														<div class='icon icon-instagram'></div>
-														<div class='icon icon-github'></div>
 														<a href="https://www.linkedin.com/in/dannylee25/"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
@@ -2499,10 +2642,10 @@
 								<div class="team-picture">
 									<div class="team-picture-inner">
 										<div class="team-picture-front">
-											<img src="img/team-photos/personal/danny-lee.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/danny-lee.jpg" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/danny-lee.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/danny-lee.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -2516,17 +2659,15 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/jennifer-ly.png" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/jennifer-ly.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Jennifer Ly</strong>
 														<div>Advisor</div>
-														<p>"My passion is code!"</p>
+														<br>
+														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<div class='icon icon-facebook'></div>
-														<div class='icon icon-instagram'></div>
-														<div class='icon icon-github'></div>
 														<a href="https://www.linkedin.com/in/ngoc-jennifer-ly/"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
@@ -2534,10 +2675,10 @@
 								<div class="team-picture">
 									<div class="team-picture-inner">
 										<div class="team-picture-front">
-											<img src="img/team-photos/personal/jennifer-ly.png" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/jennifer-ly.jpg" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/jennifer-ly.png" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/jennifer-ly.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -2551,17 +2692,15 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/paul-hansa.jpg" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/paul-hansa.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Paul Hansa</strong>
 														<div>Advisor</div>
-														<p>"My passion is code!"</p>
+														<br>
+														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<div class='icon icon-facebook'></div>
-														<div class='icon icon-instagram'></div>
-														<div class='icon icon-github'></div>
 														<a href="https://www.linkedin.com/in/phansa/"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
@@ -2569,10 +2708,10 @@
 								<div class="team-picture">
 									<div class="team-picture-inner">
 										<div class="team-picture-front">
-											<img src="img/team-photos/personal/paul-hansa.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/paul-hansa.jpg" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/paul-hansa.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/paul-hansa.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -2587,16 +2726,15 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/glen-george.jpg" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/glen-george.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Glen George</strong>
-														<p>"My passion is code!"</p>
+														<div>Logistics Team</div>
+														<p>"Chase your dreams, pursue your passions, never be afraid to be uncomfortable."</p>
 													</div>
 													<div class="pure-u-1-1">
-														<div class='icon icon-facebook'></div>
-														<div class='icon icon-instagram'></div>
-														<div class='icon icon-github'></div>
+														<a href="https://www.instagram.com/glenge0rge/"><div class='icon icon-instagram'></div></a>
 														<a href="https://www.linkedin.com/in/glen-j-george/"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
@@ -2604,10 +2742,10 @@
 								<div class="team-picture">
 									<div class="team-picture-inner">
 										<div class="team-picture-front">
-											<img src="img/team-photos/personal/glen-george.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/glen-george.jpg" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/glen-george.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/glen-george.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -2622,17 +2760,15 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/annie-lian.jpg" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/annie-lian.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Annie Lian</strong>
-														<div>Marketing Advisor</div>
-														<p>"My passion is code!"</p>
+														<div>Marketing Team</div>
+														<br>
+														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<div class='icon icon-facebook'></div>
-														<div class='icon icon-instagram'></div>
-														<div class='icon icon-github'></div>
 														<a href="https://www.linkedin.com/in/annie-lian/"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
@@ -2640,10 +2776,10 @@
 								<div class="team-picture">
 									<div class="team-picture-inner">
 										<div class="team-picture-front">
-											<img src="img/team-photos/personal/annie-lian.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/annie-lian.jpg" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/annie-lian.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/annie-lian.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -2658,17 +2794,15 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/amanda-yang.jpg" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/amanda-yang.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Amanda Yang</strong>
-														<div>Sponsorship Advisor</div>
-														<p>"My passion is code!"</p>
+														<div>Sponsorship Team</div>
+														<br>
+														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<div class='icon icon-facebook'></div>
-														<div class='icon icon-instagram'></div>
-														<div class='icon icon-github'></div>
 														<a href="https://www.linkedin.com/in/amanda-yang-2019/"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
@@ -2676,10 +2810,10 @@
 								<div class="team-picture">
 									<div class="team-picture-inner">
 										<div class="team-picture-front">
-											<img src="img/team-photos/personal/amanda-yang.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/amanda-yang.jpg" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/amanda-yang.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/amanda-yang.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -2693,17 +2827,15 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/connor-cummings.jpg" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/connor-cummings.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Connor Cummings</strong>
 														<div>Sponsorship Team</div>
-														<p>"My passion is code!"</p>
+														<br>
+														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<div class='icon icon-facebook'></div>
-														<div class='icon icon-instagram'></div>
-														<div class='icon icon-github'></div>
 														<a href="https://www.linkedin.com/in/connor-cummings-47905216b/"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
@@ -2711,10 +2843,10 @@
 								<div class="team-picture">
 									<div class="team-picture-inner">
 										<div class="team-picture-front">
-											<img src="img/team-photos/personal/connor-cummings.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/connor-cummings.jpg" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/connor-cummings.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/connor-cummings.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -2728,17 +2860,15 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/shivani-nanda.jpg" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/shivani-nanda.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Shivani Nanda</strong>
-														<div>Sponsorship Advisor</div>
-														<p>"My passion is code!"</p>
+														<div>Sponsorship Team</div>
+														<br>
+														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<div class='icon icon-facebook'></div>
-														<div class='icon icon-instagram'></div>
-														<div class='icon icon-github'></div>
 														<a href="https://www.linkedin.com/in/shivaninanda/"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
@@ -2746,10 +2876,10 @@
 								<div class="team-picture">
 									<div class="team-picture-inner">
 										<div class="team-picture-front">
-											<img src="img/team-photos/personal/shivani-nanda.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/shivani-nanda.jpg" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/shivani-nanda.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/shivani-nanda.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -2763,16 +2893,15 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/richard-red.jpg" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/richard-red.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Richard Red</strong>
+														<div>Sponsorship Team</div>
+														<br>
 														<p>"Do it"</p>
 													</div>
 													<div class="pure-u-1-1">
-														<div class='icon icon-facebook'></div>
-														<div class='icon icon-instagram'></div>
-														<div class='icon icon-github'></div>
 														<a href="https://www.linkedin.com/in/richardred/"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
@@ -2780,10 +2909,10 @@
 								<div class="team-picture">
 									<div class="team-picture-inner">
 										<div class="team-picture-front">
-											<img src="img/team-photos/personal/richard-red.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/richard-red.jpg" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/richard-red.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/richard-red.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -2798,16 +2927,15 @@
 								<div class="card">
 									<div class="pure-g">
 													<div class="pure-u-1-1">
-														<img src="img/team-photos/personal/sahil-patel.jpg" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/sahil-patel.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Sahil Patel</strong>
-														<p>"My passion is code!"</p>
+														<div>Web Team</div>
+														<br>
+														<p>"My motivation is making hella stacks."</p>
 													</div>
 													<div class="pure-u-1-1">
-														<div class='icon icon-facebook'></div>
-														<div class='icon icon-instagram'></div>
-														<div class='icon icon-github'></div>
 														<a href="https://www.linkedin.com/in/sahilpatel2397/"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
@@ -2815,10 +2943,10 @@
 								<div class="team-picture">
 									<div class="team-picture-inner">
 										<div class="team-picture-front">
-											<img src="img/team-photos/personal/sahil-patel.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/sahil-patel.jpg" alt="Avatar">
 										</div>
 										<div class="team-picture-back">
-											<img src="img/team-photos/personal/sahil-patel.jpg" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/sahil-patel.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -2835,32 +2963,28 @@
 					<h2>Mascot</h2>
 					<div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-6'>
 						<div data-scrollx data-based-on='bottom' data-remove-class-in='offscreen-up' class='offscreen-up member'>
-							<!-- let it still flip as an "easter egg", but only once.
 							<div class="card">
 								<div class="pure-g">
 												<div class="pure-u-1-1">
-													<img src="img/team-photos/personal/mascot-uh3.png" alt="Avatar">
+													<img src="img/team-photos/personal-pruned/mascot-uh3.jpg" alt="Avatar">
 												</div>
 												<div class="pure-u-1-1 info">
 													<strong>Table</strong>
 													<div>Mascot</div>
-													<p>"Thump."</p>
+													<p>"Thump. Thump. Thump."</p>
 												</div>
 												<div class="pure-u-1-1">
-													<div class='icon icon-facebook'></div>
-													<div class='icon icon-instagram'></div>
-													<div class='icon icon-github'></div>
-													<div class='icon icon-twitter'></div>
+												<a href="https://3.ugahacks.com/"><div class='icon icon-website'></div></a>
 												</div>
 								</div>
-							</div>-->
+							</div>
 							<div class="team-picture">
 								<div class="team-picture-inner">
 									<div class="team-picture-front">
-										<img src="img/team-photos/personal/mascot-uh3.png" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/mascot-uh3.jpg" alt="Avatar">
 									</div>
 									<div class="team-picture-back">
-										<img src="img/team-photos/personal/mascot-uh3.png" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/mascot-uh3.jpg" alt="Avatar">
 									</div>
 								</div>
 							</div>
@@ -2876,13 +3000,13 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/danny-lee.jpg" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/danny-lee.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Danny Lee</strong>
 									        	<div>Lead Director</div>
 									        	<br><br>
-									        	<p>"My passion is code!"</p>
+									        	<p></p>
 									        </div>
 									        <div class="pure-u-1-1">
 									        	<a href="https://www.linkedin.com/in/dannylee25/	"><div class='icon icon-linkedin'></div></a>
@@ -2892,10 +3016,10 @@
 								<div class="team-picture">
 								  <div class="team-picture-inner">
 								    <div class="team-picture-front">
-								      <img src="img/team-photos/personal/danny-lee.jpg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/danny-lee.jpg" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/danny-lee.jpg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/danny-lee.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -2909,13 +3033,13 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/jennifer-ly.png" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/jennifer-ly.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Jennifer Ly</strong>
 									        	<div>Director</div>
 									        	<br><br>
-									        	<p>"My passion is code!"</p>
+									        	<p></p>
 									        </div>
 									        <div class="pure-u-1-1">
 									        	<a href="https://www.linkedin.com/in/ngoc-jennifer-ly/"><div class='icon icon-linkedin'></div></a>
@@ -2925,10 +3049,10 @@
 								<div class="team-picture">
 								  <div class="team-picture-inner">
 								    <div class="team-picture-front">
-								      <img src="img/team-photos/personal/jennifer-ly.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/jennifer-ly.jpg" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/jennifer-ly.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/jennifer-ly.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -2942,13 +3066,13 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/paul-hansa.jpg" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/paul-hansa.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Paul Hansa</strong>
 									        	<div>Director</div>
 									        	<br><br>
-									        	<p>"My passion is code!"</p>
+									        	<p></p>
 									        </div>
 									        <div class="pure-u-1-1">
 									        	<a href="https://www.linkedin.com/in/phansa/"><div class='icon icon-linkedin'></div></a>
@@ -2958,10 +3082,10 @@
 								<div class="team-picture">
 								  <div class="team-picture-inner">
 								    <div class="team-picture-front">
-								      <img src="img/team-photos/personal/paul-hansa.jpg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/paul-hansa.jpg" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/paul-hansa.jpg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/paul-hansa.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -2979,13 +3103,13 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/James_Wang.jpeg" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/James_Wang.jpeg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>James Wang</strong>
 									        	<div>Logistics Team</div>
 									        	<br><br>
-									        	<p>"My passion is code!"</p>
+									        	<p></p>
 									        </div>
 									        <div class="pure-u-1-1">
 									        	<a href="https://www.linkedin.com/in/james-wang-771a459a/"><div class='icon icon-linkedin'></div></a>
@@ -2995,10 +3119,10 @@
 								<div class="team-picture">
 								  <div class="team-picture-inner">
 								    <div class="team-picture-front">
-								      <img src="img/team-photos/personal/James_Wang.jpeg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/James_Wang.jpeg" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/James_Wang.jpeg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/James_Wang.jpeg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -3012,13 +3136,13 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/Tyler_vox.jpeg" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/Tyler_vox.jpeg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Tyle Vox</strong>
 									        	<div>Logistics Team</div>
 									        	<br><br>
-									        	<p>"My passion is code!"</p>
+									        	<p></p>
 									        </div>
 									        <div class="pure-u-1-1">
 									        	<a href="https://www.linkedin.com/in/tyler-yox/"><div class='icon icon-linkedin'></div></a>
@@ -3028,10 +3152,10 @@
 								<div class="team-picture">
 								  <div class="team-picture-inner">
 								    <div class="team-picture-front">
-								      <img src="img/team-photos/personal/Tyler_vox.jpeg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/Tyler_vox.jpeg" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/Tyler_vox.jpeg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/Tyler_vox.jpeg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -3048,25 +3172,26 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/Ashley_W.png" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Ashley Wang</strong>
 									        	<div>Marketing Team</div>
 									        	<br><br>
-									        	<p>"My passion is code!"</p>
+									        	<p></p>
 									        </div>
 									        <div class="pure-u-1-1">
+									        	<a href="https://www.linkedin.com/in/wang-ashley/"><div class="icon icon-linkedin"></div></a>
 									        </div>
 									</div>
 								</div>
 								<div class="team-picture">
 								  <div class="team-picture-inner">
 								    <div class="team-picture-front">
-								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/Ashley_W.png" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/Ashley_W.png" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -3080,7 +3205,7 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/DJ_Bradford.jpeg" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/DJ_Bradford.jpeg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>DJ Bradbord</strong>
@@ -3095,10 +3220,10 @@
 								<div class="team-picture">
 								  <div class="team-picture-inner">
 								    <div class="team-picture-front">
-								      <img src="img/team-photos/personal/DJ_Bradford.jpeg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/DJ_Bradford.jpeg" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/DJ_Bradford.jpeg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/DJ_Bradford.jpeg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -3115,13 +3240,13 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Jacky Fong</strong>
 									        	<div>Sponsorship Team</div>
 									        	<br><br>
-									        	<p>"My passion is code!"</p>
+									        	<p></p>
 									        </div>
 									        <div class="pure-u-1-1">
 									        </div>
@@ -3130,10 +3255,10 @@
 								<div class="team-picture">
 								  <div class="team-picture-inner">
 								    <div class="team-picture-front">
-								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -3147,7 +3272,7 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/Nick_Tang.jpeg" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/Nick_Tang.jpeg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Nick Tang</strong>
@@ -3163,10 +3288,10 @@
 								<div class="team-picture">
 								  <div class="team-picture-inner">
 								    <div class="team-picture-front">
-								      <img src="img/team-photos/personal/Nick_Tang.jpeg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/Nick_Tang.jpeg" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/Nick_Tang.jpeg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/Nick_Tang.jpeg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -3188,7 +3313,7 @@
 							<div class="card-logo-sub">
 								<div class="pure-g">
 												<div class="pure-u-1-1">
-													<img src="img/team-photos/personal/mascot-uh1.png" alt="Avatar">
+													<img src="img/team-photos/personal-pruned/mascot-uh1.jpg" alt="Avatar">
 												</div>
 												<div class="pure-u-1-1 info">
 													<strong></strong>
@@ -3200,10 +3325,10 @@
 							<div class="team-picture">
 								<div class="team-picture-inner">
 									<div class="team-picture-front">
-										<img src="img/team-photos/personal/mascot-uh1.png" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/mascot-uh1.jpg" alt="Avatar">
 									</div>
 									<div class="team-picture-back">
-										<img src="img/team-photos/personal/mascot-uh1.png" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/mascot-uh1.jpg" alt="Avatar">
 									</div>
 								</div>
 							</div>
@@ -3220,13 +3345,13 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Anurag Banerjee</strong>
 									        	<div>Lead Director</div>
 									        	<br><br>
-									        	<p>"My passion is code!"</p>
+									        	<p></p>
 									        </div>
 									        <div class="pure-u-1-1">
 									        </div>
@@ -3235,10 +3360,10 @@
 								<div class="team-picture">
 								  <div class="team-picture-inner">
 								    <div class="team-picture-front">
-								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -3256,13 +3381,13 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Aditya Sood</strong>
 									        	<div>Logistics Team</div>
 									        	<br><br>
-									        	<p>"My passion is code!"</p>
+									        	<p></p>
 									        </div>
 									        <div class="pure-u-1-1">
 									        </div>
@@ -3271,10 +3396,10 @@
 								<div class="team-picture">
 								  <div class="team-picture-inner">
 								    <div class="team-picture-front">
-								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -3288,13 +3413,13 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Jade Glasgow</strong>
 									        	<div>Logistics Team</div>
 									        	<br><br>
-									        	<p>"My passion is code!"</p>
+									        	<p></p>
 									        </div>
 									        <div class="pure-u-1-1">
 									        </div>
@@ -3303,10 +3428,10 @@
 								<div class="team-picture">
 								  <div class="team-picture-inner">
 								    <div class="team-picture-front">
-								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -3323,7 +3448,7 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/Kelsie_Belan.jpeg" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/Kelsie_Belan.jpeg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Kelsie Belan</strong>
@@ -3339,10 +3464,10 @@
 								<div class="team-picture">
 								  <div class="team-picture-inner">
 								    <div class="team-picture-front">
-								      <img src="img/team-photos/personal/Kelsie_Belan.jpeg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/Kelsie_Belan.jpeg" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/Kelsie_Belan.jpeg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/Kelsie_Belan.jpeg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -3356,13 +3481,13 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Jay Patel</strong>
 									        	<div>Marketing Team</div>
 									        	<br><br>
-									        	<p>"My passion is code!"</p>
+									        	<p></p>
 									        </div>
 									        <div class="pure-u-1-1">
 									        </div>
@@ -3371,10 +3496,10 @@
 								<div class="team-picture">
 								  <div class="team-picture-inner">
 								    <div class="team-picture-front">
-								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -3391,13 +3516,13 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Heather Hunynh</strong>
 									        	<div>Tech Director</div>
 									        	<br><br>
-									        	<p>"My passion is code!"</p>
+									        	<p></p>
 									        </div>
 									        <div class="pure-u-1-1">
 									        </div>
@@ -3406,10 +3531,10 @@
 								<div class="team-picture">
 								  <div class="team-picture-inner">
 								    <div class="team-picture-front">
-								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -3430,7 +3555,7 @@
 							<div class="card-logo-sub">
 								<div class="pure-g">
 												<div class="pure-u-1-1">
-													<img src="img/team-photos/personal/mascot-uh1.png" alt="Avatar">
+													<img src="img/team-photos/personal-pruned/mascot-uh1.jpg" alt="Avatar">
 												</div>
 												<div class="pure-u-1-1 info">
 													<strong></strong>
@@ -3442,10 +3567,10 @@
 							<div class="team-picture">
 								<div class="team-picture-inner">
 									<div class="team-picture-front">
-										<img src="img/team-photos/personal/mascot-uh1.png" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/mascot-uh1.jpg" alt="Avatar">
 									</div>
 									<div class="team-picture-back">
-										<img src="img/team-photos/personal/mascot-uh1.png" alt="Avatar">
+										<img src="img/team-photos/personal-pruned/mascot-uh1.jpg" alt="Avatar">
 									</div>
 								</div>
 							</div>
@@ -3461,13 +3586,13 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Anurag Banerjee</strong>
 									        	<div>Lead Director</div>
 									        	<br><br>
-									        	<p>"My passion is code!"</p>
+									        	<p></p>
 									        </div>
 									        <div class="pure-u-1-1">
 									        </div>
@@ -3476,10 +3601,10 @@
 								<div class="team-picture">
 								  <div class="team-picture-inner">
 								    <div class="team-picture-front">
-								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -3497,25 +3622,26 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/Jaicob_S.jpeg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Jaicob Stewart</strong>
 									        	<div>Logistics Team</div>
 									        	<br><br>
-									        	<p>"My passion is code!"</p>
+									        	<p></p>
 									        </div>
 									        <div class="pure-u-1-1">
+									        	<a href="https://www.linkedin.com/in/jaicob/"><div class="icon icon-linkedin"></div></a>
 									        </div>
 									</div>
 								</div>
 								<div class="team-picture">
 								  <div class="team-picture-inner">
 								    <div class="team-picture-front">
-								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/Jaicob_S.jpeg" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/Jaicob_S.jpeg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -3538,11 +3664,11 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/Malinda_1.jpeg" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/Malinda_1.jpeg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Malinda Inthirath</strong>
-									        	<div>Marketing Director</div>       	
+									        	<div>Marketing Director</div>
 									        	<p><span class="malinda">“I feel lucky to have been a part of the inaugural UGAHacks five years ago. I’m excited for what UGAHacks 6 has in store!”</span></p>
 									        </div>
 									        <div class="pure-u-1-1">
@@ -3553,10 +3679,10 @@
 								<div class="team-picture">
 								  <div class="team-picture-inner">
 								    <div class="team-picture-front">
-								      <img src="img/team-photos/personal/Malinda_1.jpeg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/Malinda_1.jpeg" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/Malinda_1.jpeg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/Malinda_1.jpeg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -3574,13 +3700,13 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal/person.png" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Caleb Adams</strong>
 									        	<div>Tech Director</div>
 									        	<br><br>
-									        	<p>"My passion is code!"</p>
+									        	<p></p>
 									        </div>
 									        <div class="pure-u-1-1">
 									        </div>
@@ -3589,10 +3715,10 @@
 								<div class="team-picture">
 								  <div class="team-picture-inner">
 								    <div class="team-picture-front">
-								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal/person.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -3606,11 +3732,12 @@
 			</div>
 		</div>
 		</div>
+		</div>
 
 		<footer>
 			<div class='container'>
-				<a href="privacy.html">Privacy Policy</a>
-				<a href="mailto:hello@ugahacks.com">Contact Us</a>
+				<a href="https://ugahacks.com/privacy">Privacy Policy</a>
+				<a href="" data-toggle="modal" data-target="#contactusmodal">Contact Us</a>
 				<a data-link="">Back to Top</a>
 			</div>
 			<div class='bottom'>
@@ -3627,12 +3754,12 @@
   		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   		<!-- TODO: Migrate over to using webpack/gulp to combine and minify. -->
+		<script src="js/bootstrap.min.js"></script>
   		<script src="js/ticker.js"></script>
   		<script src="js/menu.js"></script>
   		<script src="js/profile-card.js"></script>
 		<script src="js/scrollx.js"></script>
 		<script src="js/router.js"></script>
-
 		<!-- Main has to be loaded last -->
 		<script src="js/main.js"></script>
 	</body>

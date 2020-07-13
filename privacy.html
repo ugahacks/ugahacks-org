@@ -11,6 +11,12 @@
 			<link rel="manifest" href="icons/favicons/site.webmanifest">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 
+			<link rel="stylesheet" href="https://toert.github.io/Isolated-Bootstrap/versions/4.1.0/iso_bootstrap4.1.0min.css">
+
+			<link href="style/bootstrap-iso.css" rel="stylesheet" type="text/css" />
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 		<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;900&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
@@ -27,12 +33,12 @@
 	<body>
 		<nav>
 			<ul class='menu'>
-				<li class='logo'><a href="index.html">UGAHacks</a></li>
-				<li><a href="index.html#about">About US</a></li>
-				<li><a href="index.html#timeline">Events</a></li>
-				<li><a href="index.html#team">Team</a></li>
-				<li><a data-link="blog">Blog</a></li>
-				<li><a href="mailto:hello@ugahacks.com">Contact Us</a></li>
+				<li class='logo'><a href="https://ugahacks.com">UGAHacks</a></li>
+				<li><a href="https://www.ugahacks.com/#about">About US</a></li>
+				<li><a href="https://ugahacks.com/#timeline">Events</a></li>
+				<li><a href="https://ugahacks.com/#team">Team</a></li>
+				<li><a href="https://blog.ugahacks.com">Blog</a></li>
+				<li><button type="button" class="btn btn-primary btn-toggle" data-toggle="modal" data-target="#contactusmodal">Contact Us</button></li>
 			</ul>
 			<div class='social'>
 				<button class="hamburger hamburger--collapse mobile-only menu-toggle" type="button">
@@ -47,7 +53,43 @@
 			</div>
 			<div style="clear:both"></div>
 		</nav>
+		<!-- Modal -->
+		<div class="bootstrap">
+			<div class="modal fade" id="contactusmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			  <div class="modal-dialog modal-dialog-centered" role="document">
+			    <div style="background-color: #313545; color: #fff;" class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLongTitle">Reach Out!</h5>
+			        <button type="button" class="close" data-dismiss="modal" style="color:#fff" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			      	<b>General: </b><a href="mailto:hello@ugahacks.com" style="color:#fe3d40">hello@ugahacks.com</a>
+			      	<br><b>Sponsor: </b><a href="mailto:sponsor@ugahacks.com" style="color:#fe3d40">sponsor@ugahacks.com</a>
+			      	<br>
+			      	<div style="width: 50%; height: 75%; float:left;">
+			      		<b>Mailing Address:</b>
+				      	<br>University Hackathons
+				      	<br>PO Box 1827
+				      	<br>Athens, GA 30603
+			      	</div>
 
+			      	<div style="width: 50%; height: 75%; float:right;">
+			      		<b>Physical Address:</b>
+				      	<br>University Hackathons
+				      	<br>102 Tate Student Center
+				      	<br>Athens, GA 30602
+			      	</div>
+
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		</div>
+
+		<!-- -->
+		<div class="site-content">
 		<section data-section="privacy" class="privacy-container">
 		    <div class="privacy-text">
 		        <h1>Privacy Policy<span></span></h1>
@@ -77,8 +119,8 @@
 
 		<footer>
 			<div class='container'>
-				<a href="privacy.html">Privacy Policy</a>
-				<a href="mailto:hello@ugahacks.com">Contact Us</a>
+				<a href="https://ugahacks.com/privacy">Privacy Policy</a>
+				<a href="" data-toggle="modal" data-target="#contactusmodal">Contact Us</a>
 				<a data-link="">Back to Top</a>
 			</div>
 			<div class='bottom'>
@@ -92,12 +134,14 @@
 		</footer>
 
   		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+			<script src="js/bootstrap.min.js"></script>
   		<script src="js/ticker.js"></script>
   		<script src="js/main.js"></script>
   		<!-- Scrolling animatons -->
 	    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-		<script src="js/scrollx.js"></script>
-		<script src="js/router.js"></script>
+			<script src="js/menu.js"></script>
+			<script src="js/scrollx.js"></script>
+			<script src="js/router.js"></script>
   		<script>
   			Router.registerState("", Router.action.scrollWindowTo(0))
   			Router.registerState("about", Router.action.scrollWindowToElement('[data-section="about"]'));

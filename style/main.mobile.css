@@ -80,6 +80,15 @@
 		display: flex;
 		flex-direction: column;
 	}
+	.nav-tabs > li {
+		float:none !important;
+		display:inline-block !important;
+		zoom:1;
+	}
+
+	.nav-tabs {
+		text-align:center;
+	}
 }
 @media only screen and (max-width: 935px) {
 	.mobile-only {
@@ -110,6 +119,10 @@
 	.menu li:not(:first-child) a {
 	    padding: 12px;
 	    width: 100%;
+	}
+
+	.menu li:not(:first-child) button {
+	    padding: 12px;
 	}
 
 	/** MENU TRANSITION */

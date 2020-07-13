@@ -3,9 +3,18 @@
  * BACKGROUND: #21232c;
  */
 
+/*Modal Blurring*/
+body.modal-open .site-content{
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+
 @media (min-width: 1200px) {
 .bootstrap-iso .container {
-    width: 1190px !important;
+    width: 1250px !important;
   }
 }
 @keyframes pulse {
@@ -17,7 +26,6 @@
 .bootstrap-iso .nav-tabs {
   border-bottom: 0px solid #dddddd;
 }
-
 
 html,
 body {
@@ -123,9 +131,9 @@ nav .menu {
 
 nav .social {
 	width: 30%;
-    float: right;
-    text-align: right;
-    padding-right: 40px;
+  float: right;
+  text-align: right;
+  padding-right: 40px;
 }
 
 nav ul {
@@ -133,12 +141,37 @@ nav ul {
 	text-transform: uppercase;
 }
 
+
 nav li {
 	display: inline-block;
 	font-size: 20px;
 	font-weight: 200;
-    color: white;
-    margin-right: 10px;
+  color: white;
+  margin-right: 10px;
+}
+
+/*For the contact-us button*/
+nav button {
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  background-repeat:no-repeat;
+
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+
+  font-size: 20px;
+  font-weight: 200;
+  color: white;
+  margin-right: 10px;
+
+  outline: none;
+}
+
+nav button:hover {
+  color: #fe3d40;
 }
 
 nav li:last-child {
@@ -491,7 +524,7 @@ nav .icon {
     z-index: 1000;
     top: -20px;
     left: -30px;
-    height: 370px;
+    height: 385px;
     width: 230px;
     padding: 20px;
     border-radius: 15px;
