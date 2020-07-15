@@ -651,7 +651,7 @@ footer .bottom .slogan {
   text-align: right;
 }
 
-/* Privacy Section */
+/* Privacy Section & Contact Section*/
 .privacy-container {
   margin: 75px auto;
   justify-content: space-evenly;
@@ -659,11 +659,32 @@ footer .bottom .slogan {
   flex-direction: row;
 }
 
+.contact-container {
+  margin: 15px auto;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+}
+
 .privacy-image {
   align-self: center;
-  width: 40%;
+  width: 100%;
   height: 100%;
 }
+
+.contact-image {
+  align-self: center;
+  width: 200px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7.5%;
+}
+
+.contact-image img {
+  width: 100%;
+}
+
 
 .privacy-image img {
   width: 100%;

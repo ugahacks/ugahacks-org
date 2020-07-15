@@ -25,7 +25,12 @@
 	/** ABOUT */
 
 	.about-image, .privacy-image {
-			width: 90%;
+		width: 90%;
+	}
+
+	.contact-image {
+		width: 90%;
+		margin-top: 25%;
 	}
 
 	.stats-container {
@@ -87,6 +92,11 @@
 	.about-image, .privacy-image {
 		margin: 0 auto;
 		margin-top: 50px;
+	}
+
+	.contact-image {
+		margin: 0 auto;
+		margin-top: 25%;
 	}
 
 	.about-container {
