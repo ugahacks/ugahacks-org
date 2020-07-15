@@ -90,6 +90,11 @@ h1 {
 	  background: url(../img/laptop.svg) center center no-repeat;
 }
 
+#laptopmobile {
+    width: 90%;
+    margin: 0 auto;
+}
+
 .header .arrow {
     height: 54px;
     background-color: transparent;
@@ -98,7 +103,7 @@ h1 {
     padding: 5px;
     display: inline-block;
     position: absolute;
-    top: calc(100vh - 205px);
+    top: calc(100vh - 190px);
     left: 50%;
     margin-left: -27px;
     animation: pulse 2s infinite;
