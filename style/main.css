@@ -657,6 +657,7 @@ footer .bottom .slogan {
   justify-content: space-evenly;
   display: flex;
   flex-direction: row;
+  min-height: 73vh;
 }
 
 .contact-container {
