@@ -666,20 +666,20 @@ footer .bottom .slogan {
   flex-direction: row;
 }
 
-.privacy-image {
+.privacy-image, .contact-image {
   align-self: center;
   width: 40%;
   height: 100%;
 }
 
-.contact-image {
+/*.contact-image {
   align-self: center;
   width: 400px;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 7.5%;
-}
+}*/
 
 .contact-image img {
   width: 100%;

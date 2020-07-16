@@ -29,8 +29,7 @@
 	}
 
 	.contact-image {
-		width: 90%;
-		margin-top: 25%;
+		width: 85%;
 	}
 
 	.stats-container {
@@ -92,11 +91,6 @@
 	.about-image, .privacy-image {
 		margin: 0 auto;
 		margin-top: 50px;
-	}
-
-	.contact-image {
-		margin: 0 auto;
-		margin-top: 25%;
 	}
 
 	.about-container {
