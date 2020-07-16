@@ -18,8 +18,8 @@
 
 		<!-- <link rel="stylesheet" href="https://toert.github.io/Isolated-Bootstrap/versions/4.1.0/iso_bootstrap4.1.0min.css">
 			DELAY THIS ASSET LOAD SINCE IT ONLY PERTAINS TO CONTACT US MODAL:-->
-		<link rel="preload" href="https://toert.github.io/Isolated-Bootstrap/versions/4.1.0/iso_bootstrap4.1.0min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-		<noscript><link rel="stylesheet" href="https://toert.github.io/Isolated-Bootstrap/versions/4.1.0/iso_bootstrap4.1.0min.css"></noscript>
+		<!-- <link rel="preload" href="https://toert.github.io/Isolated-Bootstrap/versions/4.1.0/iso_bootstrap4.1.0min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript><link rel="stylesheet" href="https://toert.github.io/Isolated-Bootstrap/versions/4.1.0/iso_bootstrap4.1.0min.css"></noscript> -->
 
 		<!-- <link href="style/bootstrap-iso.css" rel="stylesheet" type="text/css" /> -->
 		<style type="text/css">
@@ -186,7 +186,7 @@
 				<li><a data-link="timeline">Events</a></li>
 				<li><a data-link="team">Team</a></li>
 				<li><a href="//blog.ugahacks.com">Blog</a></li>
-				<li><button type="button" class="btn btn-primary btn-toggle" data-toggle="modal" data-target="#contactusmodal">Contact Us</button></li>
+				<li><a href="https://ugahacks.com/contact">Contact</a></li>
 			</ul>
 			<div class='social'>
 				<button class="hamburger hamburger--collapse mobile-only menu-toggle" type="button">
@@ -203,45 +203,13 @@
 		</nav>
 
 		<!-- Modal -->
-		<div class="bootstrap">
-			<div class="modal fade" id="contactusmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-			  <div class="modal-dialog modal-dialog-centered" role="document">
-			    <div style="background-color: #313545; color: #fff;" class="modal-content">
-			      <div class="modal-header">
-			        <h5 class="modal-title" id="exampleModalLongTitle">Reach Out!</h5>
-			        <button type="button" class="close" data-dismiss="modal" style="color:#fff" aria-label="Close">
-			          <span aria-hidden="true">&times;</span>
-			        </button>
-			      </div>
-			      <div class="modal-body">
-			      	<b>General: </b><a href="mailto:hello@ugahacks.com" style="color:#fe3d40">hello@ugahacks.com</a>
-			      	<br><b>Sponsor: </b><a href="mailto:sponsor@ugahacks.com" style="color:#fe3d40">sponsor@ugahacks.com</a>
-			      	<br>
-			      	<div style="width: 50%; height: 75%; float:left;">
-			      		<b>Mailing Address:</b>
-				      	<br>University Hackathons
-				      	<br>PO Box 1827
-				      	<br>Athens, GA 30603
-			      	</div>
-
-			      	<div style="width: 50%; height: 75%; float:right;">
-			      		<b>Physical Address:</b>
-				      	<br>University Hackathons
-				      	<br>102 Tate Student Center
-				      	<br>Athens, GA 30602
-			      	</div>
-
-			      </div>
-			    </div>
-			  </div>
-			</div>
-		</div>
 
 		<!-- -->
 		<div class="site-content">
 
 		<section class="header">
 			<div class="laptop left"></div>
+			<img id="laptopmobile" src="img/mobilelaptop.png" alt="Laptop">
 			<div class="inspiration right">
 				<h1>Boot up your dreams.
 					<br>
@@ -339,10 +307,10 @@
 			        	<div class="card-body">
 			          		<p>UGAHacks 5 was hosted at the Zell Miller Learning Center, which would become the new home for UGAHacks.
 											The 5th rendition of UGAHacks was the largest we have seen in statistical numbers with 500 participants, 14 sponsors,
-											15 mentors, and a record <a class="timeline-links" href="https://ugahacks5.devpost.com/">70 project submissions</a>. UGAHacks 5 was themed around bringing 'otherworldly' ideas to life with
+											15 mentors, and a record <a class="timeline-links" href="https://ugahacks5.devpost.com/" target="_BLANK">70 project submissions</a>. UGAHacks 5 was themed around bringing 'otherworldly' ideas to life with
 											our mascot, Byte, heading to explore space, but from the event perspective UGAHacks 5 could be
 											considered the 'Launch Pad' that became the new standard for all future UGAHacks events.</p>
-										<a href="https://5.ugahacks.com/">
+										<a href="https://5.ugahacks.com/" target="_BLANK">
 			          		<img src="img/timeline-photos/hacks5banner.jpg" alt="UGAHacks 5 banner">
 										</a>
 			        	</div>
@@ -357,10 +325,10 @@
 			        	</div>
 			        	<div class="card-body">
 			          		<p>UGAHacks 4 returned to its original home at the Lamar Dodd School of Art which allowed to connect and have a greater presence within the University that year.
-											This event saw a total of 450 participants, 11 sponsors, 15 mentors, and over <a class="timeline-links" href="https://ugahacks4.devpost.com/">50 project submissions</a>. The fourth UGAHacks event
+											This event saw a total of 450 participants, 11 sponsors, 15 mentors, and over <a class="timeline-links" href="https://ugahacks4.devpost.com/" target="_BLANK">50 project submissions</a>. The fourth UGAHacks event
 											also experienced the greatest diversity of hackers from so many different schools across the entire world. UGAHacks 4 allowed for a new sprouting of ideas and possibilities for
 											all future events which were once  thought of as unattainable.</p>
-										<a href="https://4.ugahacks.com/">
+										<a href="https://4.ugahacks.com/" target="_BLANK">
 			          			<img src="img/timeline-photos/hacks4banner.png" alt="UGAHacks 4 Banner">
 										</a>
 			        	</div>
@@ -377,9 +345,9 @@
 			          		<p>UGAHacks 3 was hosted at Thinc Studios once again but this event did not fail to exceed expectations as its predecessors once did.
 											There was a change in leadership which came with a new organizational structure and new way of planning a hackathon. The third rendition of
 											our event created a recognizable brand which allowed hackers, sponsors, and partners to see a new vision that UGAHacks was about to embark upon, one that they had to be a part of.
-											We saw a total of 150 participants, 10 sponsors/partners, and over <a class="timeline-links" href="https://ugahacks3.devpost.com/">26 submissions for projects</a>. UGAHacks 3 was centered around the possibilities that could come from partnering with a team around a table just as UGAHacks 3
+											We saw a total of 150 participants, 10 sponsors/partners, and over <a class="timeline-links" href="https://ugahacks3.devpost.com/" target="_BLANK">26 submissions for projects</a>. UGAHacks 3 was centered around the possibilities that could come from partnering with a team around a table just as UGAHacks 3
 											and future events after came to life - with a few students coming around a table and communicating new ideas.</p>
-											<a href="https://3.ugahacks.com/">
+											<a href="https://3.ugahacks.com/" target="_BLANK">
 												<img src="img/timeline-photos/hacks3banner.png" alt="UGAHacks 3 Banner">
 											</a>
 			        	</div>
@@ -388,16 +356,16 @@
 			      	<div class="event-card" data-aos="fade-left" data-aos-once="true">
 			        	<div class="card-head">
 			          		<div class="number-box">
-			            		<span>2017</span>
+			            		<span>2016</span>
 			          		</div>
 			          		<h2>UGAHacks 2</h2>
 			        	</div>
 			        	<div class="card-body">
 			          		<p>UGAHacks 2 moved to a new home in Downtown Athens, Thinc. Studios, which helped created a more hacker friendly environment
-											with better work spaces, bean bag chairs, and modern presentation rooms for unique workshops. The second UGAHacks event saw
-											great growth with more resources to add key features to the event such as food, a larger venue, and better prizes. This all
+											with better work spaces, bean bag chairs, and modern presentation rooms for unique workshops. In total, <a class="timeline-links" href="https://ugahacks-ii.devpost.com/" target="_BLANK">24 projects were submitted</a>.
+											The second UGAHacks event saw great growth with more resources to add key features to the event such as food, a larger venue, and better prizes. This all
 											fueled the desire for more hackers to come and create a standard of awesomeness moving forward.</p>
-										<a href="https://2.ugahacks.com/">
+										<a href="https://2.ugahacks.com/" target="_BLANK">
 										<img src="img/timeline-photos/hacks2banner.png" alt="UGAHacks 2 Banner">
 										</a>
 			        	</div>
@@ -406,15 +374,15 @@
 			      	<div class="event-card" data-aos="fade-right" data-aos-once="true">
 			        	<div class="card-head">
 			          		<div class="number-box">
-			            		<span>2016</span>
+			            		<span>2015</span>
 			          		</div>
 			          		<h2>UGAHacks 1</h2>
 			        	</div>
 			        	<div class="card-body">
 			          		<p>The original UGAHacks event began at the Lamar Dodd School of Art. The first event of its kind at UGA was special because two roommates wanted to bring an underrepresented
 											community of students within the Computer Science and Engineering schools together for a weekend of fun and unlimited creativity.
-											The first version of our event had humble beginnings with less than 100 participants and <a class="timeline-links" href="https://ugahacks.devpost.com/">36 submissions for projects</a>. UGAHacks became the new safe haven for hackers can come together to learn, create and share!</p>
-										<a href="https://1.ugahacks.com/">
+											The first version of our event had humble beginnings with less than 100 participants and <a class="timeline-links" href="https://ugahacks.devpost.com/" target="_BLANK">36 submissions for projects</a>. UGAHacks became the new safe haven for hackers can come together to learn, create and share!</p>
+										<a href="https://1.ugahacks.com/" target="_BLANK">
 										<img src="img/timeline-photos/hacks1banner.png" alt="UGAHacks 1 Banner">
 										</a>
 			        	</div>
@@ -502,8 +470,8 @@
 									        	<p>"Chase your dreams, pursue your passions, never be afraid to be uncomfortable."</p>
 									        </div>
 									        <div class="pure-u-1-1">
-														<a href="https://www.instagram.com/glenge0rge/"><div class='icon icon-instagram'></div></a>
-									        	<a href="https://www.linkedin.com/in/glen-j-george/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.instagram.com/glenge0rge/"target="_BLANK"><div class='icon icon-instagram'></div></a>
+									        	<a href="https://www.linkedin.com/in/glen-j-george/" target="_BLANK"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -536,7 +504,7 @@
 														<br>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<a href="https://www.linkedin.com/in/yi-jian-ma-ma-555199164/"><div class='icon icon-linkedin'></div></a>
+									        	<a href="https://www.linkedin.com/in/yi-jian-ma-ma-555199164/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -569,7 +537,7 @@
 														<br>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<a href="https://www.linkedin.com/in/sydney-nelms-1a1874191/"><div class='icon icon-linkedin'></div></a>
+									        	<a href="https://www.linkedin.com/in/sydney-nelms-1a1874191/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -602,7 +570,7 @@
 									        	<p>"Rainy day = Noodles"</p>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<a href="https://www.linkedin.com/in/jenny-kim-b005121a4/"><div class='icon icon-linkedin'></div></a>
+									        	<a href="https://www.linkedin.com/in/jenny-kim-b005121a4/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -635,11 +603,11 @@
 									        	<p>"Go Dawgs!"</p>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<a href="https://www.instagram.com/jefferyjohn_/"><div class='icon icon-instagram'></div></a>
-									        	<a href="https://github.com/jefferyjohn"><div class='icon icon-github'></div></a>
-									        	<a href="https://twitter.com/jefferyjohn_"><div class='icon icon-twitter'> </div></a>
-														<a href="https://www.linkedin.com/in/jefferyjohn/"><div class='icon icon-linkedin'></div></a>
-														<a href="https://jefferyajohn.com/"><div class='icon icon-website'></div></a>
+									        	<a href="https://www.instagram.com/jefferyjohn_/"target="_BLANK"><div class='icon icon-instagram'></div></a>
+									        	<a href="https://github.com/jefferyjohn"target="_BLANK"><div class='icon icon-github'></div></a>
+									        	<a href="https://twitter.com/jefferyjohn_"target="_BLANK"><div class='icon icon-twitter'> </div></a>
+														<a href="https://www.linkedin.com/in/jefferyjohn/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
+														<a href="https://jefferyajohn.com/"target="_BLANK"><div class='icon icon-website'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -672,9 +640,9 @@
 									        	<p>"Hello there"</p>
 									        </div>
 									        <div class="pure-u-1-1">
-														<a href="https://www.instagram.com/youkaneduit/"><div class='icon icon-instagram'></div></a>
-														<a href="https://github.com/kanedu828"><div class='icon icon-github'></div></a>
-														<a href="https://www.linkedin.com/in/kane-du-517277172/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.instagram.com/youkaneduit/"target="_BLANK"><div class='icon icon-instagram'></div></a>
+														<a href="https://github.com/kanedu828"target="_BLANK"><div class='icon icon-github'></div></a>
+														<a href="https://www.linkedin.com/in/kane-du-517277172/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -709,7 +677,7 @@
 														<br>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<a href="https://www.linkedin.com/in/dannylee25/"><div class='icon icon-linkedin'></div></a>
+									        	<a href="https://www.linkedin.com/in/dannylee25/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -738,11 +706,10 @@
 									        <div class="pure-u-1-1 info">
 									        	<strong>Jin Jeong</strong>
 									        	<div>Advisor</div>
-														<br>
-														<br>
+														<p>"Proud of the hacks team!"</p>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<a href="https://www.linkedin.com/in/jin-jeong/"><div class='icon icon-linkedin'></div></a>
+									        	<a href="https://www.linkedin.com/in/jin-jeong/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -775,7 +742,7 @@
 														<br>
 									        </div>
 									        <div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/ngoc-jennifer-ly/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/ngoc-jennifer-ly/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -807,9 +774,9 @@
 									        	<p>"Those who are seen dancing are thought to be insane by those who cannot hear the music."</p>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<a href="https://github.com/tjhasan"><div class='icon icon-github'></div></a>
-									        	<a href="https://www.linkedin.com/in/mohdhasan10/"><div class='icon icon-linkedin'></div></a>
-														<a href="https://tjhasan.github.io/"><div class='icon icon-website'></div></a>
+									        	<a href="https://github.com/tjhasan"target="_BLANK"><div class='icon icon-github'></div></a>
+									        	<a href="https://www.linkedin.com/in/mohdhasan10/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
+														<a href="https://tjhasan.github.io/"target="_BLANK"><div class='icon icon-website'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -842,7 +809,7 @@
 														<br>
 									        </div>
 									        <div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/phansa/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/phansa/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -876,7 +843,7 @@
 														<p>"Hack on!"</p>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/kevin-tang-101a62190/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/kevin-tang-101a62190/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -909,7 +876,7 @@
 														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/kyle-aban/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/kyle-aban/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -941,7 +908,7 @@
 									        	<p>"What matters in life is not what happens to you but what you remember and how"</p>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<a href="https://www.linkedin.com/in/miranda-gomez-puche/"><div class='icon icon-linkedin'></div></a>
+									        	<a href="https://www.linkedin.com/in/miranda-gomez-puche/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -973,10 +940,10 @@
 									        	<p>"No mom I don't know what error code 27 means on the TV"</p>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<a href="https://github.com/stefantobler"><div class='icon icon-github'></div></a>
-									        	<a href="https://twitter.com/stefanltobler"><div class='icon icon-twitter'></div></a>
-														<a href="https://www.linkedin.com/in/stefantobler"><div class='icon icon-linkedin'></div></a>
-														<a href="https://stefantobler.com"><div class='icon icon-website'></div></a>
+									        	<a href="https://github.com/stefantobler"target="_BLANK"><div class='icon icon-github'></div></a>
+									        	<a href="https://twitter.com/stefanltobler"target="_BLANK"><div class='icon icon-twitter'></div></a>
+														<a href="https://www.linkedin.com/in/stefantobler"target="_BLANK"><div class='icon icon-linkedin'></div></a>
+														<a href="https://stefantobler.com"target="_BLANK"><div class='icon icon-website'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -1042,7 +1009,7 @@
 														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/annie-lian/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/annie-lian/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -1075,7 +1042,7 @@
 														<p>"Opinions on Frozen Pop Tarts?"</p>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.instagram.com/feliseeeeenavidad/"><div class='icon icon-instagram'></div></a>
+														<a href="https://www.instagram.com/feliseeeeenavidad/"target="_BLANK"><div class='icon icon-instagram'></div></a>
 													</div>
 									</div>
 								</div>
@@ -1109,7 +1076,7 @@
 														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/amanda-yang-2019/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/amanda-yang-2019/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -1141,7 +1108,7 @@
 														<p>"The only time I'm not on caffeine is when I'm asleep "</p>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/chunwing-ng/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/chunwing-ng/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -1174,7 +1141,7 @@
 														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/connor-cummings-47905216b/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/connor-cummings-47905216b/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -1199,7 +1166,7 @@
 									<div class="pure-g">
 													<div class="pure-u-1-1">
 														<!-- Replace This With An IRL Pic -->
-														<img src="img/team-photos/bitmoji/keshav.png" alt="Avatar">
+														<img src="img/team-photos/personal-pruned/keshav-raviprakash.jpg" alt="Avatar">
 													</div>
 													<div class="pure-u-1-1 info">
 														<strong>Keshav Raviprakash</strong>
@@ -1208,7 +1175,7 @@
 														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/keshav-raviprakash-638b11113/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/keshav-raviprakash-638b11113/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -1219,7 +1186,7 @@
 										</div>
 										<div class="team-picture-back">
 											<!-- Replace This With An IRL Pic -->
-											<img src="img/team-photos/bitmoji/keshav.png" alt="Avatar">
+											<img src="img/team-photos/personal-pruned/keshav-raviprakash.jpg" alt="Avatar">
 										</div>
 									</div>
 								</div>
@@ -1242,8 +1209,8 @@
 														<p>"Never regret anythin that made you smile"</p>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.instagram.com/sameer_annavarapu/"><div class='icon icon-instagram'></div></a>
-														<a href="https://www.linkedin.com/in/sameer-annavarapu/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.instagram.com/sameer_annavarapu/"target="_BLANK"><div class='icon icon-instagram'></div></a>
+														<a href="https://www.linkedin.com/in/sameer-annavarapu/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -1276,7 +1243,7 @@
 														<br>
 									        </div>
 									        <div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/shivaninanda/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/shivaninanda/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -1308,11 +1275,11 @@
 									        	<p>"Some flies are too awesome for the wall"</p>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<a href="https://www.facebook.com/sudhan.chitgopkar/"><div class='icon icon-facebook'></div></a>
-									        	<a href="https://www.instagram.com/not.sudhan/"><div class='icon icon-instagram'></div></a>
-									        	<a href="https://github.com/sudhanchitgopkar"><div class='icon icon-github'></div></a>
-														<a href="https://www.linkedin.com/in/sudhanchitgopkar/"><div class='icon icon-linkedin'></div></a>
-														<a href="https://sudhanchitgopkar.com"><div class='icon icon-website'></div></a>
+									        	<a href="https://www.facebook.com/sudhan.chitgopkar/"target="_BLANK"><div class='icon icon-facebook'></div></a>
+									        	<a href="https://www.instagram.com/not.sudhan/"target="_BLANK"><div class='icon icon-instagram'></div></a>
+									        	<a href="https://github.com/sudhanchitgopkar"target="_BLANK"><div class='icon icon-github'></div></a>
+														<a href="https://www.linkedin.com/in/sudhanchitgopkar/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
+														<a href="https://sudhanchitgopkar.com"target="_BLANK"><div class='icon icon-website'></div></a>
 													</div>
 									</div>
 								</div>
@@ -1337,16 +1304,15 @@
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
 									        	<!-- IRL Pic goes here-->
-									        	<img src="img/team-photos/bitmoji/venusly-yang.png" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/venusly-yang.png" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Venusly Yang</strong>
 									        	<div>Sponsorship Team</div>
-														<br>
-														<br>
+														<p>"If Monday had a face, I would punch it."</p>
 									        </div>
 									        <div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/venusly-yang/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/venusly-yang/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -1357,7 +1323,7 @@
 								    </div>
 								    <div class="team-picture-back">
 						        		<!-- IRL Pic goes here-->
-								      <img src="img/team-photos/bitmoji/venusly-yang.png" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/venusly-yang.png" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -1380,8 +1346,8 @@
 									        	<p>"If you're good at one thing, make it everything."</p>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<a href="https://github.com/andros415"><div class='icon icon-github'></div></a>
-														<a href="https://www.linkedin.com/in/andrei-s/"><div class='icon icon-linkedin'></div></a>
+									        	<a href="https://github.com/andros415"target="_BLANK"><div class='icon icon-github'></div></a>
+														<a href="https://www.linkedin.com/in/andrei-s/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -1414,7 +1380,7 @@
 														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/dlopez1212/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/dlopez1212/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -1446,10 +1412,10 @@
 									        	<p>"The universe is change and life is opinion"</p>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<a href="https://github.com/emmanoni"><div class='icon icon-github'></div></a>
-									        	<a href="https://twitter.com/milkywaysalad"><div class='icon icon-twitter'></div></a>
-														<a href="https://www.linkedin.com/in/emmanoni/"><div class='icon icon-linkedin'></div></a>
-														<a href="https://www.milkywaysalad.com"><div class='icon icon-website'></div></a>
+									        	<a href="https://github.com/emmanoni"target="_BLANK"><div class='icon icon-github'></div></a>
+									        	<a href="https://twitter.com/milkywaysalad"target="_BLANK"><div class='icon icon-twitter'></div></a>
+														<a href="https://www.linkedin.com/in/emmanoni/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.milkywaysalad.com"target="_BLANK"><div class='icon icon-website'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -1482,9 +1448,9 @@
 														<p>"Space, reading, coding."</p>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://nealdotpy.dev"><div class='icon icon-website'></div></a>
-														<a href="https://github.com/nealdotpy"><div class='icon icon-github'></div></a>
-														<a href="https://www.linkedin.com/in/thatnealpatel/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://nealdotpy.dev"target="_BLANK"><div class='icon icon-website'></div></a>
+														<a href="https://github.com/nealdotpy"target="_BLANK"><div class='icon icon-github'></div></a>
+														<a href="https://www.linkedin.com/in/thatnealpatel/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -1517,8 +1483,8 @@
 									        	<p>"Your voice matters. Vote!"</p>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<a href="https://www.instagram.com/elhanakelly/"><div class='icon icon-instagram'></div></a>
-														<a href="https://www.linkedin.com/in/elhana/"><div class='icon icon-linkedin'></div></a>
+									        	<a href="https://www.instagram.com/elhanakelly/"target="_BLANK"><div class='icon icon-instagram'></div></a>
+														<a href="https://www.linkedin.com/in/elhana/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -1552,7 +1518,7 @@
 									        	<p></p>
 									        </div>
 									        <div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/shawn-holman/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/shawn-holman/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -1592,7 +1558,7 @@
 													<p>"Boot up your dreams!"</p>
 												</div>
 												<div class="pure-u-1-1">
-													<a href="https://5.ugahacks.com/"><div class='icon icon-website'></div></a>
+													<a href="https://5.ugahacks.com/"target="_BLANK"><div class='icon icon-website'></div></a>
 												</div>
 								</div>
 							</div>
@@ -1625,9 +1591,9 @@
 									        	<p>"Those who are seen dancing are thought to be insane by those who cannot hear the music."</p>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<a href="https://github.com/tjhasan"><div class='icon icon-github'></div></a>
-									        	<a href="https://www.linkedin.com/in/mohdhasan10/"><div class='icon icon-linkedin'></div></a>
-														<a href="https://tjhasan.github.io/"><div class='icon icon-website'></div></a>
+									        	<a href="https://github.com/tjhasan"target="_BLANK"><div class='icon icon-github'></div></a>
+									        	<a href="https://www.linkedin.com/in/mohdhasan10/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
+														<a href="https://tjhasan.github.io/"target="_BLANK"><div class='icon icon-website'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -1660,7 +1626,7 @@
 														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/amy-yang-2bba64102/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/amy-yang-2bba64102/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -1692,8 +1658,8 @@
 														<p>"Chase your dreams, pursue your passions, never be afraid to be uncomfortable."</p>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.instagram.com/glenge0rge/"><div class='icon icon-instagram'></div></a>
-														<a href="https://www.linkedin.com/in/glen-j-george/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.instagram.com/glenge0rge/"target="_BLANK"><div class='icon icon-instagram'></div></a>
+														<a href="https://www.linkedin.com/in/glen-j-george/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -1726,7 +1692,7 @@
 														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/annie-lian/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/annie-lian/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -1758,7 +1724,7 @@
 														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/amanda-yang-2019/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/amanda-yang-2019/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -1790,7 +1756,7 @@
 														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/shivaninanda/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/shivaninanda/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -1822,8 +1788,8 @@
 														<p>"If you're only good at one thing, make it everything."</p>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://github.com/andros415"><div class='icon icon-github'></div></a>
-														<a href="https://www.linkedin.com/in/andrei-s/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://github.com/andros415"target="_BLANK"><div class='icon icon-github'></div></a>
+														<a href="https://www.linkedin.com/in/andrei-s/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -1857,7 +1823,7 @@
 													<br>
 												</div>
 												<div class="pure-u-1-1">
-													<a href="https://www.linkedin.com/in/dannylee25/"><div class='icon icon-linkedin'></div></a>
+													<a href="https://www.linkedin.com/in/dannylee25/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 												</div>
 								</div>
 							</div>
@@ -1886,11 +1852,10 @@
 												<div class="pure-u-1-1 info">
 													<strong>Jin Jeong</strong>
 													<div>Advisor</div>
-													<br>
-													<br>
+												  <p>"Proud of the hacks team!"</p>
 												</div>
 												<div class="pure-u-1-1">
-													<a href="https://www.linkedin.com/in/jin-jeong/"><div class='icon icon-linkedin'></div></a>
+													<a href="https://www.linkedin.com/in/jin-jeong/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 												</div>
 								</div>
 							</div>
@@ -1923,7 +1888,7 @@
 													<br>
 												</div>
 												<div class="pure-u-1-1">
-													<a href="https://www.linkedin.com/in/ngoc-jennifer-ly/"><div class='icon icon-linkedin'></div></a>
+													<a href="https://www.linkedin.com/in/ngoc-jennifer-ly/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 												</div>
 								</div>
 							</div>
@@ -1956,7 +1921,7 @@
 													<br>
 												</div>
 												<div class="pure-u-1-1">
-													<a href="https://www.linkedin.com/in/phansa/"><div class='icon icon-linkedin'></div></a>
+													<a href="https://www.linkedin.com/in/phansa/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 												</div>
 								</div>
 							</div>
@@ -1990,7 +1955,7 @@
 													<br>
 												</div>
 												<div class="pure-u-1-1">
-													<a href="https://www.linkedin.com/in/allen-williams-ac"><div class='icon icon-linkedin'></div></a>
+													<a href="https://www.linkedin.com/in/allen-williams-ac"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 												</div>
 								</div>
 							</div>
@@ -2023,7 +1988,7 @@
 													<br>
 												</div>
 												<div class="pure-u-1-1">
-													<a href="https://www.linkedin.com/in/sydney-nelms-1a1874191/"><div class='icon icon-linkedin'></div></a>
+													<a href="https://www.linkedin.com/in/sydney-nelms-1a1874191/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 												</div>
 								</div>
 							</div>
@@ -2055,10 +2020,10 @@
 													<p>"No mom I don't know what error code 27 means on the TV"</p>
 												</div>
 												<div class="pure-u-1-1">
-													<a href="https://github.com/stefantobler"><div class='icon icon-github'></div></a>
-													<a href="https://twitter.com/stefanltobler"><div class='icon icon-twitter'></div></a>
-													<a href="https://www.linkedin.com/in/stefantobler"><div class='icon icon-linkedin'></div></a>
-													<a href="https://stefantobler.com"><div class='icon icon-website'></div></a>
+													<a href="https://github.com/stefantobler"target="_BLANK"><div class='icon icon-github'></div></a>
+													<a href="https://twitter.com/stefanltobler"target="_BLANK"><div class='icon icon-twitter'></div></a>
+													<a href="https://www.linkedin.com/in/stefantobler"target="_BLANK"><div class='icon icon-linkedin'></div></a>
+													<a href="https://stefantobler.com"target="_BLANK"><div class='icon icon-website'></div></a>
 												</div>
 								</div>
 							</div>
@@ -2091,7 +2056,7 @@
 													<br>
 												</div>
 												<div class="pure-u-1-1">
-													<a href="https://www.linkedin.com/in/thonnykoon/"><div class='icon icon-linkedin'></div></a>
+													<a href="https://www.linkedin.com/in/thonnykoon/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 												</div>
 								</div>
 							</div>
@@ -2125,7 +2090,7 @@
 													<p>"Opinions on Frozen Pop Tarts?"</p>
 												</div>
 												<div class="pure-u-1-1">
-													<a href="https://www.instagram.com/feliseeeeenavidad/"><div class='icon icon-instagram'></div></a>
+													<a href="https://www.instagram.com/feliseeeeenavidad/"target="_BLANK"><div class='icon icon-instagram'></div></a>
 												</div>
 								</div>
 							</div>
@@ -2159,7 +2124,7 @@
 													<br>
 												</div>
 												<div class="pure-u-1-1">
-													<a href="https://www.linkedin.com/in/connor-cummings-47905216b/"><div class='icon icon-linkedin'></div></a>
+													<a href="https://www.linkedin.com/in/connor-cummings-47905216b/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 												</div>
 								</div>
 							</div>
@@ -2192,11 +2157,11 @@
 													<p>"Go Dawgs!"</p>
 												</div>
 												<div class="pure-u-1-1">
-													<a href="https://www.instagram.com/jefferyjohn_/"><div class='icon icon-instagram'></div></a>
-													 <a href="https://github.com/jefferyjohn"><div class='icon icon-github'></div></a>
-													<a href="https://twitter.com/jefferyjohn_"><div class='icon icon-twitter'></div> </a>
-													 <a href="https://www.linkedin.com/in/jefferyjohn/"><div class='icon icon-linkedin'></div></a>
-													<a href="https://jefferyajohn.com/"><div class='icon icon-website'></div></a>
+													<a href="https://www.instagram.com/jefferyjohn_/"target="_BLANK"><div class='icon icon-instagram'></div></a>
+													 <a href="https://github.com/jefferyjohn"target="_BLANK"><div class='icon icon-github'></div></a>
+													<a href="https://twitter.com/jefferyjohn_"target="_BLANK"><div class='icon icon-twitter'></div> </a>
+													 <a href="https://www.linkedin.com/in/jefferyjohn/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
+													<a href="https://jefferyajohn.com/"target="_BLANK"><div class='icon icon-website'></div></a>
 												</div>
 								</div>
 							</div>
@@ -2229,7 +2194,7 @@
 													<br>
 												</div>
 												<div class="pure-u-1-1">
-													<a href="https://www.linkedin.com/in/hima-velaga/"><div class='icon icon-linkedin'></div></a>
+													<a href="https://www.linkedin.com/in/hima-velaga/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 												</div>
 								</div>
 							</div>
@@ -2263,7 +2228,7 @@
 													<br>
 												</div>
 												<div class="pure-u-1-1">
-													<a href="https://www.linkedin.com/in/alexcostaluiz/"><div class='icon icon-linkedin'></div></a>
+													<a href="https://www.linkedin.com/in/alexcostaluiz/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 												</div>
 								</div>
 							</div>
@@ -2296,7 +2261,7 @@
 													<br>
 												</div>
 												<div class="pure-u-1-1">
-													<a href="https://www.linkedin.com/in/courtney-hogan/"><div class='icon icon-linkedin'></div></a>
+													<a href="https://www.linkedin.com/in/courtney-hogan/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 												</div>
 								</div>
 							</div>
@@ -2329,7 +2294,7 @@
 													<br>
 												</div>
 												<div class="pure-u-1-1">
-													<a href="https://www.linkedin.com/in/dlopez1212/"><div class='icon icon-linkedin'></div></a>
+													<a href="https://www.linkedin.com/in/dlopez1212/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 												</div>
 								</div>
 							</div>
@@ -2362,7 +2327,7 @@
 													<br>
 												</div>
 												<div class="pure-u-1-1">
-													<a href="https://www.linkedin.com/in/juliancamp/"><div class='icon icon-linkedin'></div></a>
+													<a href="https://www.linkedin.com/in/juliancamp/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 												</div>
 								</div>
 							</div>
@@ -2395,9 +2360,9 @@
 													<p>"Hello there"</p>
 												</div>
 												<div class="pure-u-1-1">
-													<a href="https://www.instagram.com/youkaneduit/"><div class='icon icon-instagram'></div></a>
-													<a href="https://github.com/kanedu828"><div class='icon icon-github'></div></a>
-													<a href="https://www.linkedin.com/in/kane-du-517277172/"><div class='icon icon-linkedin'></div></a>
+													<a href="https://www.instagram.com/youkaneduit/"target="_BLANK"><div class='icon icon-instagram'></div></a>
+													<a href="https://github.com/kanedu828"target="_BLANK"><div class='icon icon-github'></div></a>
+													<a href="https://www.linkedin.com/in/kane-du-517277172/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 												</div>
 								</div>
 							</div>
@@ -2437,7 +2402,7 @@
 													<p>"Sowing the seed!"</p>
 												</div>
 												<div class="pure-u-1-1">
-													<a href="https://4.ugahacks.com/"><div class='icon icon-website'></div></a>
+													<a href="https://4.ugahacks.com/"target="_BLANK"><div class='icon icon-website'></div></a>
 												</div>
 								</div>
 							</div>
@@ -2467,11 +2432,10 @@
 									        <div class="pure-u-1-1 info">
 									        	<strong>Jin Jeong</strong>
 									        	<div>Lead Director</div>
-														<br>
-														<br>
+														<p>"Proud of the hacks team!"</p>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<a href="https://www.linkedin.com/in/jin-jeong/"><div class='icon icon-linkedin'></div></a>
+									        	<a href="https://www.linkedin.com/in/jin-jeong/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -2502,7 +2466,7 @@
 														<p>"I learned from the creators that you don't have ot be talented, just a heart for the community."</p>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/beier-zhu/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/beier-zhu/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -2535,7 +2499,7 @@
 														<p>"Opinions on Frozen Pop Tarts?"</p>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.instagram.com/feliseeeeenavidad/"><div class='icon icon-instagram'></div></a>
+														<a href="https://www.instagram.com/feliseeeeenavidad/"target="_BLANK"><div class='icon icon-instagram'></div></a>
 													</div>
 									</div>
 								</div>
@@ -2567,9 +2531,9 @@
 									        	<p>"Those who are seen dancing are thought to be insane by those who cannot hear the music."</p>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<a href="https://github.com/tjhasan"><div class='icon icon-github'></div></a>
-									        	<a href="https://www.linkedin.com/in/mohdhasan10/"><div class='icon icon-linkedin'></div></a>
-														<a href="https://tjhasan.github.io/"><div class='icon icon-website'></div></a>
+									        	<a href="https://github.com/tjhasan"target="_BLANK"><div class='icon icon-github'></div></a>
+									        	<a href="https://www.linkedin.com/in/mohdhasan10/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
+														<a href="https://tjhasan.github.io/"target="_BLANK"><div class='icon icon-website'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -2601,7 +2565,7 @@
 														<p>"I'm privileged to have been part of the team to create an amazing event for future talent!"</p>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/sunjun-park/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/sunjun-park/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -2635,7 +2599,7 @@
 														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/dannylee25/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/dannylee25/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -2668,7 +2632,7 @@
 														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/ngoc-jennifer-ly/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/ngoc-jennifer-ly/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -2701,7 +2665,7 @@
 														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/phansa/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/phansa/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -2734,8 +2698,8 @@
 														<p>"Chase your dreams, pursue your passions, never be afraid to be uncomfortable."</p>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.instagram.com/glenge0rge/"><div class='icon icon-instagram'></div></a>
-														<a href="https://www.linkedin.com/in/glen-j-george/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.instagram.com/glenge0rge/"target="_BLANK"><div class='icon icon-instagram'></div></a>
+														<a href="https://www.linkedin.com/in/glen-j-george/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -2769,7 +2733,7 @@
 														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/annie-lian/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/annie-lian/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -2803,7 +2767,7 @@
 														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/amanda-yang-2019/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/amanda-yang-2019/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -2836,7 +2800,7 @@
 														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/connor-cummings-47905216b/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/connor-cummings-47905216b/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -2869,7 +2833,7 @@
 														<br>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/shivaninanda/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/shivaninanda/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -2902,7 +2866,7 @@
 														<p>"Do it"</p>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/richardred/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/richardred/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -2936,7 +2900,7 @@
 														<p>"My motivation is making hella stacks."</p>
 													</div>
 													<div class="pure-u-1-1">
-														<a href="https://www.linkedin.com/in/sahilpatel2397/"><div class='icon icon-linkedin'></div></a>
+														<a href="https://www.linkedin.com/in/sahilpatel2397/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 													</div>
 									</div>
 								</div>
@@ -2974,7 +2938,7 @@
 													<p>"Thump. Thump. Thump."</p>
 												</div>
 												<div class="pure-u-1-1">
-												<a href="https://3.ugahacks.com/"><div class='icon icon-website'></div></a>
+												<a href="https://3.ugahacks.com/"target="_BLANK"><div class='icon icon-website'></div></a>
 												</div>
 								</div>
 							</div>
@@ -3009,7 +2973,7 @@
 									        	<p></p>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<a href="https://www.linkedin.com/in/dannylee25/	"><div class='icon icon-linkedin'></div></a>
+									        	<a href="https://www.linkedin.com/in/dannylee25/	"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -3042,7 +3006,7 @@
 									        	<p></p>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<a href="https://www.linkedin.com/in/ngoc-jennifer-ly/"><div class='icon icon-linkedin'></div></a>
+									        	<a href="https://www.linkedin.com/in/ngoc-jennifer-ly/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -3075,7 +3039,7 @@
 									        	<p></p>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<a href="https://www.linkedin.com/in/phansa/"><div class='icon icon-linkedin'></div></a>
+									        	<a href="https://www.linkedin.com/in/phansa/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -3112,7 +3076,7 @@
 									        	<p></p>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<a href="https://www.linkedin.com/in/james-wang-771a459a/"><div class='icon icon-linkedin'></div></a>
+									        	<a href="https://www.linkedin.com/in/james-wang-771a459a/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -3145,7 +3109,7 @@
 									        	<p></p>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<a href="https://www.linkedin.com/in/tyler-yox/"><div class='icon icon-linkedin'></div></a>
+									        	<a href="https://www.linkedin.com/in/tyler-yox/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -3213,7 +3177,7 @@
 									        	<p>"Back in my day, organizer rooms were always stocked with free soylent"</p>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<a href="https://www.linkedin.com/in/bradfordesigns/"><div class='icon icon-linkedin'></div></a>
+									        	<a href="https://www.linkedin.com/in/bradfordesigns/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -3240,7 +3204,7 @@
 								<div class="card">
 									<div class="pure-g">
 									        <div class="pure-u-1-1">
-									        	<img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
+									        	<img src="img/team-photos/personal-pruned/Jacky_F.JPG" alt="Avatar">
 									        </div>
 									        <div class="pure-u-1-1 info">
 									        	<strong>Jacky Fong</strong>
@@ -3249,16 +3213,17 @@
 									        	<p></p>
 									        </div>
 									        <div class="pure-u-1-1">
+									        	<a href="https://www.linkedin.com/in/jackyf/	"><div class="icon icon-linkedin"></div></a>
 									        </div>
 									</div>
 								</div>
 								<div class="team-picture">
 								  <div class="team-picture-inner">
 								    <div class="team-picture-front">
-								      <img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/Jacky_F.JPG" alt="Avatar">
 								    </div>
 								    <div class="team-picture-back">
-								      <img src="img/team-photos/personal-pruned/person.jpg" alt="Avatar">
+								      <img src="img/team-photos/personal-pruned/Jacky_F.JPG" alt="Avatar">
 								    </div>
 								  </div>
 								</div>
@@ -3281,7 +3246,7 @@
 									        	<p>"CEO of 3 point stories"</p>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<a href="https://www.linkedin.com/in/nick-tang-4a8b50127/"><div class='icon icon-facebook'></div></a>
+									        	<a href="https://www.linkedin.com/in/nick-tang-4a8b50127/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -3457,7 +3422,7 @@
 									        	<p>"Fail often, fail fast." ― Don Norman</p>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<a href="https://www.linkedin.com/in/kelsiebelan/"><div class='icon icon-linkedin'></div></a>
+									        	<a href="https://www.linkedin.com/in/kelsiebelan/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -3672,7 +3637,7 @@
 									        	<p><span class="malinda">“I feel lucky to have been a part of the inaugural UGAHacks five years ago. I’m excited for what UGAHacks 6 has in store!”</span></p>
 									        </div>
 									        <div class="pure-u-1-1">
-									        	<a href="https://www.linkedin.com/in/minth/"><div class='icon icon-linkedin'></div></a>
+									        	<a href="https://www.linkedin.com/in/minth/"target="_BLANK"><div class='icon icon-linkedin'></div></a>
 									        </div>
 									</div>
 								</div>
@@ -3737,7 +3702,7 @@
 		<footer>
 			<div class='container'>
 				<a href="https://ugahacks.com/privacy">Privacy Policy</a>
-				<a href="" data-toggle="modal" data-target="#contactusmodal">Contact Us</a>
+				<a href="https://ugahacks.com/contact">Contact</a>
 				<a data-link="">Back to Top</a>
 			</div>
 			<div class='bottom'>

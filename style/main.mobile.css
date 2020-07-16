@@ -5,13 +5,16 @@
 		flex-direction: column;
 	}
 
+	#laptopmobile {
+			visibility: visible;
+	}
+
 	.header .left {
-		min-height: 50%;
 		margin: 0 auto;
 	}
 
 	.header .right {
-		margin-top: -50px;
+		margin-top: -60px;
 	}
 
 	.header .inspiration h1 {
@@ -22,7 +25,11 @@
 	/** ABOUT */
 
 	.about-image, .privacy-image {
-			width: 90%;
+		width: 90%;
+	}
+
+	.contact-image {
+		width: 85%;
 	}
 
 	.stats-container {
@@ -50,6 +57,25 @@
 
 	footer > div {
 		padding: 20px;
+	}
+}
+@media only screen and (min-width: 480px) {
+	.header .left {
+			visibility: visible;
+	}
+
+	#laptopmobile {
+			display: none;
+	}
+}
+@media only screen and (max-width: 480px) and (min-height: 800px) {
+	.header .right {
+		margin-top: -30px;
+	}
+}
+@media only screen and (max-width: 480px) and (max-height: 640px) {
+	#laptopmobile {
+			width: 80%;
 	}
 }
 @media only screen and (max-width: 1024px) {

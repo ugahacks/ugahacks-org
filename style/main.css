@@ -18,9 +18,9 @@ body.modal-open .site-content{
   }
 }
 @keyframes pulse {
-  0% { margin-bottom: 20px; }
-  50% { margin-bottom: 0; }
-  100% { margin-bottom: 20px; }
+  0% { margin-top: 20px; }
+  50% { margin-top: 0; }
+  100% { margin-top: 20px; }
 }
 
 .bootstrap-iso .nav-tabs {
@@ -90,6 +90,11 @@ h1 {
 	  background: url(../img/laptop.svg) center center no-repeat;
 }
 
+#laptopmobile {
+    width: 90%;
+    margin: 0 auto;
+}
+
 .header .arrow {
     height: 54px;
     background-color: transparent;
@@ -98,7 +103,7 @@ h1 {
     padding: 5px;
     display: inline-block;
     position: absolute;
-    bottom: 100px;
+    top: calc(100vh - 190px);
     left: 50%;
     margin-left: -27px;
     animation: pulse 2s infinite;
@@ -523,7 +528,7 @@ nav .icon {
     background: white;
     z-index: 1000;
     top: -20px;
-    left: -30px;
+    left: -36px;
     height: 385px;
     width: 230px;
     padding: 20px;
@@ -646,19 +651,41 @@ footer .bottom .slogan {
   text-align: right;
 }
 
-/* Privacy Section */
+/* Privacy Section & Contact Section*/
 .privacy-container {
   margin: 75px auto;
   justify-content: space-evenly;
   display: flex;
   flex-direction: row;
+  min-height: 73vh;
 }
 
-.privacy-image {
+.contact-container {
+  margin: 15px auto;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+}
+
+.privacy-image, .contact-image {
   align-self: center;
   width: 40%;
   height: 100%;
 }
+
+/*.contact-image {
+  align-self: center;
+  width: 400px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7.5%;
+}*/
+
+.contact-image img {
+  width: 100%;
+}
+
 
 .privacy-image img {
   width: 100%;
