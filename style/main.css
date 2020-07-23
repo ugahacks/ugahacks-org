@@ -12,6 +12,10 @@ body.modal-open .site-content{
     filter: blur(5px);
 }
 
+body .site-content{
+  max-width: 2000px;
+}
+
 @media (min-width: 1200px) {
 .bootstrap-iso .container {
     width: 1250px !important;
@@ -212,7 +216,8 @@ nav > .menu a {
 }
 
 nav .icon {
-  margin-top: 15px;
+  margin: 15px 0px 0px 10px;
+
 }
 
 .icon {
@@ -301,7 +306,7 @@ nav .icon {
 
 .stats-container {
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -528,9 +533,9 @@ nav .icon {
     background: white;
     z-index: 1000;
     top: -20px;
-    left: -36px;
+    left: -41px;
     height: 385px;
-    width: 230px;
+    width: 240px;
     padding: 20px;
     border-radius: 15px;
     /*border: 3px solid rgba(0,0,0,1); -> looks real bad*/
@@ -634,7 +639,7 @@ footer .container {
   text-decoration: none;
   opacity: 0.5;
   color: white;
-  margin: 0px 55px;
+  margin: 0px 35px;
   transition: 0.2s opacity;
 }
 
@@ -645,6 +650,10 @@ footer .container {
 footer .bottom {
 	background: #1b1a1a;
   font-size: 12px;
+}
+
+.pure-g [class*=pure-u] {
+  font-family: 'Raleway' !important;
 }
 
 footer .bottom .slogan {
