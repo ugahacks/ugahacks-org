@@ -477,13 +477,13 @@ nav .icon {
   border-color: #fe3d40;
 }
 
-.timeline-links {
+.timeline-links, .about-link {
 	text-decoration: none;
 	color: #fe3d40;
 	transition: 0.2s opacity;
 }
 
-.timeline-links:hover {
+.timeline-links:hover, .about-link:hover {
   text-decoration: none;
   color: #fe3d40;
 	opacity: 0.8;
