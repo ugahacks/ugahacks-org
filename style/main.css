@@ -13,7 +13,8 @@ body.modal-open .site-content{
 }
 
 body .site-content{
-  max-width: 2000px;
+  max-width: 2200px;
+  margin: auto;
 }
 
 @media (min-width: 1200px) {
