@@ -529,9 +529,9 @@ nav .icon {
     background: white;
     z-index: 1000;
     top: -20px;
-    left: -41px;
+    left: -43.5px;
     height: 385px;
-    width: 240px;
+    width: 245px;
     padding: 20px;
     border-radius: 15px;
     /*border: 3px solid rgba(0,0,0,1); -> looks real bad*/
