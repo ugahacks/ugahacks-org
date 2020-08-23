@@ -130,7 +130,8 @@
 		border-bottom-width: 1px;
     	box-shadow: 0 0 30px -20px white;
     	/** height is set for height transition */
-    	height: 84px;
+    	/* height: 84px; */
+			height: 135px;
     	transition: height 0.20s;
 	}
 
@@ -187,7 +188,8 @@
 	}
 
 	nav.responsive-open {
-		height: 325px;
+		/* height: 325px; */
+		height: 355px;
 	}
 
 	nav.responsive-open .menu li:not(:first-child), nav.responsive-open .social a {
