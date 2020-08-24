@@ -748,7 +748,7 @@ footer .bottom .slogan {
 }
 
 /* Scrollbar Styling (Only on Chrome but something cool) */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
 		width: 15px;
 }
 ::-webkit-scrollbar-track {
@@ -760,4 +760,4 @@ footer .bottom .slogan {
 	width: 10px;
 	border-radius: 10px;
 	background-color: #D62929;
-}
+} */
