@@ -201,6 +201,18 @@
 	}
 }
 
+@media only screen and (max-width: 375px) {
+	nav {
+		height: 150px;
+	}
+	nav.responsive-open {
+		height: 375px;
+	}
+	#laptopmobile {
+	    margin: 60px auto 0;
+	}
+}
+
 /** TIMELINE */
 @media (min-width: 1050px) {
   	#timeline .event-card-wrapper::after {
