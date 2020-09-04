@@ -92,7 +92,7 @@ h1 {
 
 #laptopmobile {
     width: 90%;
-    margin: 0 auto;
+    margin: 40px auto 0;
 }
 
 .header .arrow {
@@ -112,7 +112,7 @@ h1 {
 /** MENU */
 nav {
     background-color: #21232c;
-    padding: 5px;
+    /* padding: 5px; */
     position: fixed;
     top: 0;
     /*transition: box-shadow 1.25s ease, border-bottom-width 1.25s ease;*/
@@ -262,6 +262,22 @@ nav .icon {
 	display: none;
 }
 
+.covid-alert {
+  background-color: #fe3d40;
+  text-align: center;
+  margin: 0px 0px;
+  padding: 10px;
+}
+
+.covid-alert a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.covid-alert a:hover {
+  opacity: 0.8;
+}
 /** ABOUT US */
 
 .about-container {
@@ -732,7 +748,7 @@ footer .bottom .slogan {
 }
 
 /* Scrollbar Styling (Only on Chrome but something cool) */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
 		width: 15px;
 }
 ::-webkit-scrollbar-track {
@@ -744,4 +760,4 @@ footer .bottom .slogan {
 	width: 10px;
 	border-radius: 10px;
 	background-color: #D62929;
-}
+} */
