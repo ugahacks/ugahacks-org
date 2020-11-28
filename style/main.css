@@ -297,6 +297,7 @@ nav .icon {
 
 .splashbtn:hover {
   opacity: 0.8;
+  cursor: pointer;
 }
 
 /** ABOUT US */
