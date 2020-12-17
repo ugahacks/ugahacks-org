@@ -8,7 +8,13 @@
 	#laptopmobile {
 			visibility: visible;
 	}
-
+	.inspiration {
+		text-align: center;
+	}
+	.splashbtn {
+		margin: 10px auto;
+		width: 80%;
+	}
 	.header .left {
 		margin: 0 auto;
 	}
@@ -18,7 +24,6 @@
 	}
 
 	.header .inspiration h1 {
-		text-align: center;
     	font-size: 45px;
 	}
 
@@ -78,6 +83,17 @@
 			width: 80%;
 	}
 }
+
+@media only screen and (max-width: 1150px) {
+	.btn-container {
+		flex-direction: column;
+	}
+	.splashbtn {
+		margin: 10px auto;
+		width: 80%;
+	}
+}
+
 @media only screen and (max-width: 1024px) {
 	.about-container h1, .privacy-container h1, .privacy-container h2{
 			text-align: center;
