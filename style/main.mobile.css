@@ -83,11 +83,17 @@
 			width: 80%;
 	}
 }
-@media only screen and (min-width: 700px) and (max-width: 1000px) {
+
+@media only screen and (max-width: 1150px) {
+	.btn-container {
+		flex-direction: column;
+	}
 	.splashbtn {
-		margin: auto 5px;
+		margin: 10px auto;
+		width: 80%;
 	}
 }
+
 @media only screen and (max-width: 1024px) {
 	.about-container h1, .privacy-container h1, .privacy-container h2{
 			text-align: center;
