@@ -299,7 +299,8 @@ nav .icon {
   transition: opacity 250ms ease-in-out;
 }
 #hacksbtn {
-  background-color: #203c9c;
+  background-color: #ffcd00;
+  color: black;
 }
 .material-icons {
   vertical-align: top;
