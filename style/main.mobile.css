@@ -90,7 +90,7 @@
 	}
 	.splashbtn {
 		margin: 10px auto;
-		width: 80%;
+		width: 82%;
 	}
 }
 
@@ -146,8 +146,7 @@
 		border-bottom-width: 1px;
     	box-shadow: 0 0 30px -20px white;
     	/** height is set for height transition */
-    	/* height: 84px; */
-			height: 135px;
+    	height: 84px;
     	transition: height 0.20s;
 	}
 
@@ -204,8 +203,7 @@
 	}
 
 	nav.responsive-open {
-		/* height: 325px; */
-		height: 355px;
+		height: 325px;
 	}
 
 	nav.responsive-open .menu li:not(:first-child), nav.responsive-open .social a {
@@ -214,18 +212,6 @@
 
 	nav.responsive-open.slide-in .menu li:not(:first-child), nav.responsive-open.slide-in .social a {
 		transform: translateX(0);
-	}
-}
-
-@media only screen and (max-width: 375px) {
-	nav {
-		height: 150px;
-	}
-	nav.responsive-open {
-		height: 375px;
-	}
-	#laptopmobile {
-	    margin: 60px auto 0;
 	}
 }
 
