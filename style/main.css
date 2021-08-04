@@ -64,7 +64,8 @@ h1 {
 }
 
 .header {
-    margin-top: 75px;
+    padding: top 150px;
+    margin-top: 100px;
 	  display: flex;
     height: 100vh;
 }
@@ -287,6 +288,7 @@ nav .icon {
 .splashbtn {
   padding: 10px 20px;
   width: 300px;
+  height:100%;
   margin-bottom: 25px;
   border-radius: 50px;
   background-color: #fe3d40;
@@ -310,9 +312,26 @@ nav .icon {
   cursor: pointer;
 }
 
+/* Banner for UGA Hacks 7 */
+.banner {
+  margin: 0;
+  position: fixed;
+  z-index: 10;
+  top: 75px;
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  background-color: #fe3d40;
+  opacity: 0.97;
+}
+
 /** ABOUT US */
 
 .about-container {
+  padding-top:90px;
   margin: 0 auto;
   justify-content: space-evenly;
   display: flex;
