@@ -327,11 +327,7 @@ nav .icon {
 }
 
 .bannerWords {
-  text-decoration: none;
-}
-
-.bannerWords:hover {
-  text-decoration: underline;
+  color:white;
 }
 
 /** ABOUT US */
