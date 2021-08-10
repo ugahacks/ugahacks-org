@@ -27,6 +27,12 @@
     font-size: 45px;
   }
 
+  /** BANNER */
+
+  .banner {
+    font-size: small;
+  }
+  
   /** ABOUT */
 
   .about-image,

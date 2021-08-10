@@ -326,6 +326,14 @@ nav .icon {
   opacity: 0.97;
 }
 
+.bannerWords {
+  text-decoration: none;
+}
+
+.bannerWords:hover {
+  text-decoration: underline;
+}
+
 /** ABOUT US */
 
 .about-container {
