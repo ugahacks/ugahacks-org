@@ -310,6 +310,26 @@ nav .icon {
   cursor: pointer;
 }
 
+/* Banner for UGA Hacks 7 */
+.banner {
+  margin: 0;
+  /*position: fixed;*/
+  z-index: 10;
+  top: 75px;
+  padding: 1%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  background-color: #fe3d40;
+  opacity: 0.97;
+}
+
+.bannerWords {
+  color:white;
+}
+
 /** ABOUT US */
 
 .about-container {
