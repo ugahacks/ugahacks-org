@@ -274,22 +274,25 @@
   }
 
   #timeline .event-card:nth-child(2) {
-    margin-top: 250px;
+    margin-top: 175px;
   }
 
   #timeline .event-card:nth-child(3) {
-    margin-top: 150px;
+    margin-top: 200px;
   }
 
   #timeline .event-card:nth-child(4) {
-    margin-top: 100px;
-  }
-
-  #timeline .event-card:nth-child(5) {
     margin-top: 150px;
   }
 
+  #timeline .event-card:nth-child(5) {
+    margin-top: 100px;
+  }
+
   #timeline .event-card:nth-child(6) {
+    margin-top: 150px;
+  }
+  #timeline .event-card:nth-child(7) {
     margin-top: 250px;
   }
 }
@@ -328,7 +331,7 @@
     display: flex;
     flex-flow: column wrap;
     width: 1170px;
-    height: 2050px;
+    height: 2550px;
     /*Increase to add more cards*/
     margin: 0 auto;
   }
