@@ -458,6 +458,11 @@ nav .icon {
   order: 4;
 }
 
+.event-card:nth-child(8) {
+  order: 8;
+}
+
+
 /*#timeline .event-card:nth-child(even) .card-head::before {
       width:15px;
       height:15px;
