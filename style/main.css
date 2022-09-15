@@ -435,7 +435,7 @@ nav .icon {
 }
 
 .event-card:nth-child(2) {
-  order: 5;
+  order: 6;
 }
 
 .event-card:nth-child(3) {
@@ -443,7 +443,7 @@ nav .icon {
 }
 
 .event-card:nth-child(4) {
-  order: 6;
+  order: 7;
 }
 
 .event-card:nth-child(5) {
@@ -451,7 +451,7 @@ nav .icon {
 }
 
 .event-card:nth-child(6) {
-  order: 7;
+  order: 8;
 }
 
 .event-card:nth-child(7) {
@@ -459,11 +459,11 @@ nav .icon {
 }
 
 .event-card:nth-child(8) {
-  order: 8;
+  order: 9;
 }
 
 .event-card:nth-child(9) {
-  order: 9;
+  order: 5;
 }
 
 .event-card:nth-child(10) {
