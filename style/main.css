@@ -462,6 +462,13 @@ nav .icon {
   order: 8;
 }
 
+.event-card:nth-child(9) {
+  order: 9;
+}
+
+.event-card:nth-child(10) {
+  order: 10;
+}
 
 /*#timeline .event-card:nth-child(even) .card-head::before {
       width:15px;
