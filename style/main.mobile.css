@@ -32,7 +32,7 @@
   .banner {
     font-size: small;
   }
-  
+
   /** ABOUT */
 
   .about-image,
@@ -274,29 +274,38 @@
   }
 
   #timeline .event-card:nth-child(2) {
-    margin-top: 175px;
+    margin-top: 150px;
   }
 
   #timeline .event-card:nth-child(3) {
-    margin-top: 200px;
+    margin-top: 20px;
   }
 
   #timeline .event-card:nth-child(4) {
-    margin-top: 150px;
+    margin-top: 20px;
   }
 
   #timeline .event-card:nth-child(5) {
-    margin-top: 150px;
+    margin-top: 200px;
   }
 
   #timeline .event-card:nth-child(6) {
-    margin-top: 150px;
+    margin-top: 200px;
   }
   #timeline .event-card:nth-child(7) {
-    margin-top: 80px;
+    margin-top: 200px;
+  }
+  #timeline .event-card:nth-child(8) {
+    margin-top: 200px;
   }
   #timeline .event-card:nth-child(9) {
-    margin-top: 220px;
+    margin-top: 200px;
+  }
+  #timeline .event-card:nth-child(10) {
+    margin-top: 560px;
+  }
+  #timeline .event-card:nth-child(11) {
+    margin-top: 240px;
   }
 }
 
@@ -334,7 +343,7 @@
     display: flex;
     flex-flow: column wrap;
     width: 1170px;
-    height: 3000px;
+    height: 3800px;
     /*Increase to add more cards*/
     margin: 0 auto;
   }
