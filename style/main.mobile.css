@@ -302,11 +302,16 @@
     margin-top: 200px;
   }
   #timeline .event-card:nth-child(10) {
-    margin-top: 560px;
+    margin-top: 200px;
   }
   #timeline .event-card:nth-child(11) {
+    margin-top: 180px;
+  }
+  #timeline .event-card:nth-child(12) {
     margin-top: 240px;
   }
+
+
 }
 
 @media (min-width: 1100px) {

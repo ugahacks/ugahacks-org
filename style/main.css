@@ -409,6 +409,10 @@ nav .icon {
 #timeline {
   padding: 100px 0;
   display: inline-block;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  
 }
 
 #timeline-end {
@@ -429,6 +433,7 @@ nav .icon {
 
 #timeline .timeline-progress {
   width: 10px;
+  height: 100%;
   background: #fe3d40;
   position: absolute;
   top: 0;
@@ -445,7 +450,7 @@ nav .icon {
 }
 
 .event-card:nth-child(2) {
-  order: 7;
+  order: 8;
 }
 
 .event-card:nth-child(3) {
@@ -453,7 +458,7 @@ nav .icon {
 }
 
 .event-card:nth-child(4) {
-  order: 8;
+  order: 9;
 }
 
 .event-card:nth-child(5) {
@@ -461,7 +466,7 @@ nav .icon {
 }
 
 .event-card:nth-child(6) {
-  order: 9;
+  order: 10;
 }
 
 .event-card:nth-child(7) {
@@ -469,7 +474,7 @@ nav .icon {
 }
 
 .event-card:nth-child(8) {
-  order: 10;
+  order: 11;
 }
 
 .event-card:nth-child(9) {
@@ -477,12 +482,21 @@ nav .icon {
 }
 
 .event-card:nth-child(10) {
-  order: 11;
+  order: 12;
 }
 
 .event-card:nth-child(11) {
   order: 6;
 }
+
+.event-card:nth-child(12) {
+  order: 13;
+}
+
+.event-card:nth-child(13) {
+  order: 7;
+}
+
 
 /*#timeline .event-card:nth-child(even) .card-head::before {
       width:15px;
@@ -587,6 +601,7 @@ nav .icon {
   color: #fe3d40;
   opacity: 0.8;
 }
+
 
 /** TEAM */
 
