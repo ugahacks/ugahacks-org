@@ -274,26 +274,26 @@
   }
 
   #timeline .event-card:nth-child(2) {
-    margin-top: 150px;
+    margin-top: 180px;
   }
 
   #timeline .event-card:nth-child(3) {
-    margin-top: 20px;
+    margin-top: 170px;
   }
 
   #timeline .event-card:nth-child(4) {
-    margin-top: 20px;
+    margin-top: 100px;
   }
 
   #timeline .event-card:nth-child(5) {
-    margin-top: 200px;
+    margin-top: 60px;
   }
 
   #timeline .event-card:nth-child(6) {
-    margin-top: 200px;
+    margin-top: 180px;
   }
   #timeline .event-card:nth-child(7) {
-    margin-top: 200px;
+    margin-top: 170px;
   }
   #timeline .event-card:nth-child(8) {
     margin-top: 200px;
@@ -302,12 +302,15 @@
     margin-top: 200px;
   }
   #timeline .event-card:nth-child(10) {
-    margin-top: 200px;
+    margin-top: 130px;
   }
   #timeline .event-card:nth-child(11) {
     margin-top: 180px;
   }
   #timeline .event-card:nth-child(12) {
+    margin-top: 240px;
+  }
+  #timeline .event-card:nth-child(13) {
     margin-top: 240px;
   }
 
