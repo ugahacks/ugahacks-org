@@ -1,103 +1,53 @@
-import Image from "next/image";
+"use client";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+    <div className="min-h-screen" style={{backgroundColor: '#27282f'}}>
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <h1 className="text-4xl font-bold mb-12 text-white" style={{marginLeft: '9rem', fontFamily: '"Source Sans Pro Light", sans-serif'}}>
+          About Us
+        </h1>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="prose prose-lg max-w-none space-y-6" style={{fontFamily: '"Raleway", sans-serif', fontSize: '18px', textAlign: 'justify', maxWidth: '600px', color: '#aaa'}}>
+          <p data-aos="fade-right" data-aos-once="true" data-aos-delay="0">
+            UGAHacks is a 501 (c)(3) non-profit organization that hosts an annual 48 hour programming sleepover which takes place in Athens, Georgia at the University of Georgia.
+          </p>
+          
+          <p data-aos="fade-right" data-aos-once="true" data-aos-delay="50">
+            UGAHacks is an event that prides itself as being like none other where hackers, sponsors, and mentors can come together and not only have an environment to work and create anything their mind can think of but also enjoy their time while they are there.
+          </p>
+          
+          <p data-aos="fade-right" data-aos-once="true" data-aos-delay="100">
+            UGAHacks has seen tremendous growth since its inception in 2015. We have grown from 200 hackers, 6 sponsors, and less than 10 mentors to 600+ hackers, 15+ sponsors, and 15+ mentors.
+          </p>
+          
+          <p data-aos="fade-right" data-aos-once="true" data-aos-delay="150">
+            Every year there is a new adventure to explore and new prizes to be won. Each event encompasses different people to meet, workshops to learn from, food to enjoy, and side events to take some time to relax.
+          </p>
+          
+          <p data-aos="fade-right" data-aos-once="true" data-aos-delay="200">
+            We also have become a recognizable brand with the cutest mascot, Byte, who is seen making an appearance at every event we have since 2019.
+          </p>
+          
+          <p data-aos="fade-right" data-aos-once="true" data-aos-delay="250">
+            We are always looking for new partners and new people to be apart of our event each year in order to make it even better than the last and give them an opportunity to tap into recruiting up-and-coming computer science talent, so if you are interested, please feel free to reach out to us.
+          </p>
+          
+          <p data-aos="fade-right" data-aos-once="true" data-aos-delay="300">
+            As an organization, we take great pride in our growth and are excited to see our event reach even greater heights.
+          </p>
+          </div>
+          
+          <div className="flex justify-center items-center">
+            <img 
+              src="https://ugahacks.com/img/laptopbyte.svg" 
+              alt="Byte with Laptop" 
+              className="w-full max-w-md h-auto"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
   );
 }
