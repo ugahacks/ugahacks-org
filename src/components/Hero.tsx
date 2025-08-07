@@ -28,6 +28,22 @@ export default function Hero() {
 
   return (
     <section className="header">
+
+      <div className="mlh-trust-badge">
+         <a
+           href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=white"
+           target="_blank"
+           rel="noopener noreferrer"
+         >
+           <img
+             src="/mlh-trust-badge-2026-white.svg"
+             alt="Major League Hacking 2026 Hackathon Season"
+             className="mlh-badge-img"
+           />
+
+         </a>
+      </div>
+
       <div className="laptop left"></div>
       <img id="laptopmobile" src="/laptop.svg" alt="Laptop" />
       <div className="inspiration right">
@@ -43,7 +59,7 @@ export default function Hero() {
             <button className="splashbtn">Learn more about UGAHacks</button>
           </a>
           <a href="https://mybyte.ugahacks.com/login">
-            <button className="splashbtn">Register for UGAHacks X!</button>
+            <button className="splashbtn">Register for UGAHacks 11!</button>
           </a>
         </div>
       </div>
@@ -57,10 +73,26 @@ export default function Hero() {
           padding: 4rem 2rem;
           background: #1e1f29;
           color: #e1e1f7;
+          position: relative;
         }
+
+        .mlh-trust-badge {
+          position: absolute;
+          top: 0;
+          right: 20px;
+          z-index: 10;
+        }
+
+        .mlh-badge-img {
+          width: 100px;
+          height: auto;
+          display: block;
+        }
+
+
         .laptop.left {
-          width: 50%;
-          height: 500px;
+          width: 60%;
+          height: 600px;
           background: url('/laptop.svg') no-repeat center;
           background-size: contain;
         }
@@ -80,7 +112,7 @@ export default function Hero() {
         }
         .txt-rotate .wrap {
           font-weight: 700;
-          color: #ff4b4b;
+          color: #cc3333;
         }
         .btn-container {
             display: flex;
@@ -91,7 +123,7 @@ export default function Hero() {
             margin-left: auto;  /* targets the second button */
           }
         .splashbtn {
-          background: #ff4b4b;
+          background: #cc3333;
           color: #fff;
           border: none;
           padding: 0.75rem 1.5rem;
@@ -99,6 +131,18 @@ export default function Hero() {
           margin-right: 1rem;
           cursor: pointer;
           font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .mlh-badge-img {
+                width: 80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .mlh-badge-img {
+               width: 70px;
+            }
         }
       `}</style>
 
