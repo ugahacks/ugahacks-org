@@ -6,7 +6,7 @@ export default function About() {
   return (
     <div className="min-h-screen bg-[#27282f]">
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <h1 className="mb-12 ml-24 text-5xl text-white font-extralight font-[Raleway] md:text-center md:ml-0">
+        <h1 className="mb-12 text-5xl text-white font-extralight font-[Raleway] md:text-left md:ml-0">
           About Us<span className="cursor-blink text-[#aaa] -ml-1 -mt-2 inline-block">|</span>
         </h1>
         
