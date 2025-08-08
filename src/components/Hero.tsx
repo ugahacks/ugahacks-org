@@ -27,21 +27,21 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="header">
+    <section className="header font-raleway">
 
       <div className="mlh-trust-badge">
-         <a
-           href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=white"
-           target="_blank"
-           rel="noopener noreferrer"
-         >
-           <img
-             src="/mlh-trust-badge-2026-white.svg"
-             alt="Major League Hacking 2026 Hackathon Season"
-             className="mlh-badge-img"
-           />
+        <a
+          href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=white"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/mlh-trust-badge-2026-white.svg"
+            alt="Major League Hacking 2026 Hackathon Season"
+            className="mlh-badge-img"
+          />
 
-         </a>
+        </a>
       </div>
 
       <div className="laptop left"></div>
@@ -51,7 +51,7 @@ export default function Hero() {
           Boot up your dreams.
           <br />
           <span className="txt-rotate">
-            <span ref={typedRef} className="wrap"></span>
+            <span ref={typedRef} className="wrap font-raleway"></span>
           </span>
         </h1>
         <div className="btn-container">
