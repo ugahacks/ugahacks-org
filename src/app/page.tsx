@@ -4,9 +4,24 @@ export default function Home() {
   return (
     <div className="min-h-screen" style={{backgroundColor: '#27282f'}}>
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <h1 className="text-4xl font-bold mb-12 text-white" style={{marginLeft: '9rem', fontFamily: '"Source Sans Pro Light", sans-serif'}}>
-          About Us
+        <h1 className="mb-12 about-title" style={{marginLeft: '9rem', fontFamily: '"Raleway", sans-serif', fontSize: '3rem', color: 'white', fontWeight: '200', margin: '0.4em 0'}}>
+          About Us<span className="cursor" style={{marginLeft: '-0.2rem', marginTop: '-0.4rem', display: 'inline-block', color: '#aaa'}}>|</span>
         </h1>
+        <style jsx>{`
+          .cursor {
+            animation: blink 1s infinite;
+          }
+          @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+          }
+          @media (max-width: 768px) {
+            .about-title {
+              text-align: center !important;
+              margin-left: 0 !important;
+            }
+          }
+        `}</style>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div className="prose prose-lg max-w-none space-y-6" style={{fontFamily: '"Raleway", sans-serif', fontSize: '18px', textAlign: 'justify', maxWidth: '600px', color: '#aaa'}}>
@@ -43,7 +58,7 @@ export default function Home() {
             <img 
               src="https://ugahacks.com/img/laptopbyte.svg" 
               alt="Byte with Laptop" 
-              className="w-full max-w-md h-auto"
+              className="w-full max-w-lg h-auto"
             />
           </div>
         </div>
