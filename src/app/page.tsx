@@ -1,12 +1,20 @@
 'use client';
 
+// import Image from "next/image";
+import About from "./components/About";
+import Navbar from "./components/navbar";
 import Hero from '../components/Hero';
-
-export default function HomePage() {
+export default function Home() {
   return (
-    <main>
+    <>
+      <Navbar />
       <Hero />
-    </main>
+      <About />
+      <div className="items-center justify-items-center p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+        <main className="">
+        </main>
+      </div>
+    </>
   );
 }
 
