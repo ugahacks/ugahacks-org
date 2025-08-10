@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 const navLinks = [
   { href: "/#about-us", label: "ABOUT US" },
   { href: "/#events", label: "EVENTS" },
-  { href: "/team", label: "TEAM" },
+  { href: "/#team", label: "TEAM" },
   {
     href: "https://ugahacksel.notion.site/UGAHacks-Experiential-Learning-Credit-Guidelines-131de0003a758090bf6dc75f8773353c",
     label: "EL-CREDIT",
@@ -65,11 +65,10 @@ type NavLinkProps = {
 function NavLink({ href, label, external, closeMenu }: NavLinkProps) {
   const pathname = usePathname();
   const isActive = pathname === href;
-  const classes = `block py-2 px-3 rounded-md text-base font-medium transition-colors duration-300 ${
-    isActive
+  const classes = `block py-2 px-3 rounded-md text-base font-medium transition-colors duration-300 ${isActive
       ? "text-red-400 bg-gray-900"
       : "text-gray-300 hover:text-white hover:bg-gray-700"
-  }`;
+    }`;
 
   if (external) {
     return (
@@ -113,11 +112,10 @@ function Navbar() {
               <div className="ml-10 flex items-baseline space-x-4">
                 {navLinks.map((link) => {
                   const isActive = pathname === link.href;
-                  const linkClasses = `px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${
-                    isActive
+                  const linkClasses = `px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${isActive
                       ? "text-red-400"
                       : "text-gray-300 hover:text-red-400"
-                  }`;
+                    }`;
 
                   if (link.external) {
                     return (
