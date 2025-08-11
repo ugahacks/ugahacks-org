@@ -6,12 +6,12 @@ export default function About() {
   return (
     <div id='about-us' className="min-h-screen p-2 bg-[#27282f]">
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <h1 className="mb-12 text-5xl text-white font-extralight font-[Raleway] md:text-left md:ml-0">
+        <h1 className="mb-12 text-5xl text-white font-raleway md:text-left md:ml-0">
           About Us<span className="cursor-blink text-[#aaa] -ml-1 -mt-2 inline-block">|</span>
         </h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <div className="prose prose-lg max-w-none space-y-6 font-[Raleway] text-lg text-[#aaa] text-justify max-w-[600px]">
+          <div className="prose prose-lg max-w-none space-y-6 font-raleway text-lg text-[#aaa] text-justify max-w-[600px]">
             <p>
               UGAHacks is a 501 (c)(3) non-profit organization that hosts an annual 48 hour programming sleepover which takes place in Athens, Georgia at the University of Georgia.
             </p>

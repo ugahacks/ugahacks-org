@@ -1,9 +1,9 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import Typed from 'typed.js';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useRef } from 'react';
+import Typed from 'typed.js';
 
 export default function Hero() {
   const typedRef = useRef<HTMLSpanElement>(null);
@@ -59,7 +59,7 @@ export default function Hero() {
               </button>
             </Link>
 
-            <div className="sm:ml-auto">
+            <div className="">
               <Link href="https://mybyte.ugahacks.com/login" passHref>
                 <button className="px-6 py-3 rounded-full bg-red-600 text-white font-medium hover:bg-red-700 transition">
                   Register for UGAHacks 11!

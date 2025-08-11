@@ -3,14 +3,19 @@
 // import Image from "next/image";
 import Image from "next/image";
 import About from "./components/About";
+import Events from "./components/Events";
+import Footer from "./components/footer";
 import Hero from './components/Hero';
 import Navbar from "./components/navbar";
+import Team from "./components/Team";
 export default function Home() {
   return (
     <>
       <Navbar />
       <Hero />
       <About />
+      <Events />
+      <Team />
       <a
         id="mlh-trust-badge"
         style={{
@@ -33,11 +38,7 @@ export default function Home() {
           style={{ width: '100%' }}
         />
       </a>
-      <div className="items-center justify-items-center p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-
-        <main className="">
-        </main>
-      </div>
+      <Footer />
     </>
   );
 }
