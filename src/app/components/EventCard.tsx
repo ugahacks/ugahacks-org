@@ -1,14 +1,14 @@
 import React from "react";
 
-// Props interface remains the same
+// Props interface
 interface EventCardProps {
   year: number;
   title: string;
   content: React.ReactNode;
   imageUrl: string;
+  pause?: (value: boolean) => void; // Optional pause prop
 }
 
-// Renamed the component
 const EventCard: React.FC<EventCardProps> = ({
   year,
   title,
@@ -16,7 +16,15 @@ const EventCard: React.FC<EventCardProps> = ({
   imageUrl,
 }) => {
   return (
-    <div className="bg-gray-800 rounded-lg shadow-lg shadow-red-500/10 w-96 overflow-hidden">
+    <div
+      className="bg-gray-800 rounded-lg shadow-lg shadow-red-500/10 w-120 overflow-hidden"
+      // onMouseEnter={() => {
+      //   if (pause) pause(true); // Call pause if provided
+      // }}
+      // onMouseLeave={() => {
+      //   if (pause) pause(false); // Call pause if provided
+      // }}
+    >
       <header
         className="bg-red-500 p-0 m-0 flex items-center"
         style={{ clipPath: "polygon(0 0, 100% 0, 95% 50%, 100% 100%, 0 100%)" }}
@@ -36,5 +44,4 @@ const EventCard: React.FC<EventCardProps> = ({
   );
 };
 
-// Renamed the export
 export default EventCard;
