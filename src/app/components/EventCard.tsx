@@ -1,5 +1,5 @@
+import Image from "next/image";
 import React from "react";
-
 // Props interface
 interface EventCardProps {
   year: number;
@@ -18,12 +18,12 @@ const EventCard: React.FC<EventCardProps> = ({
   return (
     <div
       className="bg-gray-800 rounded-lg shadow-lg shadow-red-500/10 w-120 overflow-hidden"
-      // onMouseEnter={() => {
-      //   if (pause) pause(true); // Call pause if provided
-      // }}
-      // onMouseLeave={() => {
-      //   if (pause) pause(false); // Call pause if provided
-      // }}
+    // onMouseEnter={() => {
+    //   if (pause) pause(true); // Call pause if provided
+    // }}
+    // onMouseLeave={() => {
+    //   if (pause) pause(false); // Call pause if provided
+    // }}
     >
       <header
         className="bg-red-500 p-0 m-0 flex items-center"
@@ -39,7 +39,7 @@ const EventCard: React.FC<EventCardProps> = ({
           {content}
         </div>
       </div>
-      <img src={imageUrl} alt={title} className="w-full h-40 object-cover" />
+      <Image src={imageUrl} width={400} height={300} alt={title} className="w-full h-40 object-cover" />
     </div>
   );
 };
