@@ -324,70 +324,77 @@ const Events: React.FC = () => {
   }, []);
 
   return (
-    <div
-      ref={scrollRef}
-      className="w-full bg-gray-950 py-20 flex overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
-      style={{ position: "relative" }}
-    >
-      {/* Timeline line */}
+    <div id="events">
+      {
+        //This top div is to make sure the /#events link doesn't
+        //scroll to the middle of the timeline.
+      }
       <div
-        className="absolute left-0 flex items-center z-0"
-        style={{
-          top: "50%",
-          transform: "translateY(-50%)",
-          width: timelineWidth ? timelineWidth : "100%",
-          pointerEvents: "none",
-        }}
+        id="events"
+        ref={scrollRef}
+        className="w-full bg-gray-950 py-20 flex overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        style={{ position: "relative" }}
       >
-        {/* Start circle */}
+        {/* Timeline line */}
         <div
+          className="absolute left-0 flex items-center z-0"
           style={{
-            width: 24,
-            height: 24,
-            borderRadius: "50%",
-            background: "radial-gradient(circle, #f87171 70%, #fff0 100%)",
-            marginLeft: 24,
-            marginRight: -12,
-            zIndex: 1,
+            top: "50%",
+            transform: "translateY(-50%)",
+            width: timelineWidth ? timelineWidth : "100%",
+            pointerEvents: "none",
           }}
-        />
-        {/* Solid red-400 line */}
-        <div
-          style={{
-            flex: 1,
-            height: 12,
-            borderRadius: 6,
-            background: "#f87171", // Tailwind red-400
-            position: "relative",
-            zIndex: 0,
-          }}
-        />
-        {/* End circle */}
-        <div
-          style={{
-            width: 24,
-            height: 24,
-            borderRadius: "50%",
-            background: "radial-gradient(circle, #f87171 70%, #fff0 100%)",
-            marginLeft: -12,
-            marginRight: 24,
-            zIndex: 1,
-          }}
-        />
-      </div>
+        >
+          {/* Start circle */}
+          <div
+            style={{
+              width: 24,
+              height: 24,
+              borderRadius: "50%",
+              background: "radial-gradient(circle, #f87171 70%, #fff0 100%)",
+              marginLeft: 24,
+              marginRight: -12,
+              zIndex: 1,
+            }}
+          />
+          {/* Solid red-400 line */}
+          <div
+            style={{
+              flex: 1,
+              height: 12,
+              borderRadius: 6,
+              background: "#f87171", // Tailwind red-400
+              position: "relative",
+              zIndex: 0,
+            }}
+          />
+          {/* End circle */}
+          <div
+            style={{
+              width: 24,
+              height: 24,
+              borderRadius: "50%",
+              background: "radial-gradient(circle, #f87171 70%, #fff0 100%)",
+              marginLeft: -12,
+              marginRight: 24,
+              zIndex: 1,
+            }}
+          />
+        </div>
 
-      {/* Cards container */}
-      <div
-        ref={cardsContainerRef}
-        className="relative flex w-max items-start pr-24 pl-24 z-10"
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-      >
-        {eventsData.map((item, index) => (
-          <div key={index} className="mx-4 relative">
-            <EventCard {...item} pause={setIsPaused} />
-          </div>
-        ))}
+        {/* Cards container */}
+        <div
+          ref={cardsContainerRef}
+          className="relative flex w-max items-start pr-24 pl-24 z-10"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          {eventsData.map((item, index) => (
+            <div key={index} className="mx-4 relative">
+              <EventCard {...item} pause={setIsPaused} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
