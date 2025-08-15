@@ -17,6 +17,8 @@ interface TeamMember {
 const Team = () => {
     const [selectedTeam, setSelectedTeam] = useState<TeamMember[]>([])
     const [isLoading, setIsLoading] = useState(false)
+    const [selectedTeamName, setSelectedTeamName] = useState<string>('')
+    const [teamCache, setTeamCache] = useState<Record<string, TeamMember[]>>({})
 
     const getImageSrc = (imagePath: string) => {
         // Since image_path in JSON now includes the full path with extension, just prepend '/'
@@ -27,12 +29,33 @@ const Team = () => {
     }
 
     const handleTeamClick = async (teamName: string) => {
+        setSelectedTeamName(teamName)
+        
+        // Check if team data is already cached
+        if (teamCache[teamName]) {
+            setSelectedTeam(teamCache[teamName])
+            return
+        }
+        
         if (teamName === 'UGAHacks 11') {
             setIsLoading(true)
             try {
                 const response = await fetch('/team_data/UGAHacks_11.json')
                 const data = await response.json()
                 setSelectedTeam(data)
+                setTeamCache(prev => ({ ...prev, [teamName]: data }))
+            } catch (error) {
+                console.error('Error loading team data:', error)
+            } finally {
+                setIsLoading(false)
+            }
+        } else if (teamName === 'UGAHacksX') {
+            setIsLoading(true)
+            try {
+                const response = await fetch('/team_data/UGAHacks_X.json')
+                const data = await response.json()
+                setSelectedTeam(data)
+                setTeamCache(prev => ({ ...prev, [teamName]: data }))
             } catch (error) {
                 console.error('Error loading team data:', error)
             } finally {
@@ -51,7 +74,12 @@ const Team = () => {
                     >
                         UGAHacks 11
                     </h2>
-                    <h2 className='text-base text-gray-400 font-raleway'>UGAHacksX</h2>
+                    <h2 
+                        className='text-base text-gray-400 font-raleway cursor-pointer hover:text-white transition-colors'
+                        onClick={() => handleTeamClick('UGAHacksX')}
+                    >
+                        UGAHacksX
+                    </h2>
                     <h2 className='text-base text-gray-400 font-raleway'>UGAHacks 9</h2>
                     <h2 className='text-base text-gray-400 font-raleway'>UGAHacks 8</h2>
                     <h2 className='text-base text-gray-400 font-raleway'>UGAHacks 7</h2>
@@ -73,9 +101,29 @@ const Team = () => {
 
                 {selectedTeam.length > 0 && !isLoading && (
                     <div className="mt-10 w-full">
+                        {/* Show mascot at top for UGAHacksX and UGAHacks 11 */}
+                        {(selectedTeamName === 'UGAHacksX' || selectedTeamName === 'UGAHacks 11') && (
+                            <div className="flex flex-col items-center mb-8">
+                                <h3 className="text-xl text-gray-300 font-raleway mb-4">Mascot</h3>
+                                <div className="p-1 rounded-full border-4 border-red-500">
+                                    <Image
+                                        src={selectedTeamName === 'UGAHacksX' ? "/team_images/UGAHacks_X/byte-x.png" : "/bytehacks11.png"}
+                                        alt="Byte Mascot"
+                                        width={120}
+                                        height={120}
+                                        className="rounded-full object-cover w-[120px] h-[120px]"
+                                    />
+                                </div>
+                                <p className="text-white font-raleway mt-2">Byte</p>
+                            </div>
+                        )}
                         {(() => {
-                            // Group members by team/role
-                            const teamGroups = selectedTeam.reduce((groups: Record<string, TeamMember[]>, member: TeamMember) => {
+                            // Group members by team/role, excluding mascot for UGAHacksX since it's shown at top
+                            const filteredTeam = selectedTeamName === 'UGAHacksX' 
+                                ? selectedTeam.filter(member => member.role !== 'Mascot')
+                                : selectedTeam;
+                            
+                            const teamGroups = filteredTeam.reduce((groups: Record<string, TeamMember[]>, member: TeamMember) => {
                                 const team = member.role.includes('Director') ? 'Directors' : member.role.split(',')[0];
                                 if (!groups[team]) {
                                     groups[team] = [];
@@ -97,25 +145,10 @@ const Team = () => {
 
                             return sortedTeams.map(([teamName, members]: [string, TeamMember[]]) => (
                                 <div key={teamName} className="mb-12">
-                                    {teamName === 'Directors' && (
-                                        <div className="flex flex-col items-center mb-6">
-                                            <h3 className="text-xl text-gray-300 font-raleway mb-4">Mascot</h3>
-                                            <div className="p-1 rounded-full border-4 border-red-500">
-                                                <Image
-                                                    src="/bytehacks11.png"
-                                                    alt="Byte Mascot"
-                                                    width={120}
-                                                    height={150}
-                                                    className="rounded-full"
-                                                />
-                                            </div>
-                                            <p className="text-white font-raleway mt-2">Byte</p>
-                                        </div>
-                                    )}
                                     <h2 className="text-2xl text-white font-raleway font-bold mb-6 text-center">
                                         {teamName}
                                     </h2>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                    <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ${selectedTeamName === 'UGAHacksX' && teamName === 'Directors' ? 'gap-3' : 'gap-6'}`}>
                                         {members.map((member: TeamMember, index: number) => (
                                             <div key={index} className="rounded-lg p-4">
                                                 <div className="text-center">
