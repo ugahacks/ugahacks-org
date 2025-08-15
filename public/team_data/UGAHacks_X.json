@@ -225,7 +225,7 @@
     },
     {
         "name": "Emily Freeman",
-        "role": "Organizer",
+        "role": "Marketing",
         "quote": "progress not perfection!",
         "image_path": "team_images/UGAHacks_X/emily-freeman.png",
         "social_links": [
@@ -241,7 +241,7 @@
     },
     {
         "name": "Eleanor Madderra",
-        "role": "Organizer",
+        "role": "Marketing",
         "quote": "",
         "image_path": "team_images/UGAHacks_X/eleanor-madderra.png",
         "social_links": [
@@ -253,7 +253,7 @@
     },
     {
         "name": "Kataleena Mishra",
-        "role": "Organizer",
+        "role": "Marketing",
         "quote": "",
         "image_path": "team_images/UGAHacks_X/kataleena-mishra.png",
         "social_links": [
@@ -269,7 +269,7 @@
     },
     {
         "name": "Siya Sharma",
-        "role": "Organizer",
+        "role": "Marketing",
         "quote": "Go dawgs!",
         "image_path": "team_images/UGAHacks_X/siya-sharma.png",
         "social_links": [
@@ -285,7 +285,7 @@
     },
     {
         "name": "Kaytie Lin",
-        "role": "Organizer",
+        "role": "Marketing",
         "quote": "",
         "image_path": "team_images/UGAHacks_X/kaytie-lin.png",
         "social_links": [
@@ -297,7 +297,7 @@
     },
     {
         "name": "Julian Phan",
-        "role": "Organizer",
+        "role": "Logistics + CE",
         "quote": "“If you focus on what you left behind, you will never be able to see what lies ahead.” ~ Ratatouille",
         "image_path": "team_images/UGAHacks_X/julian-phan.png",
         "social_links": [
@@ -309,7 +309,7 @@
     },
     {
         "name": "Aiden Dowling",
-        "role": "Organizer",
+        "role": "Logistics + CE",
         "quote": "",
         "image_path": "team_images/UGAHacks_X/aiden-dowling.png",
         "social_links": [
@@ -325,14 +325,14 @@
     },
     {
         "name": "Daylen Talekar",
-        "role": "Organizer",
+        "role": "Logistics + CE",
         "quote": "",
         "image_path": "team_images/UGAHacks_X/daylen-talekar.png",
         "social_links": []
     },
     {
         "name": "Aishu Madanu",
-        "role": "Organizer",
+        "role": "Logistics + CE",
         "quote": "",
         "image_path": "team_images/UGAHacks_X/aishwini-madanu.png",
         "social_links": [
@@ -348,7 +348,7 @@
     },
     {
         "name": "Nivedha Natarajan",
-        "role": "Organizer",
+        "role": "Logistics + CE",
         "quote": "",
         "image_path": "team_images/UGAHacks_X/nivedha-natarajan.png",
         "social_links": [
@@ -360,7 +360,7 @@
     },
     {
         "name": "Angel Hoang",
-        "role": "Organizer",
+        "role": "Logistics + CE",
         "quote": "",
         "image_path": "team_images/UGAHacks_X/angel-hoang.png",
         "social_links": [
@@ -372,7 +372,7 @@
     },
     {
         "name": "Nikki Kunthu",
-        "role": "Organizer",
+        "role": "Logistics + CE",
         "quote": "I Honestly Don't Know",
         "image_path": "team_images/UGAHacks_X/nikhita-kunthu.png",
         "social_links": [
@@ -388,7 +388,7 @@
     },
     {
         "name": "Elaine Chow",
-        "role": "Organizer",
+        "role": "Logistics + CE",
         "quote": ":D",
         "image_path": "team_images/UGAHacks_X/elaine-chow.png",
         "social_links": [
@@ -400,7 +400,7 @@
     },
     {
         "name": "Andrea Ayon",
-        "role": "Organizer",
+        "role": "Logistics + CE",
         "quote": "Best moment is yet to come",
         "image_path": "team_images/UGAHacks_X/andrea-ayon.png",
         "social_links": [
@@ -416,7 +416,7 @@
     },
     {
         "name": "Tara Ravindranathan",
-        "role": "Organizer",
+        "role": "Logistics + CE",
         "quote": "\"After all one can't complain. I have my friends\"- Eeyore",
         "image_path": "team_images/UGAHacks_X/tara-ravindranathan.png",
         "social_links": [
@@ -432,7 +432,7 @@
     },
     {
         "name": "Gokul Premkumar",
-        "role": "Organizer",
+        "role": "Sponsorship",
         "quote": "",
         "image_path": "team_images/UGAHacks_X/gokul-premkumar.png",
         "social_links": [
@@ -448,7 +448,7 @@
     },
     {
         "name": "Henry Lue",
-        "role": "Organizer",
+        "role": "Sponsorship",
         "quote": "You can’t be behind in life if it’s your race and you’re the only contestant",
         "image_path": "team_images/UGAHacks_X/henry-lue.png",
         "social_links": [
@@ -464,7 +464,7 @@
     },
     {
         "name": "Jenny Ngo",
-        "role": "Organizer",
+        "role": "Sponsorship",
         "quote": "“That’s rough, buddy.”",
         "image_path": "team_images/UGAHacks_X/jennifer-ngo.png",
         "social_links": [
@@ -476,7 +476,7 @@
     },
     {
         "name": "Danny Rifai",
-        "role": "Organizer",
+        "role": "Sponsorship",
         "quote": "Get busy living, or get busy dying - Andy Dufresne",
         "image_path": "team_images/UGAHacks_X/danny-rifai.png",
         "social_links": [
@@ -488,7 +488,7 @@
     },
     {
         "name": "Kevin Do",
-        "role": "Organizer",
+        "role": "Tech",
         "quote": "Bugs are an exponentially growing list of features.",
         "image_path": "team_images/UGAHacks_X/kevin-do.png",
         "social_links": [
@@ -500,7 +500,7 @@
     },
     {
         "name": "Ethan Ogle",
-        "role": "Organizer",
+        "role": "Tech",
         "quote": "Here's the deal I'm the best there is. Plain and simple. I wake up in the morning and I piss excellence.",
         "image_path": "team_images/UGAHacks_X/ethan-ogle.png",
         "social_links": [
@@ -512,7 +512,7 @@
     },
     {
         "name": "Akil Mir",
-        "role": "Organizer",
+        "role": "Tech",
         "quote": "",
         "image_path": "team_images/UGAHacks_X/akil-mir.png",
         "social_links": [
@@ -528,14 +528,14 @@
     },
     {
         "name": "Dhruv Patel",
-        "role": "Organizer",
+        "role": "Tech",
         "quote": "",
         "image_path": "team_images/UGAHacks_X/dhruv-patel.png",
         "social_links": []
     },
     {
         "name": "Ryan Majd",
-        "role": "Organizer",
+        "role": "Tech",
         "quote": "I'm hitting diamond 1 on rank tonight on siege. \"What dat mean\" Mess with me, \"What dat mean\" ifykyk \"Guess I don't know\"",
         "image_path": "team_images/UGAHacks_X/ryan-majd.png",
         "social_links": [
@@ -555,7 +555,7 @@
     },
     {
         "name": "Nikita Jha",
-        "role": "Organizer",
+        "role": "Tech",
         "quote": "It's a big world!",
         "image_path": "team_images/UGAHacks_X/nikita-jha.png",
         "social_links": [
