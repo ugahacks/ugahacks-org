@@ -32,8 +32,25 @@
     ]
   },
   {
+    "name": "Batu Ozdener",
+    "role": "Lead Director",
+    "quote": "Another one bytes the dust",
+    "image_path": "team_images/UGAHacks_11/batu-ozdener.png",
+    "social_links": [{"type":"website",
+      "url":"https://www.batu.dev/"},
+      {
+      "type": "instagram",
+      "url": "https://www.instagram.com/alibatuozdener/"
+    },
+      {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/alibatuozdener/"
+    }
+  ]
+  },
+  {
     "name": "Kataleena Mishra",
-    "role": "Marketing Team, Director",
+    "role": "Marketing Director",
     "quote": "",
     "image_path": "team_images/UGAHacks_11/kataleena-mishra.png",
     "social_links": [
@@ -48,15 +65,8 @@
     ]
   },
   {
-    "name": "Batu Ozdener",
-    "role": "Director",
-    "quote": "Another one bytes the dust",
-    "image_path": "team_images/UGAHacks_11/batu-ozdener.png",
-    "social_links": []
-  },
-  {
     "name": "Aishu Madanu",
-    "role": "Logistics Team, Director",
+    "role": "Logistics Director",
     "quote": "^3^",
     "image_path": "team_images/UGAHacks_11/aishu-madanu.png",
     "social_links": [
@@ -104,7 +114,7 @@
   },
   {
     "name": "Nivedha Natarajan",
-    "role": "Logistics Team, Director",
+    "role": "Logistics Director",
     "quote": "",
     "image_path": "team_images/UGAHacks_11/nivedha-natarajan.png",
     "social_links": [
@@ -463,7 +473,7 @@
   },
   {
     "name": "Jenny Ngo",
-    "role": "Sponsorship Team",
+    "role": "Sponsorship Director",
     "quote": "Sponsor Us",
     "image_path": "team_images/UGAHacks_11/jenny-ngo.png",
     "social_links": [
@@ -482,10 +492,16 @@
   },
   {
     "name": "Ryan Majd",
-    "role": "Tech Team, Director",
+    "role": "Tech Director",
     "quote": "Magic is just an Aura wrapper",
     "image_path": "team_images/UGAHacks_11/ryan-majd.png",
     "social_links": [
+      {
+        "type": "website",
+        "url": "https://ryanmajd.com"
+      },
+      {"type": "github",
+        "url": "https://github.com/theryanmajd"},
       {
         "type": "instagram",
         "url": "https://www.instagram.com/theryanmajd"
