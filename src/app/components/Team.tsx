@@ -19,6 +19,16 @@ const Team = () => {
     const [isLoading, setIsLoading] = useState(false)
     const [selectedTeamName, setSelectedTeamName] = useState<string>('')
     const [teamCache, setTeamCache] = useState<Record<string, TeamMember[]>>({})
+    const [activeCard, setActiveCard] = useState<number | null>(null)
+    const [animateIn, setAnimateIn] = useState(false)
+    const [viewKey, setViewKey] = useState(0)
+    const kickAnimateIn = () => {
+        setAnimateIn(false)
+        // Double RAF: guarantees the DOM has mounted before turning the animation on
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => setAnimateIn(true))
+        })
+    }
 
     const getImageSrc = (imagePath: string) => {
         // Since image_path in JSON now includes the full path with extension, just prepend '/'
@@ -29,11 +39,18 @@ const Team = () => {
     }
 
     const handleTeamClick = async (teamName: string) => {
+        setActiveCard(null)
+        setAnimateIn(false)
         setSelectedTeamName(teamName)
+        setViewKey(k => k + 1)
 
         // Check if team data is already cached
         if (teamCache[teamName]) {
-            setSelectedTeam(teamCache[teamName])
+            setSelectedTeam([...teamCache[teamName]])
+            kickAnimateIn()
+            // below is animation reset
+            setAnimateIn(false)
+            requestAnimationFrame(() => setAnimateIn(true))
             return
         }
 
@@ -44,6 +61,10 @@ const Team = () => {
                 const data = await response.json()
                 setSelectedTeam(data)
                 setTeamCache(prev => ({ ...prev, [teamName]: data }))
+                //anim
+                kickAnimateIn()
+                setAnimateIn(false)
+                requestAnimationFrame(() => setAnimateIn(true))
             } catch (error) {
                 console.error('Error loading team data:', error)
             } finally {
@@ -56,6 +77,7 @@ const Team = () => {
                 const data = await response.json()
                 setSelectedTeam(data)
                 setTeamCache(prev => ({ ...prev, [teamName]: data }))
+                kickAnimateIn()
             } catch (error) {
                 console.error('Error loading team data:', error)
             } finally {
@@ -67,7 +89,7 @@ const Team = () => {
         <div id="team" className="min-h-screen p-2 bg-[#27282f] flex flex-col items-center pt-30">
             <h1 className='text-4xl text-white font-raleway'>Meet The Team!<span className="cursor-blink text-[#aaa] -ml-1 -mt-2 inline-block">|</span></h1>
             <div className="w-full max-w-7xl px-6">
-                <div className="flex gap-8 mt-20 ml-60">
+                <div className="flex flex-wrap gap-4 mt-6 md:mt-20 justify-center overflow-x-auto md:overflow-visible whitespace-nowrap px-4">
                     <h2
                         className='text-base text-gray-400 font-raleway cursor-pointer hover:text-white transition-colors'
                         onClick={() => handleTeamClick('UGAHacks 11')}
@@ -84,13 +106,14 @@ const Team = () => {
                     <h2 className='text-base text-gray-400 font-raleway'>UGAHacks 8</h2>
                     <h2 className='text-base text-gray-400 font-raleway'>UGAHacks 7</h2>
                     <h2 className='text-base text-gray-400 font-raleway'>UGAHacks 5</h2>
-                </div>
-                <div className="flex gap-8 ml-60 mt-4">
                     <h2 className='text-base text-gray-400 font-raleway'>UGAHacks 4</h2>
                     <h2 className='text-base text-gray-400 ml-2 font-raleway'>UGAHacks 3</h2>
                     <h2 className='text-base text-gray-400 -ml-1 font-raleway'>UGAHacks 2</h2>
                     <h2 className='text-base text-gray-400 font-raleway'>UGAHacks 1</h2>
+
                 </div>
+
+
 
                 {/* Team Information Display */}
                 {isLoading && (
@@ -100,7 +123,7 @@ const Team = () => {
                 )}
 
                 {selectedTeam.length > 0 && !isLoading && (
-                    <div className="mt-10 w-full">
+                    <div key={viewKey} className="mt-10 w-full">
                         {/* Show mascot at top for UGAHacksX and UGAHacks 11 */}
                         {(selectedTeamName === 'UGAHacksX' || selectedTeamName === 'UGAHacks 11') && (
                             <div className="flex flex-col items-center mb-8">
@@ -150,10 +173,30 @@ const Team = () => {
                                     </h2>
                                     <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 ${selectedTeamName === 'UGAHacksX' && teamName === 'Directors' ? 'gap-3' : 'gap-6'}`}>
                                         {members.map((member: TeamMember, index: number) => (
-                                            <div key={index} className="rounded-lg p-4">
+                                            <div
+                                                key={index}
+                                                className={[
+                                                    "rounded-lg p-4",
+                                                    "transform transition-all duration-500",
+                                                    animateIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
+                                                ].join(" ")}
+                                                style={{ transitionDelay: `${index * 50}ms` }}
+                                            >
                                                 <div className="text-center">
                                                     {member.image_path && getImageSrc(member.image_path) && (
-                                                        <div className="mb-4 flex justify-center relative group">
+                                                        <div className="mb-4 flex justify-center relative group"
+                                                            role="button"
+                                                            tabIndex={0}
+                                                            onClick={() =>
+                                                                setActiveCard((prev) => (prev === index ? null : index))
+                                                            }
+                                                            onKeyDown={(e) => {
+                                                                if (e.key === 'Enter' || e.key === ' ') {
+                                                                    e.preventDefault()
+                                                                    setActiveCard((prev) => (prev === index ? null : index))
+                                                                }
+                                                            }}
+                                                        >
                                                             <div className="p-1 rounded-full border-4 border-red-500">
                                                                 <Image
                                                                     src={getImageSrc(member.image_path)!}
@@ -167,7 +210,15 @@ const Team = () => {
                                                                     }}
                                                                 />
                                                             </div>
-                                                            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4 bg-white rounded-2xl p-6 shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 w-60 h-80">
+                                                            <div
+                                                                className={[
+                                                                    "absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4",
+                                                                    // TODO: below is a little messy, it works, but yeah
+                                                                    "bg-white rounded-2xl p-4 shadow-xl transition-opacity duration-300 z-10 w-38 h-80 md:w-60 md:h-80",
+                                                                    activeCard === index ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none",
+                                                                    "md:pointer-events-auto md:opacity-0 md:group-hover:opacity-100"
+                                                                ].join(" ")}
+                                                            >
                                                                 <div className="flex flex-col items-center h-full justify-center">
                                                                     <div className="p-1 rounded-full border-4 border-red-500 mb-4">
                                                                         <Image
