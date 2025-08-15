@@ -43,7 +43,7 @@ export default function About() {
 
           <div className="flex justify-center items-center">
             <Image
-              src="https://ugahacks.com/img/laptopbyte.svg"
+              src="laptopbyte.svg"
               alt="Byte with Laptop"
               width={500}
               height={400}
