@@ -32,6 +32,13 @@
     ]
   },
   {
+    "name": "Batu Ozdener",
+    "role": "Director",
+    "quote": "Another one bytes the dust",
+    "image_path": "team_images/UGAHacks_11/batu-ozdener.png",
+    "social_links": []
+  },
+  {
     "name": "Kataleena Mishra",
     "role": "Marketing Team, Director",
     "quote": "",
@@ -46,13 +53,6 @@
         "url": "https://www.linkedin.com/in/kataleena-mishra-81b407254/"
       }
     ]
-  },
-  {
-    "name": "Batu Ozdener",
-    "role": "Director",
-    "quote": "Another one bytes the dust",
-    "image_path": "team_images/UGAHacks_11/batu-ozdener.png",
-    "social_links": []
   },
   {
     "name": "Aishu Madanu",
@@ -463,7 +463,7 @@
   },
   {
     "name": "Jenny Ngo",
-    "role": "Sponsorship Team",
+    "role": "Sponsorship Team, Director",
     "quote": "Sponsor Us",
     "image_path": "team_images/UGAHacks_11/jenny-ngo.png",
     "social_links": [

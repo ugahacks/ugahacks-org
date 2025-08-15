@@ -123,7 +123,7 @@ const Team = () => {
                 )}
 
                 {selectedTeam.length > 0 && !isLoading && (
-                    <div key={viewKey} className="mt-10 w-full">
+                    <div key={viewKey} className="mt-10 w-full mb-24">
                         {/* Show mascot at top for UGAHacksX and UGAHacks 11 */}
                         {(selectedTeamName === 'UGAHacksX' || selectedTeamName === 'UGAHacks 11') && (
                             <div className="flex flex-col items-center mb-8">
@@ -169,7 +169,7 @@ const Team = () => {
                             return sortedTeams.map(([teamName, members]: [string, TeamMember[]]) => (
                                 <div key={teamName} className="mb-12">
                                     <h2 className="text-2xl text-white font-raleway font-bold mb-6 text-center">
-                                        {teamName}
+                                        {teamName === 'Advisor' && (selectedTeamName === 'UGAHacks 11' || selectedTeamName === 'UGAHacksX') ? 'Advisors' : teamName}
                                     </h2>
                                     <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 ${selectedTeamName === 'UGAHacksX' && teamName === 'Directors' ? 'gap-3' : 'gap-6'}`}>
                                         {members.map((member: TeamMember, index: number) => (
