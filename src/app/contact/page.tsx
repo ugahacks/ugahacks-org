@@ -27,12 +27,12 @@ export default function Contact() {
         <>
             <Navbar />
             {/* Anchor so the navbar link can scroll here */}
-            <section id="contact" className="scroll-mt-24 bg-[#101828]">
+            <section id="contact" className="scroll-mt-24 bg-[#101828] min-h-screen">
                 <div className="mx-auto max-w-7xl px-6 py-16">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         {/* Left: Copy */}
                         <div>
-                            <span className="font-raleway text-[clamp(2.5rem,6vw,6rem)] leading-none tracking-tight">
+                            <span className="font-raleway text-[clamp(2.5rem,6vw,6rem)] leading-none tracking-tight text-white">
                                 <span ref={typedRef}></span>
                             </span>
 

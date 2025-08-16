@@ -53,7 +53,7 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="flex mt-10 flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
-            <Link href="/#about" passHref>
+            <Link href="/#about-us" passHref>
               <button className="px-6 py-3 rounded-full bg-red-600 text-white font-medium hover:bg-red-700 transition">
                 Learn more about UGAHacks
               </button>
