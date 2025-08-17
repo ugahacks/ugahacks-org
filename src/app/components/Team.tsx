@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 interface SocialLink {
     type: string
@@ -16,8 +16,8 @@ interface TeamMember {
 
 const Team = () => {
     const [selectedTeam, setSelectedTeam] = useState<TeamMember[]>([])
-    const [isLoading, setIsLoading] = useState(false)
-    const [selectedTeamName, setSelectedTeamName] = useState<string>('')
+    const [isLoading, setIsLoading] = useState(true)
+    const [selectedTeamName, setSelectedTeamName] = useState<string>('UGAHacks 11')
     const [teamCache, setTeamCache] = useState<Record<string, TeamMember[]>>({})
     const [activeCard, setActiveCard] = useState<number | null>(null)
     const [animateIn, setAnimateIn] = useState(false)
@@ -29,6 +29,25 @@ const Team = () => {
             requestAnimationFrame(() => setAnimateIn(true))
         })
     }
+
+    // Load UGAHacks 11 data on component mount
+    useEffect(() => {
+        const loadUGAHacks11 = async () => {
+            try {
+                const response = await fetch('/team_data/UGAHacks_11.json')
+                const data = await response.json()
+                setSelectedTeam(data)
+                setTeamCache(prev => ({ ...prev, 'UGAHacks 11': data }))
+                kickAnimateIn()
+            } catch (error) {
+                console.error('Error loading UGAHacks 11 data:', error)
+            } finally {
+                setIsLoading(false)
+            }
+        }
+
+        loadUGAHacks11()
+    }, [])
 
     const getImageSrc = (imagePath: string) => {
         // Since image_path in JSON now includes the full path with extension, just prepend '/'
@@ -91,13 +110,17 @@ const Team = () => {
             <div className="w-full max-w-7xl px-6">
                 <div className="flex flex-wrap gap-4 mt-6 md:mt-20 justify-center overflow-x-auto md:overflow-visible whitespace-nowrap px-4">
                     <h2
-                        className='text-base text-gray-400 font-raleway cursor-pointer hover:text-white transition-colors'
+                        className={`text-base font-raleway cursor-pointer hover:text-white transition-colors ${
+                            selectedTeamName === 'UGAHacks 11' ? 'text-white' : 'text-gray-400'
+                        }`}
                         onClick={() => handleTeamClick('UGAHacks 11')}
                     >
                         UGAHacks 11
                     </h2>
                     <h2
-                        className='text-base text-gray-400 font-raleway cursor-pointer hover:text-white transition-colors'
+                        className={`text-base font-raleway cursor-pointer hover:text-white transition-colors ${
+                            selectedTeamName === 'UGAHacksX' ? 'text-white' : 'text-gray-400'
+                        }`}
                         onClick={() => handleTeamClick('UGAHacksX')}
                     >
                         UGAHacksX
@@ -167,17 +190,18 @@ const Team = () => {
                             });
 
                             return sortedTeams.map(([teamName, members]: [string, TeamMember[]]) => (
-                                <div key={teamName} className="mb-12">
-                                    <h2 className="text-2xl text-white font-raleway font-bold mb-6 text-center">
+                                <div key={teamName} className="mb-24">
+                                    <h2 className="text-2xl text-white font-raleway font-bold mb-10 text-center relative z-10">
                                         {teamName === 'Advisor' && (selectedTeamName === 'UGAHacks 11' || selectedTeamName === 'UGAHacksX') ? 'Advisors' : teamName}
                                     </h2>
-                                    <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 ${selectedTeamName === 'UGAHacksX' && teamName === 'Directors' ? 'gap-3' : 'gap-6'}`}>
+                                    <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 ${selectedTeamName === 'UGAHacksX' && teamName === 'Directors' ? 'gap-x-6 gap-y-16' : 'gap-x-8 gap-y-16'}`}>
                                         {members.map((member: TeamMember, index: number) => (
                                             <div
                                                 key={index}
                                                 className={[
-                                                    "rounded-lg p-4",
+                                                    "rounded-lg p-4 pb-8",
                                                     "transform transition-all duration-500",
+                                                    "relative",
                                                     animateIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
                                                 ].join(" ")}
                                                 style={{ transitionDelay: `${index * 50}ms` }}
@@ -214,7 +238,7 @@ const Team = () => {
                                                                 className={[
                                                                     "absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4",
                                                                     // TODO: below is a little messy, it works, but yeah
-                                                                    "bg-white rounded-2xl p-4 shadow-xl transition-opacity duration-300 z-10 w-38 h-80 md:w-60 md:h-80",
+                                                                    "bg-white rounded-2xl p-4 shadow-xl transition-opacity duration-300 z-50 w-38 h-80 md:w-60 md:h-80",
                                                                     activeCard === index ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none",
                                                                     "md:pointer-events-auto md:opacity-0 md:group-hover:opacity-100"
                                                                 ].join(" ")}
