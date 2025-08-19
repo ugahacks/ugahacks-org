@@ -106,7 +106,7 @@ const Team = () => {
     }
     return (
         <div id="team" className="min-h-screen p-2 bg-[#27282f] flex flex-col items-center pt-30">
-            <h1 className='text-4xl text-white font-raleway'>Meet The Team!<span className="cursor-blink text-[#aaa] -ml-1 -mt-2 inline-block">|</span></h1>
+            <h1 className='text-4xl text-white font-raleway'>Meet The Team!<span className="cursor-blink text-white -ml-1 -mt-2 inline-block">|</span></h1>
             <div className="w-full max-w-7xl px-6">
                 <div className="flex flex-wrap gap-4 mt-6 md:mt-20 justify-center overflow-x-auto md:overflow-visible whitespace-nowrap px-4">
                     <h2
@@ -128,6 +128,7 @@ const Team = () => {
                     <h2 className='text-base text-gray-400 font-raleway'>UGAHacks 9</h2>
                     <h2 className='text-base text-gray-400 font-raleway'>UGAHacks 8</h2>
                     <h2 className='text-base text-gray-400 font-raleway'>UGAHacks 7</h2>
+                    <h2 className='text-base text-gray-400 font-raleway'>UGAHacks 6</h2>
                     <h2 className='text-base text-gray-400 font-raleway'>UGAHacks 5</h2>
                     <h2 className='text-base text-gray-400 font-raleway'>UGAHacks 4</h2>
                     <h2 className='text-base text-gray-400 ml-2 font-raleway'>UGAHacks 3</h2>
@@ -194,7 +195,7 @@ const Team = () => {
                                     <h2 className="text-2xl text-white font-raleway font-bold mb-10 text-center relative z-10">
                                         {teamName === 'Advisor' && (selectedTeamName === 'UGAHacks 11' || selectedTeamName === 'UGAHacksX') ? 'Advisors' : teamName}
                                     </h2>
-                                    <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 ${selectedTeamName === 'UGAHacksX' && teamName === 'Directors' ? 'gap-x-6 gap-y-16' : 'gap-x-8 gap-y-16'}`}>
+                                    <div className={`flex flex-wrap justify-center ${selectedTeamName === 'UGAHacksX' && teamName === 'Directors' ? 'gap-x-6 gap-y-16' : 'gap-x-8 gap-y-16'}`}>
                                         {members.map((member: TeamMember, index: number) => (
                                             <div
                                                 key={index}
@@ -202,6 +203,7 @@ const Team = () => {
                                                     "rounded-lg p-4 pb-8",
                                                     "transform transition-all duration-500",
                                                     "relative",
+                                                    "w-40 md:w-44 lg:w-48",
                                                     animateIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
                                                 ].join(" ")}
                                                 style={{ transitionDelay: `${index * 50}ms` }}
