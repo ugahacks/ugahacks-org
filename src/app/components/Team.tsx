@@ -125,15 +125,15 @@ const Team = () => {
                     >
                         UGAHacksX
                     </h2>
-                    <h2 className='text-base text-gray-400 font-raleway'>UGAHacks 9</h2>
-                    <h2 className='text-base text-gray-400 font-raleway'>UGAHacks 8</h2>
-                    <h2 className='text-base text-gray-400 font-raleway'>UGAHacks 7</h2>
-                    <h2 className='text-base text-gray-400 font-raleway'>UGAHacks 6</h2>
-                    <h2 className='text-base text-gray-400 font-raleway'>UGAHacks 5</h2>
-                    <h2 className='text-base text-gray-400 font-raleway'>UGAHacks 4</h2>
-                    <h2 className='text-base text-gray-400 ml-2 font-raleway'>UGAHacks 3</h2>
-                    <h2 className='text-base text-gray-400 -ml-1 font-raleway'>UGAHacks 2</h2>
-                    <h2 className='text-base text-gray-400 font-raleway'>UGAHacks 1</h2>
+                    <h2 className='text-base text-gray-500 font-raleway cursor-not-allowed opacity-50'>UGAHacks 9</h2>
+                    <h2 className='text-base text-gray-500 font-raleway cursor-not-allowed opacity-50'>UGAHacks 8</h2>
+                    <h2 className='text-base text-gray-500 font-raleway cursor-not-allowed opacity-50'>UGAHacks 7</h2>
+                    <h2 className='text-base text-gray-500 font-raleway cursor-not-allowed opacity-50'>UGAHacks 6</h2>
+                    <h2 className='text-base text-gray-500 font-raleway cursor-not-allowed opacity-50'>UGAHacks 5</h2>
+                    <h2 className='text-base text-gray-500 font-raleway cursor-not-allowed opacity-50'>UGAHacks 4</h2>
+                    <h2 className='text-base text-gray-500 font-raleway cursor-not-allowed opacity-50 ml-2'>UGAHacks 3</h2>
+                    <h2 className='text-base text-gray-500 font-raleway cursor-not-allowed opacity-50 -ml-1'>UGAHacks 2</h2>
+                    <h2 className='text-base text-gray-500 font-raleway cursor-not-allowed opacity-50'>UGAHacks 1</h2>
 
                 </div>
 
