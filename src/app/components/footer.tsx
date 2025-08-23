@@ -70,7 +70,7 @@ export default function Footer() {
                         <p className="mt-3 text-sm text-neutral-400">
                             Get updates on registration, workshops, and sponsor events on our socials!
                         </p>
-                        
+
                         {/* Socials */}
                         <div className="mt-4 flex items-center gap-4">
                             <SocialLink href="https://github.com/UGAHacks" label="GitHub">
@@ -89,8 +89,30 @@ export default function Footer() {
 
                             <SocialLink href="https://www.instagram.com/ugahacks" label="Instagram">
                                 {/* Instagram */}
-                                <svg viewBox="0 0 24 24" role="img" aria-hidden="true" className="h-5 w-5 fill-current">
-                                    <path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.81.24 2.23.4.56.22.96.49 1.38.91.42.42.69.82.91 1.38.16.42.35 1.06.4 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.81-.4 2.23a3.8 3.8 0 0 1-.91 1.38 3.8 3.8 0 0 1-1.38.91c-.42.16-1.06.35-2.23.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.81-.24-2.23-.4a3.8 3.8 0 0 1-1.38-.91 3.8 3.8 0 0 1-.91-1.38c-.16-.42-.35-1.06-.4-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.24-1.81.4-2.23.22-.56.49-.96.91-1.38.42-.42.82-.69 1.38-.91.42-.16 1.06-.35 2.23-.4C8.42 2.21 8.8 2.2 12 2.2Zm0 1.8c-3.15 0-3.52.01-4.76.07-.98.05-1.5.21-1.86.35-.47.18-.8.39-1.15.74-.35.35-.56.68-.74 1.15-.14.36-.3.88-.35 1.86-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.05.98.21 1.5.35 1.86.18.47.39.8.74 1.15.35.35.68.56 1.15.74.36.14.88.3 1.86.35 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.98-.05 1.5-.21 1.86-.35.47-.18.8-.39 1.15-.74.35-.35.56-.68.74-1.15.14-.36.3-.88.35-1.86.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.05-.98-.21-1.5-.35-1.86a2.3 2.3 0 0 0-.74-1.15 2.3 2.3 0 0 0-1.15-.74c-.36-.14-.88-.3-1.86-.35-1.24-.06-1.61-.07-4.76-.07Zm0 3.3a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13Zm0 2a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Zm5.95-2.45a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    role="img"
+                                    aria-hidden="true"
+                                    className="h-5 w-5"
+                                >
+                                    {/* Outer rounded square */}
+                                    <rect
+                                        x="2.5" y="2.5" width="19" height="19" rx="5"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="2"
+                                        vectorEffect="non-scaling-stroke"
+                                    />
+                                    {/* Lens */}
+                                    <circle
+                                        cx="12" cy="12" r="4.5"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="2"
+                                        vectorEffect="non-scaling-stroke"
+                                    />
+                                    {/* Flash dot */}
+                                    <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" />
                                 </svg>
                             </SocialLink>
 
