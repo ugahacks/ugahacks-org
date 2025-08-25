@@ -105,7 +105,7 @@
     },
     {
         "name": "Alex Breazu",
-        "role": "Organizer",
+        "role": "Logistics Team",
         "quote": "If you're reading this, I think you should go buy a house plant.",
         "image_path": "team_images/UGAHacks_7/alex-breazu.png",
         "social_links": [
@@ -121,7 +121,7 @@
     },
     {
         "name": "Alex Pausa",
-        "role": "Organizer",
+        "role": "Logistics Team",
         "quote": "I'm a Nerd :D",
         "image_path": "team_images/UGAHacks_7/alex-pausa.png",
         "social_links": [
@@ -133,28 +133,28 @@
     },
     {
         "name": "Claire Venenga",
-        "role": "Organizer",
+        "role": "Logistics Team",
         "quote": "Have you heard of the critically acclaimed MMORPG Final Fantasy XIV with\n\t\t\t\t\t\t\t\t\t\t\t\tan expanded free trial which you can play through the entirety of A\n\t\t\t\t\t\t\t\t\t\t\t\tRealm Reborn and the award winning Heavensward expansion up to level 60\n\t\t\t\t\t\t\t\t\t\t\t\tfor free with no restrictions on playtime?",
         "image_path": "team_images/UGAHacks_7/claire-venenga.jpg",
         "social_links": []
     },
     {
         "name": "Gally Smith",
-        "role": "Organizer",
+        "role": "Logistics Team",
         "quote": null,
         "image_path": "team_images/UGAHacks_7/gally-smith.jpg",
         "social_links": []
     },
     {
         "name": "Grant Jimmerson",
-        "role": "Organizer",
+        "role": "Logistics Team",
         "quote": "Go Dawgs!",
         "image_path": "team_images/UGAHacks_7/grant-jimmerson.PNG",
         "social_links": []
     },
     {
         "name": "Helium Yang",
-        "role": "Organizer",
+        "role": "Logistics Team",
         "quote": "What's your favorite boba?",
         "image_path": "team_images/UGAHacks_7/helium-yang.jpg",
         "social_links": [
@@ -170,7 +170,7 @@
     },
     {
         "name": "Himani Yadav",
-        "role": "Organizer",
+        "role": "Logistics Team",
         "quote": "What did the html coding dog say? href href!",
         "image_path": "team_images/UGAHacks_7/himani-yadav.jpeg",
         "social_links": [
@@ -190,14 +190,14 @@
     },
     {
         "name": "Ivan Mo",
-        "role": "Organizer",
+        "role": "Logistics Team",
         "quote": "Okay but what if",
         "image_path": "team_images/UGAHacks_7/ivan-mo.JPG",
         "social_links": []
     },
     {
         "name": "Joseph Nguyen",
-        "role": "Organizer",
+        "role": "Logistics Team",
         "quote": "Expect the unexpected",
         "image_path": "team_images/UGAHacks_7/joseph-nguyen.jpg",
         "social_links": [
@@ -213,7 +213,7 @@
     },
     {
         "name": "Larraine Mensah",
-        "role": "Organizer",
+        "role": "Logistics Team",
         "quote": "Aut viam inveniam aut faciam",
         "image_path": "team_images/UGAHacks_7/larraine-mensah.jpg",
         "social_links": [
@@ -229,7 +229,7 @@
     },
     {
         "name": "Matthew Santoro",
-        "role": "Organizer",
+        "role": "Logistics Team",
         "quote": "Gotta go fast",
         "image_path": "team_images/UGAHacks_7/matthew-santoro.png",
         "social_links": [
@@ -241,7 +241,7 @@
     },
     {
         "name": "Olivia Carino",
-        "role": "Organizer",
+        "role": "Logistics Team",
         "quote": "Tea > Coffee",
         "image_path": "team_images/UGAHacks_7/olivia-carino.jpg",
         "social_links": [
@@ -261,7 +261,7 @@
     },
     {
         "name": "Banibe Ebegbodi",
-        "role": "Organizer",
+        "role": "Marketing Team",
         "quote": "Good things take time.",
         "image_path": "team_images/UGAHacks_7/banibe-ebegbodi.jpg",
         "social_links": [
@@ -277,7 +277,7 @@
     },
     {
         "name": "Elodie Collier",
-        "role": "Organizer",
+        "role": "Marketing Team",
         "quote": "How does a computer get drunk? It takes screenshots.",
         "image_path": "team_images/UGAHacks_7/elodie-collier.jpeg",
         "social_links": [
@@ -289,7 +289,7 @@
     },
     {
         "name": "Saba Merchant",
-        "role": "Organizer",
+        "role": "Sponsorship Team",
         "quote": "I'm going to stand outside, so if anyone asks I am outstanding",
         "image_path": "team_images/UGAHacks_7/saba-merchant.jpg",
         "social_links": [
@@ -301,7 +301,7 @@
     },
     {
         "name": "Richard Hoepfinger",
-        "role": "Organizer",
+        "role": "Sponsorship Team",
         "quote": "Technically, bogosort is the most efficient if you're lucky",
         "image_path": "team_images/UGAHacks_7/richard-hoepfinger.jpeg",
         "social_links": [
@@ -313,7 +313,7 @@
     },
     {
         "name": "Genki Aikawa",
-        "role": "Organizer",
+        "role": "Tech Team",
         "quote": "Will you be my Valentine?",
         "image_path": "team_images/UGAHacks_7/genki-aikawa.jpg",
         "social_links": [
@@ -325,7 +325,7 @@
     },
     {
         "name": "Ryan Schuster",
-        "role": "Organizer",
+        "role": "Tech Team",
         "quote": "We are what we repeatedly do. Excellence, then, is not an act, but a\n\t\t\t\t\t\t\t\t\t\t\t\thabit",
         "image_path": "team_images/UGAHacks_7/ryan-schuster.png",
         "social_links": [

@@ -222,6 +222,14 @@ const Team = () => {
                                         src={
                                             selectedTeamName === 'UGAHacksX' ? "/team_images/UGAHacks_X/byte-x.png" : 
                                             selectedTeamName === 'UGAHacks 9' ? "/team_images/UGAHacks_9/byte-9.png" : 
+                                            selectedTeamName === 'UGAHacks 8' ? "/team_images/UGAHacks_8/byte-8.png" :
+                                            selectedTeamName === 'UGAHacks 7' ? "/team_images/UGAHacks_7/byte-7.png" :
+                                            selectedTeamName === 'UGAHacks 6' ? "/team_images/UGAHacks_6/byte-6.jpg" :
+                                            selectedTeamName === 'UGAHacks 5' ? "/team_images/UGAHacks_5/byte-5.jpg" :
+                                            selectedTeamName === 'UGAHacks 4' ? "/team_images/UGAHacks_4/hacks4.jpg" :
+                                            selectedTeamName === 'UGAHacks 3' ? "/team_images/UGAHacks_3/mascot-uh3.jpg" :
+                                            selectedTeamName === 'UGAHacks 2' ? "/team_images/UGAHacks_1/UGAHack1mascot.png" :
+                                            selectedTeamName === 'UGAHacks 1' ? "/team_images/UGAHacks_1/UGAHack1mascot.png" :
                                             "/bytehacks11.png"
                                         }
                                         alt="Byte Mascot"
@@ -234,13 +242,31 @@ const Team = () => {
                             </div>
                         )}
                         {(() => {
-                            // Group members by team/role, excluding mascot for UGAHacksX and UGAHacks 9 since it's shown at top
-                            const filteredTeam = (selectedTeamName === 'UGAHacksX' || selectedTeamName === 'UGAHacks 9')
+                            // Group members by team/role, excluding mascot for teams that show it at top
+                            const filteredTeam = (selectedTeamName === 'UGAHacksX' || selectedTeamName === 'UGAHacks 9' || selectedTeamName === 'UGAHacks 8' || selectedTeamName === 'UGAHacks 7' || selectedTeamName === 'UGAHacks 6' || selectedTeamName === 'UGAHacks 5' || selectedTeamName === 'UGAHacks 4' || selectedTeamName === 'UGAHacks 3' || selectedTeamName === 'UGAHacks 2' || selectedTeamName === 'UGAHacks 1')
                                 ? selectedTeam.filter(member => member.role !== 'Mascot')
                                 : selectedTeam;
 
                             const teamGroups = filteredTeam.reduce((groups: Record<string, TeamMember[]>, member: TeamMember) => {
-                                const team = member.role.includes('Director') ? 'Directors' : member.role.split(',')[0];
+                                let team = member.role?.includes('Director') ? 'Directors' : member.role?.split(',')[0] || 'Other';
+                                
+                                // Special case for UGAHacks 5: put Amanda Yang and Shivani Nanda in Directors section
+                                if (selectedTeamName === 'UGAHacks 5' && 
+                                    (member.name === 'Amanda Yang' || member.name === 'Shivani Nanda')) {
+                                    team = 'Directors';
+                                }
+                                
+                                // Special case for UGAHacks 6: group specific members with appropriate teams
+                                if (selectedTeamName === 'UGAHacks 6') {
+                                    if (member.name === 'Annie Lian' || member.name === 'Felise Wen') {
+                                        team = 'Marketing Team';
+                                    } else if (member.name === 'Amanda Yang' || member.name === 'Shivani Nanda') {
+                                        team = 'Sponsorship Team';
+                                    } else if (member.name === 'Andrei Spatariu' || member.name === 'Danny Lopez') {
+                                        team = 'Web Team';
+                                    }
+                                }
+                                
                                 if (!groups[team]) {
                                     groups[team] = [];
                                 }
@@ -377,6 +403,11 @@ const Team = () => {
                                                                                 {link.type === 'twitter' && (
                                                                                     <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                                                                                         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                                                                    </svg>
+                                                                                )}
+                                                                                {link.type === 'facebook' && (
+                                                                                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                                                                                     </svg>
                                                                                 )}
                                                                             </a>
