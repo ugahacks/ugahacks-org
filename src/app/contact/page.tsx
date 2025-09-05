@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import Typed from 'typed.js';
+import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 export default function Contact() {
     const typedRef = useRef<HTMLSpanElement>(null);
@@ -94,6 +95,7 @@ export default function Contact() {
                     </div>
                 </div>
             </section>
+            <Footer />
         </>
     );
 }

@@ -61,6 +61,7 @@ export default function Footer() {
                             { href: 'https://devpost.com/ugahacks', label: 'Devpost' },
                             { href: 'https://ugahacksel.notion.site/UGAHacks-Experiential-Learning-Credit-Guidelines-131de0003a758090bf6dc75f8773353c', label: 'EL Credit' },
                             { href: '/contact', label: 'Contact' },
+                            { href: 'https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md', label: 'MLH Code-Of-Conduct' }
                         ]}
                     />
 
