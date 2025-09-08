@@ -43,3 +43,32 @@
   .cursor-blink {
     animation: cursor-blink 1s infinite;
   }
+
+@keyframes drop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-16px) scale(0.98);
+    filter: blur(2px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(2px) scale(1.005);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* 2) Reusable utility (Tailwind v4) */
+@utility animate-drop-in {
+  animation: drop-in 650ms cubic-bezier(0.2, 0.65, 0.25, 1.2) both;
+}
+
+/* 3) Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-drop-in {
+    animation: none !important;
+  }
+}

@@ -3,6 +3,7 @@
 // import Image from "next/image";
 import Image from "next/image";
 import About from "./components/About";
+import Banner from "./components/Banner";
 import Events from "./components/Events";
 import Footer from "./components/footer";
 import Hero from './components/Hero';
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
+      <Banner />
       <Hero />
       <About />
       <Events />
@@ -23,7 +25,7 @@ export default function Home() {
           maxWidth: '100px',
           minWidth: '60px',
           position: 'fixed',
-          right: '50px',
+          right: '40px',
           top: 60,
           width: '10%',
           zIndex: 10,
