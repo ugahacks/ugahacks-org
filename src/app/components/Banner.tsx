@@ -6,7 +6,7 @@ export default function Banner() {
                 {/* <Link className="duration-300 hover:text-red-300 hover:underline" href="https://11.ugahacks.com/">
                      UH11 Registration Live!
                 </Link> */}
-                ⚠️ Registration and event website for UGAHacks 11 are termporarily unavailable. We are actively working on a fix, thank you for your patience! ⚠️
+                ⚠️ Registration and event website for UGAHacks 11 are temporarily unavailable. We are actively working on a fix, thank you for your patience! ⚠️
             </p>
         </div>
     );
