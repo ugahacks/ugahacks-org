@@ -1,4 +1,4 @@
-//import Link from "next/link";
+import Link from "next/link";
 export default function Banner() {
     return (
         <div className="w-full bg-red-600 text-white text-center py-3 shadow-md animate-drop-in ">
