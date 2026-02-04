@@ -36,17 +36,17 @@
     "role": "Lead Director",
     "quote": "Another one bytes the dust",
     "image_path": "team_images/UGAHacks_11/batu-ozdener.png",
-    "social_links": [{"type":"website",
-      "url":"https://www.batu.dev/"},
+    "social_links": [
+      { "type": "website", "url": "https://www.batu.dev/" },
       {
-      "type": "instagram",
-      "url": "https://www.instagram.com/alibatuozdener/"
-    },
+        "type": "instagram",
+        "url": "https://www.instagram.com/alibatuozdener/"
+      },
       {
-      "type": "linkedin",
-      "url": "https://www.linkedin.com/in/alibatuozdener/"
-    }
-  ]
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/alibatuozdener/"
+      }
+    ]
   },
   {
     "name": "Kataleena Mishra",
@@ -495,7 +495,20 @@
     "role": "Tech Team",
     "quote": "The only problem you’re gonna have is that you didn’t buy more",
     "image_path": "team_images/UGAHacks_11/stephen-sulimani.png",
-    "social_links": []
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/stephensulimani"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/stephensulimani"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/stephensulimani"
+      }
+    ]
   },
   {
     "name": "Ryan Majd",
@@ -507,8 +520,7 @@
         "type": "website",
         "url": "https://ryanmajd.com"
       },
-      {"type": "github",
-        "url": "https://github.com/theryanmajd"},
+      { "type": "github", "url": "https://github.com/theryanmajd" },
       {
         "type": "instagram",
         "url": "https://www.instagram.com/theryanmajd"
@@ -520,3 +532,4 @@
     ]
   }
 ]
+
