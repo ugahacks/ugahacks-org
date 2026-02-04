@@ -40,7 +40,7 @@ const eventsData = [
         UGAHacks 9 returned for an exciting 48-hour hackathon with the theme of
         superheroes at the wonderful Zell B. Miller Learning Center. Hackers
         participated in various events and workshops dedicated to help them on
-        their academic & professional journeys.
+        their academic & professional journeys. We had a great {""} <a className="timeline-links" href="https://ugahacks-9.devpost.com/" target="_BLANK" rel="noopener noreferrer">112 project submissions</a>.
       </>
     ),
     imageUrl: "/timeline-photos/hacks9banner.png",
@@ -69,7 +69,7 @@ const eventsData = [
         UGAHacks 8 returned to Zell B. Miller Learning Center for an exciting
         48-hour hackathon with the theme of travel. With 8 sponsors and 600+
         attendees, hackers traveled from far and wide to attend the 8th
-        iteration of UGAHacks. In addition to all our in-person participants,
+        iteration of UGAHacks. We had {" "} <a className="timeline-links" href="https://ugahacks-8.devpost.com/" target="_BLANK" rel="noopener noreferrer">126 project submissions</a> from our in-person participants.
         UGAHacks 8 took on a hybrid format and welcomed our virtual attendees
         from afar! Hackers participated in various side events, workshops and
         guest speaker events dedicated to help them on their academic &
@@ -113,8 +113,16 @@ const eventsData = [
         vaporwave, which saw Byte return in glorious 8-bit resolution to welcome
         yet another class of extraordinary hackers. Despite facing unprecedented
         obstacles, UGAHacks 7 was a hackathon reimagined one pixel at a time and
-        was the organization&apos;s largest to date with 800 attendees and 14
-        sponsors.
+        was the organization&apos;s largest to date with 800 attendees, 14 sponsors, and over{" "}
+        <a
+          className="timeline-links"
+          href="https://ugahacks-7.devpost.com/"
+          target="_BLANK"
+          rel="noopener noreferrer"
+        >
+          75 project submissions
+        </a>
+        .
       </>
     ),
     imageUrl: "/timeline-photos/hacks7banner.png",
