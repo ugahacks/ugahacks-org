@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "UGAHacks",
-  description: "UGAHacks is a hackathon organization at the University of Georgia.",
+  description:
+    "UGAHacks is a hackathon organization at the University of Georgia.",
 };
 
 export default function RootLayout({

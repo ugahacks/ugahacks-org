@@ -9,10 +9,11 @@ const eventsData = [
       <>
         UGAHacks X rocked the Zell B. Miller Learning Center for an electrifying
         48-hour hackathon celebrating its milestone 10th anniversary. With the
-        theme of Rock n&apos; Roll, hackers were encouraged to think outside of the
-        box and embrace the spirit of innovation in unconventional ways. Backed
-        by 12 sponsors and bringing together 500+ passionate participants, the
-        event amplified creativity and technical excellence, resulting in{" "}
+        theme of Rock n&apos; Roll, hackers were encouraged to think outside of
+        the box and embrace the spirit of innovation in unconventional ways.
+        Backed by 12 sponsors and bringing together 500+ passionate
+        participants, the event amplified creativity and technical excellence,
+        resulting in{" "}
         <a
           className="timeline-links"
           href="https://ugahacks-x.devpost.com/"
@@ -23,9 +24,9 @@ const eventsData = [
         </a>
         . Hackers participated in various side events, workshops, and guest
         speaker sessions designed to help them develop their skills and expand
-        their horizons. UGAHacks X embodied the transformative spirit of Rock n&apos;
-        Roll, inspiring participants to break boundaries and create pioneering
-        solutions.
+        their horizons. UGAHacks X embodied the transformative spirit of Rock
+        n&apos; Roll, inspiring participants to break boundaries and create
+        pioneering solutions.
       </>
     ),
     imageUrl: "/timeline-photos/hacksxbanner.png",
@@ -72,9 +73,9 @@ const eventsData = [
         UGAHacks 8 took on a hybrid format and welcomed our virtual attendees
         from afar! Hackers participated in various side events, workshops and
         guest speaker events dedicated to help them on their academic &
-        professional journeys. All in all, UGAHacks 8&apos;s theme centered around
-        adventure, and hackers fearlessly pioneered into the unknown setting a
-        new precedent for those to come.
+        professional journeys. All in all, UGAHacks 8&apos;s theme centered
+        around adventure, and hackers fearlessly pioneered into the unknown
+        setting a new precedent for those to come.
       </>
     ),
     imageUrl: "/timeline-photos/hacks8banner.png",
@@ -105,14 +106,15 @@ const eventsData = [
       <>
         UGAHacks 7 adopted our first-ever hybrid event model since our inception
         in 2015, with the in-person portion of the event returning to Zell
-        Miller Learning Center at the very heart of UGA&apos;s campus. Meanwhile,
-        virtual attendees participated in the hackathon through virtual
-        workshops, live broadcasts, and side events co-hosted by sponsors and
-        the UGAHacks 7 organizing team. The theme this year was vaporwave, which
-        saw Byte return in glorious 8-bit resolution to welcome yet another
-        class of extraordinary hackers. Despite facing unprecedented obstacles,
-        UGAHacks 7 was a hackathon reimagined one pixel at a time and was the
-        organization&apos;s largest to date with 800 attendees and 14 sponsors.
+        Miller Learning Center at the very heart of UGA&apos;s campus.
+        Meanwhile, virtual attendees participated in the hackathon through
+        virtual workshops, live broadcasts, and side events co-hosted by
+        sponsors and the UGAHacks 7 organizing team. The theme this year was
+        vaporwave, which saw Byte return in glorious 8-bit resolution to welcome
+        yet another class of extraordinary hackers. Despite facing unprecedented
+        obstacles, UGAHacks 7 was a hackathon reimagined one pixel at a time and
+        was the organization&apos;s largest to date with 800 attendees and 14
+        sponsors.
       </>
     ),
     imageUrl: "/timeline-photos/hacks7banner.png",
@@ -136,10 +138,10 @@ const eventsData = [
           40 project submissions
         </a>
         . The sixth UGAHacks event also saw the use of workshop live streams and
-        &apos;fireside&apos; broadcasts from the UGAHacks organizers throughout the event.
-        Overall, UGAHacks 6 was themed around &apos;building the future&apos; and there
-        was definitely no shortage of innovative ideas built around hardware and
-        the world&apos;s ever-changing landscape.
+        &apos;fireside&apos; broadcasts from the UGAHacks organizers throughout
+        the event. Overall, UGAHacks 6 was themed around &apos;building the
+        future&apos; and there was definitely no shortage of innovative ideas
+        built around hardware and the world&apos;s ever-changing landscape.
       </>
     ),
     imageUrl: "/timeline-photos/hacks6banner.png",
@@ -162,10 +164,10 @@ const eventsData = [
         >
           70 project submissions
         </a>
-        . UGAHacks 5 was themed around bringing &apos;otherworldly&apos; ideas to life
-        with our mascot, Byte, heading to explore space, but from the event
-        perspective UGAHacks 5 could be considered the &apos;Launch Pad&apos; that became
-        the new standard for all future UGAHacks events.
+        . UGAHacks 5 was themed around bringing &apos;otherworldly&apos; ideas
+        to life with our mascot, Byte, heading to explore space, but from the
+        event perspective UGAHacks 5 could be considered the &apos;Launch
+        Pad&apos; that became the new standard for all future UGAHacks events.
       </>
     ),
     imageUrl: "/timeline-photos/hacks5banner.jpg",
