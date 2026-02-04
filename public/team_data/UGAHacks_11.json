@@ -485,9 +485,16 @@
   },
   {
     "name": "Nikita Jha",
-    "role": "Tech Team",
+    "role": "Advisor",
     "quote": "",
     "image_path": "team_images/UGAHacks_11/nikita-jha.png",
+    "social_links": []
+  },
+  {
+    "name": "Stephen Sulimani",
+    "role": "Tech Team",
+    "quote": "The only problem you’re gonna have is that you didn’t buy more",
+    "image_path": "team_images/UGAHacks_11/stephen-sulimani.png",
     "social_links": []
   },
   {
