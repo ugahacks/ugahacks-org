@@ -495,7 +495,20 @@
     "role": "Tech Team",
     "quote": "The only problem you’re gonna have is that you didn’t buy more",
     "image_path": "team_images/UGAHacks_11/stephen-sulimani.png",
-    "social_links": []
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/stephensulimani"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/stephensulimani"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/stephensulimani"
+      }
+    ]
   },
   {
     "name": "Ryan Majd",
@@ -519,3 +532,4 @@
     ]
   }
 ]
+
