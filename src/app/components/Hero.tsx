@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { useEffect, useRef } from 'react';
-import Typed from 'typed.js';
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useRef } from "react";
+import Typed from "typed.js";
 
 export default function Hero() {
   const typedRef = useRef<HTMLSpanElement>(null);
@@ -12,13 +12,13 @@ export default function Hero() {
     if (!typedRef.current) return;
 
     const typed = new Typed(typedRef.current, {
-      strings: ['Create.', 'Inspire.', 'Code.'],
+      strings: ["Create.", "Inspire.", "Code."],
       typeSpeed: 100,
       backSpeed: 50,
       backDelay: 2000,
       loop: true,
       showCursor: true,
-      cursorChar: '|',
+      cursorChar: "|",
     });
 
     return () => typed.destroy();
@@ -28,7 +28,6 @@ export default function Hero() {
     <section className="bg-gray-900 text-gray-100 px-6 py-16 md:py-24 font-raleway">
       {/* Layout Container */}
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-12">
-
         {/* Laptop Image */}
         <div className="w-full md:w-1/2 flex justify-center">
           <Image
@@ -60,9 +59,14 @@ export default function Hero() {
             </Link>
 
             <div className="">
-              <Link href="https://mybyte.ugahacks.com/login" passHref>
+              <Link
+                href="https://11.ugahacks.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                passHref
+              >
                 <button className="px-6 py-3 rounded-full bg-red-600 text-white font-medium hover:bg-red-700 transition cursor-pointer">
-                  Register for UGAHacks 11!
+                  UGAHacks 11 Website
                 </button>
               </Link>
             </div>
