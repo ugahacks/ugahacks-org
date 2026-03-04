@@ -77,7 +77,7 @@ const Team = () => {
     // Map team names to their corresponding JSON file names
     const teamFileMap: Record<string, string> = {
       "UGAHacks 11": "UGAHacks_11.json",
-      UGAHacksX: "UGAHacks_X.json",
+      "UGAHacks X": "UGAHacks_X.json",
       "UGAHacks 9": "UGAHacks_9.json",
       "UGAHacks 8": "UGAHacks_8.json",
       "UGAHacks 7": "UGAHacks_7.json",
@@ -132,11 +132,11 @@ const Team = () => {
           </h2>
           <h2
             className={`text-base font-raleway cursor-pointer hover:text-white transition-colors ${
-              selectedTeamName === "UGAHacksX" ? "text-white" : "text-gray-400"
+              selectedTeamName === "UGAHacks X" ? "text-white" : "text-gray-400"
             }`}
-            onClick={() => handleTeamClick("UGAHacksX")}
+            onClick={() => handleTeamClick("UGAHacks X")}
           >
-            UGAHacksX
+            UGAHacks X
           </h2>
           <h2
             className={`text-base font-raleway cursor-pointer hover:text-white transition-colors ${
@@ -230,7 +230,7 @@ const Team = () => {
                 <div className="p-1 rounded-full border-4 border-red-500">
                   <Image
                     src={
-                      selectedTeamName === "UGAHacksX"
+                      selectedTeamName === "UGAHacks X"
                         ? "/team_images/UGAHacks_X/byte-x.png"
                         : selectedTeamName === "UGAHacks 9"
                           ? "/team_images/UGAHacks_9/byte-9.png"
@@ -264,7 +264,7 @@ const Team = () => {
             {(() => {
               // Group members by team/role, excluding mascot for teams that show it at top
               const filteredTeam =
-                selectedTeamName === "UGAHacksX" ||
+                selectedTeamName === "UGAHacks  X" ||
                 selectedTeamName === "UGAHacks 9" ||
                 selectedTeamName === "UGAHacks 8" ||
                 selectedTeamName === "UGAHacks 7" ||
@@ -340,12 +340,12 @@ const Team = () => {
                     <h2 className="text-2xl text-white font-raleway font-bold mb-10 text-center relative z-10">
                       {teamName === "Advisor" &&
                       (selectedTeamName === "UGAHacks 11" ||
-                        selectedTeamName === "UGAHacksX")
+                        selectedTeamName === "UGAHacks X")
                         ? "Advisors"
                         : teamName}
                     </h2>
                     <div
-                      className={`flex flex-wrap justify-center ${selectedTeamName === "UGAHacksX" && teamName === "Directors" ? "gap-x-6 gap-y-16" : "gap-x-8 gap-y-20"}`}
+                      className={`flex flex-wrap justify-center ${selectedTeamName === "UGAHacks X" && teamName === "Directors" ? "gap-x-6 gap-y-16" : "gap-x-8 gap-y-20"}`}
                     >
                       {members.map((member: TeamMember, index: number) => (
                         <div
