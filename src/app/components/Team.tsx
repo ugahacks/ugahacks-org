@@ -264,7 +264,7 @@ const Team = () => {
             {(() => {
               // Group members by team/role, excluding mascot for teams that show it at top
               const filteredTeam =
-                selectedTeamName === "UGAHacks  X" ||
+                selectedTeamName === "UGAHacks X" ||
                 selectedTeamName === "UGAHacks 9" ||
                 selectedTeamName === "UGAHacks 8" ||
                 selectedTeamName === "UGAHacks 7" ||
