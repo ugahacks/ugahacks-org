@@ -35,8 +35,8 @@ export default function Home() {
         rel="noopener noreferrer"
       >
         <Image
-          src="https://s3.amazonaws.com/logged-assets/trust-badge/2026/mlh-trust-badge-2026-white.svg"
-          alt="Major League Hacking 2026 Hackathon Season"
+          src="https://logged-assets.s3.amazonaws.com/trust-badge/2027/mlh-trust-badge-2027-white.svg"
+          alt="Major League Hacking 2027 Hackathon Season"
           width="100"
           height="100"
           style={{ width: "100%" }}
