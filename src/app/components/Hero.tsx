@@ -60,13 +60,13 @@ export default function Hero() {
 
             <div className="">
               <Link
-                href="https://forms.gle/rLLsYwuBzEHtQnf57"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSe7VHsEgkfyVJ9Z_MZB0ztxCNhfWL_72zP9Igy-Stq0byW41w/viewform"
                 target="_blank"
                 rel="noopener noreferrer"
                 passHref
               >
                 <button className="px-6 py-3 rounded-full bg-red-600 text-white font-medium hover:bg-red-700 transition cursor-pointer">
-                  Apply to Be an Organizer
+                  Pre-Register for UGAHacks 12
                 </button>
               </Link>
             </div>
