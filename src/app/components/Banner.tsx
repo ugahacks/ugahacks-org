@@ -7,9 +7,9 @@ export default function Banner() {
           className="duration-300 hover:text-red-300 hover:underline"
           target="_blank"
           rel="noopener noreferrer"
-          href="https://11.wrapped.ugahacks.com"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSe7VHsEgkfyVJ9Z_MZB0ztxCNhfWL_72zP9Igy-Stq0byW41w/viewform"
         >
-          UGAHacks 11 Wrapped Available Now!
+          UGAHacks 12 Pre-registration Now Open!
         </Link>
       </p>
     </div>
