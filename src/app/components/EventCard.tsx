@@ -6,7 +6,6 @@ interface EventCardProps {
   title: string;
   content: React.ReactNode;
   imageUrl: string;
-  pause?: (value: boolean) => void; // Optional pause prop
 }
 
 const EventCard: React.FC<EventCardProps> = ({
