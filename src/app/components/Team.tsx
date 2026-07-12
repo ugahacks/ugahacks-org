@@ -18,7 +18,7 @@ const Team = () => {
   const [selectedTeam, setSelectedTeam] = useState<TeamMember[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedTeamName, setSelectedTeamName] =
-    useState<string>("UGAHacks 11");
+    useState<string>("UGAHacks 12");
   const [teamCache, setTeamCache] = useState<Record<string, TeamMember[]>>({});
   const [activeCard, setActiveCard] = useState<number | null>(null);
   const [animateIn, setAnimateIn] = useState(false);
@@ -31,23 +31,23 @@ const Team = () => {
     });
   };
 
-  // Load UGAHacks 11 data on component mount
+  // Load UGAHacks 12 data on component mount
   useEffect(() => {
-    const loadUGAHacks11 = async () => {
+    const loadUGAHacks12 = async () => {
       try {
-        const response = await fetch("/team_data/UGAHacks_11.json");
+        const response = await fetch("/team_data/UGAHacks_12.json");
         const data = await response.json();
         setSelectedTeam(data);
-        setTeamCache((prev) => ({ ...prev, "UGAHacks 11": data }));
+        setTeamCache((prev) => ({ ...prev, "UGAHacks 12": data }));
         kickAnimateIn();
       } catch (error) {
-        console.error("Error loading UGAHacks 11 data:", error);
+        console.error("Error loading UGAHacks 12 data:", error);
       } finally {
         setIsLoading(false);
       }
     };
 
-    loadUGAHacks11();
+    loadUGAHacks12();
   }, []);
 
   const getImageSrc = (imagePath: string) => {
@@ -76,6 +76,7 @@ const Team = () => {
 
     // Map team names to their corresponding JSON file names
     const teamFileMap: Record<string, string> = {
+      "UGAHacks 12": "UGAHacks_12.json",
       "UGAHacks 11": "UGAHacks_11.json",
       "UGAHacks X": "UGAHacks_X.json",
       "UGAHacks 9": "UGAHacks_9.json",
@@ -120,6 +121,16 @@ const Team = () => {
       </h1>
       <div className="w-full max-w-7xl px-6">
         <div className="flex flex-wrap gap-4 mt-6 md:mt-20 justify-center overflow-x-auto md:overflow-visible whitespace-nowrap px-4">
+          <h2
+            className={`text-base font-raleway cursor-pointer hover:text-white transition-colors ${
+              selectedTeamName === "UGAHacks 12"
+                ? "text-white"
+                : "text-gray-400"
+            }`}
+            onClick={() => handleTeamClick("UGAHacks 12")}
+          >
+            UGAHacks 12
+          </h2>
           <h2
             className={`text-base font-raleway cursor-pointer hover:text-white transition-colors ${
               selectedTeamName === "UGAHacks 11"
