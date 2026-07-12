@@ -32,26 +32,6 @@
     ]
   },
   {
-    "name": "Batu Ozdener",
-    "role": "Lead Director",
-    "quote": "Another one bytes the dust",
-    "image_path": "team_images/UGAHacks_11/batu-ozdener.png",
-    "social_links": [
-      {
-        "type": "website",
-        "url": "https://www.batu.dev/"
-      },
-      {
-        "type": "instagram",
-        "url": "https://www.instagram.com/alibatuozdener/"
-      },
-      {
-        "type": "linkedin",
-        "url": "https://www.linkedin.com/in/alibatuozdener/"
-      }
-    ]
-  },
-  {
     "name": "Kataleena Mishra",
     "role": "Marketing Director",
     "quote": "",
