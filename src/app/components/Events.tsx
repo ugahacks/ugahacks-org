@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import EventCard from "./EventCard";
 
 const eventsData = [
@@ -40,7 +40,16 @@ const eventsData = [
         UGAHacks 9 returned for an exciting 48-hour hackathon with the theme of
         superheroes at the wonderful Zell B. Miller Learning Center. Hackers
         participated in various events and workshops dedicated to help them on
-        their academic & professional journeys. We had a great {""} <a className="timeline-links" href="https://ugahacks-9.devpost.com/" target="_BLANK" rel="noopener noreferrer">112 project submissions</a>.
+        their academic & professional journeys. We had a great {""}{" "}
+        <a
+          className="timeline-links"
+          href="https://ugahacks-9.devpost.com/"
+          target="_BLANK"
+          rel="noopener noreferrer"
+        >
+          112 project submissions
+        </a>
+        .
       </>
     ),
     imageUrl: "/timeline-photos/hacks9banner.png",
@@ -69,13 +78,22 @@ const eventsData = [
         UGAHacks 8 returned to Zell B. Miller Learning Center for an exciting
         48-hour hackathon with the theme of travel. With 8 sponsors and 600+
         attendees, hackers traveled from far and wide to attend the 8th
-        iteration of UGAHacks. We had {" "} <a className="timeline-links" href="https://ugahacks-8.devpost.com/" target="_BLANK" rel="noopener noreferrer">126 project submissions</a> from our in-person participants.
-        UGAHacks 8 took on a hybrid format and welcomed our virtual attendees
-        from afar! Hackers participated in various side events, workshops and
-        guest speaker events dedicated to help them on their academic &
-        professional journeys. All in all, UGAHacks 8&apos;s theme centered
-        around adventure, and hackers fearlessly pioneered into the unknown
-        setting a new precedent for those to come.
+        iteration of UGAHacks. We had{" "}
+        <a
+          className="timeline-links"
+          href="https://ugahacks-8.devpost.com/"
+          target="_BLANK"
+          rel="noopener noreferrer"
+        >
+          126 project submissions
+        </a>{" "}
+        from our in-person participants. UGAHacks 8 took on a hybrid format and
+        welcomed our virtual attendees from afar! Hackers participated in
+        various side events, workshops and guest speaker events dedicated to
+        help them on their academic & professional journeys. All in all,
+        UGAHacks 8&apos;s theme centered around adventure, and hackers
+        fearlessly pioneered into the unknown setting a new precedent for those
+        to come.
       </>
     ),
     imageUrl: "/timeline-photos/hacks8banner.png",
@@ -113,7 +131,8 @@ const eventsData = [
         vaporwave, which saw Byte return in glorious 8-bit resolution to welcome
         yet another class of extraordinary hackers. Despite facing unprecedented
         obstacles, UGAHacks 7 was a hackathon reimagined one pixel at a time and
-        was the organization&apos;s largest to date with 800 attendees, 14 sponsors, and over{" "}
+        was the organization&apos;s largest to date with 800 attendees, 14
+        sponsors, and over{" "}
         <a
           className="timeline-links"
           href="https://ugahacks-7.devpost.com/"
@@ -292,119 +311,171 @@ const eventsData = [
   },
 ];
 
+// milliseconds
+const SCROLL_DURATION = 60_000;
+const EASE_DURATION = 1_000;
+const TIMEOUT_DURATION = 5_000;
+
+function slowDown(time: number) {
+  return time <= EASE_DURATION
+    ? 1 - Math.sqrt(1 - Math.pow(time / EASE_DURATION - 1, 2))
+    : 0;
+}
+
+function speedUp(time: number) {
+  return time <= EASE_DURATION
+    ? 1 - Math.sqrt(1 - Math.pow(time / EASE_DURATION, 2))
+    : 1;
+}
+
 const Events: React.FC = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const cardsContainerRef = useRef<HTMLDivElement>(null);
-  const [timelineWidth, setTimelineWidth] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
+  const carousel = useRef<HTMLDivElement>(null);
+  const lastInteraction = useRef<number>(null);
+  const rewindTimeout = useRef(TIMEOUT_DURATION);
+  const paused = useRef(false);
+  const speed = useRef(0);
 
-  // Scroll animation effect
-  useEffect(() => {
-    const scrollContainer = scrollRef.current;
-    if (!scrollContainer) return;
-    let animationFrameId: number;
+  const renderFrame = useCallback((prevFrame: number, currentFrame: number) => {
+    if (!carousel.current) {
+      // Wait for component to mount
+      return currentFrame;
+    }
 
-    const scroll = () => {
-      if (!isPaused) {
-        scrollContainer.scrollLeft += 1;
-        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
-          scrollContainer.scrollLeft = 0;
-        }
+    // Set animation start time if not currently set
+    if (!lastInteraction.current) {
+      lastInteraction.current = currentFrame;
+    }
+
+    const maxScrollLeft =
+      carousel.current.scrollWidth - carousel.current.offsetWidth;
+    const timeSinceInteraction = currentFrame - lastInteraction.current;
+    const timeSinceFrame = currentFrame - prevFrame;
+
+    // Once we reach the end, rewind after pausing for a few seconds
+    if (!paused.current && maxScrollLeft - carousel.current.scrollLeft < 1) {
+      if (rewindTimeout.current >= TIMEOUT_DURATION) {
+        lastInteraction.current = 0;
+        carousel.current.scrollTo({
+          left: 0,
+          behavior: "smooth",
+        });
+        return currentFrame;
       }
-      animationFrameId = requestAnimationFrame(scroll);
-    };
-    animationFrameId = requestAnimationFrame(scroll);
-    return () => {
-      cancelAnimationFrame(animationFrameId);
-    };
-  }, [isPaused]);
 
-  useEffect(() => {
-    // Dynamically set timeline width to match cards container
-    const updateTimelineWidth = () => {
-      if (cardsContainerRef.current) {
-        setTimelineWidth(cardsContainerRef.current.scrollWidth);
-      }
-    };
-    updateTimelineWidth();
-    window.addEventListener("resize", updateTimelineWidth);
-    return () => {
-      window.removeEventListener("resize", updateTimelineWidth);
-    };
+      rewindTimeout.current += timeSinceFrame;
+      return currentFrame;
+    }
+
+    rewindTimeout.current = 0;
+    speed.current = paused.current
+      ? slowDown(timeSinceInteraction)
+      : speedUp(timeSinceInteraction);
+
+    const delta =
+      ((maxScrollLeft * timeSinceFrame) / SCROLL_DURATION) * speed.current;
+
+    if (delta < 0.5) {
+      return prevFrame;
+    }
+
+    carousel.current.scrollBy({
+      left: delta,
+    });
+
+    return currentFrame;
   }, []);
 
-  return (
-    <div id="events">
-      {
-        //This top div is to make sure the /#events link doesn&apos;t
-        //scroll to the middle of the timeline.
+  const animate = useCallback(
+    (signal: AbortSignal, prevFrame = performance.now()) => {
+      if (signal.aborted) {
+        return;
       }
-      <div
-        id="events"
-        ref={scrollRef}
-        className="w-full bg-gray-950 py-20 flex overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
-        style={{ position: "relative" }}
-      >
-        {/* Timeline line */}
-        <div
-          className="absolute left-0 flex items-center z-0"
-          style={{
-            top: "50%",
-            transform: "translateY(-50%)",
-            width: timelineWidth ? timelineWidth : "100%",
-            pointerEvents: "none",
-          }}
-        >
-          {/* Start circle */}
-          <div
-            style={{
-              width: 24,
-              height: 24,
-              borderRadius: "50%",
-              background: "radial-gradient(circle, #f87171 70%, #fff0 100%)",
-              marginLeft: 24,
-              marginRight: -12,
-              zIndex: 1,
-            }}
-          />
-          {/* Solid red-400 line */}
-          <div
-            style={{
-              flex: 1,
-              height: 12,
-              borderRadius: 6,
-              background: "#f87171", // Tailwind red-400
-              position: "relative",
-              zIndex: 0,
-            }}
-          />
-          {/* End circle */}
-          <div
-            style={{
-              width: 24,
-              height: 24,
-              borderRadius: "50%",
-              background: "radial-gradient(circle, #f87171 70%, #fff0 100%)",
-              marginLeft: -12,
-              marginRight: 24,
-              zIndex: 1,
-            }}
-          />
-        </div>
 
+      requestAnimationFrame((currentFrame) => {
+        animate(signal, renderFrame(prevFrame, currentFrame));
+      });
+    },
+    [renderFrame],
+  );
+
+  const pause = useCallback(() => {
+    if (!paused.current) {
+      paused.current = true;
+      lastInteraction.current = null;
+    }
+  }, []);
+
+  const resume = useCallback(() => {
+    if (paused.current) {
+      paused.current = false;
+      lastInteraction.current = null;
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!carousel.current) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([carousel]) => {
+        if (carousel.isIntersecting) {
+          resume();
+        } else {
+          pause();
+        }
+      },
+      {
+        scrollMargin: window.getComputedStyle(document.body).scrollMargin,
+      },
+    );
+
+    observer.observe(carousel.current);
+
+    const controller = new AbortController();
+    animate(controller.signal);
+
+    return () => {
+      observer.disconnect();
+      controller.abort();
+    };
+  }, [animate, pause, resume]);
+
+  return (
+    <div id="events" className="bg-gray-950 py-20 relative">
+      <div
+        className="w-full grid grid-rows-1 overflow-x-auto *:select-none scrollbar-none"
+        onMouseEnter={pause}
+        onMouseLeave={resume}
+        ref={carousel}
+      >
         {/* Cards container */}
+        {[...eventsData].reverse().map((item, index) => (
+          <div
+            key={index}
+            className="mx-4 relative snap-always snap-center row-start-1 self-start"
+            style={{
+              gridColumnStart: index + 2,
+            }}
+          >
+            <EventCard {...item} />
+          </div>
+        ))}
+
+        {/* Start circle */}
+        <div className="size-8 rounded-full bg-radial from-red-400 pointer-events-none from-70% to-[#fff0] row-start-1 col-start-1 self-center ml-20 mr-12" />
+
+        {/* End circle */}
         <div
-          ref={cardsContainerRef}
-          className="relative flex w-max items-start pr-24 pl-24 z-10"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-        >
-          {[...eventsData].reverse().map((item, index) => (
-            <div key={index} className="mx-4 relative">
-              <EventCard {...item} pause={setIsPaused} />
-            </div>
-          ))}
-        </div>
+          className="size-8 rounded-full bg-radial from-red-400 pointer-events-none from-70% to-[#fff0] row-start-1 self-center ml-4 mr-6"
+          style={{ gridColumnEnd: eventsData.length + 3 }}
+        />
+
+        {/* Solid red-400 line */}
+        <div
+          className="h-3 self-center block rounded-full pointer-events-none bg-red-400 col-start-2 -ml-16 -mr-8 row-start-1"
+          style={{ gridColumnEnd: eventsData.length + 2 }}
+        />
       </div>
     </div>
   );
