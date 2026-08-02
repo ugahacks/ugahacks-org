@@ -349,11 +349,7 @@ const Team = () => {
                 ([teamName, members]: [string, TeamMember[]]) => (
                   <div key={teamName} className="mb-24">
                     <h2 className="text-2xl text-white font-raleway font-bold mb-10 text-center relative z-10">
-                      {teamName === "Advisor" &&
-                      (selectedTeamName === "UGAHacks 11" ||
-                        selectedTeamName === "UGAHacks X")
-                        ? "Advisors"
-                        : teamName}
+                      {teamName === "Advisor" ? "Advisors" : teamName}
                     </h2>
                     <div
                       className={`flex flex-wrap justify-center ${selectedTeamName === "UGAHacks X" && teamName === "Directors" ? "gap-x-6 gap-y-16" : "gap-x-8 gap-y-20"}`}

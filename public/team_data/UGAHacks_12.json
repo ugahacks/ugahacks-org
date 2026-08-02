@@ -164,8 +164,13 @@
     "name": "Vini Gunasekaran",
     "role": "Logistics + CE Director",
     "quote": "",
-    "image_path": "team_images/UGAHacks_11/vilasini-gunasekaran.png",
-    "social_links": []
+    "image_path": "team_images/UGAHacks_12/Vilasini-Gunasekaran.jpg",
+    "social_links": [ 
+      {
+         "type": "linkedin",
+         "url": "https://www.linkedin.com/in/vilasini-gunasekaran/"
+      }
+    ]
   },
   {
     "name": "Krishna Mohan",
@@ -455,14 +460,23 @@
     "name": "Akanksha Tirupati",
     "role": "Logistics + CE Team",
     "quote": "",
-    "image_path": "team_images/UGAHacks_12/placeholder.jpg",
-    "social_links": []
+    "image_path": "team_images/UGAHacks_12/Akanksha-Tirupati.JPG",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/akshu.tirupati/"
+      },
+      {
+        "type": "linkedin",
+        "url": "www.linkedin.com/in/akanksha-tirupati"
+      }
+    ]
   },
   {
     "name": "Mohan Isanaka",
     "role": "Tech Team",
     "quote": "",
-    "image_path": "team_images/UGAHacks_12/placeholder.jpg",
+    "image_path": "team_images/UGAHacks_12/Mohan-Isanaka.webp",
     "social_links": []
   },
   {
@@ -504,8 +518,17 @@
     "name": "Sreenidhi Muppiri",
     "role": "Sponsorship Team",
     "quote": "",
-    "image_path": "team_images/UGAHacks_12/placeholder.jpg",
-    "social_links": []
+    "image_path": "team_images/UGAHacks_12/Sreenidhi-Muppiri.jpg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/sreenidhi.m_/"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/sreenidhi-muppiri/ "
+      }
+    ]
   },
   {
     "name": "Ronit Parikh",
