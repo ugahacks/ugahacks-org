@@ -18,7 +18,7 @@ const Team = () => {
   const [selectedTeam, setSelectedTeam] = useState<TeamMember[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedTeamName, setSelectedTeamName] =
-    useState<string>("UGAHacks 11");
+    useState<string>("UGAHacks 12");
   const [teamCache, setTeamCache] = useState<Record<string, TeamMember[]>>({});
   const [activeCard, setActiveCard] = useState<number | null>(null);
   const [animateIn, setAnimateIn] = useState(false);
@@ -31,23 +31,23 @@ const Team = () => {
     });
   };
 
-  // Load UGAHacks 11 data on component mount
+  // Load UGAHacks 12 data on component mount
   useEffect(() => {
-    const loadUGAHacks11 = async () => {
+    const loadUGAHacks12 = async () => {
       try {
-        const response = await fetch("/team_data/UGAHacks_11.json");
+        const response = await fetch("/team_data/UGAHacks_12.json");
         const data = await response.json();
         setSelectedTeam(data);
-        setTeamCache((prev) => ({ ...prev, "UGAHacks 11": data }));
+        setTeamCache((prev) => ({ ...prev, "UGAHacks 12": data }));
         kickAnimateIn();
       } catch (error) {
-        console.error("Error loading UGAHacks 11 data:", error);
+        console.error("Error loading UGAHacks 12 data:", error);
       } finally {
         setIsLoading(false);
       }
     };
 
-    loadUGAHacks11();
+    loadUGAHacks12();
   }, []);
 
   const getImageSrc = (imagePath: string) => {
@@ -76,6 +76,7 @@ const Team = () => {
 
     // Map team names to their corresponding JSON file names
     const teamFileMap: Record<string, string> = {
+      "UGAHacks 12": "UGAHacks_12.json",
       "UGAHacks 11": "UGAHacks_11.json",
       "UGAHacks X": "UGAHacks_X.json",
       "UGAHacks 9": "UGAHacks_9.json",
@@ -120,6 +121,16 @@ const Team = () => {
       </h1>
       <div className="w-full max-w-7xl px-6">
         <div className="flex flex-wrap gap-4 mt-6 md:mt-20 justify-center overflow-x-auto md:overflow-visible whitespace-nowrap px-4">
+          <h2
+            className={`text-base font-raleway cursor-pointer hover:text-white transition-colors ${
+              selectedTeamName === "UGAHacks 12"
+                ? "text-white"
+                : "text-gray-400"
+            }`}
+            onClick={() => handleTeamClick("UGAHacks 12")}
+          >
+            UGAHacks 12
+          </h2>
           <h2
             className={`text-base font-raleway cursor-pointer hover:text-white transition-colors ${
               selectedTeamName === "UGAHacks 11"
@@ -230,27 +241,29 @@ const Team = () => {
                 <div className="p-1 rounded-full border-4 border-red-500">
                   <Image
                     src={
-                      selectedTeamName === "UGAHacks X"
-                        ? "/team_images/UGAHacks_X/byte-x.png"
-                        : selectedTeamName === "UGAHacks 9"
-                          ? "/team_images/UGAHacks_9/byte-9.png"
-                          : selectedTeamName === "UGAHacks 8"
-                            ? "/team_images/UGAHacks_8/byte-8.png"
-                            : selectedTeamName === "UGAHacks 7"
-                              ? "/team_images/UGAHacks_7/byte-7.png"
-                              : selectedTeamName === "UGAHacks 6"
-                                ? "/team_images/UGAHacks_6/byte-6.jpg"
-                                : selectedTeamName === "UGAHacks 5"
-                                  ? "/team_images/UGAHacks_5/byte-5.jpg"
-                                  : selectedTeamName === "UGAHacks 4"
-                                    ? "/team_images/UGAHacks_4/hacks4.jpg"
-                                    : selectedTeamName === "UGAHacks 3"
-                                      ? "/team_images/UGAHacks_3/mascot-uh3.jpg"
-                                      : selectedTeamName === "UGAHacks 2"
-                                        ? "/team_images/UGAHacks_1/UGAHack1mascot.png"
-                                        : selectedTeamName === "UGAHacks 1"
+                      selectedTeamName === "UGAHacks 12"
+                        ? "/team_images/UGAHacks_12/byte-12.png"
+                        : selectedTeamName === "UGAHacks X"
+                          ? "/team_images/UGAHacks_X/byte-x.png"
+                          : selectedTeamName === "UGAHacks 9"
+                            ? "/team_images/UGAHacks_9/byte-9.png"
+                            : selectedTeamName === "UGAHacks 8"
+                              ? "/team_images/UGAHacks_8/byte-8.png"
+                              : selectedTeamName === "UGAHacks 7"
+                                ? "/team_images/UGAHacks_7/byte-7.png"
+                                : selectedTeamName === "UGAHacks 6"
+                                  ? "/team_images/UGAHacks_6/byte-6.jpg"
+                                  : selectedTeamName === "UGAHacks 5"
+                                    ? "/team_images/UGAHacks_5/byte-5.jpg"
+                                    : selectedTeamName === "UGAHacks 4"
+                                      ? "/team_images/UGAHacks_4/hacks4.jpg"
+                                      : selectedTeamName === "UGAHacks 3"
+                                        ? "/team_images/UGAHacks_3/mascot-uh3.jpg"
+                                        : selectedTeamName === "UGAHacks 2"
                                           ? "/team_images/UGAHacks_1/UGAHack1mascot.png"
-                                          : "/bytehacks11.png"
+                                          : selectedTeamName === "UGAHacks 1"
+                                            ? "/team_images/UGAHacks_1/UGAHack1mascot.png"
+                                            : "/bytehacks11.png"
                     }
                     alt="Byte Mascot"
                     width={120}
@@ -335,106 +348,119 @@ const Team = () => {
               );
 
               return sortedTeams.map(
-                ([teamName, members]: [string, TeamMember[]]) => (
-                  <div key={teamName} className="mb-24">
-                    <h2 className="text-2xl text-white font-raleway font-bold mb-10 text-center relative z-10">
-                      {teamName === "Advisor" &&
-                      (selectedTeamName === "UGAHacks 11" ||
-                        selectedTeamName === "UGAHacks X")
-                        ? "Advisors"
-                        : teamName}
-                    </h2>
-                    <div
-                      className={`flex flex-wrap justify-center ${selectedTeamName === "UGAHacks X" && teamName === "Directors" ? "gap-x-6 gap-y-16" : "gap-x-8 gap-y-20"}`}
-                    >
-                      {members.map((member: TeamMember, index: number) => (
-                        <div
-                          key={index}
-                          className={[
-                            "rounded-lg p-4 pb-8",
-                            "transform transition-all duration-500",
-                            "relative",
-                            "w-40 md:w-44 lg:w-48",
-                            animateIn
-                              ? "opacity-100 translate-y-0"
-                              : "opacity-0 translate-y-3",
-                          ].join(" ")}
-                          style={{ transitionDelay: `${index * 50}ms` }}
-                        >
-                          <div className="text-center">
-                            {member.image_path &&
-                              getImageSrc(member.image_path) && (
-                                <div
-                                  className="mb-4 flex justify-center relative group"
-                                  role="button"
-                                  tabIndex={0}
-                                  onClick={() =>
-                                    setActiveCard((prev) =>
-                                      prev === index ? null : index,
-                                    )
-                                  }
-                                  onKeyDown={(e) => {
-                                    if (e.key === "Enter" || e.key === " ") {
-                                      e.preventDefault();
-                                      setActiveCard((prev) =>
-                                        prev === index ? null : index,
-                                      );
-                                    }
-                                  }}
-                                >
-                                  <div className="p-1 rounded-full border-4 border-red-500">
-                                    <Image
-                                      src={getImageSrc(member.image_path)!}
-                                      alt={member.name}
-                                      width={120}
-                                      height={120}
-                                      className="rounded-full object-cover w-[120px] h-[120px]"
-                                      onError={(e) => {
-                                        const target =
-                                          e.target as HTMLImageElement;
-                                        target.style.display = "none";
+                ([teamName, members]: [string, TeamMember[]]) => {
+                  const orderedMembers =
+                    selectedTeamName === "UGAHacks 12" &&
+                    teamName === "Directors"
+                      ? [...members].sort((memberA, memberB) => {
+                          if (memberA.name === "Jacob Harris") return -1;
+                          if (memberB.name === "Jacob Harris") return 1;
+                          return 0;
+                        })
+                      : members;
+
+                  return (
+                    <div key={teamName} className="mb-24">
+                      <h2 className="text-2xl text-white font-raleway font-bold mb-10 text-center relative z-10">
+                        {teamName === "Advisor" ? "Advisors" : teamName}
+                      </h2>
+                      <div
+                        className={`flex flex-wrap justify-center ${selectedTeamName === "UGAHacks X" && teamName === "Directors" ? "gap-x-6 gap-y-16" : "gap-x-8 gap-y-20"}`}
+                      >
+                        {orderedMembers.map(
+                          (member: TeamMember, index: number) => (
+                            <div
+                              key={index}
+                              className={[
+                                "rounded-lg p-4 pb-8",
+                                "transform transition-all duration-500",
+                                "relative",
+                                "w-40 md:w-44 lg:w-48",
+                                animateIn
+                                  ? "opacity-100 translate-y-0"
+                                  : "opacity-0 translate-y-3",
+                              ].join(" ")}
+                              style={{ transitionDelay: `${index * 50}ms` }}
+                            >
+                              <div className="text-center">
+                                {member.image_path &&
+                                  getImageSrc(member.image_path) && (
+                                    <div
+                                      className="mb-4 flex justify-center relative group"
+                                      role="button"
+                                      tabIndex={0}
+                                      onClick={() =>
+                                        setActiveCard((prev) =>
+                                          prev === index ? null : index,
+                                        )
+                                      }
+                                      onKeyDown={(e) => {
+                                        if (
+                                          e.key === "Enter" ||
+                                          e.key === " "
+                                        ) {
+                                          e.preventDefault();
+                                          setActiveCard((prev) =>
+                                            prev === index ? null : index,
+                                          );
+                                        }
                                       }}
-                                    />
-                                  </div>
-                                  <div
-                                    className={[
-                                      "absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4",
-                                      "bg-white rounded-2xl p-4 shadow-xl transition-opacity duration-300 z-50 w-60 h-88",
-                                      activeCard === index
-                                        ? "opacity-100 pointer-events-auto"
-                                        : "opacity-0 pointer-events-none",
-                                      "md:pointer-events-auto md:opacity-0 md:group-hover:opacity-100",
-                                    ].join(" ")}
-                                  >
-                                    <div className="flex flex-col items-center h-full justify-center">
-                                      <div className="p-1 rounded-full border-4 border-red-500 mb-4 flex-shrink-0">
+                                    >
+                                      <div className="p-1 rounded-full border-4 border-red-500">
                                         <Image
                                           src={getImageSrc(member.image_path)!}
                                           alt={member.name}
                                           width={120}
                                           height={120}
-                                          className="rounded-full object-cover w-[120px] h-[120px] flex-shrink-0"
+                                          className="rounded-full object-cover w-[120px] h-[120px]"
+                                          onError={(e) => {
+                                            const target =
+                                              e.target as HTMLImageElement;
+                                            target.style.display = "none";
+                                          }}
                                         />
                                       </div>
-                                      <h4 className="text-gray-800 font-raleway font-bold text-lg mb-2 text-center">
-                                        {member.name}
-                                      </h4>
-                                      <p className="text-gray-600 font-raleway text-sm mb-2 text-center">
-                                        {member.role}
-                                      </p>
-                                      {member.quote && (
-                                        <p className="text-gray-500 font-raleway text-xs italic mb-2 text-center px-2">
-                                          &ldquo;{member.quote}&rdquo;
-                                        </p>
-                                      )}
-                                      <div className="flex gap-3 mt-auto">
-                                        {member.social_links &&
-                                          member.social_links.length > 0 &&
-                                          member.social_links.map(
-                                            (
-                                              link: SocialLink,
-                                              linkIndex: number,
-                                            ) => (
+                                      <div
+                                        className={[
+                                          "absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4",
+                                          "bg-white rounded-2xl p-4 shadow-xl transition-opacity duration-300 z-50 w-60 h-88",
+                                          activeCard === index
+                                            ? "opacity-100 pointer-events-auto"
+                                            : "opacity-0 pointer-events-none",
+                                          "md:pointer-events-auto md:opacity-0 md:group-hover:opacity-100",
+                                        ].join(" ")}
+                                      >
+                                        <div className="flex flex-col items-center h-full justify-center">
+                                          <div className="p-1 rounded-full border-4 border-red-500 mb-4 flex-shrink-0">
+                                            <Image
+                                              src={
+                                                getImageSrc(member.image_path)!
+                                              }
+                                              alt={member.name}
+                                              width={120}
+                                              height={120}
+                                              className="rounded-full object-cover w-[120px] h-[120px] flex-shrink-0"
+                                            />
+                                          </div>
+                                          <h4 className="text-gray-800 font-raleway font-bold text-lg mb-2 text-center">
+                                            {member.name}
+                                          </h4>
+                                          <p className="text-gray-600 font-raleway text-sm mb-2 text-center">
+                                            {member.role}
+                                          </p>
+                                          {member.quote && (
+                                            <p className="text-gray-500 font-raleway text-xs italic mb-2 text-center px-2">
+                                              &ldquo;{member.quote}&rdquo;
+                                            </p>
+                                          )}
+                                          <div className="flex gap-3 mt-auto">
+                                            {member.social_links &&
+                                              member.social_links.length > 0 &&
+                                              member.social_links.map(
+                                                (
+                                                  link: SocialLink,
+                                                  linkIndex: number,
+                                                ) => (
                                               <a
                                                 key={linkIndex}
                                                 href={link.url}
@@ -533,10 +559,11 @@ const Team = () => {
                             </p>
                           </div>
                         </div>
-                      ))}
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                ),
+                  );
+                },
               );
             })()}
           </div>
