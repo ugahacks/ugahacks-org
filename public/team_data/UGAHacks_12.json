@@ -16,6 +16,30 @@
     ]
   },
   {
+    "name": "Jacob Harris",
+    "role": "Lead Director",
+    "quote": "What's hackin' dawgs?",
+    "image_path": "team_images/UGAHacks_12/Jacob-Harris.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/jacob-harris-4874a432a/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/JacobHarris-Dev"
+      },
+      {
+        "type": "website",
+        "url": "https://www.jacob-harris.net/"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/juhcooby/"
+      }
+    ]
+  },
+  {
     "name": "Maya Castillo",
     "role": "Sponsorship Director",
     "quote": "wanna get a sweet treat?",
@@ -105,30 +129,6 @@
       {
         "type": "linkedin",
         "url": "http://www.linkedin.com/in/Saniya-pirani"
-      }
-    ]
-  },
-  {
-    "name": "Jacob Harris",
-    "role": "Lead Director",
-    "quote": "What's hackin' dawgs?",
-    "image_path": "team_images/UGAHacks_12/Jacob-Harris.png",
-    "social_links": [
-      {
-        "type": "linkedin",
-        "url": "https://www.linkedin.com/in/jacob-harris-4874a432a/"
-      },
-      {
-        "type": "github",
-        "url": "https://github.com/JacobHarris-Dev"
-      },
-      {
-        "type": "website",
-        "url": "https://www.jacob-harris.net/"
-      },
-      {
-        "type": "instagram",
-        "url": "https://www.instagram.com/juhcooby/"
       }
     ]
   },
