@@ -426,7 +426,7 @@ const Events: React.FC = () => {
         }
       },
       {
-        scrollMargin: window.getComputedStyle(document.body).scrollMargin,
+        rootMargin: window.getComputedStyle(document.body).scrollMargin,
       },
     );
 
