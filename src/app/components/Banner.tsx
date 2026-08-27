@@ -7,9 +7,9 @@ export default function Banner() {
           className="duration-300 hover:text-red-300 hover:underline"
           target="_blank"
           rel="noopener noreferrer"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSe7VHsEgkfyVJ9Z_MZB0ztxCNhfWL_72zP9Igy-Stq0byW41w/viewform"
+          href="https://cadathon.ugahacks.com/"
         >
-          UGAHacks 12 Pre-registration Now Open!
+          CADATHON REGISTRATION NOW OPEN
         </Link>
       </p>
     </div>
