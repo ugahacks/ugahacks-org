@@ -66,7 +66,7 @@ export default function Hero() {
                 passHref
               >
                 <button className="px-6 py-3 rounded-full bg-red-600 text-white font-medium hover:bg-red-700 transition cursor-pointer">
-                  Pre-Register for UGAHacks 12
+                  Register for UGAHacks 12
                 </button>
               </Link>
             </div>
