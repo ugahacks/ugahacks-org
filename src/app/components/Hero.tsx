@@ -60,7 +60,7 @@ export default function Hero() {
 
             <div className="">
               <Link
-                href="https://mybyte.ugahacks.com/"
+                href="https://12.ugahacks.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 passHref
