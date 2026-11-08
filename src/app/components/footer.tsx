@@ -26,7 +26,7 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               {/* Replace with your logo path */}
               <Image
-                src="/bytehacks11.png"
+                src="/team_images/UGAHacks_12/byte-12.png"
                 alt="UGAHacks"
                 width={36}
                 height={36}
